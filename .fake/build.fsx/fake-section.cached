@@ -44,6 +44,8 @@ Target.create "Clean" (fun _ ->
     ++ buildTestsDir
     ++ nupkgsDir
     |> Shell.cleanDirs 
+    
+    Fake.IO.Directory.ensure nupkgsDir
 )
 
 
