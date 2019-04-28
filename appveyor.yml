@@ -5,7 +5,7 @@ image: Visual Studio 2017
   
 # tasks
 before_build:
-- cmd: .paket\paket.exe restore -group Build
+- cmd: .paket\paket.exe restore --group Build
 
 build_script:
 - cmd: >-
