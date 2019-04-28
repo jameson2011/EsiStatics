@@ -763,4 +763,5 @@
   <ItemGroup>
     <ProjectReference Include="..\EsiStatics.Data.Entities\EsiStatics.Data.Entities.fsproj" />
   </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
