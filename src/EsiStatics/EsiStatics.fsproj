@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Utilities.fs" />
+    <Compile Include="Units.fs" />
+    <Compile Include="Entities.fs" />
+    <Compile Include="TypeMaps.fs" />
+    <Compile Include="Geospatial.fs" />
+    <Compile Include="Regions.fs" />
+    <Compile Include="Constellations.fs" />
+    <Compile Include="SolarSystems.fs" />
+    <Compile Include="Stars.fs" />
+    <Compile Include="Planets.fs" />
+    <Compile Include="Stations.fs" />
+    <Compile Include="Stargates.fs" />
+    <Compile Include="AsteroidBelts.fs" />
+    <Compile Include="Moons.fs" />
+    <Compile Include="UniverseExtensions.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EsiStatics.Data.Entities">
+      <HintPath>..\..\build\lib\EsiStatics.Data.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="EsiStatics.Data.ItemTypes">
+      <HintPath>..\..\build\lib\EsiStatics.Data.ItemTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="EsiStatics.Data.Moons">
+      <HintPath>..\..\build\lib\EsiStatics.Data.Moons.dll</HintPath>
+    </Reference>
+    <Reference Include="EsiStatics.Data.Universe">
+      <HintPath>..\..\build\lib\EsiStatics.Data.Universe.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
