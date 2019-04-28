@@ -1,0 +1,22 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal Groups85=
+    let getGroup id = 
+      match id with 
+      | 1152 -> { GroupData.id= 1152; name= "Drone Damage Module Blueprint"; categoryId= 9; published= true; typeIds= [| 4394; 4406 |] } |> Some
+      | 1249 -> { GroupData.id= 1249; name= "Mobile Cyno Inhibitor"; categoryId= 22; published= true; typeIds= [| 33476 |] } |> Some
+      | 1734 -> { GroupData.id= 1734; name= "Roaming Blood Raider Frigate"; categoryId= 11; published= false; typeIds= [| 42236 |] } |> Some
+      | 182 -> { GroupData.id= 182; name= "Police Drone"; categoryId= 11; published= false; typeIds= [| 9959; 9960; 9962; 9965; 9970; 9971; 9977; 9978; 9983; 9984; 9987; 9988; 9989; 9991; 10035; 10036; 10097; 10099; 10100; 10102; 10104; 10105; 10660; 10674; 11126; 11515; 11516; 11517; 11518; 11519; 11520; 11521; 32380; 32381 |] } |> Some
+      | 1831 -> { GroupData.id= 1831; name= "Structure Engineering Rig M - Advanced Small Ship TE"; categoryId= 66; published= true; typeIds= [| 43856; 43857 |] } |> Some
+      | 1928 -> { GroupData.id= 1928; name= "Irregular Container"; categoryId= 11; published= false; typeIds= [| 49759 |] } |> Some
+      | 279 -> { GroupData.id= 279; name= "LCO Drone"; categoryId= 11; published= false; typeIds= [| 3457 |] } |> Some
+      | 376 -> { GroupData.id= 376; name= "Advanced Artillery Ammo"; categoryId= 8; published= true; typeIds= [| 12629; 12631; 12633; 12761; 12763; 12765; 12767; 12769; 12771; 41318; 41320 |] } |> Some
+      | 473 -> { GroupData.id= 473; name= "Tracking Array"; categoryId= 23; published= true; typeIds= [| 17701 |] } |> Some
+      | 570 -> { GroupData.id= 570; name= "Asteroid Serpentis Battleship"; categoryId= 11; published= false; typeIds= [| 11921; 11922; 11923; 11924; 23450; 23451; 23452; 23453; 23454; 23455 |] } |> Some
+      | 667 -> { GroupData.id= 667; name= "Mission Amarr Empire Battleship"; categoryId= 11; published= false; typeIds= [| 2594; 12388; 14356; 15328; 15329; 15335; 15336; 15411; 20330; 24976; 24977; 24978; 24979; 24982; 24983; 24985; 24988; 24991; 24992; 28167; 28168; 29665; 29667; 29671; 29673; 29674; 29675; 29676; 29677; 29678; 32268 |] } |> Some
+      | 764 -> { GroupData.id= 764; name= "Overdrive Injector System"; categoryId= 7; published= true; typeIds= [| 1192; 1236; 1244; 5611; 5613; 5615; 5617; 5627; 5629; 5631; 5633; 14126; 15812; 21491 |] } |> Some
+      | 85 -> { GroupData.id= 85; name= "Hybrid Charge"; categoryId= 8; published= true; typeIds= [| 215; 216; 217; 218; 219; 220; 221; 222; 223; 224; 225; 226; 227; 228; 229; 230; 231; 232; 233; 234; 235; 236; 237; 238; 17648; 17650; 17652; 17654; 17656; 17658; 17660; 17662; 19962; 19964; 19966; 19968; 20034; 20036; 20038; 20040; 20043; 20045; 20047; 20049; 20051; 20053; 20055; 20057; 20913; 20915; 20917; 20919; 20921; 20923; 20925; 20927; 20929; 20931; 20933; 20935; 20937; 20939; 20941; 20943; 20945; 20947; 20949; 20951; 20953; 20955; 20957; 20959; 20961; 20963; 20965; 20967; 20969; 20971; 20973; 20975; 20977; 20979; 20981; 20983; 20985; 20987; 20989; 20991; 20993; 20995; 20997; 20999; 21001; 21003; 21005; 21007; 21320; 21322; 21324; 21326; 21328; 21330; 21332; 21334; 21336; 21338; 21340; 21342; 21344; 21346; 21348; 21350; 21352; 21354; 21356; 21358; 21360; 21362; 21364; 21366; 21368; 21370; 21372; 21374; 21376; 21378; 21380; 21382; 21384; 21386; 21388; 21390; 21392; 21394; 21396; 21398; 21400; 21402; 21404; 21406; 21408; 21410; 21412; 21414; 21416; 21418; 21420; 21422; 21424; 21426; 21428; 21430; 21432; 21434; 21436; 21438; 21440; 21442; 21444; 21446; 21740; 22961; 22963; 22965; 22967; 22969; 22971; 22973; 22975; 22977; 22979; 22981; 22983; 22985; 22987; 22989; 22991; 22993; 22995; 22997; 22999; 23001; 23003; 23005; 23007; 23009; 23011; 23013; 23015; 23017; 23019; 23021; 23023; 23025; 23027; 23029; 23031; 23033; 23035; 23037; 23039; 23041; 23043; 23045; 23047; 23049; 23051; 23053; 32803 |] } |> Some
+      | 861 -> { GroupData.id= 861; name= "Mission Fighter Drone"; categoryId= 11; published= false; typeIds= [| 27898; 27899; 27900; 27901; 29025; 30995; 36846; 36847 |] } |> Some
+      | 958 -> { GroupData.id= 958; name= "Core Systems"; categoryId= 32; published= true; typeIds= [| 45622; 45623; 45624; 45625; 45626; 45627; 45628; 45629; 45630; 45631; 45632; 45633 |] } |> Some
+      | _ -> None

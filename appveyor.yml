@@ -1,0 +1,26 @@
+version: 0.0.{build}
+
+# Build worker image (VM template)
+image: Visual Studio 2017
+  
+# tasks
+before_build:
+- cmd: .paket\paket.exe restore --group Build
+
+build_script:
+- cmd: >-
+    ./build.bat
+
+on_success:
+  - ps: ./sendwebhook.ps1 success $env:WEBHOOK_URL
+on_failure:
+  - ps: ./sendwebhook.ps1 failure $env:WEBHOOK_URL
+
+
+test: off
+
+artifacts:
+- path: build\lib
+  name: EsiStatics
+- path: nupkgs
+  name: EsiStatics.nupkg

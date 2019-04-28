@@ -1,0 +1,9 @@
+﻿namespace EsiStatics.Data.Universe
+open System
+open EsiStatics.Data.Entities
+module internal Regions22=
+    let getRegion id = 
+      match id with 
+      | 10000043 -> { RegionData.id= 10000043; name= "Domain"; constellationIds= [| 20000322; 20000323; 20000324; 20000325; 20000326; 20000327; 20000328; 20000329; 20000330; 20000331; 20000332; 20000333; 20000334; 20000507; 20000508; 20000509; 20000510; 20000511; 20000512; 20000513; 20000514; 20000515; 20000516; 20000517; 20000518; 20000519 |] } |> Some
+      | 11000016 -> { RegionData.id= 11000016; name= "D-R00016"; constellationIds= [| 21000153; 21000154; 21000155; 21000156; 21000157; 21000158; 21000159; 21000160; 21000161; 21000328 |] } |> Some
+      | _ -> None

@@ -1,0 +1,21 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal Groups37=
+    let getGroup id = 
+      match id with 
+      | 1007 -> { GroupData.id= 1007; name= "Mission Faction Frigate"; categoryId= 11; published= false; typeIds= [| 29234; 29239; 29242; 29245; 32786 |] } |> Some
+      | 1201 -> { GroupData.id= 1201; name= "Attack Battlecruiser"; categoryId= 6; published= true; typeIds= [| 4302; 4306; 4308; 4310 |] } |> Some
+      | 134 -> { GroupData.id= 134; name= "Mining Laser Blueprint"; categoryId= 9; published= true; typeIds= [| 784; 785; 12109; 18069; 22922; 22924; 25267; 25541; 25543; 25813; 26607; 28749; 28751; 28789; 38660; 38661 |] } |> Some
+      | 1395 -> { GroupData.id= 1395; name= "Missile Guidance Enhancer"; categoryId= 7; published= true; typeIds= [| 35770; 35771; 35774 |] } |> Some
+      | 1589 -> { GroupData.id= 1589; name= "Structure Assembly Rig L - Tech II Ship"; categoryId= 66; published= false; typeIds= [|  |] } |> Some
+      | 1686 -> { GroupData.id= 1686; name= "Asteroid Guristas Titan"; categoryId= 11; published= false; typeIds= [| 37466 |] } |> Some
+      | 1880 -> { GroupData.id= 1880; name= "♦ Dreadnought"; categoryId= 11; published= false; typeIds= [| 45470; 45474; 46653; 46654 |] } |> Some
+      | 1977 -> { GroupData.id= 1977; name= "Trinary Data Vaults"; categoryId= 17; published= false; typeIds= [| 47558; 47561; 47562; 47563; 47564; 47565; 47566; 47567; 47568; 47569; 47570; 47571; 47572; 47573; 47574; 47575; 47576; 47577; 47578; 47579; 47580; 47581; 47582; 47583; 47584; 47585; 47586; 47587; 47588; 47589; 47590; 47591; 47592; 47593; 47594; 47595; 47596; 47597; 47598; 47599; 47600; 47601; 47602; 47603; 47604; 47605; 47606; 47607; 47608; 47609; 47688; 47689; 47690; 47691; 47692; 47693; 47694; 47695; 47696; 47697; 48761; 48762; 48763; 50167; 50168; 50169; 50170; 50171; 50172 |] } |> Some
+      | 328 -> { GroupData.id= 328; name= "Armor Hardener"; categoryId= 7; published= true; typeIds= [| 11277; 11301; 11303; 11305; 11642; 11644; 11646; 11648; 13970; 13972; 13974; 13976; 13978; 13980; 13982; 13984; 13986; 13988; 13990; 13992; 14059; 14061; 14063; 14065; 15016; 15018; 15020; 15022; 15024; 15026; 15028; 15030; 15032; 15034; 15036; 15038; 15040; 15042; 15044; 15046; 15048; 15050; 15052; 15054; 15056; 15058; 15060; 15062; 15064; 15066; 15068; 15070; 15072; 15074; 15076; 15078; 15244; 15246; 15248; 15250; 15252; 15254; 15256; 15258; 15260; 15262; 15264; 15266; 15268; 15270; 15272; 15274; 15705; 15707; 15709; 15711; 15713; 15715; 15717; 15719; 16151; 16153; 16155; 16157; 16353; 16355; 16357; 16359; 16361; 16363; 16365; 16367; 16369; 16371; 16373; 16375; 16377; 16379; 16381; 16383; 17502; 17504; 17506; 17508; 17832; 17834; 17836; 17838; 18885; 18887; 18889; 18891; 18893; 18895; 18897; 18899; 18901; 18903; 18905; 18907; 18909; 18911; 18913; 18915; 18917; 18919; 18921; 18923; 18925; 18927; 18929; 18931; 18933; 18935; 18937; 18939; 18941; 18943; 18945; 18947; 18949; 18951; 18953; 18955; 18957; 18959; 18961; 18963; 18965; 18967; 18969; 18971; 18973; 18975; 18977; 18979; 28522; 28524; 28526; 28528 |] } |> Some
+      | 425 -> { GroupData.id= 425; name= "Orbital Assault Unit"; categoryId= 8; published= false; typeIds= [| 16282 |] } |> Some
+      | 522 -> { GroupData.id= 522; name= "Storyline Cruiser"; categoryId= 11; published= false; typeIds= [| 20482; 20483; 20484; 20485; 20486; 20487; 20488; 20489; 21128; 21129; 21758; 21759; 21760; 21762; 21763; 21764; 21765; 21766; 21778; 22262; 22263; 22264; 22265; 22272; 22667; 22668; 22669; 22670; 22674; 22676; 23275; 23276; 23667; 23670; 23875; 24286 |] } |> Some
+      | 716 -> { GroupData.id= 716; name= "Data Interfaces"; categoryId= 17; published= true; typeIds= [| 20426; 25553; 25554; 25555; 25556; 25851; 25853; 25855; 25857; 26597; 26599; 26601; 26603; 27026; 30386 |] } |> Some
+      | 813 -> { GroupData.id= 813; name= "Asteroid Serpentis Commander Destroyer"; categoryId= 11; published= false; typeIds= [| 23457; 23458; 23459; 23460; 23461; 23462 |] } |> Some
+      | 910 -> { GroupData.id= 910; name= "Sensor Booster Script"; categoryId= 8; published= true; typeIds= [| 29009; 29011; 41155 |] } |> Some
+      | _ -> None

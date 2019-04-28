@@ -1,0 +1,29 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal MarketGroups34=
+    let getMarketGroup id = 
+      match id with 
+      | 1004 -> { MarketGroupData.id= 1004; name= "Extra Large"; parentMarketGroupId= Some(990); typeIds= [| 21376; 20993; 21378; 20995; 21380; 20997; 21382; 20999; 21001; 21003; 21005; 21007; 21432; 21434; 21436; 21438; 21440; 20929; 21442; 20931; 21444; 20933; 21446; 20935; 20937; 20939; 20941; 20943; 21368; 21370; 21372; 21374 |]; description= "Fired by dreadnaught-sized guns and stationary defense systems." } |> Some
+      | 1198 -> { MarketGroupData.id= 1198; name= "Scan Probe Launchers"; parentMarketGroupId= Some(1710); typeIds= [| 18640; 17939 |]; description= "Blueprints of Scan Probe Launchers." } |> Some
+      | 131 -> { MarketGroupData.id= 131; name= "Microwarpdrives"; parentMarketGroupId= Some(52); typeIds= [| 19329; 15747; 15751; 12076; 15755; 19341; 15759; 19345; 19347; 12052; 19349; 12054; 19351; 15768; 19353; 14492; 14494; 19359; 14496; 41249; 14114; 41251; 14116; 41253; 14118; 41255; 14120; 14122; 19335; 14124; 14514; 14510; 14512; 434; 19315; 12084; 19337; 440; 5945; 19339; 35658; 35659; 35660; 14498; 35662; 35661; 5971; 5973; 5975; 41252; 19343; 19321; 41250; 21476; 41254; 21478; 21480; 19313; 14508; 19317; 19319; 15764; 19323; 19325; 19327 |]; description= "Ultra-advanced propulsion subsystems giving a massive speed boost." } |> Some
+      | 1392 -> { MarketGroupData.id= 1392; name= "Faction Carrier"; parentMarketGroupId= Some(817); typeIds= [| 3514; 42125 |]; description= "Faction carrier designs." } |> Some
+      | 1489 -> { MarketGroupData.id= 1489; name= "Implant Slot 06"; parentMarketGroupId= Some(1477); typeIds= [| 16003; 16008; 16009; 3096; 3097; 3100; 3104; 3105; 3108; 3109; 3110; 3111; 3117; 3118; 3119; 3120; 3121; 3124; 13237; 13239; 13241; 13242; 27101; 27097; 24669; 27110; 27111; 27112; 27113; 27114; 27115 |]; description= "Implant Slot 06" } |> Some
+      | 1586 -> { MarketGroupData.id= 1586; name= "Combat Utility Drones"; parentMarketGroupId= Some(357); typeIds= [| 23660; 22573; 23703 |]; description= "Combat Utility Drones" } |> Some
+      | 1683 -> { MarketGroupData.id= 1683; name= "Energized Thermal Plating"; parentMarketGroupId= Some(541); typeIds= [| 18817; 17544; 14956; 18827; 14094; 16429; 14096; 14098; 14958; 18861; 18863; 18845; 18847; 15216; 16425; 16427; 15218; 16431; 18865; 18867; 18807; 15453; 22881; 14952; 15721; 14954; 15212; 15214; 14960; 14962; 15731; 14964; 14966; 11255; 11257; 11259; 28542 |]; description= "Energized Thermal Plating" } |> Some
+      | 1780 -> { MarketGroupData.id= 1780; name= "Scanning Rigs"; parentMarketGroupId= Some(1111); typeIds= [|  |]; description= "Permanent modification of a ship's scanning facilities." } |> Some
+      | 1974 -> { MarketGroupData.id= 1974; name= "Amarr"; parentMarketGroupId= Some(2374); typeIds= [| 43521; 43522; 47496; 49422; 37521; 37522; 46810; 49823; 36315; 42792; 42793; 47289; 46539; 47309; 34647; 34648; 34649; 34650; 46811; 36316; 42592; 42593; 45801; 45802; 48366 |]; description= "" } |> Some
+      | 2071 -> { MarketGroupData.id= 2071; name= "Gallente"; parentMarketGroupId= Some(2065); typeIds= [| 47632; 50077; 36385; 36387; 47532; 48557; 46408; 46409; 42170; 42171; 37567; 37568; 45896; 45897; 50003; 46554; 46942; 46943; 50147; 50148; 44914; 44915; 45567; 47103 |]; description= "" } |> Some
+      | 2168 -> { MarketGroupData.id= 2168; name= "Remote Sensor Dampeners"; parentMarketGroupId= Some(2161); typeIds= [| 37066 |]; description= "" } |> Some
+      | 2265 -> { MarketGroupData.id= 2265; name= "Gallente"; parentMarketGroupId= Some(2262); typeIds= [| 41584 |]; description= "Blueprints of Gallente force auxiliary designs." } |> Some
+      | 2362 -> { MarketGroupData.id= 2362; name= "Special Recon Ships"; parentMarketGroupId= Some(2068); typeIds= [| 48577; 46020; 47681; 45480; 45992; 47000; 48580 |]; description= "" } |> Some
+      | 2459 -> { MarketGroupData.id= 2459; name= "Firestorm Filaments"; parentMarketGroupId= Some(2456); typeIds= [| 47896; 47897; 47898; 47763; 47899 |]; description= "Filaments that connect to Abyssal pockets with Plasma Firestorms" } |> Some
+      | 325 -> { MarketGroupData.id= 325; name= "Scanners"; parentMarketGroupId= Some(1710); typeIds= [| 1074; 1075; 1076 |]; description= "Blueprints of scanners." } |> Some
+      | 366112 -> { MarketGroupData.id= 366112; name= "Standard"; parentMarketGroupId= Some(366111); typeIds= [|  |]; description= "Standard." } |> Some
+      | 366209 -> { MarketGroupData.id= 366209; name= "Standard"; parentMarketGroupId= Some(366182); typeIds= [|  |]; description= "" } |> Some
+      | 369216 -> { MarketGroupData.id= 369216; name= "APEX"; parentMarketGroupId= Some(368017); typeIds= [|  |]; description= "" } |> Some
+      | 422 -> { MarketGroupData.id= 422; name= "Caldari"; parentMarketGroupId= Some(420); typeIds= [| 11192; 12032 |]; description= "Caldari covert ops designs." } |> Some
+      | 519 -> { MarketGroupData.id= 519; name= "Scordite"; parentMarketGroupId= Some(54); typeIds= [| 1228; 28427; 28428; 28429; 46703; 17463; 17464; 46687 |]; description= "Sub-types of scordite ore.  " } |> Some
+      | 616 -> { MarketGroupData.id= 616; name= "Insignias"; parentMarketGroupId= Some(19); typeIds= [|  |]; description= "DNA-imprinted personal insignias, used by empire navies. Transport with caution" } |> Some
+      | 713 -> { MarketGroupData.id= 713; name= "Ship Scanners"; parentMarketGroupId= Some(1708); typeIds= [| 443; 6527; 1855 |]; description= "Provide tactical analysis of a target ship's capabilities." } |> Some
+      | _ -> None

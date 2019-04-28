@@ -1,0 +1,70 @@
+﻿namespace EsiStatics.Data.Universe
+open System
+open EsiStatics.Data.Entities
+module internal Stars26=
+    let getStar id = 
+      match id with 
+      | 40006221 -> { StarData.id= 40006221; name= "Asilem - Star"; solarSystemId= 30000095; typeId= 3800; age= 16854893451L; luminosity= 0.012590; radius= 313700000L; spectralClass= "M4 V"; temperature= 2744 } |> Some
+      | 40009228 -> { StarData.id= 40009228; name= "Perimeter - Star"; solarSystemId= 30000144; typeId= 3802; age= 7376986592L; luminosity= 0.040310; radius= 183800000L; spectralClass= "K1 V"; temperature= 4796 } |> Some
+      | 40030374 -> { StarData.id= 40030374; name= "7-P1JO - Star"; solarSystemId= 30000487; typeId= 3802; age= 20137779527L; luminosity= 0.097890; radius= 320500000L; spectralClass= "K2 V"; temperature= 4534 } |> Some
+      | 40045700 -> { StarData.id= 40045700; name= "9BC-EB - Star"; solarSystemId= 30000724; typeId= 3802; age= 19884275526L; luminosity= 0.037970; radius= 199300000L; spectralClass= "K2 V"; temperature= 4537 } |> Some
+      | 40048707 -> { StarData.id= 40048707; name= "C-J6MT - Star"; solarSystemId= 30000772; typeId= 45036; age= 2799959483L; luminosity= 0.469200; radius= 485700000L; spectralClass= "G5 V"; temperature= 5449 } |> Some
+      | 40050356 -> { StarData.id= 40050356; name= "Q-3HS5 - Star"; solarSystemId= 30000797; typeId= 3797; age= 4664486696L; luminosity= 0.177500; radius= 298200000L; spectralClass= "G5 V"; temperature= 5453 } |> Some
+      | 40051617 -> { StarData.id= 40051617; name= "ROJ-B0 - Star"; solarSystemId= 30000815; typeId= 45037; age= 10295460258L; luminosity= 0.081480; radius= 326400000L; spectralClass= "K4 V"; temperature= 4291 } |> Some
+      | 40059862 -> { StarData.id= 40059862; name= "9-34L5 - Star"; solarSystemId= 30000939; typeId= 3798; age= 18040028742L; luminosity= 0.033630; radius= 192000000L; spectralClass= "K3 V"; temperature= 4484 } |> Some
+      | 40065779 -> { StarData.id= 40065779; name= "M-N7WD - Star"; solarSystemId= 30001032; typeId= 45032; age= 32416913227L; luminosity= 0.060040; radius= 359900000L; spectralClass= "K7 V"; temperature= 3786 } |> Some
+      | 40081978 -> { StarData.id= 40081978; name= "SS-GED - Star"; solarSystemId= 30001288; typeId= 3799; age= 1303014161L; luminosity= 0.630400; radius= 509400000L; spectralClass= "G2 V"; temperature= 5729 } |> Some
+      | 40086052 -> { StarData.id= 40086052; name= "42XJ-N - Star"; solarSystemId= 30001349; typeId= 8; age= 24954368625L; luminosity= 0.071810; radius= 330600000L; spectralClass= "K5 V"; temperature= 4131 } |> Some
+      | 40100214 -> { StarData.id= 40100214; name= "G-VFVB - Star"; solarSystemId= 30001569; typeId= 3802; age= 9769437549L; luminosity= 3.633000; radius= 1900000000L; spectralClass= "K2 IV"; temperature= 4595 } |> Some
+      | 40100796 -> { StarData.id= 40100796; name= "OSW-0P - Star"; solarSystemId= 30001579; typeId= 3802; age= 1346743683L; luminosity= 0.118200; radius= 298200000L; spectralClass= "K0 V"; temperature= 4927 } |> Some
+      | 40111660 -> { StarData.id= 40111660; name= "W9-TFD - Star"; solarSystemId= 30001748; typeId= 45030; age= 3175146331L; luminosity= 0.318900; radius= 466500000L; spectralClass= "G9 V"; temperature= 5048 } |> Some
+      | 40113697 -> { StarData.id= 40113697; name= "JBUH-H - Star"; solarSystemId= 30001777; typeId= 45033; age= 4959185779L; luminosity= 0.073900; radius= 327500000L; spectralClass= "K5 V"; temperature= 4180 } |> Some
+      | 40115055 -> { StarData.id= 40115055; name= "2WU-XT - Star"; solarSystemId= 30001799; typeId= 3801; age= 6375643063L; luminosity= 2.005000; radius= 813400000L; spectralClass= "F9 V"; temperature= 6054 } |> Some
+      | 40127083 -> { StarData.id= 40127083; name= "ION-FG - Star"; solarSystemId= 30001991; typeId= 45041; age= 18306207399L; luminosity= 0.095920; radius= 320600000L; spectralClass= "K2 V"; temperature= 4510 } |> Some
+      | 40127762 -> { StarData.id= 40127762; name= "CR-AQH - Star"; solarSystemId= 30002003; typeId= 45040; age= 34698455775L; luminosity= 0.012780; radius= 325900000L; spectralClass= "M4 V"; temperature= 2702 } |> Some
+      | 40147162 -> { StarData.id= 40147162; name= "KMH-J1 - Star"; solarSystemId= 30002311; typeId= 3797; age= 7716049147L; luminosity= 0.514000; radius= 489700000L; spectralClass= "G4 V"; temperature= 5552 } |> Some
+      | 40155504 -> { StarData.id= 40155504; name= "39-DGG - Star"; solarSystemId= 30002444; typeId= 3796; age= 2781263522L; luminosity= 4.295000; radius= 816099968L; spectralClass= "F1 V"; temperature= 7312 } |> Some
+      | 40158123 -> { StarData.id= 40158123; name= "3SFU-S - Star"; solarSystemId= 30002486; typeId= 7; age= 26158516444L; luminosity= 0.021460; radius= 226600000L; spectralClass= "K8 V"; temperature= 3689 } |> Some
+      | 40167338 -> { StarData.id= 40167338; name= "LHGA-W - Star"; solarSystemId= 30002624; typeId= 3797; age= 997857889L; luminosity= 0.085800; radius= 197600000L; spectralClass= "G3 VI"; temperature= 5586 } |> Some
+      | 40174904 -> { StarData.id= 40174904; name= "Usi - Star"; solarSystemId= 30002755; typeId= 45032; age= 36663117776L; luminosity= 0.133000; radius= 566000000L; spectralClass= "K8 V"; temperature= 3684 } |> Some
+      | 40180530 -> { StarData.id= 40180530; name= "L-GY1B - Star"; solarSystemId= 30002847; typeId= 3798; age= 17146424686L; luminosity= 0.014320; radius= 132300000L; spectralClass= "K3 V"; temperature= 4364 } |> Some
+      | 40196438 -> { StarData.id= 40196438; name= "Komaa - Star"; solarSystemId= 30003092; typeId= 45032; age= 25505742823L; luminosity= 0.056160; radius= 372000000L; spectralClass= "K8 V"; temperature= 3663 } |> Some
+      | 40220203 -> { StarData.id= 40220203; name= "Sahda - Star"; solarSystemId= 30003474; typeId= 45030; age= 2776827229L; luminosity= 2.327000; radius= 1156000000L; spectralClass= "G7 V"; temperature= 5270 } |> Some
+      | 40222725 -> { StarData.id= 40222725; name= "Gosalav - Star"; solarSystemId= 30003509; typeId= 45038; age= 2461530607L; luminosity= 0.042090; radius= 128900000L; spectralClass= "G1 VI"; temperature= 5789 } |> Some
+      | 40243289 -> { StarData.id= 40243289; name= "Ruerrotta - Star"; solarSystemId= 30003845; typeId= 45036; age= 2630428206L; luminosity= 0.086500; radius= 198500000L; spectralClass= "G3 VI"; temperature= 5585 } |> Some
+      | 40253668 -> { StarData.id= 40253668; name= "AO-N1P - Star"; solarSystemId= 30004006; typeId= 8; age= 15603214312L; luminosity= 0.011160; radius= 134500000L; spectralClass= "K5 V"; temperature= 4065 } |> Some
+      | 40254638 -> { StarData.id= 40254638; name= "9SBB-9 - Star"; solarSystemId= 30004022; typeId= 45040; age= 22321088867L; luminosity= 0.010800; radius= 361600000L; spectralClass= "M6 V"; temperature= 2460 } |> Some
+      | 40261137 -> { StarData.id= 40261137; name= "Chanoun - Star"; solarSystemId= 30004122; typeId= 45036; age= 8302278920L; luminosity= 0.542100; radius= 494300000L; spectralClass= "G3 V"; temperature= 5600 } |> Some
+      | 40272001 -> { StarData.id= 40272001; name= "Bapraya - Star"; solarSystemId= 30004296; typeId= 45031; age= 8280097456L; luminosity= 0.023110; radius= 220400000L; spectralClass= "K7 V"; temperature= 3810 } |> Some
+      | 40290334 -> { StarData.id= 40290334; name= "DBRN-Z - Star"; solarSystemId= 30004595; typeId= 45039; age= 27914036283L; luminosity= 0.012210; radius= 307600000L; spectralClass= "M4 V"; temperature= 2750 } |> Some
+      | 40308279 -> { StarData.id= 40308279; name= "8-4KME - Star"; solarSystemId= 30004869; typeId= 45037; age= 17019671596L; luminosity= 0.090480; radius= 333300000L; spectralClass= "K3 V"; temperature= 4359 } |> Some
+      | 40309928 -> { StarData.id= 40309928; name= "R2TJ-1 - Star"; solarSystemId= 30004891; typeId= 8; age= 29038963421L; luminosity= 1.110000; radius= 1295000064L; spectralClass= "K5 IV"; temperature= 4139 } |> Some
+      | 40319046 -> { StarData.id= 40319046; name= "Ami - Star"; solarSystemId= 30005035; typeId= 6; age= 6784419491L; luminosity= 0.305600; radius= 456100000L; spectralClass= "G9 V"; temperature= 5052 } |> Some
+      | 40326224 -> { StarData.id= 40326224; name= "U-3FKL - Star"; solarSystemId= 30005156; typeId= 45032; age= 39134789959L; luminosity= 0.057530; radius= 372100000L; spectralClass= "K8 V"; temperature= 3684 } |> Some
+      | 40332044 -> { StarData.id= 40332044; name= "Habu - Star"; solarSystemId= 30005250; typeId= 45040; age= 36441302047L; luminosity= 0.017290; radius= 256400000L; spectralClass= "M1 V"; temperature= 3286 } |> Some
+      | 40359398 -> { StarData.id= 40359398; name= "J204503 - Star"; solarSystemId= 31000166; typeId= 3797; age= 6008061716L; luminosity= 1.412000; radius= 798400000L; spectralClass= "G3 V"; temperature= 5598 } |> Some
+      | 40365703 -> { StarData.id= 40365703; name= "J165216 - Star"; solarSystemId= 31000286; typeId= 45039; age= 14063173419L; luminosity= 0.010050; radius= 357600000L; spectralClass= "M6 V"; temperature= 2430 } |> Some
+      | 40374239 -> { StarData.id= 40374239; name= "J124023 - Star"; solarSystemId= 31000451; typeId= 45040; age= 30125865503L; luminosity= 0.038320; radius= 439300000L; spectralClass= "M2 V"; temperature= 3063 } |> Some
+      | 40378119 -> { StarData.id= 40378119; name= "J151615 - Star"; solarSystemId= 31000521; typeId= 45042; age= 3805739305L; luminosity= 0.177000; radius= 200300000L; spectralClass= "F5 VI"; temperature= 6651 } |> Some
+      | 40378701 -> { StarData.id= 40378701; name= "J101149 - Star"; solarSystemId= 31000533; typeId= 45037; age= 17643927514L; luminosity= 0.197500; radius= 521600000L; spectralClass= "K4 V"; temperature= 4235 } |> Some
+      | 40379380 -> { StarData.id= 40379380; name= "J105000 - Star"; solarSystemId= 31000547; typeId= 3803; age= 326704194L; luminosity= 0.029190; radius= 80620000L; spectralClass= "F5 VI"; temperature= 6679 } |> Some
+      | 40394027 -> { StarData.id= 40394027; name= "J145426 - Star"; solarSystemId= 31000822; typeId= 45041; age= 16579207440L; luminosity= 0.098530; radius= 313300000L; spectralClass= "K2 V"; temperature= 4593 } |> Some
+      | 40394318 -> { StarData.id= 40394318; name= "J162518 - Star"; solarSystemId= 31000829; typeId= 45047; age= 10362005194L; luminosity= 0.411600; radius= 472600000L; spectralClass= "G6 V"; temperature= 5346 } |> Some
+      | 40395870 -> { StarData.id= 40395870; name= "J233555 - Star"; solarSystemId= 31000858; typeId= 3798; age= 14985296266L; luminosity= 0.032200; radius= 203200000L; spectralClass= "K4 V"; temperature= 4311 } |> Some
+      | 40400720 -> { StarData.id= 40400720; name= "J102143 - Star"; solarSystemId= 31000952; typeId= 45032; age= 40655818324L; luminosity= 0.055120; radius= 373000000L; spectralClass= "K8 V"; temperature= 3640 } |> Some
+      | 40405182 -> { StarData.id= 40405182; name= "J100009 - Star"; solarSystemId= 31001040; typeId= 10; age= 2052120501L; luminosity= 0.592900; radius= 326500000L; spectralClass= "F2 VI"; temperature= 7046 } |> Some
+      | 40407607 -> { StarData.id= 40407607; name= "J144725 - Star"; solarSystemId= 31001090; typeId= 3801; age= 1803685926L; luminosity= 0.845500; radius= 511800000L; spectralClass= "F8 V"; temperature= 6150 } |> Some
+      | 40412845 -> { StarData.id= 40412845; name= "J113048 - Star"; solarSystemId= 31001189; typeId= 45030; age= 11936902752L; luminosity= 0.389800; radius= 475400000L; spectralClass= "G7 V"; temperature= 5258 } |> Some
+      | 40417695 -> { StarData.id= 40417695; name= "J145555 - Star"; solarSystemId= 31001278; typeId= 7; age= 20391283529L; luminosity= 0.020580; radius= 243700000L; spectralClass= "K9 V"; temperature= 3521 } |> Some
+      | 40418374 -> { StarData.id= 40418374; name= "J103724 - Star"; solarSystemId= 31001292; typeId= 8; age= 30899055430L; luminosity= 0.164700; radius= 531400000L; spectralClass= "K6 V"; temperature= 4009 } |> Some
+      | 40419441 -> { StarData.id= 40419441; name= "J143704 - Star"; solarSystemId= 31001316; typeId= 3796; age= 2104089066L; luminosity= 10.440000; radius= 1306000000L; spectralClass= "F1 IV"; temperature= 7215 } |> Some
+      | 40421381 -> { StarData.id= 40421381; name= "J105201 - Star"; solarSystemId= 31001355; typeId= 3796; age= 218932992L; luminosity= 1.812000; radius= 525000000L; spectralClass= "F0 V"; temperature= 7347 } |> Some
+      | 40430984 -> { StarData.id= 40430984; name= "J160455 - Star"; solarSystemId= 31001543; typeId= 3799; age= 2692536849L; luminosity= 0.285200; radius= 322000000L; spectralClass= "G0 V"; temperature= 5909 } |> Some
+      | 40436707 -> { StarData.id= 40436707; name= "J152720 - Star"; solarSystemId= 31001653; typeId= 45039; age= 47595506431L; luminosity= 0.014780; radius= 277900000L; spectralClass= "M2 V"; temperature= 3035 } |> Some
+      | 40436901 -> { StarData.id= 40436901; name= "J125929 - Star"; solarSystemId= 31001657; typeId= 9; age= 2430793124L; luminosity= 1.030000; radius= 498600000L; spectralClass= "F6 V"; temperature= 6546 } |> Some
+      | 40447765 -> { StarData.id= 40447765; name= "J132152 - Star"; solarSystemId= 31001873; typeId= 45039; age= 37962328235L; luminosity= 0.015390; radius= 278700000L; spectralClass= "M2 V"; temperature= 3061 } |> Some
+      | 40475507 -> { StarData.id= 40475507; name= "J140133 - Star"; solarSystemId= 31002358; typeId= 45040; age= 62837478357L; luminosity= 0.032520; radius= 509500000L; spectralClass= "M4 V"; temperature= 2730 } |> Some
+      | 40476477 -> { StarData.id= 40476477; name= "J130241 - Star"; solarSystemId= 31002029; typeId= 7; age= 9224402312L; luminosity= 0.053560; radius= 349400000L; spectralClass= "K8 V"; temperature= 3734 } |> Some
+      | 40487923 -> { StarData.id= 40487923; name= "J001302 - Star"; solarSystemId= 31002543; typeId= 34331; age= 500943792L; luminosity= 29.362356; radius= 1137429120L; spectralClass= "A0IV"; temperature= 9260 } |> Some
+      | 40488214 -> { StarData.id= 40488214; name= "J000487 - Star"; solarSystemId= 31002581; typeId= 34331; age= 488038448L; luminosity= 32.840343; radius= 1217279104L; spectralClass= "A0IV"; temperature= 9618 } |> Some
+      | _ -> None
