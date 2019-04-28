@@ -3,6 +3,9 @@ version: 0.0.{build}
 # Build worker image (VM template)
 image: Visual Studio 2017
   
+# tasks
+before_build:
+- cmd: .paket\paket.exe restore -group Build
 
 build_script:
 - cmd: >-
