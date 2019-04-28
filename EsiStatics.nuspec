@@ -13,7 +13,13 @@
     <copyright>Copyright Jameson2011 2019 Data Copyright CCP hf 2019</copyright>
     <tags></tags>
     <dependencies>
+<<<<<<< HEAD
         <dependency id="FSharp.Core" version="4.5.2" />
+=======
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="FSharp.Core" version="4.6.2" exclude="Build,Analyzers" />
+      </group>
+>>>>>>> dev
     </dependencies>
   </metadata>
   <files>
