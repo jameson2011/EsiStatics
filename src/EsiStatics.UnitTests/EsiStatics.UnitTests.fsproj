@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Utilities.fs" />
+    <Compile Include="RegionTests.fs" />
+    <Compile Include="UniverseDataTests.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EsiStatics\EsiStatics.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EsiStatics.Data.Entities">
+      <HintPath>..\..\build\lib\EsiStatics.Data.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="EsiStatics.Data.ItemTypes">
+      <HintPath>..\..\build\lib\EsiStatics.Data.ItemTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="EsiStatics.Data.Moons">
+      <HintPath>..\..\build\lib\EsiStatics.Data.Moons.dll</HintPath>
+    </Reference>
+    <Reference Include="EsiStatics.Data.Universe">
+      <HintPath>..\..\build\lib\EsiStatics.Data.Universe.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

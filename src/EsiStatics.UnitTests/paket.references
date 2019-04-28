@@ -1,0 +1,4 @@
+xunit
+FSharp.Core
+xunit.runner.visualstudio
+FluentAssertions
