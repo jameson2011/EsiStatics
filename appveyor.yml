@@ -14,7 +14,8 @@ build_script:
 
 deploy:
 - provider: NuGet
-  api_key: %NUGET_API_KEY%
+  api_key:
+    value: %NUGET_API_KEY%
   artifact: ./nupkgs/*.nupkg
 
 
