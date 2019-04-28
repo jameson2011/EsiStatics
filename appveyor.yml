@@ -11,13 +11,6 @@ build_script:
 - cmd: >-
     ./build.bat
 
-
-deploy:
-- provider: NuGet
-  api_key:  $env:NUGET_API_KEY
-  artifact: EsiStatics.nupkg
-
-
 on_success:
   - ps: ./sendwebhook.ps1 success $env:WEBHOOK_URL
 on_failure:
