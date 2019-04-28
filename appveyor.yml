@@ -11,6 +11,13 @@ build_script:
 - cmd: >-
     ./build.bat
 
+
+deploy:
+  provider: NuGet
+  api_key: %NUGET_API_KEY%
+  artifact: ./nupkgs/*.nupkg
+
+
 on_success:
   - ps: ./sendwebhook.ps1 success $env:WEBHOOK_URL
 on_failure:
