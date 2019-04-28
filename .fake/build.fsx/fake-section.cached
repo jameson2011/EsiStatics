@@ -8,8 +8,20 @@ open Fake.Core.TargetOperators
 open Fake.DotNet.NuGet
 open Fake.SystemHelper
 
-let version = "0.0.2.0"
-let packageVersion = "0.0.1"
+let branchName() = Fake.Core.Environment.environVarOrNone "APPVEYOR_REPO_BRANCH"
+                
+
+
+let version = Fake.Core.Environment.environVarOrNone "APPVEYOR_BUILD_VERSION"
+                |> Option.defaultValue "0.0.0.1"
+
+let packageVersion =    let suffix = match branchName() with
+                                        | Some "master" -> ""
+                                        | None 
+                                        | Some _ -> "-preview"
+                        sprintf "%s%s" version suffix
+
+
 let buildDir = "./build/"
 let buildLibDir = buildDir + "lib/"
 let buildTestsDir = buildDir + "tests/"
@@ -34,6 +46,20 @@ let testOptions = fun (opts: DotNet.TestOptions) ->
                                     Output = buildTestsDir |> Path.combine "../../" |> Some
                                     }
 
+let nugetOptions = fun (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->  
+                                { p with 
+                                    Version = packageVersion;
+                                    ToolPath = nugetExePath;
+                                    OutputPath = nupkgsDir;
+                                    WorkingDir = ".\\"
+                                } 
+
+
+Trace.log (branchName() 
+            |> Option.defaultValue "Unknown"
+            |> sprintf "Branch: %s")
+Trace.log (version        |> sprintf "Build Version: %s")
+Trace.log (packageVersion |> sprintf "Package %s")
 
 
 Target.create "Clean" (fun _ ->
@@ -65,12 +91,7 @@ Target.create "Test" (fun _ ->
 
 Target.create "Nuget" (fun _ -> 
     !! nuspecFile 
-    |> Seq.iter (Fake.DotNet.NuGet.NuGet.NuGetPackDirectly 
-                        (fun p2 ->  { p2 with Version = packageVersion;
-                                                ToolPath = nugetExePath;
-                                                OutputPath = nupkgsDir;
-                                                WorkingDir = ".\\"
-                                            }) ))
+    |> Seq.iter (Fake.DotNet.NuGet.NuGet.NuGetPackDirectly nugetOptions))
 
 Target.create "All" ignore
 
