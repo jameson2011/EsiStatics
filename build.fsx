@@ -29,6 +29,8 @@ let nupkgsDir = "./nupkgs"
 
 let nugetExePath = ".\\.tools\\nuget\\nuget.exe"
 let nuspecFile = "EsiStatics.nuspec"
+let nugetApiKey() = Fake.Core.Environment.environVarOrNone "NUGET_API_KEY"
+
 
 let buildOptions = fun (opts: DotNet.BuildOptions) -> 
                                 let props = ("AssemblyVersion", version) 
@@ -54,6 +56,13 @@ let nugetOptions = fun (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->
                                     WorkingDir = ".\\"
                                 } 
 
+let nugetPushOptions = fun (apiKey) (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->  
+                                { p with 
+                                    PublishUrl = "https://www.nuget.org";
+                                    AccessKey = apiKey;
+                                    ToolPath = nugetExePath;
+                                    WorkingDir = ".\\";
+                                }                
 
 Trace.log (branchName() 
             |> Option.defaultValue "Unknown"
@@ -89,9 +98,15 @@ Target.create "Test" (fun _ ->
     !! "src/**/*.UnitTests.fsproj"
     |> Seq.iter (DotNet.test testOptions))
 
-Target.create "Nuget" (fun _ -> 
+Target.create "Nuget Package" (fun _ -> 
     !! nuspecFile 
     |> Seq.iter (Fake.DotNet.NuGet.NuGet.NuGetPackDirectly nugetOptions))
+
+Target.create "Nuget Push" (fun _ -> 
+    match nugetApiKey() with
+    | Some k -> k |> nugetPushOptions |> Fake.DotNet.NuGet.NuGet.NuGetPublish 
+    | None -> Trace.log "No Nuget key set."
+    )
 
 Target.create "All" ignore
 
@@ -99,7 +114,7 @@ Target.create "All" ignore
   ==> "Build Data"
   ==> "Build Facade"
   ==> "Test"
-  ==> "Nuget"
+  ==> "Nuget Package"
   ==> "All"
 
 Target.runOrDefault "All"
