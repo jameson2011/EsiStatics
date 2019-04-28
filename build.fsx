@@ -96,6 +96,7 @@ Target.create "Build Facade" (fun _ ->
 
 Target.create "Test" (fun _ -> 
     !! "src/**/*.UnitTests.fsproj"
+    ++ "src/**/*.UnitTests.csproj"
     |> Seq.iter (DotNet.test testOptions))
 
 Target.create "Nuget Package" (fun _ -> 
