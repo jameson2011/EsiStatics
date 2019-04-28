@@ -264,3 +264,4 @@ __pycache__/
 
 build/
 nupkgs/
+.fake/build.fsx/
