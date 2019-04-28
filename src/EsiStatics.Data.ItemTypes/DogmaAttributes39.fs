@@ -1,0 +1,33 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal DogmaAttributes39=
+    let getDogmaAttribute id = 
+      match id with 
+      | 1009 -> { DogmaAttributeData.id= 1009; name= "entityArmorRepairDelayChanceSmall"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1106 -> { DogmaAttributeData.id= 1106; name= "displayMissileMaxVelocityBonus"; description= ""; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1300 -> { DogmaAttributeData.id= 1300; name= "canFitShipGroup03"; description= ""; published= true; unitId= Some(115); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 136 -> { DogmaAttributeData.id= 136; name= "uniformity"; description= "This number is deducted from the %chance of the seeping to armor, to slow seep of damage through shield."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1397 -> { DogmaAttributeData.id= 1397; name= "wormholeTargetConstellation3"; description= "Specific target constellation 3 for wormholes"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1494 -> { DogmaAttributeData.id= 1494; name= "mediumWeaponDamageMultiplier"; description= "Damage multiplier for medium weapons"; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1591 -> { DogmaAttributeData.id= 1591; name= "anchorDistanceMax"; description= "the maximum distance it can be anchored at,  from what  depends on the object in question"; published= false; unitId= Some(1); defaultValue= 250000.000000; stackable= true; highIsGood= true } |> Some
+      | 1688 -> { DogmaAttributeData.id= 1688; name= "shipBonusRole8"; description= "Second Stock Bonus on Pirate Faction Ships."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1785 -> { DogmaAttributeData.id= 1785; name= "isCapitalSize"; description= ""; published= false; unitId= Some(137); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1882 -> { DogmaAttributeData.id= 1882; name= "warfareLinkCPUAdd"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1979 -> { DogmaAttributeData.id= 1979; name= "resistanceKillerHull"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2076 -> { DogmaAttributeData.id= 2076; name= "launcherGroup4"; description= "One of the groups of launcher this charge can be loaded into."; published= true; unitId= Some(115); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2173 -> { DogmaAttributeData.id= 2173; name= "fighterAbilityAttackTurretDamageKin"; description= "Kinetic Damage"; published= true; unitId= Some(113); defaultValue= 0.000000; stackable= false; highIsGood= true } |> Some
+      | 2270 -> { DogmaAttributeData.id= 2270; name= "fighterSquadronRole"; description= "0=None  1=Anti-Fighter  2=General  3=Ewar  4=TorpedoBomber  5=AOEBomber"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2367 -> { DogmaAttributeData.id= 2367; name= "shipBonusCarrierG1"; description= "Multiplied by Gallente Carrier skill level."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2464 -> { DogmaAttributeData.id= 2464; name= "affectedByIndustrialInvulnModule"; description= "Tells if this type (ship) can be affected by the Rorqual Invulnerability Module"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2561 -> { DogmaAttributeData.id= 2561; name= "attributeStructureManufactureMaterialMultiplier"; description= "Decrease material requirement for manufacturing the following:  Structure Components, Structure Modules,          Upwell Structures, Starbase Structures, Fuel Blocks        "; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2658 -> { DogmaAttributeData.id= 2658; name= "attributeAdvCapCompManufactureMaterialMultiplier"; description= "Decrease material requirement for manufacturing the following:  T2 Capital Construction Components"; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2755 -> { DogmaAttributeData.id= 2755; name= "targetPainterStrengthModifierFlagCruisers"; description= ""; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 330 -> { DogmaAttributeData.id= 330; name= "boosterDuration"; description= "Duration of booster, after this duration the booster is destroyed"; published= true; unitId= Some(101); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 39 -> { DogmaAttributeData.id= 39; name= "damageHP"; description= "The damage this weapon deals"; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 427 -> { DogmaAttributeData.id= 427; name= "heavyDroneDamageBonus"; description= "Autogenerated skill attribute, heavyDroneDamageBonus"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 524 -> { DogmaAttributeData.id= 524; name= "armorUniformity"; description= "DO NOT MESS WITH"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 621 -> { DogmaAttributeData.id= 621; name= "trackingSpeedAtOptimal"; description= "Rated target transverse velocity at optimal range."; published= true; unitId= Some(10); defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 815 -> { DogmaAttributeData.id= 815; name= "propulsionFusionStrengthBonus"; description= "Amarr Propulsion Attack Strength for Warp Scramblers etc."; published= true; unitId= Some(120); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 912 -> { DogmaAttributeData.id= 912; name= "fleetHangarCapacity"; description= "The capacity of the fleet hangar."; published= true; unitId= Some(9); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | _ -> None

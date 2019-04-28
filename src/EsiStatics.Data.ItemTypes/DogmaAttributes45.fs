@@ -1,0 +1,32 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal DogmaAttributes45=
+    let getDogmaAttribute id = 
+      match id with 
+      | 1015 -> { DogmaAttributeData.id= 1015; name= "entityShieldBoostDelayChanceSmallMultiplier"; description= ""; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 1112 -> { DogmaAttributeData.id= 1112; name= "inventionPropabilityMultiplier"; description= "Modifies base chance of successful invention"; published= false; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1209 -> { DogmaAttributeData.id= 1209; name= "bombDeploymentCpuNeedMultiplier"; description= "Multiplier to CPU need of modules requireing Bomb Deployment"; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1306 -> { DogmaAttributeData.id= 1306; name= "maxRangeMultiplierBonusAdditive"; description= "Additive bonus to maxRangeMultiplier"; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1403 -> { DogmaAttributeData.id= 1403; name= "wormholeTargetConstellation9"; description= "Specific target constellation 9 for wormholes"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 142 -> { DogmaAttributeData.id= 142; name= "ecmBurstRange"; description= "Range that an ECM burst has an effect within."; published= true; unitId= Some(1); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1500 -> { DogmaAttributeData.id= 1500; name= "rechargeRateMultiplier"; description= "Capacitor recharge rate multiplier"; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1597 -> { DogmaAttributeData.id= 1597; name= "sovUpgradeSovereigntyHeldFor"; description= "The number of seconds that sovereignty has to have been claimed for to Install this upgrade"; published= true; unitId= Some(129); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1791 -> { DogmaAttributeData.id= 1791; name= "bcSiegeMissilePower"; description= "Used by Battlecruisers for siege missile powergrid reduction"; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 1888 -> { DogmaAttributeData.id= 1888; name= "shipBonusAD2"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1985 -> { DogmaAttributeData.id= 1985; name= "stanceSwitchTime"; description= "Time in milliseconds that it takes to switch stances."; published= true; unitId= Some(101); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2082 -> { DogmaAttributeData.id= 2082; name= "armorThermalDamageResonancePostAssignment"; description= "Sets Thermal damage taken by Armor. "; published= true; unitId= Some(108); defaultValue= 1.000000; stackable= true; highIsGood= false } |> Some
+      | 2179 -> { DogmaAttributeData.id= 2179; name= "fighterAbilityAttackTurretSignatureResolution"; description= "Signature Resolution"; published= true; unitId= Some(1); defaultValue= 1.000000; stackable= false; highIsGood= true } |> Some
+      | 2276 -> { DogmaAttributeData.id= 2276; name= "onDeathSignatureRadius"; description= "Signature Radius of Explosion (cloud factor) when ship dies"; published= true; unitId= Some(1); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2373 -> { DogmaAttributeData.id= 2373; name= "shipBonusCarrierM3"; description= "Multiplied by Minmatar Carrier skill level."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 239 -> { DogmaAttributeData.id= 239; name= "scanLadarStrengthBonus"; description= "+/- modifier to the ladar strength of an electronic system."; published= true; unitId= None; defaultValue= 0.000000; stackable= false; highIsGood= true } |> Some
+      | 2470 -> { DogmaAttributeData.id= 2470; name= "warfareBuff2ID"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2567 -> { DogmaAttributeData.id= 2567; name= "attributeTEResearchCostMultiplier"; description= "Decrease cost requirement for manufacturing the following:  Time Efficiency Blueprint Research        "; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2664 -> { DogmaAttributeData.id= 2664; name= "reactionSlotLimit"; description= "Maximum amount of Reactions slots that can be used at a time"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2761 -> { DogmaAttributeData.id= 2761; name= "difficultyTier"; description= "sets the difficulty tier for abyssal deadspace keys"; published= true; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 336 -> { DogmaAttributeData.id= 336; name= "uniformityBonus"; description= "Autogenerated skill attribute, uniformityBonus"; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 433 -> { DogmaAttributeData.id= 433; name= "heavyMissileDamageBonus"; description= "Autogenerated skill attribute, heavyMissileDamageBonus"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 530 -> { DogmaAttributeData.id= 530; name= "reqManufacturingTool"; description= ""; published= true; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 627 -> { DogmaAttributeData.id= 627; name= "bountySkillBonus"; description= "Autogenerated skill attribute, bountySkillBonus"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 724 -> { DogmaAttributeData.id= 724; name= "contrabandDetectionResistance"; description= "A modifier to the chance of contraband detection success of police who scan the pilot's vessel."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | _ -> None

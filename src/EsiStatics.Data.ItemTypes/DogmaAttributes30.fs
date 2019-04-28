@@ -1,0 +1,33 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal DogmaAttributes30=
+    let getDogmaAttribute id = 
+      match id with 
+      | 1000 -> { DogmaAttributeData.id= 1000; name= "eliteBonusCommandShips1"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1097 -> { DogmaAttributeData.id= 1097; name= "displayAoeVelocityBonus"; description= ""; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1194 -> { DogmaAttributeData.id= 1194; name= "projECMCpuNeedBonus"; description= "Bonus for CPU requirement of projected electronic counter measures."; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 127 -> { DogmaAttributeData.id= 127; name= "ammoLoaded"; description= "A temporary attribute for projectile/hybrid weapons to indicate which charges they have loaded when created in newbie ships ala ammo."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1291 -> { DogmaAttributeData.id= 1291; name= "implantSetSyndicate"; description= "Edge set bonus attribute"; published= true; unitId= Some(104); defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 1388 -> { DogmaAttributeData.id= 1388; name= "wormholeTargetRegion3"; description= "Specific target region 3 for wormholes"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1485 -> { DogmaAttributeData.id= 1485; name= "heatDamageMultiplier"; description= "Damage multiplier for heat"; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1582 -> { DogmaAttributeData.id= 1582; name= "specialTutorialLootRespawnTime"; description= "The number of milliseconds before the container replenishes the loot inside itself. This special tutorial attribute will allow re-spawning of items in distribution dungeons bypassing restrictions present. 10 second minimum (10000 ms)."; published= false; unitId= Some(101); defaultValue= 30000.000000; stackable= true; highIsGood= true } |> Some
+      | 1679 -> { DogmaAttributeData.id= 1679; name= "entityGroupPropJamDuration"; description= "Duration of NPCGroupPropJamAssist effect."; published= true; unitId= None; defaultValue= 10000.000000; stackable= true; highIsGood= true } |> Some
+      | 1970 -> { DogmaAttributeData.id= 1970; name= "disallowInHighSec"; description= "Security status restriction, preventing ships from entering high sec and modules from being activated."; published= true; unitId= Some(137); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2067 -> { DogmaAttributeData.id= 2067; name= "mjfgRadius"; description= "range effected by mjfg scoop"; published= true; unitId= Some(1); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 224 -> { DogmaAttributeData.id= 224; name= "intelligenceSkillTrainingTimeMultiplier"; description= "Scales the time it takes to train skills with Intelligence as the primary attribute. "; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2261 -> { DogmaAttributeData.id= 2261; name= "doomsdayEnergyNeutSignatureRadius"; description= ""; published= true; unitId= Some(1); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2358 -> { DogmaAttributeData.id= 2358; name= "securityModifier"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2455 -> { DogmaAttributeData.id= 2455; name= "cynosuralFieldSpawnRadius"; description= ""; published= false; unitId= Some(1); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2552 -> { DogmaAttributeData.id= 2552; name= "attributeAdvMediumShipManufactureMaterialMultiplier"; description= "Decrease material requirement for manufacturing the following:  T2 Cruisers, T2 Battlecruisers, T2 Haulers, Exhumers, T3 Cruisers,T3 Subsystems        "; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2649 -> { DogmaAttributeData.id= 2649; name= "BehaviorSiegeTurretDamageModifier"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2746 -> { DogmaAttributeData.id= 2746; name= "resistanceMultiplier"; description= ""; published= true; unitId= Some(108); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 30 -> { DogmaAttributeData.id= 30; name= "power"; description= "current power need"; published= true; unitId= Some(107); defaultValue= 0.000000; stackable= true; highIsGood= false } |> Some
+      | 321 -> { DogmaAttributeData.id= 321; name= "burstSpeed"; description= ""; published= true; unitId= Some(3); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 418 -> { DogmaAttributeData.id= 418; name= "nonRaceCorporationMembersBonus"; description= "Autogenerated skill attribute, nonRaceCorporationMembersBonus"; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 515 -> { DogmaAttributeData.id= 515; name= "modifyTargetSpeedCapacitorNeed"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 612 -> { DogmaAttributeData.id= 612; name= "baseShieldDamage"; description= "Just for the UI to display base damage on shield."; published= true; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 709 -> { DogmaAttributeData.id= 709; name= "harvesterType"; description= "The type of material harvested."; published= true; unitId= Some(116); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 806 -> { DogmaAttributeData.id= 806; name= "repairBonus"; description= "Autogenerated skill attribute, repairBonus"; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 903 -> { DogmaAttributeData.id= 903; name= "spawnWithoutGuardsToo"; description= "Whether a spawn container should refill itself when there are no guards assigned to it."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | _ -> None

@@ -1,0 +1,31 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal MarketGroups62=
+    let getMarketGroup id = 
+      match id with 
+      | 1032 -> { MarketGroupData.id= 1032; name= "Gas Clouds Materials"; parentMarketGroupId= Some(533); typeIds= [|  |]; description= "Voluminous clouds of various gases, found in space, that can be extracted and used in the manufacturing of biochemical boosters." } |> Some
+      | 1129 -> { MarketGroupData.id= 1129; name= "Gallente Defensive Subsystems"; parentMarketGroupId= Some(1627); typeIds= [| 45592; 45593; 45594 |]; description= "Gallente defensive subsystems." } |> Some
+      | 1226 -> { MarketGroupData.id= 1226; name= "Medium Energy Weapon Rigs"; parentMarketGroupId= Some(962); typeIds= [| 31456; 31426; 31492; 31462; 31432; 31498; 31468; 31438; 31474; 31444; 31480; 31450; 31420; 31486 |]; description= "Modifications that affect a medium starship's energy weapons." } |> Some
+      | 1323 -> { MarketGroupData.id= 1323; name= "Resource Processing"; parentMarketGroupId= Some(150); typeIds= [| 11395; 25863; 12180; 12181; 12182; 12183; 12184; 12185; 12186; 12187; 12188; 12189; 12190; 12191; 12192; 12193; 12194; 12195; 12196; 28585; 45746; 46152; 22578; 45748; 45749; 45750; 3385; 3386; 3389; 25544; 46153; 46154; 46155; 46156; 3410; 18025; 16281 |]; description= "Skills pertaining to efficiently extracting raw materials and refining them" } |> Some
+      | 1517 -> { MarketGroupData.id= 1517; name= "Implant Slot 09"; parentMarketGroupId= Some(1469); typeIds= [| 27073; 19684; 19685; 3476; 3477; 3478 |]; description= "Implant Slot 09" } |> Some
+      | 159 -> { MarketGroupData.id= 159; name= "Combat Drones"; parentMarketGroupId= Some(157); typeIds= [|  |]; description= "Drones with combat capabilities" } |> Some
+      | 1614 -> { MarketGroupData.id= 1614; name= "Special Edition Industrial Ships"; parentMarketGroupId= Some(1612); typeIds= [| 32811; 4363; 4388; 2863 |]; description= "Industrial ships which have been offered to capsuleers on occasion for limited periods." } |> Some
+      | 1711 -> { MarketGroupData.id= 1711; name= "Harvest Equipment"; parentMarketGroupId= Some(209); typeIds= [|  |]; description= "Harvesting equipment" } |> Some
+      | 1808 -> { MarketGroupData.id= 1808; name= "Capital Targeting Rigs"; parentMarketGroupId= Some(1796); typeIds= [| 31327; 31279 |]; description= "Blueprints of Capital Targeting Rigs." } |> Some
+      | 1905 -> { MarketGroupData.id= 1905; name= "Takmahl"; parentMarketGroupId= Some(1897); typeIds= [| 23136; 23137; 23173; 23174; 23143; 23144; 23145; 23146; 23147; 23175; 23176; 23177; 23133; 23134; 23135 |]; description= "Artifacts of the Takmahl civilization." } |> Some
+      | 2002 -> { MarketGroupData.id= 2002; name= "Amarr"; parentMarketGroupId= Some(2001); typeIds= [| 49151; 49798; 47495; 47626; 44200; 48218; 34719; 34720; 34721; 34722; 34723; 34724; 34725; 34726; 34727; 34728; 34729; 34730; 34731; 42546; 42544; 42545; 36914; 42547; 42548; 42549; 45753; 45754; 45755; 45756; 45757; 45758; 47304; 43482; 43483; 43484; 43485; 43486; 43487; 44134; 44135; 44136; 44137; 44138; 44139; 37484; 37485; 37486; 37487; 37488; 37489; 46707; 48830; 42746; 42747; 42748; 42749; 42750; 42751 |]; description= "" } |> Some
+      | 2099 -> { MarketGroupData.id= 2099; name= "Advanced Battlecruisers"; parentMarketGroupId= Some(1955); typeIds= [|  |]; description= "" } |> Some
+      | 2196 -> { MarketGroupData.id= 2196; name= "Structure Antisubcapital Missiles"; parentMarketGroupId= Some(114); typeIds= [| 37848; 37846; 37847 |]; description= "" } |> Some
+      | 2293 -> { MarketGroupData.id= 2293; name= "Mining Foreman Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42880; 42881; 42882 |]; description= "Mining Foreman Burst Charges" } |> Some
+      | 2390 -> { MarketGroupData.id= 2390; name= "Minmatar"; parentMarketGroupId= Some(2315); typeIds= [| 45931; 46879 |]; description= "Minmatar Shuttle Skins" } |> Some
+      | 2487 -> { MarketGroupData.id= 2487; name= "Cerebral Accelerators"; parentMarketGroupId= Some(24); typeIds= [| 50091; 48582 |]; description= "Cerebral Accelerators come in a variety of different forms, but in the end the effects are similar. These drugs, devices, and boosters that significantly increase a pilot's skill development." } |> Some
+      | 354403 -> { MarketGroupData.id= 354403; name= "Standard"; parentMarketGroupId= Some(353575); typeIds= [|  |]; description= "" } |> Some
+      | 364491 -> { MarketGroupData.id= 364491; name= "Active Scanners"; parentMarketGroupId= Some(353563); typeIds= [|  |]; description= "Handheld scanners designed to detect enemy units and relay their location to TACNET systems.  " } |> Some
+      | 365946 -> { MarketGroupData.id= 365946; name= "Vehicle Loadouts"; parentMarketGroupId= Some(367566); typeIds= [|  |]; description= "Fitted Vehicles." } |> Some
+      | 450 -> { MarketGroupData.id= 450; name= "Caldari"; parentMarketGroupId= Some(448); typeIds= [| 11993; 12011 |]; description= "Caldari heavy assault cruiser designs." } |> Some
+      | 644 -> { MarketGroupData.id= 644; name= "Torpedo Launchers"; parentMarketGroupId= Some(140); typeIds= [| 8001; 13923; 13924; 20603; 22569; 34294; 8113; 17490; 8115; 2420; 8117; 16067; 503; 14680; 14681; 14682; 14683; 14524; 14525; 14526; 14527 |]; description= "For the launching of torpedoes and cruise missiles." } |> Some
+      | 741 -> { MarketGroupData.id= 741; name= "Blood Raiders"; parentMarketGroupId= Some(739); typeIds= [| 25239; 17200; 17201; 17202; 17203; 12532; 12533; 12534; 12535; 12536; 17204 |]; description= "Blood Raider identification tags." } |> Some
+      | 838 -> { MarketGroupData.id= 838; name= "Medium Scout Drones"; parentMarketGroupId= Some(159); typeIds= [| 31874; 31882; 28294; 21638; 2183; 21640; 2185; 28298; 28300; 28270; 28272; 28296; 31890; 48744; 15508; 31866; 15510; 28282; 28284; 2173; 2175 |]; description= "Medium Scout Drones" } |> Some
+      | 935 -> { MarketGroupData.id= 935; name= "Mining Upgrades"; parentMarketGroupId= Some(1713); typeIds= [| 28576; 49792; 28578; 22542; 22576; 22611; 22613; 22615; 22619; 22621; 22623 |]; description= "Subsystems designed to improve mining laser efficiency." } |> Some
+      | _ -> None

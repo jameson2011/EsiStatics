@@ -1,0 +1,31 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal DogmaAttributes40=
+    let getDogmaAttribute id = 
+      match id with 
+      | 1010 -> { DogmaAttributeData.id= 1010; name= "entityArmorRepairDelayChanceMedium"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1107 -> { DogmaAttributeData.id= 1107; name= "displayArmorDamageAmountBonus"; description= ""; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1301 -> { DogmaAttributeData.id= 1301; name= "canFitShipGroup04"; description= ""; published= true; unitId= Some(115); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 137 -> { DogmaAttributeData.id= 137; name= "launcherGroup"; description= "One of the groups of launcher this charge can be loaded into."; published= true; unitId= Some(115); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1398 -> { DogmaAttributeData.id= 1398; name= "wormholeTargetConstellation4"; description= "Specific target constellation 4 for wormholes"; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1495 -> { DogmaAttributeData.id= 1495; name= "armorDamageAmountMultiplier"; description= "Armor repair amount multiplier"; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1689 -> { DogmaAttributeData.id= 1689; name= "ecuAreaOfInfluence"; description= ""; published= false; unitId= None; defaultValue= 0.300000; stackable= true; highIsGood= true } |> Some
+      | 1786 -> { DogmaAttributeData.id= 1786; name= "bcLargeTurretPower"; description= "Used by Battlecruisers for large turret powergrid reduction"; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 1883 -> { DogmaAttributeData.id= 1883; name= "warfareLinkCPUPenalty"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1980 -> { DogmaAttributeData.id= 1980; name= "asteroidRadiusGrowthFactor"; description= "Controls how quickly an asteroid radius increases as its quantity grows."; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2077 -> { DogmaAttributeData.id= 2077; name= "launcherGroup5"; description= "One of the groups of launcher this charge can be loaded into."; published= true; unitId= Some(115); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2174 -> { DogmaAttributeData.id= 2174; name= "fighterAbilityAttackTurretDamageExp"; description= "Explosive Damage"; published= true; unitId= Some(113); defaultValue= 0.000000; stackable= false; highIsGood= true } |> Some
+      | 2271 -> { DogmaAttributeData.id= 2271; name= "onDeathDamageEM"; description= "EM Damage when the ship dies"; published= true; unitId= Some(113); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2368 -> { DogmaAttributeData.id= 2368; name= "shipBonusCarrierG2"; description= "Multiplied by Gallente Carrier skill level."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 2562 -> { DogmaAttributeData.id= 2562; name= "attributeStructureManufactureTimeMultiplier"; description= "Decrease time requirement for manufacturing the following:  Structure Components, Structure Modules,          Upwell Structures, Starbase Structures, Fuel Blocks        "; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2659 -> { DogmaAttributeData.id= 2659; name= "attributeAdvCapCompManufactureTimeMultiplier"; description= "Decrease time requirement for manufacturing the following:  T2 Capital Construction Components"; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 2756 -> { DogmaAttributeData.id= 2756; name= "targetPainterRangeModifierFlagCruisers"; description= ""; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 331 -> { DogmaAttributeData.id= 331; name= "implantness"; description= "Whether an item is an implant or not"; published= true; unitId= Some(136); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 428 -> { DogmaAttributeData.id= 428; name= "miningDroneAmountPercent"; description= "Mining drone speed percent"; published= true; unitId= None; defaultValue= 100.000000; stackable= true; highIsGood= true } |> Some
+      | 525 -> { DogmaAttributeData.id= 525; name= "structureUniformity"; description= "DO NOT MESS WITH"; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 622 -> { DogmaAttributeData.id= 622; name= "massLimit"; description= "Determines the maximum weight of a ship that, ships that are to heavy get denied of service by this attribute"; published= false; unitId= Some(2); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 719 -> { DogmaAttributeData.id= 719; name= "operationalDuration"; description= "The amount of time that is taken to refine the ore into the end product.  The structure is busy for the length of this process."; published= true; unitId= Some(101); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 816 -> { DogmaAttributeData.id= 816; name= "propulsionIonStrengthBonus"; description= "Caldari Propulsion Attack Strength for Warp Scramblers etc."; published= true; unitId= Some(120); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 913 -> { DogmaAttributeData.id= 913; name= "gallenteNavyBonus"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | _ -> None

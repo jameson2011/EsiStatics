@@ -1,0 +1,21 @@
+﻿namespace EsiStatics.Data.ItemTypes
+open System
+open EsiStatics.Data.Entities
+module internal Groups1=
+    let getGroup id = 
+      match id with 
+      | 1 -> { GroupData.id= 1; name= "Character"; categoryId= 1; published= false; typeIds= [| 1373; 1374; 1375; 1376; 1377; 1378; 1379; 1380; 1381; 1382; 1383; 1384; 1385; 1386; 34574 |] } |> Some
+      | 1068 -> { GroupData.id= 1068; name= "DetailMesh"; categoryId= 26; published= false; typeIds= [|  |] } |> Some
+      | 1165 -> { GroupData.id= 1165; name= "Satellite"; categoryId= 2; published= true; typeIds= [| 32884 |] } |> Some
+      | 1262 -> { GroupData.id= 1262; name= "Ghost Sites Serpentis Cruiser"; categoryId= 11; published= true; typeIds= [| 33507; 33508; 33509; 33510 |] } |> Some
+      | 1844 -> { GroupData.id= 1844; name= "Structure Engineering Rig M - ME Research Cost Optimization"; categoryId= 66; published= true; typeIds= [| 43884; 43885 |] } |> Some
+      | 1941 -> { GroupData.id= 1941; name= "Structure Resource Rig M - Asteroid Ore Reprocessing"; categoryId= 66; published= true; typeIds= [| 46633; 46634 |] } |> Some
+      | 195 -> { GroupData.id= 195; name= "Amarr Education"; categoryId= 14; published= false; typeIds= [| 1650; 1651; 1652; 1653; 1654; 1655 |] } |> Some
+      | 486 -> { GroupData.id= 486; name= "Scan Probe Blueprint"; categoryId= 9; published= true; typeIds= [| 22779; 30014; 30029 |] } |> Some
+      | 583 -> { GroupData.id= 583; name= "Asteroid Serpentis Destroyer"; categoryId= 11; published= false; typeIds= [| 23423; 23424; 23425; 23426; 23427; 23428 |] } |> Some
+      | 680 -> { GroupData.id= 680; name= "Mission Gallente Federation Battleship"; categoryId= 11; published= false; typeIds= [| 12390; 15330; 15337; 15351; 15355; 20335; 25187; 25188; 25189; 25190; 25193; 25194; 25196; 25198; 25201; 25202; 28177; 28178; 29689; 29690; 29691; 29692; 29693; 29694; 29695; 29696; 29697 |] } |> Some
+      | 777 -> { GroupData.id= 777; name= "Rig Projectile Weapon"; categoryId= 7; published= true; typeIds= [| 26036; 26038; 26040; 26042; 26044; 26046; 26048; 26422; 26424; 26426; 26428; 26430; 26432; 26434; 31656; 31658; 31660; 31662; 31664; 31666; 31668; 31670; 31672; 31674; 31676; 31678; 31680; 31682; 31684; 31686; 31688; 31690; 31692; 31694; 31696; 31698; 31700; 31702; 31704; 31706; 31708; 31710; 31712; 31714 |] } |> Some
+      | 874 -> { GroupData.id= 874; name= "Disruptable Station Services"; categoryId= 2; published= false; typeIds= [| 28155; 28156; 28157; 28158; 28159; 28166 |] } |> Some
+      | 971 -> { GroupData.id= 971; name= "Sleeper Propulsion Relics"; categoryId= 34; published= true; typeIds= [| 30187; 30558; 30562 |] } |> Some
+      | 98 -> { GroupData.id= 98; name= "Armor Coating"; categoryId= 7; published= true; typeIds= [| 1193; 1197; 1198; 1262; 1264; 1266; 1272; 1274; 1276; 1282; 1284; 1286; 1292; 1294; 1296; 1302; 1304; 1306; 13999; 14001; 14003; 14005; 14007; 14009; 14011; 14013; 14015; 14017; 14019; 14021; 14023; 14025; 14027; 14049; 14051; 14053; 14055; 14057; 14556; 14560; 14564; 14568; 14572; 14576; 14580; 14584; 14588; 14592; 14856; 14858; 14860; 14862; 14864; 14866; 14868; 14870; 14872; 14874; 14876; 14878; 14880; 14882; 14884; 14886; 14888; 14890; 14892; 14894; 14896; 14898; 14900; 14902; 14904; 14906; 14908; 14910; 14912; 14914; 14916; 14918; 14920; 14922; 14924; 14926; 14928; 14930; 14932; 14934; 15164; 15166; 15168; 15170; 15172; 15174; 15176; 15178; 15180; 15182; 15184; 15186; 15188; 15190; 15192; 15194; 15196; 15198; 15200; 15202; 15685; 15687; 15689; 15691; 15693; 15695; 15697; 15699; 15701; 15703; 16305; 16307; 16309; 16311; 16313; 16315; 16317; 16319; 16321; 16323; 16325; 16327; 16329; 16331; 16333; 16335; 16337; 16339; 16341; 16343; 16345; 16347; 16349; 16351; 17512; 17514; 17516; 17518; 17549; 17551; 17553; 17555; 17557; 18700; 18702; 18704; 18706; 18708; 18710; 18712; 18714; 18716; 18718; 18720; 18722; 18724; 18726; 18728; 18730; 18740; 18742; 18744; 18746; 18748; 18750; 18752; 18754; 18756; 18758; 18760; 18762; 18764; 18766; 18768; 18770; 18772; 18775; 18777; 18779; 18781; 18783; 18785; 18787; 18789; 18791; 18793; 18795; 18797; 28520; 28547; 28552; 28554; 28559; 32809 |] } |> Some
+      | _ -> None
