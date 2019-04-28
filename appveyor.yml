@@ -14,7 +14,7 @@ build_script:
 
 deploy:
 - provider: NuGet
-  api_key:  $env:NUGET_API_KEY%%
+  api_key:  $env:NUGET_API_KEY
   artifact: EsiStatics.nupkg
 
 
