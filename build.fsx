@@ -29,11 +29,8 @@ let nupkgsDir = "./nupkgs"
 
 let nugetExePath = ".\\.tools\\nuget\\nuget.exe"
 let nuspecFile = "EsiStatics.nuspec"
-<<<<<<< HEAD
-=======
 let nugetApiKey() = Fake.Core.Environment.environVarOrNone "NUGET_API_KEY"
 
->>>>>>> dev
 
 let buildOptions = fun (opts: DotNet.BuildOptions) -> 
                                 let props = ("AssemblyVersion", version) 
@@ -59,8 +56,6 @@ let nugetOptions = fun (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->
                                     WorkingDir = ".\\"
                                 } 
 
-<<<<<<< HEAD
-=======
 let nugetPushOptions = fun (apiKey) (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->  
                                 { p with 
                                     PublishUrl = "https://www.nuget.org";
@@ -68,7 +63,6 @@ let nugetPushOptions = fun (apiKey) (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->
                                     ToolPath = nugetExePath;
                                     WorkingDir = ".\\";
                                 }                
->>>>>>> dev
 
 Trace.log (branchName() 
             |> Option.defaultValue "Unknown"
@@ -87,29 +81,6 @@ Target.create "Clean" (fun _ ->
     |> Shell.cleanDirs 
     
     Fake.IO.Directory.ensure nupkgsDir
-<<<<<<< HEAD
-)
-
-
-Target.create "Build Data" (fun _ ->
-    !! "src/**/EsiStatics.Data.sln"
-    |> Seq.iter (DotNet.build buildOptions) 
-)
-
-Target.create "Build Facade" (fun _ ->
-    !! "src/**/EsiStatics.Facade.sln"
-    |> Seq.iter (DotNet.build buildOptions) 
-)
-
-Target.create "Test" (fun _ -> 
-    !! "src/**/*.UnitTests.fsproj"
-    |> Seq.iter (DotNet.test testOptions))
-
-Target.create "Nuget" (fun _ -> 
-    !! nuspecFile 
-    |> Seq.iter (Fake.DotNet.NuGet.NuGet.NuGetPackDirectly nugetOptions))
-
-=======
 )
 
 
@@ -138,18 +109,13 @@ Target.create "Nuget Push" (fun _ ->
     | None -> Trace.log "No Nuget key set."
     )
 
->>>>>>> dev
 Target.create "All" ignore
 
 "Clean"
   ==> "Build Data"
   ==> "Build Facade"
   ==> "Test"
-<<<<<<< HEAD
-  ==> "Nuget"
-=======
   ==> "Nuget Package"
->>>>>>> dev
   ==> "All"
 
 Target.runOrDefault "All"

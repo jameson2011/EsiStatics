@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-=======
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
->>>>>>> dev
   <ItemGroup>
     <Compile Include="Utilities.fs" />
     <Compile Include="Units.fs" />
@@ -29,10 +20,6 @@
     <Compile Include="Moons.fs" />
     <Compile Include="UniverseExtensions.fs" />
   </ItemGroup>
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
   <ItemGroup>
     <Reference Include="EsiStatics.Data.Entities">
       <HintPath>..\..\build\lib\EsiStatics.Data.Entities.dll</HintPath>
@@ -47,10 +34,5 @@
       <HintPath>..\..\build\lib\EsiStatics.Data.Universe.dll</HintPath>
     </Reference>
   </ItemGroup>
-<<<<<<< HEAD
-
-</Project>
-=======
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
->>>>>>> dev
