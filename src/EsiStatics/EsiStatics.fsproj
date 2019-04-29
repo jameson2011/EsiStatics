@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Utilities.fs" />
+    <Compile Include="Collections.fs" />
     <Compile Include="Units.fs" />
     <Compile Include="Entities.fs" />
     <Compile Include="TypeMaps.fs" />
