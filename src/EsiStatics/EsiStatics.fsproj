@@ -19,6 +19,7 @@
     <Compile Include="Stargates.fs" />
     <Compile Include="AsteroidBelts.fs" />
     <Compile Include="Moons.fs" />
+    <Compile Include="Navigation.fs" />
     <Compile Include="UniverseExtensions.fs" />
   </ItemGroup>
   <ItemGroup>

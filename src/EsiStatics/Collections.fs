@@ -26,13 +26,15 @@ type MutablePriorityQueue<'k,'v>()=
                         if q.Count = 0 then
                             dictionary.Remove(k) |> ignore
                         
-                        Some result
+                        Some (k, result)
         | None ->       None
         
     let count() =
         dictionary.Values |> Seq.sumBy (fun xs -> xs.Count)
 
-    member this.Push(key, value) = push key value
+    member this.Push(key, value) = 
+        push key value
+        this
 
     member this.Pop() = pop()
 
