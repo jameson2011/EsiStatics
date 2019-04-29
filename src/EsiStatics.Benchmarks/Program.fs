@@ -10,7 +10,9 @@ module Program=
         let switch =
             BenchmarkSwitcher [|    typedefof<SolarSystemGetBenchmark>;
                                     typedefof<SolarSystemScanBenchmark>;
-                                    typedefof<SolarSystemDeepGetBenchmark>
+                                    typedefof<SolarSystemDeepGetBenchmark>;
+                                    typedefof<SolarSystemCelestialDistancesBenchmark>;
+                                    typedefof<SolarSystemNeighboursBenchmark>;
                                     |]
     
         switch.Run argv |> ignore
