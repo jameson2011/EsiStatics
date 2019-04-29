@@ -2,7 +2,7 @@
 
 open System.Collections.Generic
 
-type internal MutablePriorityQueue<'k,'v>()=
+type MutablePriorityQueue<'k,'v>()=
 
     let dictionary = new SortedDictionary<'k,  Queue<'v>>()
     
@@ -29,7 +29,11 @@ type internal MutablePriorityQueue<'k,'v>()=
                         Some result
         | None ->       None
         
+    let count() =
+        dictionary.Values |> Seq.sumBy (fun xs -> xs.Count)
 
     member this.Push(key, value) = push key value
 
     member this.Pop() = pop()
+
+    member this.Count() = count()
