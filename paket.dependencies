@@ -1,6 +1,5 @@
 source https://www.nuget.org/api/v2
 
-nuget BenchmarkDotNet 0.11.5
 nuget FluentAssertions 5.6.0
 nuget FSharp.Core 4.6.2
 nuget xunit 2.4.0
