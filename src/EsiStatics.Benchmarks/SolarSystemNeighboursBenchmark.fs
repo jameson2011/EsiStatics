@@ -9,6 +9,7 @@ open Microsoft.CodeAnalysis
 
 
 [<CoreJob>]
+[<MemoryDiagnoser>]
 [<RankColumn>][<MinColumn>][<Q1Column>][<Q3Column>][<MaxColumn>]
 [<MaxIterationCount(1000)>]
 type SolarSystemNeighboursBenchmark()=

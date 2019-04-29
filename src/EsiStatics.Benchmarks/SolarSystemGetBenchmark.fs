@@ -6,6 +6,7 @@ open BenchmarkDotNet.Configs
 open BenchmarkDotNet.Jobs
 
 [<CoreJob>]
+[<MemoryDiagnoser>]
 [<RankColumn>][<MinColumn>][<Q1Column>][<Q3Column>][<MaxColumn>]
 [<MaxIterationCount(1000)>]
 type SolarSystemGetBenchmark()=
