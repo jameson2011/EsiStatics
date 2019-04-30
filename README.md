@@ -13,11 +13,11 @@ This is a partial representation of ESI static data
 
 ## Usage ##
 
-Please refer to the [wiki](TBD). Although EsiStatics built & designed for F#, C# is fully interoperable.
+Please refer to the [wiki](https://github.com/jameson2011/EsiStatics/wiki). Although EsiStatics built & designed for F#, C# is fully interoperable.
 
 ## Roadmap ##
 
-What's in store is in the [wiki](TBD).
+What's in store is in the [wiki](https://github.com/jameson2011/EsiStatics/wiki/roadmap).
 
 ## Credits & Copyright ##
 
