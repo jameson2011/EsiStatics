@@ -33,4 +33,13 @@ module NavigationTests=
         let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
 
         Assert.Equal(result.Length, expected)
-        
+    
+    [<Theory>]
+    [<InlineData(KnownSystems.thera, KnownSystems.jita)>]
+    let ``findRoute on WH returns empty``(start, finish) =
+        let s = start |> SolarSystems.byId |> Option.get
+        let f = finish |> SolarSystems.byId |> Option.get
+
+        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
+
+        Assert.Equal(result.Length, 0)
