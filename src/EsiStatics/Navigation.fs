@@ -7,20 +7,35 @@ module Navigation=
 
     let private getSys = SolarSystems.byId >> Option.get
 
-    let euclideanDistance (start: SolarSystem) (finish: SolarSystem) = 
-        Geospatial.euclidean start.Position finish.Position |> float
+    
+    let internal euclidean' (coords: seq<float>) =
+        coords  |> Seq.map (float >> abs >> Math.sq)
+                |> Seq.sum 
+                |> sqrt
+                
+
+    /// Get a Euclidean distance between 2 Positions
+    [<CompiledName("GetEuclidean")>]
+    let euclidean (p1: Position) (p2: Position) =
+        [ p1.x - p2.x; p1.y - p2.y; p1.z - p2.z ]
+            |> Seq.map float
+            |> euclidean'
+            |> Units.toMetres
+
+    let euclideanSystemDistance (start: SolarSystem) (finish: SolarSystem) = 
+        euclidean start.Position finish.Position |> float
         
-    let euclideanDistancePreferHighsec (start: SolarSystem) (finish: SolarSystem) = 
+    let euclideanSystemDistancePreferHighsec (start: SolarSystem) (finish: SolarSystem) = 
         match start.Level, finish.Level with
             | SecurityLevel.Highsec, SecurityLevel.Highsec -> 1.
             | _ -> 2.
-        |> (*) (Geospatial.euclidean start.Position finish.Position |> float)
+        |> (*) (euclidean start.Position finish.Position |> float)
         
-    let euclideanDistancePreferNotHighsec (start: SolarSystem) (finish: SolarSystem) = 
+    let euclideanSystemDistanceAvoidHighsec (start: SolarSystem) (finish: SolarSystem) = 
         match start.Level, finish.Level with
             | SecurityLevel.Highsec, SecurityLevel.Highsec -> 2.
             | _ -> 1.
-        |> (*) (Geospatial.euclidean start.Position finish.Position |> float)
+        |> (*) (euclidean start.Position finish.Position |> float)
     
     let findRoute (distanceOf: SolarSystem -> SolarSystem -> float)  (start: SolarSystem, finish: SolarSystem) =
         let startId = start.Id;
@@ -75,5 +90,8 @@ module Navigation=
                             find todo
 
         find todo
+            |> List.filter (fun s -> s <> start.Id)
             |> List.map (SolarSystems.byId >> Option.get)
 
+    [<CompiledName("FindDirectRoute")>]
+    let findDirectRoute(start, finish) = findRoute euclideanSystemDistance (start, finish)

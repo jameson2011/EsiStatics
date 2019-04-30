@@ -9,7 +9,6 @@
     <Compile Include="Units.fs" />
     <Compile Include="Entities.fs" />
     <Compile Include="TypeMaps.fs" />
-    <Compile Include="Geospatial.fs" />
     <Compile Include="Regions.fs" />
     <Compile Include="Constellations.fs" />
     <Compile Include="SolarSystems.fs" />
