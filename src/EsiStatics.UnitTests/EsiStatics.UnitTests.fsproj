@@ -8,6 +8,7 @@
   <ItemGroup>
     <Compile Include="Utilities.fs" />
     <Compile Include="RegionTests.fs" />
+    <Compile Include="NavigationTests.fs" />
     <Compile Include="UniverseDataTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

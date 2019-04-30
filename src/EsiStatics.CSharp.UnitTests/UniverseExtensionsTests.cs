@@ -165,7 +165,7 @@ namespace EsiStatics.CSharp.UnitTests
             var neighbours = sys.Neighbours(depth).SelectMany(xs => xs)
                                     .Where(s => s.Level == SecurityLevel.Lowsec ||
                                                 s.Level == SecurityLevel.Nullsec)
-                                    .Select(s => (Units.MetresToLy(Geospatial.GetEuclidean(sys.Position, s.Position)), s))
+                                    .Select(s => (Units.MetresToLy(Navigation.GetEuclidean(sys.Position, s.Position)), s))
                                     .Where(t => t.Item1 <= ly)
                                     .OrderBy(t => t.Item1)
                                     .ToList();

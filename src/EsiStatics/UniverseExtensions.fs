@@ -138,7 +138,7 @@ type UniverseExtensions=
                             |> argNull "solarSystem"
         
         solarSystem.Celestials()
-                    |> Seq.map (fun n -> (n, Geospatial.euclidean position n.Position))
+                    |> Seq.map (fun n -> (n, Navigation.euclidean position n.Position))
                     |> Seq.sortBy snd
 
     [<Extension>]

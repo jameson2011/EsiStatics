@@ -7,7 +7,7 @@ using FluentAssertions;
 
 namespace EsiStatics.CSharp.UnitTests
 {
-    public class GeospatialTests
+    public class NavigationTests
     {
         
         [Theory]
@@ -20,7 +20,7 @@ namespace EsiStatics.CSharp.UnitTests
             var p1 = Position.FromCoordinates(x, y, z);
             var p2 = Position.FromCoordinates(x, y, z);
 
-            var distance = Geospatial.GetEuclidean(p1, p2);
+            var distance = Navigation.GetEuclidean(p1, p2);
 
             distance.Should().Be(0);
         }
@@ -34,9 +34,25 @@ namespace EsiStatics.CSharp.UnitTests
             var p1 = Position.Empty;
             var p2 = Position.FromCoordinates(x, y, z);
 
-            var distance = Geospatial.GetEuclidean(p1, p2);
+            var distance = Navigation.GetEuclidean(p1, p2);
 
             distance.Should().BeGreaterThan(0); 
+        }
+
+
+        [Theory]
+        [InlineData(30005003, 30002089, 14)]
+        [InlineData(30013489, 30005003, 18)]
+        [InlineData(30013489, 30002089, 20)]
+        [InlineData(30013489, 30000142, 10)]
+        public void findRoute_euclidean(int start, int finish, int expected)
+        {
+            var s = SolarSystems.ById(start).Value;
+            var f = SolarSystems.ById(finish).Value;
+            
+            var result = Navigation.FindDirectRoute(s, f);
+
+            Assert.Equal(result.Length, expected);
         }
     }
 }
