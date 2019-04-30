@@ -178,3 +178,11 @@ type UniverseExtensions=
             |> argNull "stargate"
             |> fun sg -> SolarSystems.byId sg.SolarSystemId
             |> Option.get
+
+    [<Extension>]
+    static member FindRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistance 
+
+    [<Extension>]
+    static member FindHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec

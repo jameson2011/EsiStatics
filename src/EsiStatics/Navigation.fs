@@ -89,5 +89,5 @@ module Navigation=
             |> List.filter (fun s -> s <> start.Id)
             |> List.map getSys
 
-    [<CompiledName("FindDirectRoute")>]
-    let findDirectRoute(start, finish) = findRoute euclideanSystemDistance (start, finish)
+    
+    

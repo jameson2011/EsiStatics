@@ -342,6 +342,37 @@ namespace EsiStatics.CSharp.UnitTests
 
 
         [Theory]
+        [InlineData(30005003, 30002089, 14)]
+        [InlineData(30013489, 30005003, 18)]
+        [InlineData(30013489, 30002089, 20)]
+        [InlineData(30013489, 30000142, 10)]
+        public void SolarSystem_FindRoute(int start, int finish, int expected)
+        {
+            var s = SolarSystems.ById(start).Value;
+            var f = SolarSystems.ById(finish).Value;
+
+            var result = s.FindRoute(f);
+
+            Assert.Equal(result.Length, expected);
+        }
+
+        [Theory]
+        [InlineData(30005003, 30002089, 14)]
+        [InlineData(30013489, 30005003, 18)]
+        [InlineData(30013489, 30002089, 20)]
+        [InlineData(30013489, 30000142, 10)]
+        public void SolarSystem_FindHighsecRoute(int start, int finish, int expected)
+        {
+            var s = SolarSystems.ById(start).Value;
+            var f = SolarSystems.ById(finish).Value;
+
+            var result = s.FindHighsecRoute(f);
+
+            Assert.Equal(result.Length, expected);
+        }
+
+
+        [Theory]
         [InlineData(50004356)]
         public void Stargate_DestinationSolarSystem_ReturnsSolarSystem(int stargateId)
         {
