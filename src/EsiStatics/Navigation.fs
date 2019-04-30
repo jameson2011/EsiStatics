@@ -44,11 +44,9 @@ module Navigation=
         let todo = todo.Push(0., start)
 
         let cameFrom = new Dictionary<int, int>()
-        let gScore = new Dictionary<int, float>()
-        gScore.[start.Id] <- 0.0
-
+        let scores = new Dictionary<int, float>()
+        scores.[start.Id] <- 0.0
         
-
         let rec backWalk current result  =
             match current with
             | x when x = start.Id -> result
@@ -61,38 +59,35 @@ module Navigation=
             
             match todo.Pop() with
             | None -> []
-            | Some (distance, current) -> 
-
-                        if (current.Id = finish.Id) then                    
-                            backWalk current.Id [ current.Id ]                    
-                        else                    
-                            
+            | Some (_, current) when current.Id = finish.Id ->  
+                            backWalk current.Id [ current.Id ]       
+            | Some (distance, current)  ->      
                             closed.Add current.Id |> ignore
 
-                            let neighbours = SolarSystems.neighbourIds current.Id
+                            let neighbours = current.Id
+                                                |> SolarSystems.neighbourIds 
                                                 |> Seq.filter (closed.Contains >> not)                                        
-                                                |> Seq.map (fun s ->    let sys = getSys s
+                                                |> Seq.map (fun id ->   let sys = getSys id
                                                                         (distanceOf sys finish), sys) 
                                                 |> List.ofSeq
 
                             // adjust best known paths
                             neighbours 
-                                |> Seq.iter (fun (d,s) ->   let tentative = distance + (distanceOf current s)
-                                                            if (gScore.ContainsKey(s.Id) |> not) 
-                                                                    || (gScore.[s.Id] > tentative) then
-                                                                cameFrom.[s.Id] <- current.Id
-                                                                gScore.[s.Id] <- tentative  )
+                                |> Seq.iter (fun (_,s) -> let t = distance + (distanceOf current s)
+                                                          if (scores.ContainsKey(s.Id) |> not) || 
+                                                             (scores.[s.Id] > t) then
+                                                            cameFrom.[s.Id] <- current.Id
+                                                            scores.[s.Id] <- t  )
                             // construct todo  
                             neighbours 
-                                    |> Seq.map (fun (d,s) -> gScore.[s.Id] + d, s)   
-                                    |> Seq.iter (fun (d,s) -> todo.Push(d,s) |> ignore)
-                        
+                                |> Seq.map  (fun (d,s) -> scores.[s.Id] + d, s)   
+                                |> Seq.iter (fun (d,s) -> todo.Push(d,s) |> ignore)
 
                             find todo
 
         find todo
             |> List.filter (fun s -> s <> start.Id)
-            |> List.map (SolarSystems.byId >> Option.get)
+            |> List.map getSys
 
     [<CompiledName("FindDirectRoute")>]
     let findDirectRoute(start, finish) = findRoute euclideanSystemDistance (start, finish)
