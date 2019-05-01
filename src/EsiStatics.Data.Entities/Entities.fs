@@ -10,12 +10,19 @@ type SystemSecurity =
 | Abyssal
 type RegionData = { id: int; name: string; constellationIds: int[] }
 type ConstellationData = { id: int; name: string; regionId: int; solarSystemIds: int[]; position: PositionData }
+[<Struct>]
 type SolarSystemData = { id: int; name: string; constellationId: int; position: PositionData; secRating: SystemSecurity; secClass: string; secStatus: float; stargateIds: int[]; stationIds: int[]; starIds: int[]; planetIds: PlanetRefData[] }
+[<Struct>]
 type PlanetData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int }
+[<Struct>]
 type StarData = { id: int; name: string; solarSystemId: int; typeId: int; age: int64; luminosity: float; radius: int64; spectralClass: string; temperature: int }
+[<Struct>]
 type StargateData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int; destinationSolarSystemId: int; destinationStargateId: int }
+[<Struct>]
 type AsteroidBeltData = { id: int; name: string; solarSystemId: int; position: PositionData }
+[<Struct>]
 type StationData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int; services: string[]; maxDockableShipVolume: int }
+[<Struct>]
 type MoonData = { id: int; name: string; solarSystemId: int; position: PositionData }
 type CategoryData = { id: int; name: string; published: bool; groupIds: int[] }
 type GroupData = { id: int; name: string; categoryId: int; published: bool; typeIds: int[] }
