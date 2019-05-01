@@ -346,6 +346,8 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30013489, 30005003, 18)]
         [InlineData(30013489, 30002089, 20)]
         [InlineData(30013489, 30000142, 10)]
+        [InlineData(30004714, 30000142, 45)] // 1 sec + high GC
+        [InlineData(30004483, 30000142, 50)] // 100ms
         public void SolarSystem_FindRoute(int start, int finish, int expected)
         {
             var s = SolarSystems.ById(start).Value;
