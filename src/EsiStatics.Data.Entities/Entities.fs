@@ -28,7 +28,6 @@ type AsteroidBeltData = { id: int; name: string; solarSystemId: int; position: P
 type StationData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int; services: string[]; maxDockableShipVolume: int }
 [<Struct>]
 type MoonData = { id: int; name: string; solarSystemId: int; position: PositionData }
-
 [<Struct>]
 type CategoryData = { id: int; name: string; published: bool; groupIds: int[] }
 [<Struct>]
