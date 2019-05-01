@@ -62,26 +62,28 @@ module Navigation=
             | Some (_, current) when current.Id = finish.Id ->  
                             backWalk current.Id [ current.Id ]       
             | Some (distance, current)  ->      
-                            closed.Add current.Id |> ignore
+                            if closed.Contains(current.Id) |> not then
+                                
+                                closed.Add current.Id |> ignore
 
-                            let neighbours = current.Id
-                                                |> SolarSystems.neighbourIds 
-                                                |> Seq.filter (closed.Contains >> not)                                        
-                                                |> Seq.map (fun id ->   let sys = getSys id
-                                                                        (distanceOf sys finish), sys) 
-                                                |> List.ofSeq
+                                let neighbours = current.Id
+                                                    |> SolarSystems.neighbourIds 
+                                                    |> Seq.filter (closed.Contains >> not)                                        
+                                                    |> Seq.map (fun id ->   let sys = getSys id
+                                                                            (distanceOf sys finish), sys) 
+                                                    |> List.ofSeq
 
-                            // adjust best known paths
-                            neighbours 
-                                |> Seq.iter (fun (_,s) -> let t = distance + (distanceOf current s)
-                                                          if (scores.ContainsKey(s.Id) |> not) || 
-                                                             (scores.[s.Id] > t) then
-                                                            cameFrom.[s.Id] <- current.Id
-                                                            scores.[s.Id] <- t  )
-                            // construct todo  
-                            neighbours 
-                                |> Seq.map  (fun (d,s) -> scores.[s.Id] + d, s)   
-                                |> Seq.iter (fun (d,s) -> todo.Push(d,s) |> ignore)
+                                // adjust best known paths
+                                neighbours 
+                                    |> Seq.iter (fun (_,s) -> let t = distance + (distanceOf current s)
+                                                              if (scores.ContainsKey(s.Id) |> not) || 
+                                                                 (scores.[s.Id] > t) then
+                                                                cameFrom.[s.Id] <- current.Id
+                                                                scores.[s.Id] <- t  )
+                                // construct todo  
+                                neighbours 
+                                    |> Seq.map  (fun (d,s) -> scores.[s.Id] + d, s)   
+                                    |> Seq.iter (fun (d,s) -> todo.Push(d,s) |> ignore)
 
                             find todo
 
