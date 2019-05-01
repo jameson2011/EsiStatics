@@ -138,7 +138,7 @@ type UniverseExtensions=
                             |> argNull "solarSystem"
         
         solarSystem.Celestials()
-                    |> Seq.map (fun n -> (n, Geospatial.euclidean position n.Position))
+                    |> Seq.map (fun n -> (n, Navigation.euclidean position n.Position))
                     |> Seq.sortBy snd
 
     [<Extension>]
@@ -178,3 +178,11 @@ type UniverseExtensions=
             |> argNull "stargate"
             |> fun sg -> SolarSystems.byId sg.SolarSystemId
             |> Option.get
+
+    [<Extension>]
+    static member FindRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistance 
+
+    [<Extension>]
+    static member FindHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec

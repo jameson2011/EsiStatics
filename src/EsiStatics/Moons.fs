@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module Moons=
-    let id (belt: Moon) = 
+    let internal id (belt: Moon) = 
         belt |> argNull "belt"
              |> (fun ss -> ss.Id)
 

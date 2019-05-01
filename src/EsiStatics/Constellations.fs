@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module Constellations=
-    let id (constellation: Constellation) = 
+    let internal id (constellation: Constellation) = 
         constellation |> argNull "constellation" 
                       |> (fun c -> c.Id)
 

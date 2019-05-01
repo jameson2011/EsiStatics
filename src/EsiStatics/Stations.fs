@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module Stations=
-    let id (station: Station) = 
+    let internal id (station: Station) = 
         station |> argNull "station"
                 |> (fun ss -> ss.Id)
 

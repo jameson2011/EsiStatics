@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module Regions =
-    let id (region: Region) = 
+    let internal id (region: Region) = 
         region  |> argNull "region"
                 |> (fun r -> r.Id)
 

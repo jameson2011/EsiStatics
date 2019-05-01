@@ -165,7 +165,7 @@ namespace EsiStatics.CSharp.UnitTests
             var neighbours = sys.Neighbours(depth).SelectMany(xs => xs)
                                     .Where(s => s.Level == SecurityLevel.Lowsec ||
                                                 s.Level == SecurityLevel.Nullsec)
-                                    .Select(s => (Units.MetresToLy(Geospatial.GetEuclidean(sys.Position, s.Position)), s))
+                                    .Select(s => (Units.MetresToLy(Navigation.GetEuclidean(sys.Position, s.Position)), s))
                                     .Where(t => t.Item1 <= ly)
                                     .OrderBy(t => t.Item1)
                                     .ToList();
@@ -338,6 +338,37 @@ namespace EsiStatics.CSharp.UnitTests
             var results = ss.CelestialDistances(pos).ToList();
             
             results.Should().HaveCount(0);
+        }
+
+
+        [Theory]
+        [InlineData(30005003, 30002089, 14)]
+        [InlineData(30013489, 30005003, 18)]
+        [InlineData(30013489, 30002089, 20)]
+        [InlineData(30013489, 30000142, 10)]
+        public void SolarSystem_FindRoute(int start, int finish, int expected)
+        {
+            var s = SolarSystems.ById(start).Value;
+            var f = SolarSystems.ById(finish).Value;
+
+            var result = s.FindRoute(f);
+
+            Assert.Equal(result.Length, expected);
+        }
+
+        [Theory]
+        [InlineData(30005003, 30002089, 14)]
+        [InlineData(30013489, 30005003, 18)]
+        [InlineData(30013489, 30002089, 20)]
+        [InlineData(30013489, 30000142, 10)]
+        public void SolarSystem_FindHighsecRoute(int start, int finish, int expected)
+        {
+            var s = SolarSystems.ById(start).Value;
+            var f = SolarSystems.ById(finish).Value;
+
+            var result = s.FindHighsecRoute(f);
+
+            Assert.Equal(result.Length, expected);
         }
 
 

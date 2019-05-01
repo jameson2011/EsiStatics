@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module Stargates=
-    let id (stargate: Stargate) = 
+    let internal id (stargate: Stargate) = 
         stargate |> argNull "stargate"
                  |> (fun ss -> ss.Id)
 

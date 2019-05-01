@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module SolarSystems=
-    let id (solarSystem: SolarSystem) = 
+    let internal id (solarSystem: SolarSystem) = 
         solarSystem |> argNull "solarSystem"
                     |> (fun ss -> ss.Id)
 
