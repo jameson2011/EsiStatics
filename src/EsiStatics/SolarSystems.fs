@@ -13,9 +13,10 @@ module SolarSystems=
     let internal neighbourIds (id: int)=
         id  |> Data.Universe.SolarSystems.getSolarSystem
             |> Option.map (fun ss -> ss.stargateIds 
-                                        |> Seq.map (Data.Universe.Stargates.getStargate >> Option.get))
-            |> Option.defaultValue Seq.empty
-            |> Seq.map (fun sg -> sg.destinationSolarSystemId)
+                                        |> Array.map (Data.Universe.Stargates.getStargate >> Option.get >> (fun sg -> sg.destinationSolarSystemId)))
+            |> Option.defaultValue Array.empty
+            
+            
 
     let internal data = id >> Data.Universe.SolarSystems.getSolarSystem
 
