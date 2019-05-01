@@ -15,22 +15,11 @@ namespace EsiStatics.CSharp.UnitTests
         {
             var ss = SolarSystems.ById(solarSystemId).Value;
 
-            var id = SolarSystems.id(ss);
-
-            id.Should().Be(solarSystemId);
-        }
-
-        [Fact]
-        public void SolarSystem_Id_NullSystem_ThrowsException()
-        {
-            SolarSystem ss = null;
-
-            Action a = () => SolarSystems.id(ss);
-
-            a.Should().Throw<ArgumentNullException>();
             
+            ss.Id.Should().Be(solarSystemId);
         }
 
+        
         [Theory]
         [InlineData(30005003, "Adirain")]
         public void SolarSystem_ById_ReturnsSystem(int solarSystemId, string expectedName)

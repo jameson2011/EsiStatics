@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module Planets=
-    let id (planet: Planet) = 
+    let internal id (planet: Planet) = 
         planet |> argNull "planet"
                     |> (fun ss -> ss.Id)
 

@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module Stars=
-    let id (star: Star) = 
+    let internal id (star: Star) = 
         star    |> argNull "star"
                 |> (fun ss -> ss.Id)
 

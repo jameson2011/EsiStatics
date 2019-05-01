@@ -2,7 +2,7 @@
 
 open System.Collections.Generic
 
-type MutablePriorityQueue<'k,'v>()=
+type internal MutablePriorityQueue<'k,'v>()=
 
     let dictionary = new SortedDictionary<'k,  Queue<'v>>()
     
