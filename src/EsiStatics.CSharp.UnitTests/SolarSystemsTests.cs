@@ -10,6 +10,18 @@ namespace EsiStatics.CSharp.UnitTests
     {
 
         [Theory]
+        [InlineData(-1)]
+        public void SolarSystem_UnknownId_ThrowsException(int solarSystemId)
+        {
+            Action a = () =>
+            {
+                var x = SolarSystems.ById(solarSystemId).Value;
+            };
+
+            a.Should().Throw<NullReferenceException>();
+        }
+
+        [Theory]
         [InlineData(30005003)]
         public void SolarSystem_Id_ReturnsSame(int solarSystemId)
         {
