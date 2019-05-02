@@ -60,6 +60,9 @@ module internal TypeMaps=
             Name = value.name;
             Position = ofPositionData value.position;
             SolarSystemId = value.solarSystemId;
+            TypeId = value.typeId;
+            Services = value.services;
+            MaxDockableVolume = value.maxDockableShipVolume;
         }
 
     let ofStargateData (value: StargateData) =
@@ -69,6 +72,7 @@ module internal TypeMaps=
             SolarSystemId = value.solarSystemId;
             DestinationSolarSystemId = value.destinationSolarSystemId;
             DestinationStargateId = value.destinationStargateId;
+            TypeId = value.typeId;
         }
 
     let ofAsteroidBeltData (value: AsteroidBeltData) = 

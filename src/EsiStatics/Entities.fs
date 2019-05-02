@@ -95,10 +95,13 @@ type Planet =
 
 type Station = 
     {
-        Id:             int
-        Name:           string
-        Position:       Position
-        SolarSystemId:  int
+        Id:                 int
+        Name:               string
+        Position:           Position
+        SolarSystemId:      int
+        Services:           string [];
+        TypeId:             int;
+        MaxDockableVolume:  int;
     }
     interface INavigable with
         member x.Id =       x.Id
@@ -136,6 +139,7 @@ type Stargate =
         SolarSystemId:              int
         DestinationSolarSystemId:   int
         DestinationStargateId:      int
+        TypeId:                     int
     }
     interface INavigable with
         member x.Id =       x.Id
