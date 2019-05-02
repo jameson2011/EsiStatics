@@ -31,7 +31,13 @@ module internal TypeMaps=
     let ofStarData (value: StarData) =
         { Star.Id = value.id;
                 Name = value.name;
-                Position = Position.empty
+                Position = Position.empty;
+                Age = value.age;
+                Luminosity = value.luminosity;
+                TypeId = value.typeId;
+                Radius = value.radius;
+                SpectralClass = value.spectralClass;
+                Temperature = value.temperature;
                 }
 
     let ofPlanetData (value: PlanetData) =

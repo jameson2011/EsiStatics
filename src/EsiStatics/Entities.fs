@@ -65,9 +65,15 @@ type SolarSystem =
 
 type Star = 
     {
-        Id:         int
-        Name:       string
-        Position:   Position
+        Id:             int
+        Name:           string
+        Position:       Position;
+        TypeId:         int; 
+        Age:            int64; 
+        Luminosity:     float; 
+        Radius:         int64; 
+        SpectralClass:  string; 
+        Temperature:    int
     }
     interface INavigable with
         member x.Id =       x.Id
