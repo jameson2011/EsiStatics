@@ -10,6 +10,10 @@
     <Compile Include="RegionTests.fs" />
     <Compile Include="NavigationTests.fs" />
     <Compile Include="UniverseDataTests.fs" />
+    <Compile Include="CategoryTests.fs" />
+    <Compile Include="GroupsTests.fs" />
+    <Compile Include="MarketGroupsTests.fs" />
+    <Compile Include="ItemTypesTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
