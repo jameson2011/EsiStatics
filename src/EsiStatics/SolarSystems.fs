@@ -16,9 +16,9 @@ module SolarSystems=
                                         |> Array.map (Data.Universe.Stargates.getStargate >> Option.get >> (fun sg -> sg.destinationSolarSystemId)))
             |> Option.defaultValue Array.empty
             
-            
-
     let internal data = id >> Data.Universe.SolarSystems.getSolarSystem
+
+    let internal knownSystem = byId >> Option.get
 
     let internal planetRefData solarSystemId planetId =
          solarSystemId 

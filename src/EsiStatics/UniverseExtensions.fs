@@ -104,7 +104,7 @@ type UniverseExtensions=
         
         [id] |> walk (max 0 depth) (Map.ofList [ (id,id) ]) [] 
              |> Seq.rev
-             |> Seq.map (Seq.map (SolarSystems.byId >> Option.get) >> Array.ofSeq)
+             |> Seq.map (Seq.map (SolarSystems.knownSystem) >> Array.ofSeq)
 
     [<Extension>]
     static member Celestials(solarSystem: SolarSystem)=

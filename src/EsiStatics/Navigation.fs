@@ -5,9 +5,8 @@ module Navigation=
 
     open System.Collections.Generic
 
-    let private getSys = SolarSystems.byId >> Option.get
-
     
+        
     let internal euclidean' (coords: seq<float>) =
         coords  |> Seq.map (float >> abs >> Math.sq)
                 |> Seq.sum 
@@ -69,7 +68,7 @@ module Navigation=
                                 let neighbours = current.Id
                                                     |> SolarSystems.neighbourIds 
                                                     |> Seq.filter (closed.Contains >> not)                                        
-                                                    |> Seq.map (fun id ->   let sys = getSys id
+                                                    |> Seq.map (fun id ->   let sys = SolarSystems.knownSystem id
                                                                             (distanceOf sys finish), sys) 
                                                     |> List.ofSeq
 
@@ -89,7 +88,7 @@ module Navigation=
 
         find todo
             |> List.filter (fun s -> s <> start.Id)
-            |> List.map getSys
+            |> List.map SolarSystems.knownSystem
 
     
     
