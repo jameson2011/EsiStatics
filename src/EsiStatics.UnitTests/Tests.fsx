@@ -20,3 +20,11 @@ let indexValues = solarSystems
 let index =  new EsiStatics.MutableTrie<string * int>(indexValues)
 
 index.Find "adi"
+
+let solarSystemFinder = new EsiStatics.SolarSystemFinder()
+
+solarSystemFinder.Find "adi" |> Array.ofSeq
+
+solarSystemFinder.Find "adirain" |> Array.ofSeq
+
+solarSystemFinder.Find "thera" |> Array.ofSeq
