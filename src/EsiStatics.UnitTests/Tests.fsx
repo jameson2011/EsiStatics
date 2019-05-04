@@ -23,7 +23,8 @@ index.Find "adi"
 
 let solarSystemFinder = new EsiStatics.SolarSystemFinder()
 
-solarSystemFinder.Find "adi" |> Array.ofSeq
+solarSystemFinder.Find "adi" |> Seq.collect (fun s -> s.Neighbours 1)
+                             |> Array.ofSeq
 
 solarSystemFinder.Find "adirain" |> Array.ofSeq
 
