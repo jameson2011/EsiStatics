@@ -53,3 +53,18 @@ module MutableTrieNodeTests=
 
         matches.SequenceEqual(expected).Should().BeTrue("")
     
+    
+    [<Theory>]
+    [<InlineData("a")>]
+    [<InlineData("aa")>]
+    [<InlineData("aaa")>]
+    [<InlineData("c")>]
+    let ``Search is case insensitive``(word: string) =
+        let trie = values() |> MutableTrie.Create
+        
+        let matches = word.ToUpper() |> trie.Find
+
+        let expected = words |> Seq.filter (fun w -> w.StartsWith(word)) |> List.ofSeq
+
+        matches.SequenceEqual(expected).Should().BeTrue("")
+    
