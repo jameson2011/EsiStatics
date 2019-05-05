@@ -20,7 +20,7 @@
     <Compile Include="Moons.fs" />
     <Compile Include="Navigation.fs" />
     <Compile Include="UniverseExtensions.fs" />
-    <Compile Include="SolarSystemFinder.fs" />
+    <Compile Include="UniverseSearch.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EsiStatics.Data.Entities">
