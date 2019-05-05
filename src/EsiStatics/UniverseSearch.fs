@@ -4,13 +4,11 @@ open EsiStatics.Data.Universe
 
 type SolarSystemFinder() =
     
-    let values = Regions.regions()
+    let index = Regions.regions()
                             |> Seq.collect (fun r -> r.constellationIds)
                             |> Seq.map (Constellations.getConstellation >> Option.get)
                             |> Seq.collect (fun c -> c.solarSystemIds)
                             |> Seq.map (SolarSystems.getSolarSystem >> Option.get)
-
-    let index = values
                             |> Seq.map (fun s -> (s.name,  s.id))
                             |> MutableTrie.Create
     
@@ -25,11 +23,9 @@ type SolarSystemFinder() =
 
 type ConstellationFinder() =
     
-    let values = Regions.regions()
+    let index = Regions.regions()
                             |> Seq.collect (fun r -> r.constellationIds)
                             |> Seq.map (Constellations.getConstellation >> Option.get)
-                            
-    let index = values
                             |> Seq.map (fun s -> (s.name, s.id))
                             |> MutableTrie.Create
     
