@@ -5,8 +5,9 @@ image: Visual Studio 2017
   
 # tasks
 before_build:
-- cmd: .paket\paket.exe restore --group Build
 - ps: ./.tools/discord/sendwebhook.ps1 start $env:WEBHOOK_URL
+- cmd: .paket\paket.exe restore --group Build
+
 
 build_script:
 - cmd: >-
