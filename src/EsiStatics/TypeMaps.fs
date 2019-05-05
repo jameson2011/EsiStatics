@@ -106,5 +106,12 @@ module internal TypeMaps=
             ItemType.Id = value.id;
             Name = value.name;
             Published = value.published;
+            Capacity = value.capacity;
+            Mass = value.mass;
+            PackagedVolume = value.packagedVolume;
+            PortionSize = value.portionSize;
+            Radius = value.radius;
+            Volume = value.volume;
+            GraphicId = value.graphicId;
         }
         

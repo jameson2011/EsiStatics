@@ -27,6 +27,12 @@ type SecurityLevel =
     | Abyssal
 
 
+type INavigable =
+    abstract member Id:         int
+    abstract member Name:       string
+    abstract member Position:   Position
+
+
 type Region = 
     {
         Id:                 int;
@@ -40,11 +46,6 @@ type Constellation =
         Name:               string;
         Position:           Position;
     }
-
-type INavigable =
-    abstract member Id:         int
-    abstract member Name:       string
-    abstract member Position:   Position
 
     
 type SolarSystem = 
@@ -171,4 +172,11 @@ type ItemType =
         Id:             int;
         Name:           string;
         Published:      bool;
+        Capacity:       float;
+        Mass:           float;
+        PackagedVolume: float;
+        PortionSize:    int;
+        Radius:         float;
+        Volume:         float;
+        GraphicId:      int option;
     }

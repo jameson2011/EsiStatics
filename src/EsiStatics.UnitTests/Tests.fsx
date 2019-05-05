@@ -21,7 +21,8 @@ solarSystemFinder.Find "adirain"
             |> Seq.collect (fun s -> UniverseExtensions.Neighbours s 1)
             |> Array.ofSeq
 
-solarSystemFinder.Find "adirain" |> Array.ofSeq
+let adi = solarSystemFinder.Find "adirain" |> Seq.head
+let adiPlanets = adi |> UniverseExtensions.Planets |> Array.ofSeq
 
 solarSystemFinder.Find "thera" |> Array.ofSeq
 
