@@ -80,3 +80,31 @@ module internal TypeMaps=
             Name = value.name;
             Position = ofPositionData value.position;
         }
+
+    let ofMarketGroupData (value: MarketGroupData)=
+        {
+            MarketGroup.Id = value.id;
+            Name = value.name;
+        }
+
+    let ofCategoryData (value: CategoryData) =
+        {
+            Category.Id = value.id;
+            Name = value.name;
+            Published = value.published;
+        }
+        
+    let ofGroupData (value: GroupData)=
+        {
+            Group.Id = value.id;
+            Name = value.name;
+            Published = value.published;
+        }
+
+    let ofItemTypeData (value: ItemTypeData)=
+        {
+            ItemType.Id = value.id;
+            Name = value.name;
+            Published = value.published;
+        }
+        

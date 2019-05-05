@@ -21,6 +21,8 @@
     <Compile Include="Navigation.fs" />
     <Compile Include="UniverseExtensions.fs" />
     <Compile Include="UniverseSearch.fs" />
+    <Compile Include="ItemTypes.fs" />
+    <Compile Include="ItemTypesFinder.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EsiStatics.Data.Entities">

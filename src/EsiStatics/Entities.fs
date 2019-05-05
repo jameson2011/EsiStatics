@@ -145,3 +145,30 @@ type Stargate =
         member x.Id =       x.Id
         member x.Name =     x.Name
         member x.Position = x.Position
+
+type MarketGroup =
+    {
+        Id:             int;
+        Name:           string;
+    }
+
+type Category =
+    {
+        Id:             int;
+        Name:           string;
+        Published:      bool; 
+    }
+
+type Group =
+    {
+        Id:             int;
+        Name:           string;
+        Published:      bool;
+    }
+
+type ItemType =
+    {
+        Id:             int;
+        Name:           string;
+        Published:      bool;
+    }

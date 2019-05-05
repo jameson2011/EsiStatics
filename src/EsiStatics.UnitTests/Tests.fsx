@@ -1,31 +1,56 @@
-﻿
-#r @"bin\Debug\netcoreapp2.2\EsiStatics.dll"
+﻿#r @"bin\Debug\netcoreapp2.2\EsiStatics.dll"
 #r @"bin\Debug\netcoreapp2.2\EsiStatics.Data.Entities.dll"
+#r @"bin\Debug\netcoreapp2.2\EsiStatics.Data.ItemTypes.dll"
 #r @"bin\Debug\netcoreapp2.2\EsiStatics.Data.Universe.dll"
 
 #time
 
 open EsiStatics
+
 open EsiStatics.Data.Entities
-open EsiStatics.Data.Universe
 
 let solarSystems = Regions.all() 
                     |> Seq.collect (fun r -> r.Constellations())
                     |> Seq.collect (fun c -> c.SolarSystems())
                     |> Array.ofSeq
-
-let indexValues = solarSystems 
-                    |> Array.map (fun s -> (s.Name, (s.Name, s.Id)))
-
-let index =  new EsiStatics.MutableTrie<string * int>(indexValues)
-
-index.Find "adi"
+                    
 
 let solarSystemFinder = new EsiStatics.SolarSystemFinder()
 
-solarSystemFinder.Find "adi" |> Seq.collect (fun s -> s.Neighbours 1)
-                             |> Array.ofSeq
+solarSystemFinder.Find "adirain" 
+            |> Seq.collect (fun s -> UniverseExtensions.Neighbours s 1)
+            |> Array.ofSeq
 
 solarSystemFinder.Find "adirain" |> Array.ofSeq
 
 solarSystemFinder.Find "thera" |> Array.ofSeq
+
+let itemTypesFinder = new ItemTypesFinder()
+let mgs = MarketGroups.rootMarketGroups() |> Array.ofSeq
+let shipMg = MarketGroups.marketGroup 4 |> Option.get
+let shipItemTypes = shipMg |> MarketGroups.itemTypes
+let shipChildren = MarketGroups.childMarketGroups shipMg |> Array.ofSeq
+let frigates = shipChildren |> Seq.filter (fun mg -> mg.Name = "Frigates") |> Seq.head
+let frigateGroups = frigates |> MarketGroups.childMarketGroups |> Array.ofSeq
+let factionFrigates = frigateGroups 
+                        |> Seq.filter (fun mg -> mg.Name = "Faction Frigates") 
+                        |> Seq.head
+                        |> MarketGroups.childMarketGroups
+                        |> Seq.filter (fun mg -> mg.Name = "Navy Faction")
+                        |> Seq.head
+let parentage = factionFrigates |> MarketGroups.parentage
+
+
+let categories = Categories.categories() |> Array.ofSeq
+
+let cat = categories |> Seq.skip 3 |> Seq.head
+cat |> Categories.groups |> Array.ofSeq
+
+// cat 6 = ship
+let cat = Categories.category 6 |> Option.get
+let catGroups = cat |> Categories.groups |> Array.ofSeq
+
+// citizen ships = group 2001
+let shipGroup = Groups.group 2001 |> Option.get
+let itemTypes = shipGroup |> Groups.itemTypes |> Array.ofSeq
+let cat = shipGroup |> Groups.category
