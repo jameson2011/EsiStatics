@@ -24,7 +24,11 @@ Switch ($STATUS) {
     $STATUS_MESSAGE="Failed"
     Break
   }
-  default {
+  "start" {
+    $EMBED_COLOR=10181046
+    $STATUS_MESSAGE="Starting"
+    Break
+  }default {
     Write-Output "Default!"
     Break
   }
