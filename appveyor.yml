@@ -22,5 +22,5 @@ test: off
 artifacts:
 - path: build\lib
   name: EsiStatics
-- path: nupkgs
+- path: nupkgs\EsiStatics.*.nupkg
   name: EsiStatics.nupkg
