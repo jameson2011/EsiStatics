@@ -35,9 +35,9 @@ module internal TypeMaps=
                 Age = value.age;
                 Luminosity = value.luminosity;
                 TypeId = value.typeId;
-                Radius = value.radius;
+                Radius = value.radius |> float |> Units.toMetres;
                 SpectralClass = value.spectralClass;
-                Temperature = value.temperature;
+                Temperature = value.temperature |> float |> Units.toKelvin;
                 }
 
     let ofPlanetData (value: PlanetData) =
@@ -106,12 +106,12 @@ module internal TypeMaps=
             ItemType.Id = value.id;
             Name = value.name;
             Published = value.published;
-            Capacity = value.capacity;
-            Mass = value.mass;
-            PackagedVolume = value.packagedVolume;
+            Capacity = value.capacity |> Units.toCubicMetres;
+            Mass = value.mass |> Units.toKilos;
+            PackagedVolume = value.packagedVolume |> Units.toCubicMetres;
             PortionSize = value.portionSize;
-            Radius = value.radius;
-            Volume = value.volume;
+            Radius = value.radius |> Units.toMetres;
+            Volume = value.volume |> Units.toCubicMetres;
             GraphicId = value.graphicId;
         }
         

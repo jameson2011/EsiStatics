@@ -23,6 +23,7 @@ solarSystemFinder.Find "adirain"
 
 let adi = solarSystemFinder.Find "adirain" |> Seq.head
 let adiPlanets = adi |> UniverseExtensions.Planets |> Array.ofSeq
+let adiStar = adi |> UniverseExtensions.Star |> Option.get
 
 solarSystemFinder.Find "thera" |> Array.ofSeq
 

@@ -5,6 +5,9 @@
 [<Measure>] type km
 [<Measure>] type AU
 [<Measure>] type LY
+[<Measure>] type m3
+[<Measure>] type kg
+[<Measure>] type K
 
 [<AutoOpen>]
 module Units=
@@ -42,5 +45,14 @@ module Units=
     let lyToMetres (x: float<LY>) = 
         ((float x) * 9460730472580800.0) |> toMetres
         
-    
+    /// Convert an arbitrary float to cubic metres
+    [<CompiledName("ToCubicMetres")>]
+    let toCubicMetres (x: float) = x * 1.0<m3>
 
+    /// Convert an arbitrary float to kilogrammes
+    [<CompiledName("ToKilos")>]
+    let toKilos (x: float) = x * 1.0<kg>
+
+    /// Convert an arbitrary float to kilogrammes
+    [<CompiledName("ToKelvin")>]
+    let toKelvin (x: float) = x * 1.0<K>

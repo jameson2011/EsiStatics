@@ -72,9 +72,9 @@ type Star =
         TypeId:         int; 
         Age:            int64; 
         Luminosity:     float; 
-        Radius:         int64; 
+        Radius:         float<m>; 
         SpectralClass:  string; 
-        Temperature:    int
+        Temperature:    float<K>
     }
     interface INavigable with
         member x.Id =       x.Id
@@ -172,11 +172,11 @@ type ItemType =
         Id:             int;
         Name:           string;
         Published:      bool;
-        Capacity:       float;
-        Mass:           float;
-        PackagedVolume: float;
+        Capacity:       float<m3>;
+        Mass:           float<kg>;
+        PackagedVolume: float<m3>;
         PortionSize:    int;
-        Radius:         float;
-        Volume:         float;
+        Radius:         float<m>;
+        Volume:         float<m3>;
         GraphicId:      int option;
     }
