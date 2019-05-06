@@ -7,12 +7,14 @@ module MarketGroups=
     let marketGroups() =
         Data.ItemTypes.MarketGroups.marketGroups()
             |> Seq.map TypeMaps.ofMarketGroupData
+            |> Seq.sortBy (fun mg -> mg.Name)
                 
     [<CompiledName("GetRootMarketGroups")>]
     let rootMarketGroups()=
         Data.ItemTypes.MarketGroups.marketGroups()
             |> Seq.filter (fun mg -> Option.isNone mg.parentMarketGroupId)
             |> Seq.map TypeMaps.ofMarketGroupData
+            |> Seq.sortBy (fun mg -> mg.Name)
 
     [<CompiledName("GetMarketGroup")>]
     let marketGroup (id: int)=
@@ -26,6 +28,7 @@ module MarketGroups=
                                         | Some x -> x = value.Id
                                         | _ -> false)
             |> Seq.map TypeMaps.ofMarketGroupData
+            |> Seq.sortBy (fun mg -> mg.Name)
 
     [<CompiledName("GetItemTypes")>]
     let itemTypes (value: MarketGroup)=
@@ -36,7 +39,8 @@ module MarketGroups=
             |> Seq.map Data.ItemTypes.ItemTypes.getItemType
             |> Seq.reduceOptions
             |> Seq.map TypeMaps.ofItemTypeData
-            
+            |> Seq.sortBy (fun it -> it.Name)
+
     [<CompiledName("GetParent")>]
     let parent (value: MarketGroup)=
         value.Id
@@ -49,7 +53,7 @@ module MarketGroups=
     let parentage (value: MarketGroup) =
         let rec walk group result =
             match group with
-            | Some g -> walk (parent g) (group::result)
+            | Some g -> walk (parent g) (g::result)
             | None ->   result
         walk (Some value) [] |> Seq.rev
 
