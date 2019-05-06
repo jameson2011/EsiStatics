@@ -27,12 +27,12 @@ module Navigation=
     let euclideanSystemDistancePreferHighsec (start: SolarSystem) (finish: SolarSystem) = 
         match start.Level, finish.Level with
             | SecurityLevel.Highsec, SecurityLevel.Highsec -> 1.
-            | _ -> 2.
+            | _ -> 100.
         |> (*) (euclidean start.Position finish.Position |> float)
         
     let euclideanSystemDistanceAvoidHighsec (start: SolarSystem) (finish: SolarSystem) = 
         match start.Level, finish.Level with
-            | SecurityLevel.Highsec, SecurityLevel.Highsec -> 2.
+            | SecurityLevel.Highsec, SecurityLevel.Highsec -> 100.
             | _ -> 1.
         |> (*) (euclidean start.Position finish.Position |> float)
     

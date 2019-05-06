@@ -17,6 +17,13 @@ let solarSystems = Regions.all()
 
 let solarSystemFinder = new EsiStatics.SolarSystemFinder()
 
+let adi = solarSystemFinder.Find "adirain" |> Seq.head
+let ded = solarSystemFinder.Find "dead end" |> Seq.head
+
+let route = Navigation.findRoute Navigation.euclideanSystemDistanceAvoidHighsec (adi, ded) |> Array.ofSeq
+
+route |> Array.map (fun s -> s.Name)
+
 solarSystemFinder.Find "adirain" 
             |> Seq.collect (fun s -> UniverseExtensions.Neighbours s 1)
             |> Array.ofSeq
