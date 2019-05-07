@@ -186,3 +186,7 @@ type UniverseExtensions=
     [<Extension>]
     static member FindHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
         (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
+
+    [<Extension>]
+    static member FindExHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistanceAvoidHighsec
