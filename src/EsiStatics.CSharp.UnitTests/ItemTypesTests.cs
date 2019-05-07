@@ -21,7 +21,7 @@ namespace EsiStatics.CSharp.UnitTests
             parentedMgs.Should().HaveCount(0);
         }
 
-        
+
         [Fact]
         public void MarketGroups_All_ReturnsMoreThanRoots()
         {
@@ -88,6 +88,75 @@ namespace EsiStatics.CSharp.UnitTests
             var mgs = MarketGroups.GetParents(mg.Value).ToList();
 
             mgs.Should().HaveCountGreaterThan(0);
+        }
+
+        [Fact]
+        public void Categories_GetCategories_ReturnsNonEmpty()
+        {
+            var cats = Categories.GetCategories().ToList();
+
+            cats.Should().NotHaveCount(0);
+        }
+
+        [Fact]
+        public void Categories_GetCategory_ReturnsMatch()
+        {
+            var cats = Categories.GetCategories().ToList();
+
+            var cats2 = cats.Select(c => Categories.GetCategory(c.Id))
+                            .Where(c => c != null)
+                            .Select(c => c.Value)
+                            .ToList();
+
+            cats2.Should().BeEquivalentTo(cats);
+        }
+
+
+        [Fact]
+        public void Categories_GetGroups_ReturnsMatch()
+        {
+            var cats = Categories.GetCategories().ToList();
+
+            var groups = cats.Where(c => c.Published).Select(Categories.GetGroups).ToList();
+
+            foreach(var grp in groups)
+            {
+                
+                grp.Count().Should().NotBe(0);
+            }
+        }
+
+
+        [Fact]
+        public void Groups_GetGroups_ReturnsNonEmpty()
+        {
+            var grps = Groups.GetGroups().ToList();
+
+            grps.Should().NotHaveCount(0);
+        }
+
+        [Fact]
+        public void Groups_GetGroup_ReturnsMatch()
+        {
+            var grps = Groups.GetGroups().ToList();
+
+            var grps2 = grps.Select(g => Groups.GetGroup(g.Id))
+                            .Where(c => c != null)
+                            .Select(c => c.Value)
+                            .ToList();
+
+            grps2.Should().BeEquivalentTo(grps);
+        }
+
+        [Fact]
+        public void Groups_GetCategory_AlwaysReturns()
+        {
+            var grps = Groups.GetGroups().ToList();
+            
+            var cats = grps.Select(Groups.GetCategory)
+                            .ToList();
+
+            grps.Count().Should().Be(cats.Count);
         }
     }
 }

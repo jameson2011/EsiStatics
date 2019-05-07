@@ -65,6 +65,7 @@ module Categories =
         Data.ItemTypes.Categories.categories()
             |> Seq.map TypeMaps.ofCategoryData
             
+
     [<CompiledName("GetCategory")>]
     let category (id: int)=
         id  |> Data.ItemTypes.Categories.getCategory
