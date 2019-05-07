@@ -50,6 +50,15 @@ namespace EsiStatics.CSharp.UnitTests
             children.Count.Should().BeGreaterThan(0);
         }
 
+        [Theory]
+        [InlineData(64)]
+        public void MarketGroups_GetItemTypes_Returned(int id)
+        {
+            var mg = MarketGroups.GetMarketGroup(id).Value;
+
+            var itemTypes = MarketGroups.GetItemTypes(mg).ToList();
+            itemTypes.Count.Should().BeGreaterThan(0);
+        }
 
         [Theory]
         [InlineData(587)]
