@@ -1,11 +1,11 @@
 ﻿namespace EsiStatics
 
 module Moons=
-    let internal id (belt: Moon) = 
+    let internal identity (belt: Moon) = 
         belt |> argNull "belt"
              |> (fun ss -> ss.Id)
 
-    let internal data = id >> Data.Moons.Moons.getMoon
+    let internal data = identity >> Data.Moons.Moons.getMoon
 
     [<CompiledName("ById")>]
     let byId (id: int) = 

@@ -10,7 +10,7 @@ type UniverseExtensions=
     static member Constellations(region: Region) =
         region
             |> argNull "region"
-            |> Regions.id
+            |> Regions.identity
             |> Data.Universe.Regions.getRegion
             |> Option.map (fun r -> r.constellationIds) 
             |> Option.defaultValue Array.empty
@@ -22,7 +22,7 @@ type UniverseExtensions=
     static member SolarSystems(constellation: Constellation) =
         constellation
             |> argNull "constellation"
-            |> Constellations.id
+            |> Constellations.identity
             |> Data.Universe.Constellations.getConstellation
             |> Option.map (fun c -> c.solarSystemIds)
             |> Option.defaultValue Array.empty
@@ -100,7 +100,7 @@ type UniverseExtensions=
                                 
         let id = solarSystem
                     |> argNull "solarSystem"
-                    |> SolarSystems.id
+                    |> SolarSystems.identity
         
         [id] |> walk (max 0 depth) (Map.ofList [ (id,id) ]) [] 
              |> Seq.rev

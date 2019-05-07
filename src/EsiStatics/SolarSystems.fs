@@ -1,7 +1,7 @@
 ﻿namespace EsiStatics
 
 module SolarSystems=
-    let internal id (solarSystem: SolarSystem) = 
+    let internal identity (solarSystem: SolarSystem) = 
         solarSystem |> argNull "solarSystem"
                     |> (fun ss -> ss.Id)
 
@@ -16,7 +16,7 @@ module SolarSystems=
                                         |> Array.map (Data.Universe.Stargates.getStargate >> Option.get >> (fun sg -> sg.destinationSolarSystemId)))
             |> Option.defaultValue Array.empty
             
-    let internal data = id >> Data.Universe.SolarSystems.getSolarSystem
+    let internal data = identity >> Data.Universe.SolarSystems.getSolarSystem
 
     let internal knownSystem = byId >> Option.get
 

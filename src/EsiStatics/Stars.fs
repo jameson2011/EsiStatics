@@ -1,11 +1,11 @@
 ﻿namespace EsiStatics
 
 module Stars=
-    let internal id (star: Star) = 
+    let internal identity (star: Star) = 
         star    |> argNull "star"
                 |> (fun ss -> ss.Id)
 
-    let internal data = id >> Data.Universe.Stars.getStar
+    let internal data = identity >> Data.Universe.Stars.getStar
 
     [<CompiledName("ById")>]
     let byId (id: int) = 
