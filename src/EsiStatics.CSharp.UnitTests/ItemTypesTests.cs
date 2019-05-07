@@ -21,6 +21,36 @@ namespace EsiStatics.CSharp.UnitTests
             parentedMgs.Should().HaveCount(0);
         }
 
+        
+        [Fact]
+        public void MarketGroups_All_ReturnsMoreThanRoots()
+        {
+            var roots = MarketGroups.GetRootMarketGroups().ToList();
+            var mgs = MarketGroups.GetMarketGroups().ToList();
+
+            mgs.Count.Should().BeGreaterThan(roots.Count);
+        }
+
+        [Theory]
+        [InlineData(4)]
+        public void MarketGroups_Get_Returned(int id)
+        {
+            var mg = MarketGroups.GetMarketGroup(id).Value;
+
+            mg.Should().NotBeNull();
+        }
+
+        [Theory]
+        [InlineData(4)]
+        public void MarketGroups_GetChildren_Returned(int id)
+        {
+            var mg = MarketGroups.GetMarketGroup(id).Value;
+
+            var children = MarketGroups.GetChildMarketGroups(mg).ToList();
+            children.Count.Should().BeGreaterThan(0);
+        }
+
+
         [Theory]
         [InlineData(587)]
         [InlineData(570)]
