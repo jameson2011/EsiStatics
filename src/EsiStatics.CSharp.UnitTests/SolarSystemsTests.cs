@@ -51,5 +51,20 @@ namespace EsiStatics.CSharp.UnitTests
         }
 
 
+        [Theory]
+        [InlineData(30005003, 10)]
+        public void SolarSystem_BeltsMoonsCrawled(int id, int expectedPlanets)
+        {
+            var s = SolarSystems.ById(id).Value;
+
+            var planets = s.Planets().ToList();
+
+            var xs = planets.Select(p => (p, p.AsteroidBelts().ToList(), p.Moons().ToList())).ToList();
+            
+            planets.Should().HaveCount(expectedPlanets);
+
+            xs.Any(t => t.Item2.Count > 0).Should().BeTrue();
+            xs.Any(t => t.Item3.Count > 0).Should().BeTrue();
+        }
     }
 }
