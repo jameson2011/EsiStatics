@@ -6,21 +6,21 @@ type ItemTypesFinder()=
         lazy (
             Data.ItemTypes.MarketGroups.marketGroups()
                     |> Seq.map (fun mg -> (mg.name, mg.id))
-                    |> MutableTrie.Create
+                    |> ReadonlyTrie.Create
         )
 
     let categoryIndex =
         lazy (
             Data.ItemTypes.Categories.categories()
                 |> Seq.map (fun mg -> (mg.name, mg.id))
-                |> MutableTrie.Create
+                |> ReadonlyTrie.Create
         )
     
     let groupIndex =
         lazy (
             Data.ItemTypes.Groups.groups()
                 |> Seq.map (fun mg -> (mg.name, mg.id))
-                |> MutableTrie.Create
+                |> ReadonlyTrie.Create
         )
 
     
@@ -28,7 +28,7 @@ type ItemTypesFinder()=
         lazy (
             Data.ItemTypes.ItemTypes.itemTypes()
                 |> Seq.map (fun mg -> (mg.name, mg.id))
-                |> MutableTrie.Create
+                |> ReadonlyTrie.Create
         )
 
     member this.FindMarketGroups(search: string) =

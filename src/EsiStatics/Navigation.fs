@@ -19,17 +19,17 @@ module Navigation=
             | SecurityLevel.Highsec, SecurityLevel.Highsec -> 100.
             | _ -> 1.
 
+    
     let euclideanSystemDistancePreferHighsec (start: SolarSystem, finish: SolarSystem) = 
-        match start.Level, finish.Level with
-            | SecurityLevel.Highsec, SecurityLevel.Highsec -> 1.
-            | _ -> 100.
-        |> (*) (Geometry.euclidean start.Position finish.Position |> float)
-        
+        let route = (start, finish) 
+        route  |> euclideanSystemDistance 
+               |> (*) (preferHighsec route)
+               
     let euclideanSystemDistanceAvoidHighsec (start: SolarSystem, finish: SolarSystem) = 
-        match start.Level, finish.Level with
-            | SecurityLevel.Highsec, SecurityLevel.Highsec -> 100.
-            | _ -> 1.
-        |> (*) (Geometry.euclidean start.Position finish.Position |> float)
+        let route = (start, finish) 
+        route  |> euclideanSystemDistance 
+               |> (*) (avoidHighsec route)
+               
     
     let findRoute (distanceOf: SolarSystem * SolarSystem -> float)  (start: SolarSystem, finish: SolarSystem) =
         

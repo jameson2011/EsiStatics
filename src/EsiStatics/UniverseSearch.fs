@@ -10,7 +10,7 @@ type SolarSystemFinder() =
                             |> Seq.collect (fun c -> c.solarSystemIds)
                             |> Seq.map (SolarSystems.getSolarSystem >> Option.get)
                             |> Seq.map (fun s -> (s.name,  s.id))
-                            |> MutableTrie.Create
+                            |> ReadonlyTrie.Create
     
 
     member this.Find(search: string) =
@@ -27,7 +27,7 @@ type ConstellationFinder() =
                             |> Seq.collect (fun r -> r.constellationIds)
                             |> Seq.map (Constellations.getConstellation >> Option.get)
                             |> Seq.map (fun s -> (s.name, s.id))
-                            |> MutableTrie.Create
+                            |> ReadonlyTrie.Create
     
 
     member this.Find(search: string) =
@@ -41,7 +41,7 @@ type RegionFinder() =
     
     let index = Regions.regions()
                             |> Seq.map (fun s -> (s.name, s.id))
-                            |> MutableTrie.Create
+                            |> ReadonlyTrie.Create
     
 
     member this.Find(search: string) =

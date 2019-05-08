@@ -8,7 +8,7 @@
   <ItemGroup>
     <None Include="Tests.fsx" />
     <Compile Include="Utilities.fs" />
-    <Compile Include="MutableTrieNodeTests.fs" />
+    <Compile Include="ReadonlyTrieTests.fs" />
     <Compile Include="RegionTests.fs" />
     <Compile Include="SolarSystemsTests.fs" />
     <Compile Include="NavigationTests.fs" />

@@ -85,7 +85,7 @@ type internal MutableTrieNode<'a>(charmap: Map<char,int>)=
             | node ->   node.Add(word, value, idx+1)
 
 
-type MutableTrie<'a>(items: seq<string * 'a>)=
+type ReadonlyTrie<'a>(items: seq<string * 'a>)=
     let charArray (value: string) = value.ToCharArray()
 
     let charmap = items |> argNull "items"
@@ -136,4 +136,4 @@ type MutableTrie<'a>(items: seq<string * 'a>)=
         else []
 
     static member Create<'a>(items: seq<string * 'a>)=
-        new MutableTrie<'a>(items)
+        new ReadonlyTrie<'a>(items)

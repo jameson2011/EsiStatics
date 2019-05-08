@@ -6,7 +6,7 @@ open Xunit
 open FluentAssertions
 open EsiStatics
 
-module MutableTrieNodeTests=
+module ReadonlyTrieTests=
 
     let words = [| "cba"; "aaa"; "aab"; "aac"; "aba"; "abb"; "abc"; "baa"; "bab" |]
     let values() = words |> Array.map (fun s -> (s, s))
@@ -14,7 +14,7 @@ module MutableTrieNodeTests=
     
     [<Fact>]
     let ``Empty Trie returns empty``() =
-        let trie = MutableTrie.Create([])
+        let trie = ReadonlyTrie.Create([])
         
         let matches = trie.Find ""
 
@@ -23,7 +23,7 @@ module MutableTrieNodeTests=
 
     [<Fact>]
     let ``Search for all - all returned``() =
-        let trie = values() |> MutableTrie.Create
+        let trie = values() |> ReadonlyTrie.Create
         
         let matches = trie.Find ""
 
@@ -32,7 +32,7 @@ module MutableTrieNodeTests=
     
     [<Fact>]
     let ``Search for unkonwn returns empty``() =
-        let trie = values() |> MutableTrie.Create
+        let trie = values() |> ReadonlyTrie.Create
         
         let matches = trie.Find "!"
 
@@ -45,7 +45,7 @@ module MutableTrieNodeTests=
     [<InlineData("c")>]
     [<InlineData("!£$!\"")>]
     let ``Search returns prefixed words``(word) =
-        let trie = values() |> MutableTrie.Create
+        let trie = values() |> ReadonlyTrie.Create
         
         let matches = trie.Find word
 
@@ -60,7 +60,7 @@ module MutableTrieNodeTests=
     [<InlineData("aaa")>]
     [<InlineData("c")>]
     let ``Search is case insensitive``(word: string) =
-        let trie = values() |> MutableTrie.Create
+        let trie = values() |> ReadonlyTrie.Create
         
         let matches = word.ToUpper() |> trie.Find
 
