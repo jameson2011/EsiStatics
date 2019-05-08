@@ -7,7 +7,7 @@ module Navigation=
     let euclideanSystemDistance (start: SolarSystem) (finish: SolarSystem) = 
         Geometry.euclidean start.Position finish.Position |> float
         
-    // TODO: multiplier is a separate function
+    
     let euclideanSystemDistancePreferHighsec (start: SolarSystem) (finish: SolarSystem) = 
         match start.Level, finish.Level with
             | SecurityLevel.Highsec, SecurityLevel.Highsec -> 1.
