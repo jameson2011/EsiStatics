@@ -10,14 +10,15 @@
     <Compile Include="Entities.fs" />
     <Compile Include="Geometry.fs" />
     <Compile Include="TypeMaps.fs" />
+    <Compile Include="UniverseUtils.fs" />
+    <Compile Include="AsteroidBelts.fs" />
+    <Compile Include="Moons.fs" />
     <Compile Include="Planets.fs" />
     <Compile Include="Stars.fs" />
     <Compile Include="Regions.fs" />
     <Compile Include="Constellations.fs" />
     <Compile Include="Stations.fs" />
     <Compile Include="Stargates.fs" />
-    <Compile Include="AsteroidBelts.fs" />
-    <Compile Include="Moons.fs" />
     <Compile Include="SolarSystems.fs" />
     <Compile Include="Navigation.fs" />
     <Compile Include="UniverseExtensions.fs" />

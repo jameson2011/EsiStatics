@@ -20,12 +20,9 @@ module SolarSystems=
 
     let internal knownSystem = byId >> Option.get
 
+    // TODO: defunct?
     let internal planetRefData solarSystemId planetId =
-         solarSystemId 
-            |> Data.Universe.SolarSystems.getSolarSystem 
-            |> Option.get 
-            |> (fun s -> s.planetIds)
-            |> Array.find (fun p -> p.planetId = planetId)
+         planetId |> UniverseUtils.solarSystemPlanetRefData solarSystemId
 
     let internal navigable (value: Planet) = value :> INavigable
 

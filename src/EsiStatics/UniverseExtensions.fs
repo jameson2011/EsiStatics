@@ -78,17 +78,13 @@ type PlanetExts=
     static member AsteroidBelts(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> SolarSystems.planetRefData p.SolarSystemId p.Id )
-            |> (fun pr -> pr.beltIds)
-            |> Seq.map (AsteroidBelts.byId >> Option.get)
+            |> Planets.asteroidBelts
 
     [<Extension>]
     static member Moons(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> SolarSystems.planetRefData p.SolarSystemId p.Id )
-            |> (fun pr -> pr.moonIds)
-            |> Seq.map (Moons.byId >> Option.get)
+            |> Planets.moons
                                
 [<Extension>]
 type StargateExts=

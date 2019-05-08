@@ -16,3 +16,17 @@ module Planets=
     
     let internal navigable (value: Planet) = value :> INavigable
 
+    let asteroidBelts(planet: Planet) =
+        planet
+            |> argNull "planet"
+            |> (fun p -> UniverseUtils.solarSystemPlanetRefData p.SolarSystemId p.Id )
+            |> (fun pr -> pr.beltIds)
+            |> Seq.map (AsteroidBelts.byId >> Option.get)
+
+    
+    let moons(planet: Planet) =
+        planet
+            |> argNull "planet"
+            |> (fun p -> UniverseUtils.solarSystemPlanetRefData p.SolarSystemId p.Id )
+            |> (fun pr -> pr.moonIds)
+            |> Seq.map (Moons.byId >> Option.get)
