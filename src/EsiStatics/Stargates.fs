@@ -7,9 +7,11 @@ module Stargates=
 
     let internal data = identity >> Data.Universe.Stargates.getStargate
 
+    let internal navigable (value: Stargate) = value :> INavigable
+
     [<CompiledName("ById")>]
     let byId (id: int) = 
         id  |> Data.Universe.Stargates.getStargate
             |> Option.map TypeMaps.ofStargateData
 
-    let internal navigable (value: Stargate) = value :> INavigable
+    

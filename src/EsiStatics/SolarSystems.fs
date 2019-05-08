@@ -19,11 +19,7 @@ module SolarSystems=
     let internal data = identity >> Data.Universe.SolarSystems.getSolarSystem
 
     let internal knownSystem = byId >> Option.get
-
-    // TODO: defunct?
-    let internal planetRefData solarSystemId planetId =
-         planetId |> UniverseUtils.solarSystemPlanetRefData solarSystemId
-
+    
     let internal navigable (value: Planet) = value :> INavigable
 
     let constellation(solarSystem: SolarSystem) =

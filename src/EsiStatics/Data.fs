@@ -1,6 +1,6 @@
 ﻿namespace EsiStatics
 
-module internal UniverseUtils=
+module internal Data=
     let solarSystemPlanetRefData solarSystemId planetId =
          solarSystemId 
             |> Data.Universe.SolarSystems.getSolarSystem 

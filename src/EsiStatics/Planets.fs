@@ -7,19 +7,17 @@ module Planets=
 
     let internal data = identity >> Data.Universe.Planets.getPlanet
 
+    let internal navigable (value: Planet) = value :> INavigable
+
     [<CompiledName("ById")>]
     let byId (id: int) = 
         id  |> Data.Universe.Planets.getPlanet
             |> Option.map TypeMaps.ofPlanetData
-            
-
     
-    let internal navigable (value: Planet) = value :> INavigable
-
     let asteroidBelts(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> UniverseUtils.solarSystemPlanetRefData p.SolarSystemId p.Id )
+            |> (fun p -> Data.solarSystemPlanetRefData p.SolarSystemId p.Id )
             |> (fun pr -> pr.beltIds)
             |> Seq.map (AsteroidBelts.byId >> Option.get)
 
@@ -27,6 +25,6 @@ module Planets=
     let moons(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> UniverseUtils.solarSystemPlanetRefData p.SolarSystemId p.Id )
+            |> (fun p -> Data.solarSystemPlanetRefData p.SolarSystemId p.Id )
             |> (fun pr -> pr.moonIds)
             |> Seq.map (Moons.byId >> Option.get)

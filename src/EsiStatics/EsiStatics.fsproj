@@ -10,7 +10,7 @@
     <Compile Include="Entities.fs" />
     <Compile Include="Geometry.fs" />
     <Compile Include="TypeMaps.fs" />
-    <Compile Include="UniverseUtils.fs" />
+    <Compile Include="Data.fs" />
     <Compile Include="AsteroidBelts.fs" />
     <Compile Include="Moons.fs" />
     <Compile Include="Planets.fs" />
