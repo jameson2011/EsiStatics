@@ -13,3 +13,4 @@ module AsteroidBelts=
             |> Option.map TypeMaps.ofAsteroidBeltData
 
     let internal navigable (value: AsteroidBelt) = value :> INavigable
+

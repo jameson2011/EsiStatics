@@ -7,7 +7,7 @@ open EsiStatics
 
 module NavigationTests=
 
-
+    
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>]
     [<InlineData(30013489, KnownSystems.adirain, 18)>]
@@ -16,7 +16,7 @@ module NavigationTests=
     let ``findRoute euclidean``(start, finish, expected) =
         let s = start |> knownSystem
         let f = finish |> knownSystem
-
+        
         let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
 
         Assert.Equal(result.Length, expected)

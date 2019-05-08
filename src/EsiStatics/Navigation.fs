@@ -1,40 +1,24 @@
 ﻿namespace EsiStatics
 
-
 module Navigation=
 
     open System.Collections.Generic
-
     
-        
-    let internal euclidean' (coords: seq<float>) =
-        coords  |> Seq.map (float >> abs >> Math.sq)
-                |> Seq.sum 
-                |> sqrt
-                
-
-    /// Get a Euclidean distance between 2 Positions
-    [<CompiledName("GetEuclidean")>]
-    let euclidean (p1: Position) (p2: Position) =
-        [ p1.x - p2.x; p1.y - p2.y; p1.z - p2.z ]
-            |> Seq.map float
-            |> euclidean'
-            |> Units.toMetres
-
     let euclideanSystemDistance (start: SolarSystem) (finish: SolarSystem) = 
-        euclidean start.Position finish.Position |> float
+        Geometry.euclidean start.Position finish.Position |> float
         
+    // TODO: multiplier is a separate function
     let euclideanSystemDistancePreferHighsec (start: SolarSystem) (finish: SolarSystem) = 
         match start.Level, finish.Level with
             | SecurityLevel.Highsec, SecurityLevel.Highsec -> 1.
             | _ -> 100.
-        |> (*) (euclidean start.Position finish.Position |> float)
+        |> (*) (Geometry.euclidean start.Position finish.Position |> float)
         
     let euclideanSystemDistanceAvoidHighsec (start: SolarSystem) (finish: SolarSystem) = 
         match start.Level, finish.Level with
             | SecurityLevel.Highsec, SecurityLevel.Highsec -> 100.
             | _ -> 1.
-        |> (*) (euclidean start.Position finish.Position |> float)
+        |> (*) (Geometry.euclidean start.Position finish.Position |> float)
     
     let findRoute (distanceOf: SolarSystem -> SolarSystem -> float)  (start: SolarSystem, finish: SolarSystem) =
         
@@ -89,6 +73,3 @@ module Navigation=
         find todo
             |> List.filter (fun s -> s <> start.Id)
             |> List.map SolarSystems.knownSystem
-
-    
-    

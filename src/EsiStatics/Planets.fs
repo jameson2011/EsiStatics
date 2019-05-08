@@ -15,3 +15,4 @@ module Planets=
 
     
     let internal navigable (value: Planet) = value :> INavigable
+
