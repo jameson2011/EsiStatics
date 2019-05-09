@@ -17,14 +17,16 @@ module Planets=
     let asteroidBelts(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> Data.solarSystemPlanetRefData p.SolarSystemId p.Id )
-            |> (fun pr -> pr.beltIds)
+            |> data
+            |> Option.map (fun pr -> pr.asteroidBeltIds)
+            |> Option.defaultValue [||]
             |> Seq.map (AsteroidBelts.byId >> Option.get)
 
     
     let moons(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> Data.solarSystemPlanetRefData p.SolarSystemId p.Id )
-            |> (fun pr -> pr.moonIds)
+            |> data
+            |> Option.map (fun pr -> pr.moonIds)
+            |> Option.defaultValue [||]
             |> Seq.map (Moons.byId >> Option.get)
