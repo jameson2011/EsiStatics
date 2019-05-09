@@ -67,3 +67,21 @@ module SolarSystemsTests=
         notEmpty stars
         notEmpty stations
         notEmpty moons
+
+    
+    [<Theory>]
+    [<InlineData(KnownSystems.adirain)>]
+    let ``SolarSystem has celestial distances``(id)=
+        let pos = Position.empty
+
+        let s = SolarSystems.byId id |> Option.get
+        let cs = s |> SolarSystems.celestials |> Array.ofSeq
+
+        let results = s |> SolarSystems.celestialDistances pos |> Array.ofSeq
+        results.Should().HaveCount(cs.Length, "") |> ignore
+        
+        let distances = results |> Array.map (snd >> float)
+        
+        distances.Should().BeInAscendingOrder("") |> ignore
+        
+        
