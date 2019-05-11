@@ -10,6 +10,14 @@ open EsiStatics.Moons
 
 module UniverseTests=
 
+
+    [<Fact>]
+    let Warmup() =
+        
+        EsiStatics.Library.initUniverse()
+        
+        
+
     [<Fact>]
     let ``Walk Regions Names``() =
         let regions = Regions.regions() 
