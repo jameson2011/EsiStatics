@@ -11,7 +11,7 @@ namespace EsiStatics.CSharp.UnitTests
         [Fact]
         public void Region_Constellations_ReturnsNonEmptySequence()
         {
-            var r = Regions.ById(10000064).Value;
+            var r = Regions.Get(10000064).Value;
             
             var cs = r.Constellations().ToList();
 
@@ -32,7 +32,7 @@ namespace EsiStatics.CSharp.UnitTests
         [Fact]
         public void Constellation_SolarSystems_ReturnsNonEmptySequence()
         {
-            var c = Constellations.ById(20000001).Value;
+            var c = Constellations.Get(20000001).Value;
 
             var ss = c.SolarSystems().ToList();
 
@@ -53,7 +53,7 @@ namespace EsiStatics.CSharp.UnitTests
         [Fact]
         public void Constellation_Region_HasSameId()
         {
-            var c = Constellations.ById(20000001).Value;
+            var c = Constellations.Get(20000001).Value;
 
             var r = c.Region();
 
@@ -75,7 +75,7 @@ namespace EsiStatics.CSharp.UnitTests
         [Fact]
         public void SolarSystem_Constellation_HasSameId()
         {
-            var ss = SolarSystems.ById(30005003).Value;
+            var ss = SolarSystems.Get(30005003).Value;
 
             var c = ss.Constellation();
 
@@ -99,7 +99,7 @@ namespace EsiStatics.CSharp.UnitTests
         public void SolarSystem_ToConstellation_ToRegion_Aligns(int solarSystemId, string regionName)
         {
             
-            var r = SolarSystems.ById(solarSystemId).Value.Constellation().Region();
+            var r = SolarSystems.Get(solarSystemId).Value.Constellation().Region();
 
             r.Name.Should().Be(regionName);
 
@@ -127,7 +127,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30005003, 6)]
         public void SolarSystem_Neighbours(int solarSystemId, int depth)
         {
-            var sys = SolarSystems.ById(solarSystemId).Value;
+            var sys = SolarSystems.Get(solarSystemId).Value;
 
             var neighbours = sys.Neighbours(depth).ToList();
             
@@ -140,7 +140,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30005003, -2)]
         public void SolarSystem_Neighbours_NegativeDepth(int solarSystemId, int depth)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var neighbours = ss.Neighbours(depth).ToList();
 
@@ -160,7 +160,7 @@ namespace EsiStatics.CSharp.UnitTests
 
         public void SolarSystem_Neighbours_FindThoseWithinXLightYears(int solarSystemId, int depth, double ly)
         {
-            var sys = SolarSystems.ById(solarSystemId).Value;
+            var sys = SolarSystems.Get(solarSystemId).Value;
 
             var neighbours = sys.Neighbours(depth).SelectMany(xs => xs)
                                     .Where(s => s.Level == SecurityLevel.Lowsec ||
@@ -178,7 +178,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30005003)]
         public void SolarSystem_Planets_ReturnsNonEmpty(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var planets = ss.Planets().ToList();
 
@@ -190,7 +190,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30005003)]
         public void SolarSystem_Stations_ReturnsNonEmpty(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var stations = ss.Stations().ToList();
 
@@ -202,7 +202,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30005003)]
         public void SolarSystem_Stargates_ReturnsNonEmpty(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var gates = ss.Stargates().ToList();
 
@@ -213,7 +213,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30005003)]
         public void SolarSystem_Star_ReturnsSome(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var star = ss.Star().Value;
 
@@ -226,7 +226,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(40316914)]
         public void Planet_AsteroidBelts_ReturnsNonEmpty(int planetId)
         {
-            var planet = Planets.ById(planetId).Value;
+            var planet = Planets.Get(planetId).Value;
 
             var belts = planet.AsteroidBelts().ToList();
 
@@ -237,7 +237,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(40316908)]
         public void Planet_Moons_ReturnsNonEmpty(int planetId)
         {
-            var planet = Planets.ById(planetId).Value;
+            var planet = Planets.Get(planetId).Value;
             var moons = planet.Moons().ToList();
 
             moons.Should().NotHaveCount(0);
@@ -256,7 +256,7 @@ namespace EsiStatics.CSharp.UnitTests
                                 .SelectMany(p => p.AsteroidBelts())
                                 .Count();
 
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var belts = ss.Planets().SelectMany(p => p.AsteroidBelts()).ToList();
 
@@ -276,7 +276,7 @@ namespace EsiStatics.CSharp.UnitTests
                                 .SelectMany(p => p.Moons())
                                 .Count();
 
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var moons = ss.Planets().SelectMany(p => p.Moons()).ToList();
 
@@ -302,7 +302,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30002089)]
         public void SolarSystem_Celestials_ReturnsAll(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var celestials = ss.Celestials().ToList();
 
@@ -314,7 +314,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30002089)]
         public void SolarSystem_CelestialDistances(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             var pos = Position.FromCoordinates(1, 1, 1);
 
@@ -351,8 +351,8 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30001375, 30000055, 28)]
         public void SolarSystem_FindRoute(int start, int finish, int expected)
         {
-            var s = SolarSystems.ById(start).Value;
-            var f = SolarSystems.ById(finish).Value;
+            var s = SolarSystems.Get(start).Value;
+            var f = SolarSystems.Get(finish).Value;
 
             var result = s.FindRoute(f);
 
@@ -366,8 +366,8 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(30013489, 30000142, 10)]
         public void SolarSystem_FindHighsecRoute(int start, int finish, int expected)
         {
-            var s = SolarSystems.ById(start).Value;
-            var f = SolarSystems.ById(finish).Value;
+            var s = SolarSystems.Get(start).Value;
+            var f = SolarSystems.Get(finish).Value;
 
             var result = s.FindHighsecRoute(f);
 
@@ -379,7 +379,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(50004356)]
         public void Stargate_DestinationSolarSystem_ReturnsSolarSystem(int stargateId)
         {
-            var sg = Stargates.ById(stargateId).Value;
+            var sg = Stargates.Get(stargateId).Value;
 
             var dest = sg.DestinationSolarSystem();
 
@@ -391,7 +391,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(50004356)]
         public void Stargate_DestinationStargate_ReturnsStargate(int stargateId)
         {
-            var sg = Stargates.ById(stargateId).Value;
+            var sg = Stargates.Get(stargateId).Value;
 
             var dest = sg.DestinationStargate();
 
@@ -404,7 +404,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(50004356)]
         public void Stargate_SolarSystem_ReturnsSolarSystem(int stargateId)
         {
-            var sg = Stargates.ById(stargateId).Value;
+            var sg = Stargates.Get(stargateId).Value;
 
             var dest = sg.SolarSystem();
 

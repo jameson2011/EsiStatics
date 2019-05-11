@@ -5,7 +5,7 @@ module Regions =
         region  |> argNull "region"
                 |> (fun r -> r.Id)
 
-    [<CompiledName("ById")>]
+    [<CompiledName("Get")>]
     let byId (id: int) = 
         id  |> Data.Universe.Regions.getRegion
             |> Option.map TypeMaps.ofRegionData

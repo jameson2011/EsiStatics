@@ -9,7 +9,7 @@ module Moons=
 
     let internal navigable (value: Moon) = value :> INavigable
 
-    [<CompiledName("ById")>]
+    [<CompiledName("Get")>]
     let byId (id: int) = 
         id  |> Data.Moons.Moons.getMoon
             |> Option.map TypeMaps.ofMoonData

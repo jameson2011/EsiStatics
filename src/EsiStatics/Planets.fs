@@ -9,7 +9,7 @@ module Planets=
 
     let internal navigable (value: Planet) = value :> INavigable
 
-    [<CompiledName("ById")>]
+    [<CompiledName("Get")>]
     let byId (id: int) = 
         id  |> Data.Universe.Planets.getPlanet
             |> Option.map TypeMaps.ofPlanetData

@@ -5,7 +5,7 @@ module SolarSystems=
         solarSystem |> argNull "solarSystem"
                     |> (fun ss -> ss.Id)
 
-    [<CompiledName("ById")>]
+    [<CompiledName("Get")>]
     let byId (id: int) = 
         id  |> Data.Universe.SolarSystems.getSolarSystem
             |> Option.map TypeMaps.ofSolarSystemData

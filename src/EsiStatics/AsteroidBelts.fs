@@ -9,7 +9,7 @@ module AsteroidBelts=
 
     let internal navigable (value: AsteroidBelt) = value :> INavigable
 
-    [<CompiledName("ById")>]
+    [<CompiledName("Get")>]
     let byId (id: int) = 
         id  |> Data.Universe.AsteroidBelts.getAsteroidBelt
             |> Option.map TypeMaps.ofAsteroidBeltData

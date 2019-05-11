@@ -9,7 +9,7 @@ module Stations=
 
     let internal navigable (value: Station) = value :> INavigable
 
-    [<CompiledName("ById")>]
+    [<CompiledName("Get")>]
     let byId (id: int) = 
         id  |> Data.Universe.Stations.getStation
             |> Option.map TypeMaps.ofStationData

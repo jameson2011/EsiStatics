@@ -5,7 +5,7 @@ module Constellations=
         constellation |> argNull "constellation" 
                       |> (fun c -> c.Id)
 
-    [<CompiledName("ById")>]
+    [<CompiledName("Get")>]
     let byId (id: int) = 
         id  |> Data.Universe.Constellations.getConstellation
             |> Option.map TypeMaps.ofConstellationData
