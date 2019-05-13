@@ -9,8 +9,10 @@ open EsiStatics
 module SolarSystemsTests=
     
     [<Theory>]
-    [<InlineData(KnownSystems.adirain, 10)>]
-    let ``SolarSystem has belts & moons``(id, expectedCount: int)=
+    [<InlineData(KnownSystems.adirain, 10, 1)>]
+    [<InlineData(KnownSystems.avenod, 9, 1)>]
+    [<InlineData(KnownSystems.jita, 8, 0)>]
+    let ``SolarSystem has belts & moons``(id, expectedCount: int, minBelts: int)=
         let moons = Planets.moons >> List.ofSeq
         let belts = Planets.asteroidBelts >> List.ofSeq
 
@@ -19,7 +21,7 @@ module SolarSystemsTests=
         let xs = planets |> Array.map (fun p -> (p, belts p, moons p ))
 
         xs.Should().HaveCount(expectedCount, "") |> ignore
-        (xs |> Array.exists (fun (_,b,_) -> b.Length > 0)).Should().BeTrue("") |> ignore
+        (xs |> Array.exists (fun (_,b,_) -> b.Length >= minBelts)).Should().BeTrue("") |> ignore
         (xs |> Array.exists (fun (_,_,m) -> m.Length > 0)).Should().BeTrue("") |> ignore
 
     
@@ -44,8 +46,11 @@ module SolarSystemsTests=
         c.Id.Should().Be(s.ConstellationId, "") |> ignore
 
     
+    
+
     [<Theory>]
     [<InlineData(KnownSystems.adirain)>]
+    [<InlineData(KnownSystems.avenod)>]
     let ``SolarSystem has celestials``(id)=
 
         let notEmpty (xs: seq<'a>) = xs.Should().NotBeEmpty("") |> ignore
