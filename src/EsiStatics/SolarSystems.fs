@@ -94,20 +94,20 @@ module SolarSystems=
         
 
         let celestials (solarSystem: Data.Entities.SolarSystemData) =
-            let stars = solarSystem.starIds |> Seq.map star
-            let stations = solarSystem.stationIds |> Seq.map station
-            let stargates = solarSystem.stargateIds |> Seq.map stargate
-            let planets = solarSystem.planetIds |> Seq.map (fun pr -> pr.planetId) |> Seq.map planet
-            let belts = solarSystem.planetIds |> Seq.collect (fun pr -> pr.beltIds) |> Seq.map belt
-            let moons = solarSystem.planetIds |> Seq.collect (fun pr -> pr.moonIds) |> Seq.map moon
+            let stars = solarSystem.starIds |> Array.map star
+            let stations = solarSystem.stationIds |> Array.map station
+            let stargates = solarSystem.stargateIds |> Array.map stargate
+            let planets = solarSystem.planetIds |> Array.map (fun pr -> pr.planetId |> planet)
+            let belts = solarSystem.planetIds |> Array.collect (fun pr -> pr.beltIds |> Array.map belt)
+            let moons = solarSystem.planetIds |> Array.collect (fun pr -> pr.moonIds |> Array.map moon)
             
-            Seq.concat [ stars; stations; stargates; planets; belts; moons ]
+            Array.concat [ stars; stations; stargates; planets; belts; moons ]
 
         solarSystem
             |> argNull "solarSystem" 
             |> data
             |> Option.map celestials 
-            |> Option.defaultValue Seq.empty
+            |> Option.defaultValue Array.empty
 
     let celestialDistances(position: Position)(solarSystem: SolarSystem)=
         let solarSystem = solarSystem
