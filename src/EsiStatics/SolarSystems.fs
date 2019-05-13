@@ -91,16 +91,17 @@ module SolarSystems=
         let stargate = Stargates.byId >> Option.get >> Stargates.navigable
         let belt = AsteroidBelts.byId >> Option.get >> AsteroidBelts.navigable
         let moon = Moons.byId >> Option.get >> Moons.navigable
+        
 
         let celestials (solarSystem: Data.Entities.SolarSystemData) =
-            seq {
-                yield! solarSystem.starIds |> Seq.map star
-                yield! solarSystem.stationIds |> Seq.map station
-                yield! solarSystem.stargateIds |> Seq.map stargate
-                yield! solarSystem.planetIds |> Seq.map (fun pr -> pr.planetId) |> Seq.map planet
-                yield! solarSystem.planetIds |> Seq.collect (fun pr -> pr.beltIds) |> Seq.map belt
-                yield! solarSystem.planetIds |> Seq.collect (fun pr -> pr.moonIds) |> Seq.map moon
-            }
+            let stars = solarSystem.starIds |> Seq.map star
+            let stations = solarSystem.stationIds |> Seq.map station
+            let stargates = solarSystem.stargateIds |> Seq.map stargate
+            let planets = solarSystem.planetIds |> Seq.map (fun pr -> pr.planetId) |> Seq.map planet
+            let belts = solarSystem.planetIds |> Seq.collect (fun pr -> pr.beltIds) |> Seq.map belt
+            let moons = solarSystem.planetIds |> Seq.collect (fun pr -> pr.moonIds) |> Seq.map moon
+            
+            Seq.concat [ stars; stations; stargates; planets; belts; moons ]
 
         solarSystem
             |> argNull "solarSystem" 
