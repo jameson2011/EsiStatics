@@ -9,6 +9,29 @@ open EsiStatics
 module SolarSystemsTests=
     
     [<Theory>]
+    [<InlineData(KnownSystems.adirain, 2)>]
+    [<InlineData(KnownSystems.avenod, 5)>]
+    [<InlineData(KnownSystems.jita, 14)>]
+    let ``SolarSystem has stations``(id, expectedCount: int)=
+        
+        let s = SolarSystems.byId id |> Option.get
+        let stations = s |> SolarSystems.stations |> Array.ofSeq
+        
+        stations.Should().HaveCount(expectedCount, "") |> ignore
+        
+    [<Theory>]
+    [<InlineData(KnownSystems.adirain, 3)>]
+    [<InlineData(KnownSystems.avenod, 3)>]
+    [<InlineData(KnownSystems.jita, 7)>]
+    let ``SolarSystem has stargates``(id, expectedCount: int)=
+        
+        let s = SolarSystems.byId id |> Option.get
+        let gates = s |> SolarSystems.stargates |> Array.ofSeq
+        
+        gates.Should().HaveCount(expectedCount, "") |> ignore
+        
+
+    [<Theory>]
     [<InlineData(KnownSystems.adirain, 10, 1)>]
     [<InlineData(KnownSystems.avenod, 9, 1)>]
     [<InlineData(KnownSystems.jita, 8, 0)>]
