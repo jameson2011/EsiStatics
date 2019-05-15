@@ -34,7 +34,7 @@ module SolarSystems=
         solarSystem
             |> argNull "solarSystem"
             |> data
-            |> Option.map (fun ss -> ss.planetIds 
+            |> Option.map (fun ss -> ss.planets 
                                         |> Seq.map (fun p -> p.planetId |> Planets.byId)  
                                         |> Seq.reduceOptions)
             |> Option.defaultValue Seq.empty
@@ -97,9 +97,9 @@ module SolarSystems=
             let stars = solarSystem.starIds |> Seq.map star
             let stations = solarSystem.stationIds |> Seq.map station
             let stargates = solarSystem.stargateIds |> Seq.map stargate
-            let planets = solarSystem.planetIds |> Seq.map (fun pr -> pr.planetId |> planet)
-            let belts = solarSystem.planetIds |> Seq.collect (fun pr -> pr.beltIds |> Seq.map belt)
-            let moons = solarSystem.planetIds |> Seq.collect (fun pr -> pr.moonIds |> Seq.map moon)
+            let planets = solarSystem.planets |> Seq.map (fun pr -> pr.planetId |> planet)
+            let belts = solarSystem.planets |> Seq.collect (fun pr -> pr.beltIds |> Seq.map belt)
+            let moons = solarSystem.planets |> Seq.collect (fun pr -> pr.moonIds |> Seq.map moon)
             
             Seq.concat [ stars; stations; stargates; planets; belts; moons ]
 

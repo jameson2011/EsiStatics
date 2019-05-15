@@ -57,7 +57,7 @@ module UniverseTests=
     [<Fact>]
     let ``Walk Solar System planets``() =
         let values = getAllSolarSystems()
-                        |> Seq.collect (fun s -> s.planetIds)
+                        |> Seq.collect (fun s -> s.planets)
                         |> Seq.map (fun p -> p.planetId)
                         |> Seq.map (Planets.getPlanet >> Option.get)
 
@@ -115,7 +115,7 @@ module UniverseTests=
     [<Fact>]
     let ``Walk Solar System belts``() =
         let values = getAllSolarSystems()
-                        |> Seq.collect (fun s -> s.planetIds )
+                        |> Seq.collect (fun s -> s.planets )
                         |> Seq.collect (fun p -> p.beltIds )
                         |> Seq.map (AsteroidBelts.getAsteroidBelt >> Option.get)
 
@@ -130,7 +130,7 @@ module UniverseTests=
     [<Fact>]
     let ``Walk Solar System moons``() =
         let values = getAllSolarSystems()
-                        |> Seq.collect (fun s -> s.planetIds)
+                        |> Seq.collect (fun s -> s.planets)
                         |> Seq.collect (fun p -> p.moonIds)
                         |> Seq.map (Moons.getMoon >> Option.get)
 

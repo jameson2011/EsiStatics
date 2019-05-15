@@ -15,7 +15,7 @@ type RegionData = { id: int; name: string; constellationIds: int[] }
 [<Struct>]
 type ConstellationData = { id: int; name: string; regionId: int; solarSystemIds: int[]; position: PositionData }
 [<Struct>]
-type SolarSystemData = { id: int; name: string; constellationId: int; position: PositionData; secRating: SystemSecurity; secClass: string; secStatus: float; stargateIds: int[]; stationIds: int[]; starIds: int[]; planetIds: PlanetRefData[] }
+type SolarSystemData = { id: int; name: string; constellationId: int; position: PositionData; secRating: SystemSecurity; secClass: string; secStatus: float; stargateIds: int[]; stationIds: int[]; starIds: int[]; planets: PlanetRefData[] }
 [<Struct>]
 type PlanetData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int; asteroidBeltIds: int[]; moonIds: int[] }
 [<Struct>]
