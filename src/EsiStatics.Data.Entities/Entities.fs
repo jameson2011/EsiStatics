@@ -23,11 +23,11 @@ type StarData = { id: int; name: string; solarSystemId: int; typeId: int; age: i
 [<Struct>]
 type StargateData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int; destinationSolarSystemId: int; destinationStargateId: int }
 [<Struct>]
-type AsteroidBeltData = { id: int; name: string; solarSystemId: int; position: PositionData }
+type AsteroidBeltData = { id: int; name: string; planetId: int; solarSystemId: int; position: PositionData }
 [<Struct>]
 type StationData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int; services: string[]; maxDockableShipVolume: int }
 [<Struct>]
-type MoonData = { id: int; name: string; solarSystemId: int; position: PositionData }
+type MoonData = { id: int; name: string; planetId: int; solarSystemId: int; position: PositionData }
 [<Struct>]
 type CategoryData = { id: int; name: string; published: bool; groupIds: int[] }
 [<Struct>]
