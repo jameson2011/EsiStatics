@@ -32,7 +32,9 @@ module MarketGroups=
 
     [<CompiledName("GetItemTypes")>]
     let itemTypes (value: MarketGroup)=
-        value.Id
+        value
+            |> argNull "value"
+            |> identity
             |> (Data.ItemTypes.MarketGroups.getMarketGroup 
                     >> Option.get
                     >> fun mg -> mg.typeIds)
@@ -43,7 +45,9 @@ module MarketGroups=
 
     [<CompiledName("GetParent")>]
     let parent (value: MarketGroup)=
-        value.Id
+        value
+            |> argNull "value"
+            |> identity
             |> (Data.ItemTypes.MarketGroups.getMarketGroup 
                     >> Option.get
                     >> fun mg -> mg.parentMarketGroupId)
@@ -51,11 +55,16 @@ module MarketGroups=
 
     [<CompiledName("GetParents")>]
     let parentage (value: MarketGroup) =
-        let rec walk group result =
+        let rec walk result group =
             match group with
-            | Some g -> walk (parent g) (g::result)
+            | Some g -> walk (g::result) (parent g) 
             | None ->   result
-        walk (Some value) [] |> Seq.rev
+
+        value 
+            |> argNull "value"
+            |> Some
+            |> walk [] 
+            |> Seq.rev
 
 module Categories =
     let internal identity (value: Category)= value.Id
@@ -73,7 +82,9 @@ module Categories =
 
     [<CompiledName("GetGroups")>]
     let groups (value: Category)=
-        value.Id
+        value
+            |> argNull "value"
+            |> identity
             |> (Data.ItemTypes.Categories.getCategory >> Option.get)
             |> (fun c -> c.groupIds)
             |> Seq.map (Data.ItemTypes.Groups.getGroup >> Option.get >> TypeMaps.ofGroupData)
