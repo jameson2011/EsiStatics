@@ -32,6 +32,7 @@ module internal TypeMaps=
         { Star.Id = value.id;
                 Name = value.name;
                 Position = Position.empty;
+                SolarSystemId = value.solarSystemId;
                 Age = value.age;
                 Luminosity = value.luminosity;
                 TypeId = value.typeId;
@@ -52,6 +53,7 @@ module internal TypeMaps=
         { Moon.Id = value.id;
             Name = value.name;
             Position = ofPositionData value.position;
+            SolarSystemId = value.solarSystemId;
         }
 
 
@@ -79,6 +81,7 @@ module internal TypeMaps=
         { AsteroidBelt.Id = value.id;
             Name = value.name;
             Position = ofPositionData value.position;
+            SolarSystemId = value.solarSystemId;
         }
 
     let ofMarketGroupData (value: MarketGroupData)=

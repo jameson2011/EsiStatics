@@ -69,6 +69,7 @@ type Star =
         Id:             int
         Name:           string
         Position:       Position;
+        SolarSystemId:  int;
         TypeId:         int; 
         Age:            int64; 
         Luminosity:     float; 
@@ -114,6 +115,7 @@ type Moon =
         Id:         int
         Name:       string
         Position:   Position
+        SolarSystemId:      int
     }
     interface INavigable with
         member x.Id =       x.Id
@@ -125,6 +127,7 @@ type AsteroidBelt =
         Id:         int
         Name:       string
         Position:   Position
+        SolarSystemId:      int
     }
     interface INavigable with
         member x.Id =       x.Id

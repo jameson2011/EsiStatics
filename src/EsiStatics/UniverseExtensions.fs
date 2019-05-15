@@ -86,6 +86,23 @@ type PlanetExts=
             |> argNull "planet"
             |> Planets.moons
                                
+    [<Extension>]
+    static member SolarSystem(planet: Planet) =
+        planet
+            |> argNull "planet"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
+                
+[<Extension>]
+type StationExts = 
+    
+    [<Extension>]
+    static member SolarSystem(value: Station) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
+
 [<Extension>]
 type StargateExts=
 
@@ -110,3 +127,24 @@ type StargateExts=
             |> argNull "stargate"
             |> fun sg -> SolarSystems.byId sg.SolarSystemId
             |> Option.get
+
+[<Extension>]
+type MoonExts = 
+    
+    [<Extension>]
+    static member SolarSystem(value: Moon) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
+
+
+[<Extension>]
+type StarExts = 
+    
+    [<Extension>]
+    static member SolarSystem(value: Star) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
