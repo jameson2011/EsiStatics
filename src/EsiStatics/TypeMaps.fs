@@ -54,6 +54,7 @@ module internal TypeMaps=
             Name = value.name;
             Position = ofPositionData value.position;
             SolarSystemId = value.solarSystemId;
+            PlanetId = value.planetId;
         }
 
 
@@ -82,6 +83,7 @@ module internal TypeMaps=
             Name = value.name;
             Position = ofPositionData value.position;
             SolarSystemId = value.solarSystemId;
+            PlanetId = value.planetId;
         }
 
     let ofMarketGroupData (value: MarketGroupData)=

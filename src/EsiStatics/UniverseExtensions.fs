@@ -138,6 +138,30 @@ type MoonExts =
             |> (fun p -> p.SolarSystemId)
             |> (SolarSystems.byId >> Option.get)
 
+    [<Extension>]
+    static member Planet(value: Moon) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.PlanetId)
+            |> (Planets.byId >> Option.get)
+
+
+[<Extension>]
+type AsteroidBeltExts = 
+    
+    [<Extension>]
+    static member SolarSystem(value: AsteroidBelt) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
+
+    [<Extension>]
+    static member Planet(value: AsteroidBelt) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.PlanetId)
+            |> (Planets.byId >> Option.get)
 
 [<Extension>]
 type StarExts = 

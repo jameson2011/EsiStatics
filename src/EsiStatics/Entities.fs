@@ -112,10 +112,11 @@ type Station =
        
 type Moon = 
     {
-        Id:         int
-        Name:       string
-        Position:   Position
-        SolarSystemId:      int
+        Id:             int
+        Name:           string
+        Position:       Position
+        SolarSystemId:  int
+        PlanetId:       int
     }
     interface INavigable with
         member x.Id =       x.Id
@@ -124,10 +125,11 @@ type Moon =
        
 type AsteroidBelt = 
     {
-        Id:         int
-        Name:       string
-        Position:   Position
-        SolarSystemId:      int
+        Id:             int
+        Name:           string
+        Position:       Position
+        SolarSystemId:  int
+        PlanetId:       int
     }
     interface INavigable with
         member x.Id =       x.Id
