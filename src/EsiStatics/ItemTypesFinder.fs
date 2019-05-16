@@ -3,54 +3,49 @@
 type ItemTypesFinder()=
     
     let marketGroupIndex =
-        lazy (
-            Data.ItemTypes.MarketGroups.marketGroups()
-                    |> Seq.map (fun mg -> (mg.name, mg.id))
-                    |> ReadonlyTrie.Create
-        )
+        Data.ItemTypes.MarketGroups.marketGroups()
+                |> Seq.map (fun mg -> (mg.name, mg.id))
+                |> ReadonlyTrie.Create
+        
 
     let categoryIndex =
-        lazy (
-            Data.ItemTypes.Categories.categories()
-                |> Seq.map (fun mg -> (mg.name, mg.id))
-                |> ReadonlyTrie.Create
-        )
+        Data.ItemTypes.Categories.categories()
+            |> Seq.map (fun mg -> (mg.name, mg.id))
+            |> ReadonlyTrie.Create
+        
     
     let groupIndex =
-        lazy (
-            Data.ItemTypes.Groups.groups()
-                |> Seq.map (fun mg -> (mg.name, mg.id))
-                |> ReadonlyTrie.Create
-        )
+        Data.ItemTypes.Groups.groups()
+            |> Seq.map (fun mg -> (mg.name, mg.id))
+            |> ReadonlyTrie.Create
+        
 
     
     let itemTypeIndex =
-        lazy (
-            Data.ItemTypes.ItemTypes.itemTypes()
-                |> Seq.map (fun mg -> (mg.name, mg.id))
-                |> ReadonlyTrie.Create
-        )
+        Data.ItemTypes.ItemTypes.itemTypes()
+            |> Seq.map (fun mg -> (mg.name, mg.id))
+            |> ReadonlyTrie.Create
 
     member this.FindMarketGroups(search: string) =
         search
             |> argNull "search"
-            |> marketGroupIndex.Value.Find 
+            |> marketGroupIndex.Find 
             |> Seq.map (EsiStatics.MarketGroups.marketGroup >> Option.get)
           
     member this.FindCategories(search: string) =
         search
             |> argNull "search"
-            |> categoryIndex.Value.Find 
+            |> categoryIndex.Find 
             |> Seq.map (EsiStatics.Categories.category >> Option.get)
 
     member this.FindGroups(search: string) =
         search
             |> argNull "search"
-            |> groupIndex.Value.Find 
+            |> groupIndex.Find 
             |> Seq.map (EsiStatics.Groups.group >> Option.get)
                 
     member this.FindItemTypes(search: string) =
         search
             |> argNull "search"
-            |> itemTypeIndex.Value.Find 
+            |> itemTypeIndex.Find 
             |> Seq.map (EsiStatics.ItemTypes.itemType >> Option.get)

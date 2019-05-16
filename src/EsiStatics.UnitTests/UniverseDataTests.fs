@@ -13,7 +13,7 @@ module UniverseTests=
 
     [<Fact>]
     let Warmup() =
-        
+        EsiStatics.Library.initItemTypes()
         EsiStatics.Library.initUniverse()
         
         
