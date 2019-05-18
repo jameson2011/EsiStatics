@@ -25,7 +25,7 @@ jobs:
     - task: PublishBuildArtifacts@1
       displayName: 'Package artifacts'
       inputs:
-        PathtoPublish: 'nupkgs\EsiStatics.*.nupkg'
+        PathtoPublish: 'nupkgs'
         ArtifactName: 'EsiStatics.nupkg'
         publishLocation: 'Container'
     - powershell: ./.tools/discord/sendazurewebhook.ps1 success $(WEBHOOK_URL)
