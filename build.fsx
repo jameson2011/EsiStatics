@@ -20,7 +20,7 @@ let version = (match Fake.Core.Environment.environVarOrNone "APPVEYOR_BUILD_VERS
 
 let packageVersion =    let suffix = match branchName() with
                                         | Some "master" 
-                                        | Some "refs/head/master" -> ""
+                                        | Some "refs/heads/master" -> ""
                                         | None 
                                         | Some _ -> "-preview"
                         sprintf "%s%s" version suffix
