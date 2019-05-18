@@ -2,6 +2,10 @@
 
 trigger:
   branches:
+    include:
+      - master
+      - dev
+      - feature/*
     exclude:
       - releases/old*
 
