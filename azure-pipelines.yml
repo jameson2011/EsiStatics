@@ -30,10 +30,11 @@ jobs:
         publishLocation: 'Container'
     - task: PublishTestResults@2
       inputs:
-        testResultsFormat: 'XUnit'
+        testResultsFormat: 'VSTest'
         testResultsFiles: '**/*.trx'
         mergeTestResults: true
         testRunTitle: 'Publish Test results'
+        failTaskOnFailedTests: true
     - powershell: ./.tools/discord/sendazurewebhook.ps1 success $(WEBHOOK_URL)
       displayName: 'Notify success'
 
