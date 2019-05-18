@@ -2,7 +2,7 @@
 
 | Azure Dev | Azure Master | Nuget |
 | --------- | ------------ | ----- |
-| [![Build Status](https://dev.azure.com/j7db/EsiStatics/_apis/build/status/jameson2011.EsiStatics?branchName=dev)](https://dev.azure.com/j7db/EsiStatics/_build/latest?definitionId=4&branchName=dev) |  [![Build Status](https://dev.azure.com/j7db/EsiStatics/_apis/build/status/jameson2011.EsiStatics?branchName=master)](https://dev.azure.com/j7db/EsiStatics/_build/latest?definitionId=4&branchName=master) |  [![Build status](https://img.shields.io/nuget/v/EsiStatics.svg)](https://www.nuget.org/packages/EsiStatics) |
+| [![Build Status](https://dev.azure.com/jameson2011/EsiStatics/_apis/build/status/jameson2011.EsiStatics?branchName=dev)](https://dev.azure.com/jameson2011/EsiStatics/_build/latest?definitionId=4&branchName=dev) |  [![Build Status](https://dev.azure.com/jameson2011/EsiStatics/_apis/build/status/jameson2011.EsiStatics?branchName=master)](https://dev.azure.com/jameson2011/EsiStatics/_build/latest?definitionId=4&branchName=master) |  [![Build status](https://img.shields.io/nuget/v/EsiStatics.svg)](https://www.nuget.org/packages/EsiStatics) |
 
 A .NET Standard 2 library with  embedded static data from ESI. There are no database queries, API calls or JSON files to worry about: the data is encoded in plain old CLI code ready for use.
 
