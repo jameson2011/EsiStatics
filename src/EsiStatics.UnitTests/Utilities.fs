@@ -5,6 +5,7 @@
 module Seq=
     let reduceOptions values = values |> Seq.filter Option.isSome |> Seq.map Option.get
 
+[<AutoOpen>]
 module KnownSystems =
     [<Literal>]
     let adirain = 30005003
@@ -17,6 +18,8 @@ module KnownSystems =
     [<Literal>]
     let ``QX-LIJ`` = 30004714
 
+    
+    let knownSystem = EsiStatics.SolarSystems.byId >> Option.get
 
 [<AutoOpen>]
 module UniverseHelpers=

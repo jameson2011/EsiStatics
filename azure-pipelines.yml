@@ -1,4 +1,4 @@
-
+name:   $(MajorVersion).$(MinorVersion).$(BuildID)
 
 trigger:
   branches:
@@ -25,9 +25,26 @@ jobs:
     - task: PublishBuildArtifacts@1
       displayName: 'Package artifacts'
       inputs:
-        PathtoPublish: 'nupkgs\EsiStatics.*.nupkg'
+        PathtoPublish: 'nupkgs'
         ArtifactName: 'EsiStatics.nupkg'
         publishLocation: 'Container'
+    - task: PublishTestResults@2
+      displayName: "Publish Test results"
+      inputs:
+        testResultsFormat: 'VSTest'
+        testResultsFiles: '**/*.trx'
+        mergeTestResults: true
+        testRunTitle: 'Publish Test results'
+        failTaskOnFailedTests: true
+    - task: NuGetCommand@2
+      displayName: "Push to Nuget"
+      inputs:
+        command: 'push'
+        feedsToUse: 'select'
+        packagesToPush: '**/EsiStatics*.nupkg'
+        nuGetFeedType: 'external'
+        publishFeedCredentials: 'EsiStatics Nuget'
+        versioningScheme: 'off'
     - powershell: ./.tools/discord/sendazurewebhook.ps1 success $(WEBHOOK_URL)
       displayName: 'Notify success'
 

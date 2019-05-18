@@ -4,159 +4,108 @@ open System.Runtime.CompilerServices
 
 
 [<Extension>]
-type UniverseExtensions=
+type RegionExts=
 
     [<Extension>]
     static member Constellations(region: Region) =
-        region
-            |> argNull "region"
-            |> Regions.id
-            |> Data.Universe.Regions.getRegion
-            |> Option.map (fun r -> r.constellationIds) 
-            |> Option.defaultValue Array.empty
-            |> Seq.map Data.Universe.Constellations.getConstellation
-            |> Seq.reduceOptions
-            |> Seq.map TypeMaps.ofConstellationData
+        Regions.constellations region
+
+[<Extension>]
+type ConstellationExts=
 
     [<Extension>]
     static member SolarSystems(constellation: Constellation) =
         constellation
-            |> argNull "constellation"
-            |> Constellations.id
-            |> Data.Universe.Constellations.getConstellation
-            |> Option.map (fun c -> c.solarSystemIds)
-            |> Option.defaultValue Array.empty
-            |> Seq.map Data.Universe.SolarSystems.getSolarSystem
-            |> Seq.reduceOptions
-            |> Seq.map TypeMaps.ofSolarSystemData
+            |> Constellations.solarSystems
 
     [<Extension>]
     static member Region(constellation: Constellation) =
         constellation
-            |> argNull "constellation"
-            |> (fun r -> r.RegionId)
-            |> Data.Universe.Regions.getRegion
-            |> Option.get
-            |> TypeMaps.ofRegionData
+            |> Constellations.region
+
+
+[<Extension>]
+type SolarSystemExts=
 
     [<Extension>]
     static member Constellation(solarSystem: SolarSystem) =
-        solarSystem
-            |> argNull "solarSystem"
-            |> (fun ss -> ss.ConstellationId)
-            |> Data.Universe.Constellations.getConstellation
-            |> Option.get
-            |> TypeMaps.ofConstellationData
+        solarSystem |> SolarSystems.constellation
     
     [<Extension>]
     static member Planets(solarSystem: SolarSystem) =
-        solarSystem
-            |> argNull "solarSystem"
-            |> SolarSystems.data
-            |> Option.map (fun ss -> ss.planetIds 
-                                        |> Seq.map (fun p -> p.planetId |> Planets.byId) 
-                                        |> Seq.reduceOptions)
-            |> Option.defaultValue Seq.empty
+        solarSystem |> SolarSystems.planets
     
     [<Extension>]
     static member Star(solarSystem: SolarSystem) =
-        solarSystem
-            |> argNull "solarSystem"
-            |> SolarSystems.data
-            |> Option.bind (fun ss -> ss.starIds 
-                                        |> Seq.map (Stars.byId >> Option.get)
-                                        |> Seq.tryHead)
+        solarSystem |> SolarSystems.star
     
     [<Extension>]
     static member Stations(solarSystem: SolarSystem) =
-        solarSystem
-            |> argNull "solarSystem"
-            |> SolarSystems.data
-            |> Option.map (fun ss -> ss.stationIds |> Seq.map Stations.byId |> Seq.reduceOptions )
-            |> Option.defaultValue Seq.empty
+        solarSystem |> SolarSystems.stations
     
     [<Extension>]
     static member Stargates(solarSystem: SolarSystem) =
-        solarSystem
-            |> argNull "solarSystem"
-            |> SolarSystems.data
-            |> Option.map (fun ss -> ss.stargateIds |> Seq.map Stargates.byId |> Seq.reduceOptions )
-            |> Option.defaultValue Seq.empty
+        solarSystem |> SolarSystems.stargates
 
     [<Extension>]
     static member Neighbours(solarSystem: SolarSystem)(depth: int)=
-        
-        let rec walk depth  (found: Map<int,int>) (result: int[] list) (systemIds: seq<int>)=
-            match depth with
-            | 0 ->      result
-            | d ->      let neighbourIds = systemIds 
-                                            |> Seq.collect SolarSystems.neighbourIds 
-                                            |> Seq.filter (found.ContainsKey >> not)
-                                            |> Seq.distinct
-                                            |> Array.ofSeq
-                        let found = neighbourIds |> Seq.fold (fun m i -> m |> Map.add i i ) found 
-                        
-                        neighbourIds |> walk (d-1) found (neighbourIds :: result)
-                                
-        let id = solarSystem
-                    |> argNull "solarSystem"
-                    |> SolarSystems.id
-        
-        [id] |> walk (max 0 depth) (Map.ofList [ (id,id) ]) [] 
-             |> Seq.rev
-             |> Seq.map (Seq.map (SolarSystems.byId >> Option.get) >> Array.ofSeq)
+        solarSystem |> SolarSystems.neighbours depth
 
     [<Extension>]
     static member Celestials(solarSystem: SolarSystem)=
-        
-        let star = Stars.byId >> Option.get >> Stars.navigable
-        let station = Stations.byId >> Option.get >> Stations.navigable
-        let planet = Planets.byId >> Option.get >> Planets.navigable
-        let stargate = Stargates.byId >> Option.get >> Stargates.navigable
-        let belt = AsteroidBelts.byId >> Option.get >> AsteroidBelts.navigable
-        let moon = Moons.byId >> Option.get >> Moons.navigable
-
-        let celestials (solarSystem: Data.Entities.SolarSystemData) =
-            seq {
-                yield! solarSystem.starIds |> Seq.map star
-                yield! solarSystem.stationIds |> Seq.map station
-                yield! solarSystem.stargateIds |> Seq.map stargate
-                yield! solarSystem.planetIds |> Seq.map (fun pr -> pr.planetId) |> Seq.map planet
-                yield! solarSystem.planetIds |> Seq.collect (fun pr -> pr.beltIds) |> Seq.map belt
-                yield! solarSystem.planetIds |> Seq.collect (fun pr -> pr.moonIds) |> Seq.map moon
-            }
-
-        solarSystem
-            |> argNull "solarSystem" 
-            |> SolarSystems.data
-            |> Option.map celestials 
-            |> Option.defaultValue Seq.empty
+        solarSystem |> SolarSystems.celestials
              
     [<Extension>]
     static member CelestialDistances(solarSystem: SolarSystem)(position: Position)=
-        let solarSystem = solarSystem
-                            |> argNull "solarSystem"
+        solarSystem |> SolarSystems.celestialDistances position
         
-        solarSystem.Celestials()
-                    |> Seq.map (fun n -> (n, Navigation.euclidean position n.Position))
-                    |> Seq.sortBy snd
+    [<Extension>]
+    static member FindRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistance 
 
+    [<Extension>]
+    static member FindHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
+
+    [<Extension>]
+    static member FindExHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistanceAvoidHighsec
+
+
+[<Extension>]
+type PlanetExts=
     [<Extension>]
     static member AsteroidBelts(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> SolarSystems.planetRefData p.SolarSystemId p.Id )
-            |> (fun pr -> pr.beltIds)
-            |> Seq.map (AsteroidBelts.byId >> Option.get)
+            |> Planets.asteroidBelts
 
     [<Extension>]
     static member Moons(planet: Planet) =
         planet
             |> argNull "planet"
-            |> (fun p -> SolarSystems.planetRefData p.SolarSystemId p.Id )
-            |> (fun pr -> pr.moonIds)
-            |> Seq.map (Moons.byId >> Option.get)
+            |> Planets.moons
                                
+    [<Extension>]
+    static member SolarSystem(planet: Planet) =
+        planet
+            |> argNull "planet"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
+                
+[<Extension>]
+type StationExts = 
+    
+    [<Extension>]
+    static member SolarSystem(value: Station) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
+
+[<Extension>]
+type StargateExts=
+
     [<Extension>]
     static member DestinationSolarSystem(stargate: Stargate)=
         stargate
@@ -179,10 +128,47 @@ type UniverseExtensions=
             |> fun sg -> SolarSystems.byId sg.SolarSystemId
             |> Option.get
 
+[<Extension>]
+type MoonExts = 
+    
     [<Extension>]
-    static member FindRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
-        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistance 
+    static member SolarSystem(value: Moon) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
 
     [<Extension>]
-    static member FindHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
-        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
+    static member Planet(value: Moon) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.PlanetId)
+            |> (Planets.byId >> Option.get)
+
+
+[<Extension>]
+type AsteroidBeltExts = 
+    
+    [<Extension>]
+    static member SolarSystem(value: AsteroidBelt) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)
+
+    [<Extension>]
+    static member Planet(value: AsteroidBelt) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.PlanetId)
+            |> (Planets.byId >> Option.get)
+
+[<Extension>]
+type StarExts = 
+    
+    [<Extension>]
+    static member SolarSystem(value: Star) =
+        value
+            |> argNull "value"
+            |> (fun p -> p.SolarSystemId)
+            |> (SolarSystems.byId >> Option.get)

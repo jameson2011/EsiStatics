@@ -12,7 +12,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(-1)]
         public void Star_Unknown_ReturnsNull(int starId)
         {
-            var s = Stars.ById(starId);
+            var s = Stars.Get(starId);
 
             s.Should().BeNull();
         }
@@ -21,7 +21,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(40000291)]
         public void Star_Known_ReturnsSome(int starId)
         {
-            var star = Stars.ById(starId).Value;
+            var star = Stars.Get(starId).Value;
 
             star.Id.Should().Be(starId);
         }

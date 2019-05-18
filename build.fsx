@@ -8,15 +8,19 @@ open Fake.Core.TargetOperators
 open Fake.DotNet.NuGet
 open Fake.SystemHelper
 
-let branchName() = Fake.Core.Environment.environVarOrNone "APPVEYOR_REPO_BRANCH"
-                
+// AP: Build.SourceBranch (refs/head/...) or Build.SourceBranchName
+let branchName() = match Fake.Core.Environment.environVarOrNone "APPVEYOR_REPO_BRANCH" with
+                    | None -> (Fake.Core.Environment.environVarOrNone "BUILD_SOURCEBRANCH")
+                    | x -> x
 
-
-let version = Fake.Core.Environment.environVarOrNone "APPVEYOR_BUILD_VERSION"
-                |> Option.defaultValue "0.0.0.1"
+// AP: Build.BuildNumber
+let version = (match Fake.Core.Environment.environVarOrNone "APPVEYOR_BUILD_VERSION" with
+                | None -> Fake.Core.Environment.environVarOrNone "BUILD_BUILDNUMBER"
+                | x -> x)|> Option.defaultValue "0.0.0.1"
 
 let packageVersion =    let suffix = match branchName() with
-                                        | Some "master" -> ""
+                                        | Some "master" 
+                                        | Some "refs/head/master" -> ""
                                         | None 
                                         | Some _ -> "-preview"
                         sprintf "%s%s" version suffix
@@ -46,6 +50,8 @@ let testOptions = fun (opts: DotNet.TestOptions) ->
                                 { opts with
                                     Configuration = DotNet.BuildConfiguration.Release
                                     Output = buildTestsDir |> Path.combine "../../" |> Some
+                                    ResultsDirectory = buildTestsDir |> Path.combine "../../" |> Some
+                                    Logger = Some "trx"
                                     }
 
 let nugetOptions = fun (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->  

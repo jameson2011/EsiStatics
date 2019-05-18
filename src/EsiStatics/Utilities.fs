@@ -18,3 +18,5 @@ module internal Seq=
 module internal Math=
     let sq (x: float) = x * x
 
+module internal String =
+    let lower (value: string) = value.ToLower()

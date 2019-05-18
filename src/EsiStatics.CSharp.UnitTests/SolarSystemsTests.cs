@@ -10,10 +10,22 @@ namespace EsiStatics.CSharp.UnitTests
     {
 
         [Theory]
-        [InlineData(30005003)]
-        public void SolarSystem_Id_ReturnsSame(int solarSystemId)
+        [InlineData(-1)]
+        public void SolarSystem_Get_UnknownId_ThrowsException(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            Action a = () =>
+            {
+                var x = SolarSystems.Get(solarSystemId).Value;
+            };
+
+            a.Should().Throw<NullReferenceException>();
+        }
+
+        [Theory]
+        [InlineData(30005003)]
+        public void SolarSystem_Get_ReturnsSame(int solarSystemId)
+        {
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             
             ss.Id.Should().Be(solarSystemId);
@@ -22,22 +34,37 @@ namespace EsiStatics.CSharp.UnitTests
         
         [Theory]
         [InlineData(30005003, "Adirain")]
-        public void SolarSystem_ById_ReturnsSystem(int solarSystemId, string expectedName)
+        public void SolarSystem_Get_ReturnsSystem(int solarSystemId, string expectedName)
         {
-            var ss = SolarSystems.ById(solarSystemId).Value;
+            var ss = SolarSystems.Get(solarSystemId).Value;
 
             ss.Name.Should().Be(expectedName);
         }
 
         [Theory]
         [InlineData(-1)]
-        public void SolarSystem_ById_UnknownId_ReturnsNull(int solarSystemId)
+        public void SolarSystem_Get_UnknownId_ReturnsNull(int solarSystemId)
         {
-            var ss = SolarSystems.ById(solarSystemId);
+            var ss = SolarSystems.Get(solarSystemId);
 
             ss.Should().BeNull();
         }
 
 
+        [Theory]
+        [InlineData(30005003, 10)]
+        public void SolarSystem_BeltsMoonsCrawled(int id, int expectedPlanets)
+        {
+            var s = SolarSystems.Get(id).Value;
+
+            var planets = s.Planets().ToList();
+
+            var xs = planets.Select(p => (p, p.AsteroidBelts().ToList(), p.Moons().ToList())).ToList();
+            
+            planets.Should().HaveCount(expectedPlanets);
+
+            xs.Any(t => t.Item2.Count > 0).Should().BeTrue();
+            xs.Any(t => t.Item3.Count > 0).Should().BeTrue();
+        }
     }
 }

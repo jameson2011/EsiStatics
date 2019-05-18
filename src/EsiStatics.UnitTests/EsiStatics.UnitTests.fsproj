@@ -6,10 +6,18 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Tests.fsx" />
     <Compile Include="Utilities.fs" />
+    <Compile Include="ReadonlyTrieTests.fs" />
     <Compile Include="RegionTests.fs" />
+    <Compile Include="SolarSystemsTests.fs" />
     <Compile Include="NavigationTests.fs" />
     <Compile Include="UniverseDataTests.fs" />
+    <Compile Include="SolarSystemFinderTests.fs" />
+    <Compile Include="CategoryTests.fs" />
+    <Compile Include="GroupsTests.fs" />
+    <Compile Include="MarketGroupsTests.fs" />
+    <Compile Include="ItemTypesTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,18 +8,23 @@
     <Compile Include="Collections.fs" />
     <Compile Include="Units.fs" />
     <Compile Include="Entities.fs" />
+    <Compile Include="Geometry.fs" />
     <Compile Include="TypeMaps.fs" />
-    <Compile Include="Regions.fs" />
-    <Compile Include="Constellations.fs" />
-    <Compile Include="SolarSystems.fs" />
-    <Compile Include="Stars.fs" />
-    <Compile Include="Planets.fs" />
-    <Compile Include="Stations.fs" />
-    <Compile Include="Stargates.fs" />
     <Compile Include="AsteroidBelts.fs" />
     <Compile Include="Moons.fs" />
+    <Compile Include="Planets.fs" />
+    <Compile Include="Stars.fs" />
+    <Compile Include="Regions.fs" />
+    <Compile Include="Constellations.fs" />
+    <Compile Include="Stations.fs" />
+    <Compile Include="Stargates.fs" />
+    <Compile Include="SolarSystems.fs" />
     <Compile Include="Navigation.fs" />
     <Compile Include="UniverseExtensions.fs" />
+    <Compile Include="UniverseSearch.fs" />
+    <Compile Include="ItemTypes.fs" />
+    <Compile Include="ItemTypesFinder.fs" />
+    <Compile Include="Library.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EsiStatics.Data.Entities">
