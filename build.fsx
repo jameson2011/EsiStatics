@@ -50,6 +50,8 @@ let testOptions = fun (opts: DotNet.TestOptions) ->
                                 { opts with
                                     Configuration = DotNet.BuildConfiguration.Release
                                     Output = buildTestsDir |> Path.combine "../../" |> Some
+                                    ResultsDirectory = buildTestsDir |> Path.combine "../../" |> Some
+                                    Logger = Some "trx"
                                     }
 
 let nugetOptions = fun (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->  
