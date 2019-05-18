@@ -28,6 +28,12 @@ jobs:
         PathtoPublish: 'nupkgs'
         ArtifactName: 'EsiStatics.nupkg'
         publishLocation: 'Container'
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'XUnit'
+        testResultsFiles: '**/*.trx'
+        mergeTestResults: true
+        testRunTitle: 'Publish Test results'
     - powershell: ./.tools/discord/sendazurewebhook.ps1 success $(WEBHOOK_URL)
       displayName: 'Notify success'
 
