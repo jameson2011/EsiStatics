@@ -41,7 +41,7 @@ jobs:
       inputs:
         command: 'push'
         feedsToUse: 'select'
-        packagesToPush: '**/*.nupkg'
+        packagesToPush: '**/EsiStatics*.nupkg'
         nuGetFeedType: 'external'
         publishFeedCredentials: 'EsiStatics Nuget'
         versioningScheme: 'off'
