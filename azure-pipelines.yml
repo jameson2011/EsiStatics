@@ -1,4 +1,4 @@
-
+name:   $(MajorVersion).$(MinorVersion).$(BuildID)
 
 trigger:
   branches:
