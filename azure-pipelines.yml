@@ -1,0 +1,36 @@
+
+
+trigger:
+- master
+
+
+jobs:
+  - job: build
+    timeoutInMinutes: 180
+    pool:
+      vmImage: 'vs2017-win2016'
+
+    steps:
+    - powershell: ./.tools/discord/sendwebhook.ps1 start $(WEBHOOK_URL)
+      displayName: 'Notify start'
+    - script: .paket\paket.exe restore --group Build
+      displayName: 'Restore packages'
+    - script: build.bat
+      displayName: 'Run build'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Package artifacts'
+      inputs:
+        PathtoPublish: 'nupkgs\EsiStatics.*.nupkg'
+        ArtifactName: 'EsiStatics.nupkg'
+        publishLocation: 'Container'
+    - powershell: ./.tools/discord/sendwebhook.ps1 success $(WEBHOOK_URL)
+      displayName: 'Notify success'
+
+  - job: OnBuildFailure
+    pool:
+      vmImage: 'vs2017-win2016'
+    dependsOn: build
+    condition: failed()
+    steps:
+    - powershell: ./.tools/discord/sendwebhook.ps1 failure $(WEBHOOK_URL)
+      displayName: 'Notify failure'
