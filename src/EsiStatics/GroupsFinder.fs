@@ -5,7 +5,8 @@ type GroupsFinder(eagerIndex: bool)=
     let groupIndex =
         lazy (
             Data.ItemTypes.Groups.groups()
-                |> Seq.map (fun mg -> (mg.name, mg.id))
+                |> Seq.filter (fun g -> g.published)
+                |> Seq.map (fun g -> (g.name, g.id))
                 |> ReadonlyTrie.Create
         )
         

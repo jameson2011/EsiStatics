@@ -5,7 +5,8 @@ type ItemTypesFinder(eagerIndex: bool)=
     let itemTypeIndex =
         lazy (
             Data.ItemTypes.ItemTypes.itemTypes()
-                |> Seq.map (fun mg -> (mg.name, mg.id))
+                |> Seq.filter (fun it -> it.published)
+                |> Seq.map (fun it -> (it.name, it.id))
                 |> ReadonlyTrie.Create
         )
                 
