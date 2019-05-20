@@ -2,7 +2,7 @@
 
 open EsiStatics.Data.Universe
 
-type SolarSystemFinder() =
+type SolarSystemFinder(eagerIndex) =
     
     let index = 
         lazy (
@@ -15,6 +15,13 @@ type SolarSystemFinder() =
                             |> ReadonlyTrie.Create
         )
 
+    
+    do  if eagerIndex then
+            index.Value |> ignore
+
+    new() = 
+        SolarSystemFinder(false)
+
     member this.Find(search: string) =
         search
             |> argNull "search"
@@ -23,7 +30,7 @@ type SolarSystemFinder() =
         
 
 
-type ConstellationFinder() =
+type ConstellationFinder(eagerIndex) =
     
     let index = 
         lazy (
@@ -33,6 +40,12 @@ type ConstellationFinder() =
                             |> Seq.map (fun s -> (s.name, s.id))
                             |> ReadonlyTrie.Create
         )
+            
+    do  if eagerIndex then
+            index.Value |> ignore
+
+    new() = 
+        ConstellationFinder(false)
 
     member this.Find(search: string) =
         search
@@ -41,7 +54,7 @@ type ConstellationFinder() =
             |> Seq.map (EsiStatics.Constellations.byId >> Option.get)
         
 
-type RegionFinder() =
+type RegionFinder(eagerIndex) =
     
     let index = 
         lazy (
@@ -49,6 +62,12 @@ type RegionFinder() =
                             |> Seq.map (fun s -> (s.name, s.id))
                             |> ReadonlyTrie.Create
         )
+
+    do  if eagerIndex then
+            index.Value |> ignore
+
+    new() = 
+        RegionFinder(false)
 
     member this.Find(search: string) =
         search
