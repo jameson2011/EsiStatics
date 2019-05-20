@@ -18,6 +18,7 @@
     <Compile Include="GroupsTests.fs" />
     <Compile Include="MarketGroupsTests.fs" />
     <Compile Include="ItemTypesTests.fs" />
+    <Compile Include="ItemTypesFinderTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
