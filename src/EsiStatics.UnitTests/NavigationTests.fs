@@ -43,3 +43,14 @@ module NavigationTests=
         let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
 
         Assert.Equal(result.Length, 0)
+
+    
+    [<Theory>]
+    [<InlineData(KnownSystems.jita, KnownSystems.jita)>]
+    let ``findRoute on self returns empty``(start, finish) =
+        let s = start |> knownSystem
+        let f = finish |> knownSystem
+
+        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
+
+        Assert.Equal(result.Length, 0)
