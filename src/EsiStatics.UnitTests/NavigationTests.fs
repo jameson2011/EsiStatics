@@ -13,6 +13,7 @@ module NavigationTests=
     [<InlineData(30013489, KnownSystems.adirain, 18)>]
     [<InlineData(30013489, KnownSystems.avenod, 20)>]
     [<InlineData(30013489, KnownSystems.jita, 10)>]
+    [<InlineData(30002726, KnownSystems.adirain, 6)>]
     let ``findRoute euclidean``(start, finish, expected) =
         let s = start |> knownSystem
         let f = finish |> knownSystem
@@ -26,6 +27,7 @@ module NavigationTests=
     [<InlineData(30013489, KnownSystems.adirain, 18)>]
     [<InlineData(30013489, KnownSystems.avenod, 20)>]
     [<InlineData(30013489, KnownSystems.jita, 10)>]
+    
     let ``findRoute euclidean highsec preferred``(start, finish, expected) =
         let s = start |> knownSystem
         let f = finish |> knownSystem
