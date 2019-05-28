@@ -7,7 +7,7 @@ module Navigation=
     let euclideanSystemDistance (start: SolarSystem, finish: SolarSystem) = 
         Geometry.euclidean start.Position finish.Position |> float
         
-    let neutral (start: SolarSystem, finish: SolarSystem) = 1.
+    let dijkstraDistance (start: SolarSystem, finish: SolarSystem) = 1.
 
     let preferHighsec (start: SolarSystem, finish: SolarSystem) = 
         match start.Level, finish.Level with
@@ -64,7 +64,7 @@ module Navigation=
                                                     |> SolarSystems.neighbourIds 
                                                     |> Seq.filter (closed.Contains >> not)                                        
                                                     |> Seq.map (fun id ->   let sys = SolarSystems.knownSystem id
-                                                                            (distanceOf (sys, finish) ), sys) 
+                                                                            (euclideanSystemDistance (sys, finish) ), sys) 
                                                     |> List.ofSeq
 
                                 // adjust best known paths

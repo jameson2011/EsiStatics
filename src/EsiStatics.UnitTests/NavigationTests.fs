@@ -14,19 +14,39 @@ module NavigationTests=
     [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
     [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
     [<InlineData(KnownSystems.raeghoscon, KnownSystems.adirain, 6)>]
-    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 13)>] // should be 6
+    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 13)>] // should be 6 if symmetric
     let ``findRoute euclidean``(start, finish, expected) =
         let s = start |> knownSystem
         let f = finish |> knownSystem
         
         let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
 
-        Assert.Equal(result.Length, expected)
+        Assert.Equal(expected, result.Length)
 
 
     [<Theory>]
-    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>] // should be 13
-    [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 13)>] // ???
+    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 13)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.deepari, 19)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.deepari, 16)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.deepari, 10)>]
+    [<InlineData(KnownSystems.raeghoscon, KnownSystems.adirain, 6)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 6)>]
+    let ``findRoute dijkstra``(start, finish, expected) =
+        let s = start |> knownSystem
+        let f = finish |> knownSystem
+        
+        let result = (s, f) |> Navigation.findRoute Navigation.dijkstraDistance
+
+        Assert.Equal(expected, result.Length)
+
+
+    [<Theory>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>] 
+    [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 13)>] 
     [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.deepari, 18)>]
     [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
@@ -39,7 +59,7 @@ module NavigationTests=
 
         let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
 
-        Assert.Equal(result.Length, expected)
+        Assert.Equal(expected, result.Length)
     
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 15)>]
