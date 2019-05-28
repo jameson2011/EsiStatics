@@ -7,7 +7,7 @@ module Navigation=
     let euclideanSystemDistance (start: SolarSystem, finish: SolarSystem) = 
         Geometry.euclidean start.Position finish.Position |> float
         
-    let dijkstraDistance (start: SolarSystem, finish: SolarSystem) = 1.
+    let dijkstraSystemDistance (start: SolarSystem, finish: SolarSystem) = 1.
 
     let preferHighsec (start: SolarSystem, finish: SolarSystem) = 
         match start.Level, finish.Level with

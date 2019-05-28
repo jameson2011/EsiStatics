@@ -39,7 +39,7 @@ module NavigationTests=
         let s = start |> knownSystem
         let f = finish |> knownSystem
         
-        let result = (s, f) |> Navigation.findRoute Navigation.dijkstraDistance
+        let result = (s, f) |> Navigation.findRoute Navigation.dijkstraSystemDistance
 
         Assert.Equal(expected, result.Length)
 
