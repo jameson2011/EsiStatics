@@ -14,7 +14,7 @@ module internal MarketGroups94=
       | 2131 -> { MarketGroupData.id= 2131; name= "Caldari"; parentMarketGroupId= Some(2125); typeIds= [| 37482 |]; description= "" } |> Some
       | 2228 -> { MarketGroupData.id= 2228; name= "Doomsday Devices"; parentMarketGroupId= Some(2209); typeIds= [| 35928 |]; description= "" } |> Some
       | 2325 -> { MarketGroupData.id= 2325; name= "ORE"; parentMarketGroupId= Some(912); typeIds= [| 42522 |]; description= "" } |> Some
-      | 2519 -> { MarketGroupData.id= 2519; name= "Triglavian"; parentMarketGroupId= Some(2518); typeIds= [| 49936; 50144; 49927 |]; description= "Triglavian Battlecruisers" } |> Some
+      | 2519 -> { MarketGroupData.id= 2519; name= "Triglavian"; parentMarketGroupId= Some(2518); typeIds= [| 49936; 50144; 52419; 52444; 49927 |]; description= "Triglavian Battlecruisers" } |> Some
       | 288 -> { MarketGroupData.id= 288; name= "Energy Turrets"; parentMarketGroupId= Some(210); typeIds= [|  |]; description= "Blueprints of energy turrets for capsule-fitted ships." } |> Some
       | 353562 -> { MarketGroupData.id= 353562; name= "Dropsuits and Gear"; parentMarketGroupId= Some(350001); typeIds= [|  |]; description= "Infantry dropsuits designed to protect and sustain the wearer in even the harshest environments" } |> Some
       | 354338 -> { MarketGroupData.id= 354338; name= "Locus Grenades"; parentMarketGroupId= Some(353557); typeIds= [|  |]; description= "" } |> Some

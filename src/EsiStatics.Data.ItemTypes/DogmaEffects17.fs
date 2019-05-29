@@ -46,6 +46,7 @@ module internal DogmaEffects17=
       | 6904 -> { DogmaEffectData.id= 6904; name= "strategicCruiserMinmatarSkillLevel2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13917; postExpression= 13918 } |> Some
       | 7001 -> { DogmaEffectData.id= 7001; name= "roleBonusTorpRoF1"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19363; postExpression= 19364 } |> Some
       | 7098 -> { DogmaEffectData.id= 7098; name= "structureConversionRigBasicBonuses"; description= ""; displayName= ""; effectCategory= 0; preExpression= 227; postExpression= 228 } |> Some
+      | 7195 -> { DogmaEffectData.id= 7195; name= "systemAgilityBonusPercent"; description= ""; displayName= ""; effectCategory= 7; preExpression= 1544; postExpression= 1545 } |> Some
       | 793 -> { DogmaEffectData.id= 793; name= "escortHullUpgradeCpu Bonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3758; postExpression= 3759 } |> Some
       | 987 -> { DogmaEffectData.id= 987; name= "gunshipSkillMultiplier1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4387; postExpression= 4388 } |> Some
       | _ -> None

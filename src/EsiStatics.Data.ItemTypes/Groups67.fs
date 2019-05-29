@@ -8,7 +8,7 @@ module internal Groups67=
       | 1328 -> { GroupData.id= 1328; name= "Structure Guided Bomb Launcher"; categoryId= 66; published= true; typeIds= [| 35923; 47325 |] } |> Some
       | 1619 -> { GroupData.id= 1619; name= "Structure Combat Rig M - EW projection"; categoryId= 66; published= true; typeIds= [| 37228; 37229 |] } |> Some
       | 1813 -> { GroupData.id= 1813; name= "♦ Cruiser"; categoryId= 11; published= false; typeIds= [| 43557; 43558; 43559; 43560; 43568; 43569; 43570; 43571; 43579; 43580; 43581; 43582; 43590; 43591; 43592; 43593; 43601; 43602; 43603; 43604; 43622; 43623; 43624; 43625; 43641; 43642; 43649; 43656; 46054; 46056; 46059; 46062; 46067; 46071; 46075; 46079; 46581; 46760; 48583 |] } |> Some
-      | 358 -> { GroupData.id= 358; name= "Heavy Assault Cruiser"; categoryId= 6; published= true; typeIds= [| 2836; 3518; 11993; 11999; 12003; 12005; 12011; 12015; 12019; 12023; 32209; 34477; 34479 |] } |> Some
+      | 358 -> { GroupData.id= 358; name= "Heavy Assault Cruiser"; categoryId= 6; published= true; typeIds= [| 2836; 3518; 11993; 11999; 12003; 12005; 12011; 12015; 12019; 12023; 32209; 34477; 34479; 52252 |] } |> Some
       | 455 -> { GroupData.id= 455; name= "Hemorphite"; categoryId= 25; published= true; typeIds= [| 1231; 17444; 17445; 28403; 28404; 28405; 46681; 46697 |] } |> Some
       | 552 -> { GroupData.id= 552; name= "Asteroid Angel Cartel Battleship"; categoryId= 11; published= false; typeIds= [| 11898; 11899; 11900; 11927; 22838; 22839; 22840; 22841; 22842; 22843 |] } |> Some
       | 649 -> { GroupData.id= 649; name= "Freight Container"; categoryId= 2; published= true; typeIds= [| 3468; 24445; 33003; 33005; 33007; 33009; 33011 |] } |> Some

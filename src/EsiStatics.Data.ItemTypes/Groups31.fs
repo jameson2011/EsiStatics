@@ -8,7 +8,7 @@ module internal Groups31=
       | 128 -> { GroupData.id= 128; name= "Ship Scanner Blueprint"; categoryId= 9; published= true; typeIds= [| 1075; 1856 |] } |> Some
       | 1292 -> { GroupData.id= 1292; name= "Drone Tracking Enhancer"; categoryId= 7; published= true; typeIds= [| 33822; 33824; 33828; 33830; 33832; 33834; 33836; 33838; 33840; 41033 |] } |> Some
       | 1583 -> { GroupData.id= 1583; name= "Structure Assembly Rig M - Large Tech II Ship"; categoryId= 66; published= false; typeIds= [|  |] } |> Some
-      | 1971 -> { GroupData.id= 1971; name= "Abyssal Hazards"; categoryId= 2; published= false; typeIds= [| 47436; 47439; 47440; 47441; 47465; 47467; 47468; 47472; 47473; 47620 |] } |> Some
+      | 1971 -> { GroupData.id= 1971; name= "Abyssal Hazards"; categoryId= 2; published= false; typeIds= [| 47436; 47439; 47440; 47441; 47465; 47467; 47468; 47472; 47473; 47620; 52422 |] } |> Some
       | 225 -> { GroupData.id= 225; name= "Cheat Module Group"; categoryId= 7; published= false; typeIds= [|  |] } |> Some
       | 31 -> { GroupData.id= 31; name= "Shuttle"; categoryId= 6; published= true; typeIds= [| 672; 11129; 11132; 11134; 21097; 21628; 27299; 27301; 27303; 27305; 29266; 29328; 29330; 29332; 29334; 30842; 33513; 34496 |] } |> Some
       | 419 -> { GroupData.id= 419; name= "Combat Battlecruiser"; categoryId= 6; published= true; typeIds= [| 3756; 16227; 16229; 16231; 16233; 24696; 24698; 24700; 24702; 33151; 33153; 33155; 33157; 33869; 33871; 33873; 33875; 34473; 49711 |] } |> Some

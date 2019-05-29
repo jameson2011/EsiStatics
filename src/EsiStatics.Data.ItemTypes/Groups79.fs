@@ -5,7 +5,7 @@ module internal Groups79=
     let getGroup id = 
       match id with 
       | 1146 -> { GroupData.id= 1146; name= "Light Fighter Blueprint"; categoryId= 9; published= true; typeIds= [| 23056; 23058; 23060; 23062; 41375; 41376; 41377; 41378; 41379; 41380; 41381; 41382; 41383; 41384; 41385; 41386; 45670; 45672; 47208; 47209; 47210; 47211; 47212; 47213; 47214; 47215; 47216; 47217; 47218; 47219; 47220; 47221; 47222; 47223 |] } |> Some
-      | 1534 -> { GroupData.id= 1534; name= "Command Destroyer"; categoryId= 6; published= true; typeIds= [| 37480; 37481; 37482; 37483 |] } |> Some
+      | 1534 -> { GroupData.id= 1534; name= "Command Destroyer"; categoryId= 6; published= true; typeIds= [| 37480; 37481; 37482; 37483; 52254 |] } |> Some
       | 1631 -> { GroupData.id= 1631; name= "Structure Citadel Rig L - Drone Hitpoints and Speed"; categoryId= 66; published= false; typeIds= [| 37252; 37253 |] } |> Some
       | 1728 -> { GroupData.id= 1728; name= "Roaming Angel Cartel Cruiser"; categoryId= 11; published= false; typeIds= [| 42143 |] } |> Some
       | 176 -> { GroupData.id= 176; name= "Combat Drone Blueprint"; categoryId= 9; published= true; typeIds= [| 1214; 2174; 2176; 2184; 2186; 2194; 2196; 2204; 2206; 2437; 2445; 2447; 2455; 2457; 2465; 2467; 2477; 2479; 2487; 2489; 15509; 15511; 21639; 21641; 22781; 23526; 23560; 23562; 23564; 23760; 28210; 28212; 28214; 28216; 28263; 28265; 28267; 28269; 28271; 28273; 28275; 28277; 28279; 28281; 28283; 28285; 28287; 28289; 28291; 28293; 28295; 28297; 28299; 28301; 28303; 28305; 28307; 28309; 31865; 31867; 31869; 31871; 31873; 31875; 31877; 31879; 31881; 31883; 31885; 31887; 31889; 31891; 31893; 31895; 33682; 48745 |] } |> Some

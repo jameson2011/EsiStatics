@@ -20,6 +20,7 @@ module internal MarketGroups15=
       | 2246 -> { MarketGroupData.id= 2246; name= "Scriptable Shield Hardeners"; parentMarketGroupId= Some(553); typeIds= [| 41528; 41529; 41530; 41531; 41516 |]; description= "Shield Hardeners that can be reconfigured on the fly using scripts." } |> Some
       | 2343 -> { MarketGroupData.id= 2343; name= "X-Large Structure Resource Processing Rigs"; parentMarketGroupId= Some(2204); typeIds= [| 46641; 46642; 37284; 37285 |]; description= "X-Large Structure Reprocessing and Reaction Rigs" } |> Some
       | 2440 -> { MarketGroupData.id= 2440; name= "Engineering Mutaplasmids"; parentMarketGroupId= Some(2436); typeIds= [|  |]; description= "Mutaplasmids that can be used on Engineering modules" } |> Some
+      | 2537 -> { MarketGroupData.id= 2537; name= "Triglavian"; parentMarketGroupId= Some(2125); typeIds= [| 52254 |]; description= "Triglavian Command Destroyers" } |> Some
       | 306 -> { MarketGroupData.id= 306; name= "Large"; parentMarketGroupId= Some(300); typeIds= [| 1152; 1153; 1146; 1147; 1148; 1149; 1150; 1151 |]; description= "Blueprints of large hybrid ammunition." } |> Some
       | 353580 -> { MarketGroupData.id= 353580; name= "Vehicle Modules"; parentMarketGroupId= Some(353566); typeIds= [|  |]; description= "Modules are interchangeable hardware components that enhance or otherwise alter the functionality of the vehicle they are fitted to." } |> Some
       | 354453 -> { MarketGroupData.id= 354453; name= "CPU Upgrades"; parentMarketGroupId= Some(353589); typeIds= [|  |]; description= "" } |> Some

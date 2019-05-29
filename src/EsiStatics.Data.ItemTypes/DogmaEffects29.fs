@@ -56,6 +56,7 @@ module internal DogmaEffects29=
       | 7013 -> { DogmaEffectData.id= 7013; name= "eliteBonusGunshipKineticMissileDamage1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19373; postExpression= 19374 } |> Some
       | 708 -> { DogmaEffectData.id= 708; name= "bomberLightsRangeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3473; postExpression= 3474 } |> Some
       | 7110 -> { DogmaEffectData.id= 7110; name= "structureConversionRigResearchCostBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 227; postExpression= 228 } |> Some
+      | 7207 -> { DogmaEffectData.id= 7207; name= "shipArmorExpResistancePF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19802; postExpression= 19803 } |> Some
       | 902 -> { DogmaEffectData.id= 902; name= "decloakWave"; description= ""; displayName= ""; effectCategory= 1; preExpression= 4129; postExpression= 131 } |> Some
       | 999 -> { DogmaEffectData.id= 999; name= "eliteBonusGunshipShieldBoost2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4421; postExpression= 4422 } |> Some
       | _ -> None

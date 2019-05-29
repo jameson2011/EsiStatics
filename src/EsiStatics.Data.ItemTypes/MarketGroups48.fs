@@ -17,7 +17,7 @@ module internal MarketGroups48=
       | 2376 -> { MarketGroupData.id= 2376; name= "Pirate Faction"; parentMarketGroupId= Some(2375); typeIds= [| 46980; 47009; 46044; 46877; 46823 |]; description= "" } |> Some
       | 2473 -> { MarketGroupData.id= 2473; name= "Drone Implants"; parentMarketGroupId= Some(531); typeIds= [|  |]; description= "Drone Implants" } |> Some
       | 339 -> { MarketGroupData.id= 339; name= "Cap Booster Charges"; parentMarketGroupId= Some(211); typeIds= [| 3553; 3555; 11284; 11286; 11288; 1178; 1179; 11290; 41598 |]; description= "Blueprints of cap booster charges." } |> Some
-      | 353613 -> { MarketGroupData.id= 353613; name= "Small"; parentMarketGroupId= Some(353605); typeIds= [|  |]; description= "" } |> Some
+      | 353613 -> { MarketGroupData.id= 353613; name= ""; parentMarketGroupId= Some(353605); typeIds= [|  |]; description= "" } |> Some
       | 353710 -> { MarketGroupData.id= 353710; name= "Vehicle Command"; parentMarketGroupId= Some(353633); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
       | 354389 -> { MarketGroupData.id= 354389; name= "Advanced"; parentMarketGroupId= Some(353600); typeIds= [|  |]; description= "" } |> Some
       | 364768 -> { MarketGroupData.id= 364768; name= "Assault"; parentMarketGroupId= Some(353653); typeIds= [|  |]; description= "The Assault is a low-level aerial attack craft effective against aerial and ground units" } |> Some

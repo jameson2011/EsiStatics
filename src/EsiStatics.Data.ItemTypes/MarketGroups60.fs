@@ -17,7 +17,7 @@ module internal MarketGroups60=
       | 2097 -> { MarketGroupData.id= 2097; name= "Gallente"; parentMarketGroupId= Some(2094); typeIds= [| 46442; 44948; 36405; 42199; 37595; 45930; 46975 |]; description= "" } |> Some
       | 2291 -> { MarketGroupData.id= 2291; name= "Armor Command Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42874; 42875; 42876 |]; description= "Armor Command Burst Charges" } |> Some
       | 2388 -> { MarketGroupData.id= 2388; name= "Caldari"; parentMarketGroupId= Some(2315); typeIds= [| 45810; 46827 |]; description= "Caldari Shuttle Skins" } |> Some
-      | 2485 -> { MarketGroupData.id= 2485; name= "Triglavian"; parentMarketGroupId= Some(2483); typeIds= [| 52322; 49924; 49925; 49926; 48650; 50157; 48654; 49935; 48564; 49934; 50141; 50142; 50143 |]; description= "Triglavian Cruisers" } |> Some
+      | 2485 -> { MarketGroupData.id= 2485; name= "Triglavian"; parentMarketGroupId= Some(2483); typeIds= [| 52322; 49924; 49925; 49926; 52418; 48650; 50157; 48654; 49935; 48564; 49934; 52443; 50141; 50142; 50143 |]; description= "Triglavian Cruisers" } |> Some
       | 354692 -> { MarketGroupData.id= 354692; name= "Prototype"; parentMarketGroupId= Some(354686); typeIds= [|  |]; description= "" } |> Some
       | 355468 -> { MarketGroupData.id= 355468; name= "Equipment"; parentMarketGroupId= Some(355458); typeIds= [|  |]; description= "" } |> Some
       | 367593 -> { MarketGroupData.id= 367593; name= "Visual Customization"; parentMarketGroupId= Some(350001); typeIds= [|  |]; description= "" } |> Some

@@ -13,7 +13,7 @@ module internal MarketGroups0=
       | 1940 -> { MarketGroupData.id= 1940; name= "Interdiction Sphere Launchers"; parentMarketGroupId= Some(1566); typeIds= [| 22783 |]; description= "" } |> Some
       | 2037 -> { MarketGroupData.id= 2037; name= "Interdictors"; parentMarketGroupId= Some(2036); typeIds= [|  |]; description= "" } |> Some
       | 2134 -> { MarketGroupData.id= 2134; name= "Micro Jump Field Generators"; parentMarketGroupId= Some(252); typeIds= [| 37621 |]; description= "" } |> Some
-      | 2231 -> { MarketGroupData.id= 2231; name= ""; parentMarketGroupId= Some(2226); typeIds= [| 35922; 47298 |]; description= "" } |> Some
+      | 2231 -> { MarketGroupData.id= 2231; name= "Structure Antisubcapital Launcher"; parentMarketGroupId= Some(2226); typeIds= [| 35922; 47298 |]; description= "" } |> Some
       | 2328 -> { MarketGroupData.id= 2328; name= "ORE"; parentMarketGroupId= Some(2085); typeIds= [| 46994; 43676; 46743 |]; description= "" } |> Some
       | 2425 -> { MarketGroupData.id= 2425; name= "Precursor Frigates"; parentMarketGroupId= Some(1361); typeIds= [|  |]; description= "Precursor Frigates" } |> Some
       | 2522 -> { MarketGroupData.id= 2522; name= "Precursor Destroyers"; parentMarketGroupId= Some(1372); typeIds= [|  |]; description= "Precursor Destroyers" } |> Some
@@ -24,7 +24,7 @@ module internal MarketGroups0=
       | 366175 -> { MarketGroupData.id= 366175; name= "Dropsuits"; parentMarketGroupId= Some(365998); typeIds= [|  |]; description= "" } |> Some
       | 366272 -> { MarketGroupData.id= 366272; name= "Standard"; parentMarketGroupId= Some(366180); typeIds= [|  |]; description= "" } |> Some
       | 368018 -> { MarketGroupData.id= 368018; name= "Scout"; parentMarketGroupId= Some(368107); typeIds= [|  |]; description= "" } |> Some
-      | 485 -> { MarketGroupData.id= 485; name= ""; parentMarketGroupId= Some(1285); typeIds= [| 17184; 17185; 17186; 17187 |]; description= "" } |> Some
+      | 485 -> { MarketGroupData.id= 485; name= "Shield Hardening Arrays"; parentMarketGroupId= Some(1285); typeIds= [| 17184; 17185; 17186; 17187 |]; description= "Anchorable structures for the boosting of a control tower's shield resistances." } |> Some
       | 582 -> { MarketGroupData.id= 582; name= "Destroyers"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of destroyer-class vessels." } |> Some
       | 679 -> { MarketGroupData.id= 679; name= "Remote Sensor Dampeners"; parentMarketGroupId= Some(657); typeIds= [| 22945; 1968; 1969; 5299; 5301; 5302 |]; description= "Decrease the targeting speed and range of target ship." } |> Some
       | 776 -> { MarketGroupData.id= 776; name= "Extra Large"; parentMarketGroupId= Some(559); typeIds= [| 41152; 41153; 41154; 20452; 37289; 41080; 3573; 41081; 37304; 37305; 37306; 41083; 41082; 41150; 41151 |]; description= "Capital ship autocannons, for use on dreadnoughts and titans." } |> Some

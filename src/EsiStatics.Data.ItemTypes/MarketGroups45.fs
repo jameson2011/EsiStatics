@@ -15,7 +15,7 @@ module internal MarketGroups45=
       | 2082 -> { MarketGroupData.id= 2082; name= "Caldari"; parentMarketGroupId= Some(2068); typeIds= [| 46846; 48549; 46118; 45841; 46119; 45842; 46845; 36657; 36658; 36341; 36342; 48185; 48184; 36729; 36730; 40605; 40606 |]; description= "" } |> Some
       | 2179 -> { MarketGroupData.id= 2179; name= "Weapon Upgrades"; parentMarketGroupId= Some(2164); typeIds= [|  |]; description= "" } |> Some
       | 2276 -> { MarketGroupData.id= 2276; name= "Non-Racial"; parentMarketGroupId= Some(912); typeIds= [| 40633; 40634 |]; description= "" } |> Some
-      | 2373 -> { MarketGroupData.id= 2373; name= "Minmatar"; parentMarketGroupId= Some(2369); typeIds= [| 46026; 45964; 46901; 48511 |]; description= "" } |> Some
+      | 2373 -> { MarketGroupData.id= 2373; name= "Minmatar"; parentMarketGroupId= Some(2369); typeIds= [| 52428; 46026; 45964; 46901; 48511 |]; description= "" } |> Some
       | 2470 -> { MarketGroupData.id= 2470; name= "Large"; parentMarketGroupId= Some(2464); typeIds= [| 47934; 47935 |]; description= "Large Advanced Exotic Plasma Charges" } |> Some
       | 353707 -> { MarketGroupData.id= 353707; name= "Dropsuit Command"; parentMarketGroupId= Some(353706); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
       | 354386 -> { MarketGroupData.id= 354386; name= "Prototype"; parentMarketGroupId= Some(353602); typeIds= [|  |]; description= "" } |> Some

@@ -42,4 +42,5 @@ module internal DogmaEffects38=
       | 6925 -> { DogmaEffectData.id= 6925; name= "subsystemBonusGallenteOffensive2DroneVeloTracking"; description= ""; displayName= ""; effectCategory= 0; preExpression= 14103; postExpression= 14104 } |> Some
       | 7022 -> { DogmaEffectData.id= 7022; name= "structureShieldCapacityBonusOnline"; description= ""; displayName= ""; effectCategory= 4; preExpression= 199; postExpression= 201 } |> Some
       | 7119 -> { DogmaEffectData.id= 7119; name= "eliteBonusReconShip3PCTdamagePerCycle"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19567; postExpression= 19568 } |> Some
+      | 7216 -> { DogmaEffectData.id= 7216; name= "shipDmgMultiMaxEliteGunship1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19820; postExpression= 19821 } |> Some
       | _ -> None

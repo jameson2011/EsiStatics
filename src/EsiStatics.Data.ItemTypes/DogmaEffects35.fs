@@ -44,4 +44,5 @@ module internal DogmaEffects35=
       | 6922 -> { DogmaEffectData.id= 6922; name= "subSystemBonusAmarrDefensive3TractorBeamBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 14452; postExpression= 14453 } |> Some
       | 7019 -> { DogmaEffectData.id= 7019; name= "eliteBonusGunshipDroneTracking2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19386; postExpression= 19387 } |> Some
       | 7116 -> { DogmaEffectData.id= 7116; name= "eliteBonusReconScanProbeStrength2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19558; postExpression= 19559 } |> Some
+      | 7213 -> { DogmaEffectData.id= 7213; name= "shipArmorThermresistanceEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19813; postExpression= 19814 } |> Some
       | _ -> None

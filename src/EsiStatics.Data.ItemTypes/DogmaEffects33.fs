@@ -38,4 +38,5 @@ module internal DogmaEffects33=
       | 6920 -> { DogmaEffectData.id= 6920; name= "structureHPBonusAddPassive"; description= ""; displayName= ""; effectCategory= 0; preExpression= 10069; postExpression= 10070 } |> Some
       | 7017 -> { DogmaEffectData.id= 7017; name= "eliteBonusGunshipExplosionVelocity2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19381; postExpression= 19382 } |> Some
       | 7114 -> { DogmaEffectData.id= 7114; name= "eliteBonusMaxDmgMultiBonusAddHeavyPrecursor"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19554; postExpression= 19555 } |> Some
+      | 7211 -> { DogmaEffectData.id= 7211; name= "shipDmgMultiMaxEliteHeavyGunship1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19809; postExpression= 19810 } |> Some
       | _ -> None

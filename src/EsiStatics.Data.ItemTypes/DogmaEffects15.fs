@@ -46,4 +46,5 @@ module internal DogmaEffects15=
       | 6805 -> { DogmaEffectData.id= 6805; name= "rigEquipmentManufactureMaterialBonus"; description= "Structure Rig Material effect on Manufacturing of equipment "; displayName= ""; effectCategory= 0; preExpression= 1; postExpression= 1 } |> Some
       | 6902 -> { DogmaEffectData.id= 6902; name= "shipModuleNonRepeatingShieldHardener"; description= ""; displayName= ""; effectCategory= 1; preExpression= 59; postExpression= 59 } |> Some
       | 6999 -> { DogmaEffectData.id= 6999; name= "covertOpsStealthBomberSiegeMissileLauncherCPUNeedBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 12824; postExpression= 12825 } |> Some
+      | 7193 -> { DogmaEffectData.id= 7193; name= "systemMiningCycleTimeBonus"; description= ""; displayName= ""; effectCategory= 7; preExpression= 19771; postExpression= 19772 } |> Some
       | _ -> None

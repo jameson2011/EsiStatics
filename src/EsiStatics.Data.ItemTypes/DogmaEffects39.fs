@@ -44,5 +44,6 @@ module internal DogmaEffects39=
       | 6926 -> { DogmaEffectData.id= 6926; name= "subsystemBonusAmarrPropulsionWarpCapacitor"; description= ""; displayName= ""; effectCategory= 0; preExpression= 15389; postExpression= 15390 } |> Some
       | 7023 -> { DogmaEffectData.id= 7023; name= "structureShieldResonanceBonusPostPercent"; description= ""; displayName= ""; effectCategory= 4; preExpression= 7755; postExpression= 7756 } |> Some
       | 7120 -> { DogmaEffectData.id= 7120; name= "structureCynoJammerOnline"; description= ""; displayName= ""; effectCategory= 4; preExpression= 59; postExpression= 59 } |> Some
+      | 7217 -> { DogmaEffectData.id= 7217; name= "shipNosNeutSmartPowerReductionEliteGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19824; postExpression= 19825 } |> Some
       | 912 -> { DogmaEffectData.id= 912; name= "shipMissileLauncherRofCC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4164; postExpression= 4165 } |> Some
       | _ -> None

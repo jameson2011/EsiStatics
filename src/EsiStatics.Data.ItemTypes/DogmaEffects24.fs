@@ -51,5 +51,6 @@ module internal DogmaEffects24=
       | 7008 -> { DogmaEffectData.id= 7008; name= "structureFullPowerStateHitpointModifier"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19371; postExpression= 19372 } |> Some
       | 703 -> { DogmaEffectData.id= 703; name= "interceptorsSkillLevelPreMulEliteBonusInterceptorShip"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3451; postExpression= 3452 } |> Some
       | 7105 -> { DogmaEffectData.id= 7105; name= "structureConversionRigMETimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 227; postExpression= 228 } |> Some
+      | 7202 -> { DogmaEffectData.id= 7202; name= "systemDroneSpeedBonusPercent"; description= "Automatically generated effect"; displayName= ""; effectCategory= 7; preExpression= 7638; postExpression= 7639 } |> Some
       | 897 -> { DogmaEffectData.id= 897; name= "covertOpsCpuMultplier1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4115; postExpression= 4116 } |> Some
       | _ -> None

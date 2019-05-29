@@ -52,6 +52,7 @@ module internal DogmaEffects28=
       | 7012 -> { DogmaEffectData.id= 7012; name= "moduleBonusAssaultDamageControl"; description= ""; displayName= ""; effectCategory= 1; preExpression= 59; postExpression= 59 } |> Some
       | 707 -> { DogmaEffectData.id= 707; name= "bomberRocketRangeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3469; postExpression= 3470 } |> Some
       | 7109 -> { DogmaEffectData.id= 7109; name= "structureConversionRigInventionCostBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 227; postExpression= 228 } |> Some
+      | 7206 -> { DogmaEffectData.id= 7206; name= "shipArmorThermResistancePF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19800; postExpression= 19801 } |> Some
       | 804 -> { DogmaEffectData.id= 804; name= "ammoInfluenceCapNeed"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3797; postExpression= 3798 } |> Some
       | 901 -> { DogmaEffectData.id= 901; name= "onlineForStructures"; description= "this is the online effect for structures"; displayName= "online"; effectCategory= 1; preExpression= 131; postExpression= 131 } |> Some
       | 998 -> { DogmaEffectData.id= 998; name= "eliteBonusGunshipProjectileFalloff2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4419; postExpression= 4420 } |> Some

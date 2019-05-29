@@ -46,4 +46,5 @@ module internal DogmaEffects42=
       | 6929 -> { DogmaEffectData.id= 6929; name= "subsystemBonusGallentePropulsion2PropModHeatBenefit"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13091; postExpression= 13092 } |> Some
       | 7026 -> { DogmaEffectData.id= 7026; name= "scriptStandupWarpScram"; description= ""; displayName= ""; effectCategory= 0; preExpression= 12336; postExpression= 12337 } |> Some
       | 721 -> { DogmaEffectData.id= 721; name= "miningCapBonus"; description= "Automatically generated effect"; displayName= "Reduces Mining laser activation power"; effectCategory= 0; preExpression= 3536; postExpression= 3537 } |> Some
+      | 7220 -> { DogmaEffectData.id= 7220; name= "shipSmartBombPowerReductionEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19834; postExpression= 19835 } |> Some
       | _ -> None

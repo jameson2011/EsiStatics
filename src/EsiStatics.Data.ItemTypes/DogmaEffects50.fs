@@ -40,6 +40,7 @@ module internal DogmaEffects50=
       | 6840 -> { DogmaEffectData.id= 6840; name= "rigAllShipManufactureMaterialBonus"; description= "Structure Rig Material effect on Manufacturing of all ships"; displayName= ""; effectCategory= 0; preExpression= 1; postExpression= 1 } |> Some
       | 6937 -> { DogmaEffectData.id= 6937; name= "subsystemBonusGallenteCore3WarpScramHeatBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 14147; postExpression= 14148 } |> Some
       | 7034 -> { DogmaEffectData.id= 7034; name= "shipBonusHeavyMissileExplosiveDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19398; postExpression= 19399 } |> Some
+      | 7228 -> { DogmaEffectData.id= 7228; name= "shipMediumPrecursorWeaponOptimalEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19846; postExpression= 19847 } |> Some
       | 729 -> { DogmaEffectData.id= 729; name= "shipBonusVelocityGI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3553; postExpression= 3554 } |> Some
       | 923 -> { DogmaEffectData.id= 923; name= "shipMiningYieldMC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4196; postExpression= 4197 } |> Some
       | _ -> None

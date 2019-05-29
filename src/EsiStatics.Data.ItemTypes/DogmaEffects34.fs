@@ -47,5 +47,6 @@ module internal DogmaEffects34=
       | 7018 -> { DogmaEffectData.id= 7018; name= "shipSETROFAF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3626; postExpression= 3627 } |> Some
       | 7115 -> { DogmaEffectData.id= 7115; name= "eliteBonusReconMaxDmgMultiMaxHPT"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19556; postExpression= 19557 } |> Some
       | 713 -> { DogmaEffectData.id= 713; name= "stealthActive"; description= ""; displayName= ""; effectCategory= 1; preExpression= 3520; postExpression= 3521 } |> Some
+      | 7212 -> { DogmaEffectData.id= 7212; name= "shipArmorEMresistanceEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19811; postExpression= 19812 } |> Some
       | 907 -> { DogmaEffectData.id= 907; name= "shipLaserRofAC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4152; postExpression= 4153 } |> Some
       | _ -> None

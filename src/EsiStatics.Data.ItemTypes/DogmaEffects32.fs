@@ -42,4 +42,5 @@ module internal DogmaEffects32=
       | 6919 -> { DogmaEffectData.id= 6919; name= "subsystemSkillLevelMinmatarDefensive3"; description= ""; displayName= ""; effectCategory= 0; preExpression= 12983; postExpression= 12984 } |> Some
       | 7016 -> { DogmaEffectData.id= 7016; name= "eliteBonusGunshipExplosiveMissileDamage1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19379; postExpression= 19380 } |> Some
       | 7113 -> { DogmaEffectData.id= 7113; name= "eliteBonusMaxDmgMultiBonusAdd"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19550; postExpression= 19551 } |> Some
+      | 7210 -> { DogmaEffectData.id= 7210; name= "shipBonusCommandDestroyerRole2DefenderBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 59; postExpression= 59 } |> Some
       | _ -> None

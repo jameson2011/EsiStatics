@@ -44,6 +44,7 @@ module internal DogmaEffects9=
       | 688 -> { DogmaEffectData.id= 688; name= "electronic2AttributeModifyOnline"; description= ""; displayName= ""; effectCategory= 4; preExpression= 3398; postExpression= 3399 } |> Some
       | 6896 -> { DogmaEffectData.id= 6896; name= "subsystemMHTFittingReduction"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19331; postExpression= 19332 } |> Some
       | 6993 -> { DogmaEffectData.id= 6993; name= "roleBonus2BoosterPenaltyReduction"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19360; postExpression= 19361 } |> Some
+      | 7187 -> { DogmaEffectData.id= 7187; name= "npcBehaviorMicroJumpAttack"; description= ""; displayName= ""; effectCategory= 2; preExpression= 59; postExpression= 59 } |> Some
       | 882 -> { DogmaEffectData.id= 882; name= "shipHybridRangeBonusCF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4052; postExpression= 4053 } |> Some
       | 9 -> { DogmaEffectData.id= 9; name= "missileLaunching"; description= ""; displayName= ""; effectCategory= 2; preExpression= 114; postExpression= 89 } |> Some
       | _ -> None

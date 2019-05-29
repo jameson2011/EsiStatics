@@ -5,7 +5,7 @@ module internal Groups87=
     let getGroup id = 
       match id with 
       | 1154 -> { GroupData.id= 1154; name= "Target Breaker"; categoryId= 7; published= true; typeIds= [| 4409 |] } |> Some
-      | 1542 -> { GroupData.id= 1542; name= "Command Destroyer Blueprint"; categoryId= 9; published= true; typeIds= [| 37617; 37618; 37619; 37620 |] } |> Some
+      | 1542 -> { GroupData.id= 1542; name= "Command Destroyer Blueprint"; categoryId= 9; published= true; typeIds= [| 37617; 37618; 37619; 37620; 52255 |] } |> Some
       | 1639 -> { GroupData.id= 1639; name= "Structure Combat Rig XL - Missile and AoE Missile"; categoryId= 66; published= true; typeIds= [| 37268; 37269 |] } |> Some
       | 1736 -> { GroupData.id= 1736; name= "Roaming Blood Raider Battlecruiser"; categoryId= 11; published= false; typeIds= [| 42237 |] } |> Some
       | 1833 -> { GroupData.id= 1833; name= "Structure Engineering Rig M - Advanced Medium Ship TE"; categoryId= 66; published= true; typeIds= [| 43860; 43861 |] } |> Some

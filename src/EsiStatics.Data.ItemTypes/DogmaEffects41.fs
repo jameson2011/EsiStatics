@@ -43,5 +43,6 @@ module internal DogmaEffects41=
       | 6928 -> { DogmaEffectData.id= 6928; name= "subsystemBonusCaldariPropulsion2PropModHeatBenefit"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13091; postExpression= 13092 } |> Some
       | 7025 -> { DogmaEffectData.id= 7025; name= "eliteBonusGunshipExplosionRadius2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19390; postExpression= 19391 } |> Some
       | 720 -> { DogmaEffectData.id= 720; name= "sensorBoosterActive"; description= ""; displayName= "sensorBoosterActivated"; effectCategory= 1; preExpression= 3527; postExpression= 3528 } |> Some
+      | 7219 -> { DogmaEffectData.id= 7219; name= "shipSmartBombPowerReductionEliteGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19832; postExpression= 19833 } |> Some
       | 914 -> { DogmaEffectData.id= 914; name= "shipMiningYieldCC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4170; postExpression= 4171 } |> Some
       | _ -> None

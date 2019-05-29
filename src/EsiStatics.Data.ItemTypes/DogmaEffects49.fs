@@ -39,5 +39,6 @@ module internal DogmaEffects49=
       | 6839 -> { DogmaEffectData.id= 6839; name= "rigCapShipManufactureTimeBonus"; description= "Structure Rig Time effect on Manufacturing of Capital Ships"; displayName= ""; effectCategory= 0; preExpression= 1; postExpression= 1 } |> Some
       | 6936 -> { DogmaEffectData.id= 6936; name= "subsystemBonusMinmatarCore3StasisWebHeatBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 14149; postExpression= 14150 } |> Some
       | 7033 -> { DogmaEffectData.id= 7033; name= "shipBonusHeavyMissileEMDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19396; postExpression= 19397 } |> Some
+      | 7227 -> { DogmaEffectData.id= 7227; name= "	systemHullHPBonusPercentItem"; description= ""; displayName= ""; effectCategory= 7; preExpression= 1634; postExpression= 1635 } |> Some
       | 728 -> { DogmaEffectData.id= 728; name= "shipBonusCargoMI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3551; postExpression= 3552 } |> Some
       | _ -> None

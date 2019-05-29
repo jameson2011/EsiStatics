@@ -15,7 +15,7 @@ module internal MarketGroups9=
       | 2143 -> { MarketGroupData.id= 2143; name= "Caldari"; parentMarketGroupId= Some(2141); typeIds= [| 40322; 45830; 48173; 40595; 46838; 48728; 46107 |]; description= "" } |> Some
       | 2240 -> { MarketGroupData.id= 2240; name= "25000mm Armor Plate"; parentMarketGroupId= Some(133); typeIds= [| 41456; 41457; 41458; 40348; 40349; 40350; 40351 |]; description= "25000mm Armor Plate" } |> Some
       | 2337 -> { MarketGroupData.id= 2337; name= "Industrial Command Ships"; parentMarketGroupId= Some(2006); typeIds= [|  |]; description= "" } |> Some
-      | 2434 -> { MarketGroupData.id= 2434; name= "Medium"; parentMarketGroupId= Some(2432); typeIds= [| 47273; 47916; 47917; 47918; 47919 |]; description= "Medium Entropic Disintegrators" } |> Some
+      | 2434 -> { MarketGroupData.id= 2434; name= "Medium"; parentMarketGroupId= Some(2432); typeIds= [| 47273; 47916; 47917; 52238; 47919; 47918 |]; description= "Medium Entropic Disintegrators" } |> Some
       | 2531 -> { MarketGroupData.id= 2531; name= "Booster Slot 14"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "" } |> Some
       | 300 -> { MarketGroupData.id= 300; name= "Hybrid Charges"; parentMarketGroupId= Some(211); typeIds= [|  |]; description= "Hybrid charge blueprints." } |> Some
       | 353574 -> { MarketGroupData.id= 353574; name= "Nanohives"; parentMarketGroupId= Some(353563); typeIds= [|  |]; description= "" } |> Some
