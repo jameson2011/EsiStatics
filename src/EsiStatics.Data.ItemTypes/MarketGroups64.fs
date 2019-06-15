@@ -14,7 +14,7 @@ module internal MarketGroups64=
       | 2004 -> { MarketGroupData.id= 2004; name= "Gallente"; parentMarketGroupId= Some(2001); typeIds= [| 49799; 46386; 44174; 36367; 36368; 44177; 44178; 44179; 47503; 47631; 45875; 45871; 37552; 47522; 42147; 42148; 42149; 42150; 42151; 42152; 46387; 44891; 37547; 37548; 37549; 37550; 37551; 34736; 34737; 34738; 34739; 34740; 34741; 34742; 34743; 34744; 34745; 34746; 37055; 45876; 46388; 46384; 44889; 44890; 44175; 44892; 44893; 44894; 44176; 48226; 46563; 45872; 46385; 46383; 45560; 45874; 46717; 45873 |]; description= "" } |> Some
       | 2101 -> { MarketGroupData.id= 2101; name= "Standard Battlecruisers"; parentMarketGroupId= Some(1955); typeIds= [|  |]; description= "" } |> Some
       | 2198 -> { MarketGroupData.id= 2198; name= "Structure Guided Bombs"; parentMarketGroupId= Some(11); typeIds= [| 37849; 37850 |]; description= "" } |> Some
-      | 2295 -> { MarketGroupData.id= 2295; name= "Skirmish Command Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42888; 42886; 42887 |]; description= "Skirmish Command Burst Charges" } |> Some
+      | 2295 -> { MarketGroupData.id= 2295; name= ""; parentMarketGroupId= Some(2290); typeIds= [| 42888; 42886; 42887 |]; description= "" } |> Some
       | 2392 -> { MarketGroupData.id= 2392; name= "Minmatar"; parentMarketGroupId= Some(2309); typeIds= [| 48528; 45953; 52426; 46892 |]; description= "" } |> Some
       | 2489 -> { MarketGroupData.id= 2489; name= "Booster Slot 02"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "Booster Slot 02" } |> Some
       | 354405 -> { MarketGroupData.id= 354405; name= "Prototype"; parentMarketGroupId= Some(353575); typeIds= [|  |]; description= "" } |> Some

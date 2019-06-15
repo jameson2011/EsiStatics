@@ -16,7 +16,7 @@ module internal MarketGroups49=
       | 2086 -> { MarketGroupData.id= 2086; name= "Advanced Industrial Ships"; parentMarketGroupId= Some(2006); typeIds= [|  |]; description= "" } |> Some
       | 2183 -> { MarketGroupData.id= 2183; name= "Structure Anticapital Launcher"; parentMarketGroupId= Some(2178); typeIds= [| 37047 |]; description= "" } |> Some
       | 2280 -> { MarketGroupData.id= 2280; name= "Gallente"; parentMarketGroupId= Some(2277); typeIds= [| 47051; 46148; 46443; 47537; 41684; 52439; 47644 |]; description= "" } |> Some
-      | 2377 -> { MarketGroupData.id= 2377; name= "Standard Dreadnoughts"; parentMarketGroupId= Some(1971); typeIds= [|  |]; description= "" } |> Some
+      | 2377 -> { MarketGroupData.id= 2377; name= ""; parentMarketGroupId= Some(1971); typeIds= [|  |]; description= "" } |> Some
       | 2474 -> { MarketGroupData.id= 2474; name= "Implant Slot 06"; parentMarketGroupId= Some(2473); typeIds= [|  |]; description= "Implant Slot 06" } |> Some
       | 340 -> { MarketGroupData.id= 340; name= "Missile Launchers"; parentMarketGroupId= Some(210); typeIds= [| 41184; 10630; 26759; 13321; 41226; 41227; 44103; 786; 1876; 41225; 790; 33449; 41178; 788; 41177; 20540; 32445; 41183 |]; description= "Blueprints of missile launchers." } |> Some
       | 353711 -> { MarketGroupData.id= 353711; name= "Vehicle Command"; parentMarketGroupId= Some(353710); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some

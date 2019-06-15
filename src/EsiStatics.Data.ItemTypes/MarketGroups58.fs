@@ -8,7 +8,7 @@ module internal MarketGroups58=
       | 1125 -> { MarketGroupData.id= 1125; name= "Minmatar Core Subsystems"; parentMarketGroupId= Some(1626); typeIds= [| 45632; 45633; 45631 |]; description= "Minmatar core subsystems." } |> Some
       | 1222 -> { MarketGroupData.id= 1222; name= "Small Engineering Rigs"; parentMarketGroupId= Some(961); typeIds= [| 31232; 31394; 31364; 43894; 31400; 31370; 31406; 31376; 26929; 26931; 31412; 31382; 31226; 31388; 31358 |]; description= "Modifications that affect a small starship's energy grid." } |> Some
       | 1416 -> { MarketGroupData.id= 1416; name= "Reactive Armor Hardeners"; parentMarketGroupId= Some(535); typeIds= [| 4403 |]; description= "Armor Hardeners that shift resistance based on damaged received." } |> Some
-      | 1513 -> { MarketGroupData.id= 1513; name= "Implant Slot 09"; parentMarketGroupId= Some(1470); typeIds= [| 3288; 3289; 3290; 13232; 13235; 13236; 3271; 3272; 3273; 3280; 3281; 3282; 3283; 3284; 3287; 27224; 27225; 27226; 27232; 27233; 27234; 27235; 27236; 27237 |]; description= "Implant Slot 09" } |> Some
+      | 1513 -> { MarketGroupData.id= 1513; name= ""; parentMarketGroupId= Some(1470); typeIds= [| 3288; 3289; 3290; 13232; 13235; 13236; 3271; 3272; 3273; 3280; 3281; 3282; 3283; 3284; 3287; 27224; 27225; 27226; 27232; 27233; 27234; 27235; 27236; 27237 |]; description= "" } |> Some
       | 1610 -> { MarketGroupData.id= 1610; name= "Amarr Subsystems"; parentMarketGroupId= Some(1112); typeIds= [|  |]; description= "Amarr Subsystems" } |> Some
       | 1707 -> { MarketGroupData.id= 1707; name= "Scanning Upgrades"; parentMarketGroupId= Some(1710); typeIds= [| 33177; 33179; 33181 |]; description= "Blueprints of scanning upgrade modules" } |> Some
       | 1804 -> { MarketGroupData.id= 1804; name= "Capital Scanning Rigs"; parentMarketGroupId= Some(1795); typeIds= [| 31315; 31218; 31243; 31206 |]; description= "Blueprints of Capital Scanning Rigs." } |> Some
@@ -24,6 +24,6 @@ module internal MarketGroups58=
       | 446 -> { MarketGroupData.id= 446; name= "Minmatar"; parentMarketGroupId= Some(442); typeIds= [| 11979 |]; description= "Blueprints of Minmatar logistics designs." } |> Some
       | 640 -> { MarketGroupData.id= 640; name= "Light Missile Launchers"; parentMarketGroupId= Some(140); typeIds= [| 17491; 20595; 2404; 13925; 13926; 499; 16068; 8089; 8091; 22565 |]; description= "For the launching of light missiles." } |> Some
       | 737 -> { MarketGroupData.id= 737; name= "Individuals"; parentMarketGroupId= Some(616); typeIds= [| 18657; 15658; 15659; 15980; 15667; 15668; 15637; 15638; 15639; 17817; 15645 |]; description= "Individual identification tags." } |> Some
-      | 834 -> { MarketGroupData.id= 834; name= "Minmatar"; parentMarketGroupId= Some(822); typeIds= [| 22468; 22444 |]; description= "Minmatar command ship designs." } |> Some
+      | 834 -> { MarketGroupData.id= 834; name= ""; parentMarketGroupId= Some(822); typeIds= [| 22468; 22444 |]; description= "" } |> Some
       | 931 -> { MarketGroupData.id= 931; name= "Advanced Anti-Ship Torpedoes"; parentMarketGroupId= Some(387); typeIds= [| 24521; 2811; 24523; 24519 |]; description= "Advanced Anti-Ship Torpedoes" } |> Some
       | _ -> None

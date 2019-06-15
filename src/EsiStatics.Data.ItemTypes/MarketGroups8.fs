@@ -7,7 +7,7 @@ module internal MarketGroups8=
       | 105 -> { MarketGroupData.id= 105; name= "Large"; parentMarketGroupId= Some(851); typeIds= [| 256; 257; 258; 259; 260; 261; 262; 255 |]; description= "Large frequency crystals, for use with battleship-sized lasers." } |> Some
       | 1075 -> { MarketGroupData.id= 1075; name= "Black Ops"; parentMarketGroupId= Some(1377); typeIds= [|  |]; description= "Battleship-Class vessels, designed to operate behind enemy lines." } |> Some
       | 1269 -> { MarketGroupData.id= 1269; name= "Large Shield Rigs"; parentMarketGroupId= Some(954); typeIds= [| 26081; 26083; 26085; 26087; 26089; 26091; 25907; 26077; 26079 |]; description= "Blueprints of Large Shield Rigs." } |> Some
-      | 1366 -> { MarketGroupData.id= 1366; name= "Navy Faction"; parentMarketGroupId= Some(1362); typeIds= [| 17703; 33677; 37454; 37453; 37456; 17841; 17619; 17812; 37455 |]; description= "Navy faction frigate designs." } |> Some
+      | 1366 -> { MarketGroupData.id= 1366; name= ""; parentMarketGroupId= Some(1362); typeIds= [| 17703; 33677; 37454; 37453; 37456; 17841; 17619; 17812; 37455 |]; description= "" } |> Some
       | 1560 -> { MarketGroupData.id= 1560; name= "Power Diagnostic Systems"; parentMarketGroupId= Some(1546); typeIds= [| 1540 |]; description= "Power Diagnostic Systems" } |> Some
       | 1657 -> { MarketGroupData.id= 1657; name= "Standard Containers"; parentMarketGroupId= Some(379); typeIds= [| 3296; 3297; 3293 |]; description= "Standard Containers" } |> Some
       | 1851 -> { MarketGroupData.id= 1851; name= "Complex Reactions"; parentMarketGroupId= Some(1849); typeIds= [|  |]; description= "Chemical processes through which compounds are combined into complex materials" } |> Some
@@ -30,6 +30,6 @@ module internal MarketGroups8=
       | 590 -> { MarketGroupData.id= 590; name= "Caldari"; parentMarketGroupId= Some(588); typeIds= [| 24699; 4307; 16228 |]; description= "Blueprints of Caldari battlecruiser designs." } |> Some
       | 687 -> { MarketGroupData.id= 687; name= "Shield Flux Coils"; parentMarketGroupId= Some(554); typeIds= [| 37825; 1254; 8295; 1256; 8297; 508 |]; description= "Increase shield recharge rate while lowering maximum shield capacity." } |> Some
       | 784 -> { MarketGroupData.id= 784; name= "Caldari"; parentMarketGroupId= Some(782); typeIds= [| 19727 |]; description= "Blueprints of Caldari dreadnought designs." } |> Some
-      | 8 -> { MarketGroupData.id= 8; name= ""; parentMarketGroupId= Some(1382); typeIds= [|  |]; description= "" } |> Some
+      | 8 -> { MarketGroupData.id= 8; name= "Standard Industrial Ships"; parentMarketGroupId= Some(1382); typeIds= [|  |]; description= "Built for the transportation of vast amounts of cargo." } |> Some
       | 881 -> { MarketGroupData.id= 881; name= "Command Ships"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of command ship-class vessels." } |> Some
       | _ -> None

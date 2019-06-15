@@ -25,7 +25,7 @@ module internal MarketGroups23=
       | 354364 -> { MarketGroupData.id= 354364; name= "Standard"; parentMarketGroupId= Some(353571); typeIds= [|  |]; description= "" } |> Some
       | 354461 -> { MarketGroupData.id= 354461; name= "Boosts (Ground)"; parentMarketGroupId= Some(353591); typeIds= [|  |]; description= "These speed boost modules only apply to ground vehicles" } |> Some
       | 366198 -> { MarketGroupData.id= 366198; name= "Advanced"; parentMarketGroupId= Some(366174); typeIds= [|  |]; description= "" } |> Some
-      | 411 -> { MarketGroupData.id= 411; name= "Caldari"; parentMarketGroupId= Some(408); typeIds= [| 11177; 11179 |]; description= "Blueprints of Caldari interceptor designs." } |> Some
+      | 411 -> { MarketGroupData.id= 411; name= ""; parentMarketGroupId= Some(408); typeIds= [| 11177; 11179 |]; description= "" } |> Some
       | 605 -> { MarketGroupData.id= 605; name= "Small"; parentMarketGroupId= Some(551); typeIds= [| 28742; 8521; 8427; 20625; 31922; 20627; 31924; 377; 380 |]; description= "Frigate-class shield extension systems." } |> Some
       | 702 -> { MarketGroupData.id= 702; name= "Micro"; parentMarketGroupId= Some(664); typeIds= [| 522 |]; description= "Give a small increase in capacitor energy." } |> Some
       | 799 -> { MarketGroupData.id= 799; name= "Fleet Assistance Modules"; parentMarketGroupId= Some(209); typeIds= [| 21604; 28647; 28653; 43544; 23954; 23736; 43545; 43546; 43547; 43548 |]; description= "Blueprints of Fleet Assistance Modules." } |> Some

@@ -24,7 +24,7 @@ module internal MarketGroups85=
       | 570 -> { MarketGroupData.id= 570; name= "Small"; parentMarketGroupId= Some(558); typeIds= [| 13826; 13830; 6671; 6673; 6675; 6677; 23836; 5175; 5177; 5179; 5181; 450; 451; 453; 5217; 3017; 5215; 3001; 13797; 34272; 3041; 5219; 5221; 15849; 13803; 15853; 15856; 13811; 15864; 15871; 15868; 13823 |]; description= "Small pulse lasers, suitable for frigate use." } |> Some
       | 667 -> { MarketGroupData.id= 667; name= "Capacitor Power Relays"; parentMarketGroupId= Some(655); typeIds= [| 14144; 14146; 1445; 17510; 1447; 15080; 15082; 15084; 15437; 15086; 8175; 15088; 8177; 15090; 15092; 15094; 17528; 23896; 506; 28532 |]; description= "Increase capacitor recharge rate at the expense of shield boosting capability." } |> Some
       | 764 -> { MarketGroupData.id= 764; name= "Gallente"; parentMarketGroupId= Some(761); typeIds= [| 19724 |]; description= "Gallente dreadnought designs." } |> Some
-      | 85 -> { MarketGroupData.id= 85; name= ""; parentMarketGroupId= Some(8); typeIds= [| 1944; 19744 |]; description= "" } |> Some
+      | 85 -> { MarketGroupData.id= 85; name= "Amarr"; parentMarketGroupId= Some(8); typeIds= [| 1944; 19744 |]; description= "Amarr industrial designs." } |> Some
       | 861 -> { MarketGroupData.id= 861; name= "Medium"; parentMarketGroupId= Some(849); typeIds= [| 12785; 12789 |]; description= "Medium advanced hybrid shells, fired by cruiser-sized guns." } |> Some
       | 958 -> { MarketGroupData.id= 958; name= "Drone Rigs"; parentMarketGroupId= Some(1111); typeIds= [|  |]; description= "Permanent modification of a ship's drone facilities." } |> Some
       | _ -> None

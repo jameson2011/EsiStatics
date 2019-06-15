@@ -20,7 +20,7 @@ module internal MarketGroups79=
       | 363441 -> { MarketGroupData.id= 363441; name= "Heavy"; parentMarketGroupId= Some(354448); typeIds= [|  |]; description= " " } |> Some
       | 364896 -> { MarketGroupData.id= 364896; name= "Prototype"; parentMarketGroupId= Some(364893); typeIds= [|  |]; description= "Prototype heavy frames." } |> Some
       | 365769 -> { MarketGroupData.id= 365769; name= "Rail Rifles"; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "Rail Rifles." } |> Some
-      | 366254 -> { MarketGroupData.id= 366254; name= ""; parentMarketGroupId= Some(366190); typeIds= [|  |]; description= "" } |> Some
+      | 366254 -> { MarketGroupData.id= 366254; name= "Advanced"; parentMarketGroupId= Some(366190); typeIds= [|  |]; description= "" } |> Some
       | 366351 -> { MarketGroupData.id= 366351; name= "Faction Booster Gallente"; parentMarketGroupId= Some(354534); typeIds= [|  |]; description= "" } |> Some
       | 370 -> { MarketGroupData.id= 370; name= "Fleet Support"; parentMarketGroupId= Some(150); typeIds= [| 22552; 11574; 22536; 20494; 20495; 43728; 11569; 3348; 3349; 3350; 3351; 3352; 11572; 3354; 24764 |]; description= "Skills pertaining to the operation of Command Burst modules" } |> Some
       | 467 -> { MarketGroupData.id= 467; name= "Gallente"; parentMarketGroupId= Some(464); typeIds= [| 16240; 32872 |]; description= "Gallente destroyer designs." } |> Some

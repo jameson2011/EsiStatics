@@ -10,7 +10,7 @@ module internal MarketGroups92=
       | 1547 -> { MarketGroupData.id= 1547; name= "Shield Flux Coils"; parentMarketGroupId= Some(1545); typeIds= [| 1255 |]; description= "Shield Flux Coils" } |> Some
       | 1838 -> { MarketGroupData.id= 1838; name= "Special Edition Covert Ops"; parentMarketGroupId= Some(1612); typeIds= [| 44993; 45530; 48636; 33397; 42246 |]; description= "" } |> Some
       | 1935 -> { MarketGroupData.id= 1935; name= "Warp Disruptors"; parentMarketGroupId= Some(657); typeIds= [| 21510; 15889; 15891; 5399; 40730; 40731; 40732; 5405; 40734; 40736; 40737; 14242; 5403; 14244; 14246; 14248; 3242; 3244; 40733; 14656; 14658; 14660; 14662; 15431; 32459; 28516; 41062; 14250 |]; description= "" } |> Some
-      | 2032 -> { MarketGroupData.id= 2032; name= "Missile Guidance Computers"; parentMarketGroupId= Some(143); typeIds= [| 35788; 35789; 35790 |]; description= "" } |> Some
+      | 2032 -> { MarketGroupData.id= 2032; name= ""; parentMarketGroupId= Some(143); typeIds= [| 35788; 35789; 35790 |]; description= "" } |> Some
       | 2226 -> { MarketGroupData.id= 2226; name= "Missile Launchers"; parentMarketGroupId= Some(2209); typeIds= [|  |]; description= "" } |> Some
       | 2323 -> { MarketGroupData.id= 2323; name= "Engineering Service Modules"; parentMarketGroupId= Some(2166); typeIds= [| 43928; 43929; 43925; 43926; 43927 |]; description= "" } |> Some
       | 2420 -> { MarketGroupData.id= 2420; name= "Special Battleships"; parentMarketGroupId= Some(1960); typeIds= [|  |]; description= "" } |> Some

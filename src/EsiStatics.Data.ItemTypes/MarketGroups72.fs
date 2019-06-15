@@ -18,8 +18,8 @@ module internal MarketGroups72=
       | 2497 -> { MarketGroupData.id= 2497; name= "Frentix"; parentMarketGroupId= Some(2489); typeIds= [| 28678; 15460; 15461; 15462 |]; description= "Frentix Boosters" } |> Some
       | 355189 -> { MarketGroupData.id= 355189; name= "Prototype"; parentMarketGroupId= Some(355181); typeIds= [|  |]; description= "" } |> Some
       | 364889 -> { MarketGroupData.id= 364889; name= "Basic"; parentMarketGroupId= Some(364045); typeIds= [|  |]; description= "Basic medium frame dropsuits." } |> Some
-      | 365277 -> { MarketGroupData.id= 365277; name= "Prototype"; parentMarketGroupId= Some(365272); typeIds= [|  |]; description= "Prototype pilot dropsuits." } |> Some
-      | 365374 -> { MarketGroupData.id= 365374; name= ""; parentMarketGroupId= Some(367566); typeIds= [|  |]; description= "" } |> Some
+      | 365277 -> { MarketGroupData.id= 365277; name= ""; parentMarketGroupId= Some(365272); typeIds= [|  |]; description= "" } |> Some
+      | 365374 -> { MarketGroupData.id= 365374; name= "Item Bundles"; parentMarketGroupId= Some(367566); typeIds= [|  |]; description= "" } |> Some
       | 557 -> { MarketGroupData.id= 557; name= "Beam Lasers"; parentMarketGroupId= Some(88); typeIds= [|  |]; description= "Beam lasers fire a concentrated, persistent stream of energy at their target." } |> Some
       | 72 -> { MarketGroupData.id= 72; name= "Amarr"; parentMarketGroupId= Some(5); typeIds= [| 29248; 589; 590; 591; 2161; 597 |]; description= "Amarr frigate designs." } |> Some
       | 751 -> { MarketGroupData.id= 751; name= "Overseer's Personal Effects"; parentMarketGroupId= Some(614); typeIds= [| 19400; 19401; 19402; 19403; 19404; 19405; 19406; 19407; 19408; 19409; 19410; 19411; 19412; 19413; 19414; 19415; 19416; 19417; 19418; 19419; 19420; 19421; 19422 |]; description= "Proof that there's one less evil bastard in the world." } |> Some

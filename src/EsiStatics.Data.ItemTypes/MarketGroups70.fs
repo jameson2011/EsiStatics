@@ -17,7 +17,7 @@ module internal MarketGroups70=
       | 2301 -> { MarketGroupData.id= 2301; name= "Shield Command Burst Charges"; parentMarketGroupId= Some(2297); typeIds= [| 42696; 42694; 42695 |]; description= "Shield Command Burst Charges" } |> Some
       | 2398 -> { MarketGroupData.id= 2398; name= "Uncommon Moon Ores"; parentMarketGroupId= Some(2395); typeIds= [| 46299; 46298; 46300; 46301; 46296; 46297; 45498; 45499; 45500; 45501; 46302; 46303 |]; description= "" } |> Some
       | 2495 -> { MarketGroupData.id= 2495; name= "Antipharmakon"; parentMarketGroupId= Some(2488); typeIds= [| 36912; 36908; 36909 |]; description= "Antipharmakon Boosters" } |> Some
-      | 264 -> { MarketGroupData.id= 264; name= "Minmatar"; parentMarketGroupId= Some(205); typeIds= [| 945; 946; 689; 690; 691; 3767 |]; description= "Blueprints of Minmatar frigate designs." } |> Some
+      | 264 -> { MarketGroupData.id= 264; name= ""; parentMarketGroupId= Some(205); typeIds= [| 945; 946; 689; 690; 691; 3767 |]; description= "" } |> Some
       | 354411 -> { MarketGroupData.id= 354411; name= "Advanced"; parentMarketGroupId= Some(353574); typeIds= [|  |]; description= "" } |> Some
       | 355187 -> { MarketGroupData.id= 355187; name= "Standard"; parentMarketGroupId= Some(355181); typeIds= [|  |]; description= "" } |> Some
       | 364887 -> { MarketGroupData.id= 364887; name= "Advanced"; parentMarketGroupId= Some(364885); typeIds= [|  |]; description= "Advanced light frame dropsuits." } |> Some

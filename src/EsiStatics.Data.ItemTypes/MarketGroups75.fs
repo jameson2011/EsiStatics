@@ -8,7 +8,7 @@ module internal MarketGroups75=
       | 1142 -> { MarketGroupData.id= 1142; name= "Minmatar"; parentMarketGroupId= Some(1138); typeIds= [| 29990 |]; description= "Minmatar strategic cruiser designs." } |> Some
       | 1239 -> { MarketGroupData.id= 1239; name= "Large Projectile Weapon Rigs"; parentMarketGroupId= Some(979); typeIds= [| 26048; 26432; 26434; 26424; 26430; 26038; 26040; 26042; 26428; 26046 |]; description= "Modifications that affect a large starship's projectile weapons." } |> Some
       | 1336 -> { MarketGroupData.id= 1336; name= "Specialized Planetary Materials"; parentMarketGroupId= Some(1332); typeIds= [| 17136; 12836; 9846; 2344; 2345; 2346; 2348; 2349; 28974; 2351; 2352; 9848; 2354; 17392; 2358; 17898; 2360; 2361; 9834; 2366; 2367 |]; description= "The fourth tier of planetary materials." } |> Some
-      | 1530 -> { MarketGroupData.id= 1530; name= "Combat Drones"; parentMarketGroupId= Some(357); typeIds= [|  |]; description= "Combat Drones" } |> Some
+      | 1530 -> { MarketGroupData.id= 1530; name= ""; parentMarketGroupId= Some(357); typeIds= [|  |]; description= "" } |> Some
       | 1627 -> { MarketGroupData.id= 1627; name= "Gallente Subsystems"; parentMarketGroupId= Some(1112); typeIds= [|  |]; description= "Gallente Subsystems" } |> Some
       | 1724 -> { MarketGroupData.id= 1724; name= "Capital Engineering Rigs"; parentMarketGroupId= Some(949); typeIds= [| 31363; 43908; 31399; 31375; 31411; 33304; 31387; 31231 |]; description= "Blueprints of Capital Energy Grid Rigs." } |> Some
       | 1918 -> { MarketGroupData.id= 1918; name= "R.A.M."; parentMarketGroupId= Some(800); typeIds= [| 11872; 11873; 11891; 11887; 11889; 11890; 11859; 11870 |]; description= "" } |> Some

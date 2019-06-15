@@ -19,7 +19,7 @@ module internal MarketGroups55=
       | 355463 -> { MarketGroupData.id= 355463; name= "Weapons & Grenades"; parentMarketGroupId= Some(355462); typeIds= [|  |]; description= "" } |> Some
       | 356433 -> { MarketGroupData.id= 356433; name= "Nova Knives"; parentMarketGroupId= Some(364048); typeIds= [|  |]; description= "Nova knives." } |> Some
       | 368655 -> { MarketGroupData.id= 368655; name= "Battle Salvage"; parentMarketGroupId= Some(367771); typeIds= [|  |]; description= "" } |> Some
-      | 443 -> { MarketGroupData.id= 443; name= "Amarr"; parentMarketGroupId= Some(442); typeIds= [| 11988 |]; description= "Blueprints of Amarr logistics designs." } |> Some
+      | 443 -> { MarketGroupData.id= 443; name= ""; parentMarketGroupId= Some(442); typeIds= [| 11988 |]; description= "" } |> Some
       | 540 -> { MarketGroupData.id= 540; name= "Resistance Plating"; parentMarketGroupId= Some(14); typeIds= [|  |]; description= "Mechanically enhanced armor plating augmentation." } |> Some
       | 637 -> { MarketGroupData.id= 637; name= "Gallente"; parentMarketGroupId= Some(634); typeIds= [| 12744; 12746 |]; description= "Blueprints of Gallente transport designs." } |> Some
       | 734 -> { MarketGroupData.id= 734; name= "Gallente Navy"; parentMarketGroupId= Some(616); typeIds= [| 15648; 15649; 15650; 15587; 15588; 15589; 15590; 15591; 15592; 15593; 15594; 28236; 16002; 15673; 15994; 15646; 15647 |]; description= "Officially sanctioned Gallente Navy insignias." } |> Some

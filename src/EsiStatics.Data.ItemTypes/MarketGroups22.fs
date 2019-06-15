@@ -16,7 +16,7 @@ module internal MarketGroups22=
       | 2156 -> { MarketGroupData.id= 2156; name= "Citadels"; parentMarketGroupId= Some(1338); typeIds= [| 36968; 36966; 36967 |]; description= "Blueprints of Citadel structures." } |> Some
       | 22 -> { MarketGroupData.id= 22; name= "Radioactive Goods"; parentMarketGroupId= Some(19); typeIds= [| 3729; 19398; 3727 |]; description= "Chemicals and waste, pulsing with radiation. Can be bought and sold for profit" } |> Some
       | 2253 -> { MarketGroupData.id= 2253; name= "Extra Large"; parentMarketGroupId= Some(847); typeIds= [| 41314; 41316 |]; description= "Fired by dreadnaught-sized guns and stationary defense systems." } |> Some
-      | 2350 -> { MarketGroupData.id= 2350; name= "Special Edition Destroyers"; parentMarketGroupId= Some(1612); typeIds= [| 42685 |]; description= "Destroyers which have been offered to capsuleers on occasion for limited periods." } |> Some
+      | 2350 -> { MarketGroupData.id= 2350; name= ""; parentMarketGroupId= Some(1612); typeIds= [| 42685 |]; description= "" } |> Some
       | 2447 -> { MarketGroupData.id= 2447; name= "Medium Shield Mutaplasmids"; parentMarketGroupId= Some(2438); typeIds= [| 47835; 47782; 47783; 47784; 47801; 47802; 47803 |]; description= "Medium Shield Mutaplasmids" } |> Some
       | 313 -> { MarketGroupData.id= 313; name= "Small"; parentMarketGroupId= Some(299); typeIds= [| 879; 880; 881; 882; 883; 884; 885; 886 |]; description= "Blueprints of small projectile ammunition." } |> Some
       | 353587 -> { MarketGroupData.id= 353587; name= "Shield"; parentMarketGroupId= Some(353580); typeIds= [|  |]; description= "" } |> Some

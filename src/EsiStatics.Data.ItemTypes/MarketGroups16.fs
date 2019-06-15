@@ -21,7 +21,7 @@ module internal MarketGroups16=
       | 2441 -> { MarketGroupData.id= 2441; name= "Warp Disruption Mutaplasmids"; parentMarketGroupId= Some(2436); typeIds= [| 47729; 47730; 47731; 47733; 47734; 47735 |]; description= "Mutaplasmids that can be used on Warp Disruption modules." } |> Some
       | 2538 -> { MarketGroupData.id= 2538; name= "Bezdnacine"; parentMarketGroupId= Some(54); typeIds= [| 52316 |]; description= "Bezdnacine" } |> Some
       | 307 -> { MarketGroupData.id= 307; name= "Small"; parentMarketGroupId= Some(300); typeIds= [| 1130; 1131; 1132; 1133; 1134; 1135; 1136; 1137 |]; description= "Blueprints of small hybrid ammunition." } |> Some
-      | 353581 -> { MarketGroupData.id= 353581; name= "Shield"; parentMarketGroupId= Some(353579); typeIds= [|  |]; description= "" } |> Some
+      | 353581 -> { MarketGroupData.id= 353581; name= ""; parentMarketGroupId= Some(353579); typeIds= [|  |]; description= "" } |> Some
       | 354454 -> { MarketGroupData.id= 354454; name= "Damage Control Systems"; parentMarketGroupId= Some(353590); typeIds= [|  |]; description= "" } |> Some
       | 356976 -> { MarketGroupData.id= 356976; name= "Standard"; parentMarketGroupId= Some(354483); typeIds= [|  |]; description= "" } |> Some
       | 363475 -> { MarketGroupData.id= 363475; name= "Corporations"; parentMarketGroupId= Some(353633); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some

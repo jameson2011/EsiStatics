@@ -22,7 +22,7 @@ module internal MarketGroups21=
       | 353586 -> { MarketGroupData.id= 353586; name= "Weapon Upgrades"; parentMarketGroupId= Some(353579); typeIds= [|  |]; description= "" } |> Some
       | 354459 -> { MarketGroupData.id= 354459; name= "Power Diagnostic Systems"; parentMarketGroupId= Some(353590); typeIds= [|  |]; description= "" } |> Some
       | 356981 -> { MarketGroupData.id= 356981; name= "Prototype"; parentMarketGroupId= Some(353613); typeIds= [|  |]; description= "" } |> Some
-      | 506 -> { MarketGroupData.id= 506; name= "Corporate Hangar Array"; parentMarketGroupId= Some(1285); typeIds= [| 17621 |]; description= "Communal hangar structures with divisional compartments." } |> Some
+      | 506 -> { MarketGroupData.id= 506; name= ""; parentMarketGroupId= Some(1285); typeIds= [| 17621 |]; description= "" } |> Some
       | 603 -> { MarketGroupData.id= 603; name= "Small"; parentMarketGroupId= Some(128); typeIds= [| 19137; 3586; 19139; 3588; 41480; 19129; 8531; 405; 8535; 8537; 19131; 19133; 19135 |]; description= "Frigate-sized shield transport units." } |> Some
       | 700 -> { MarketGroupData.id= 700; name= "Medium"; parentMarketGroupId= Some(668); typeIds= [| 14176; 577; 14178; 4835; 4833; 2024; 23809; 20557; 15784; 15776; 4829; 4831 |]; description= "Cruiser-sized capacitor boosters." } |> Some
       | 894 -> { MarketGroupData.id= 894; name= "Gallente"; parentMarketGroupId= Some(880); typeIds= [| 22461 |]; description= "Blueprints of Gallente interdictor designs." } |> Some
