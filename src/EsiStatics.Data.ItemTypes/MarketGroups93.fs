@@ -5,13 +5,13 @@ module internal MarketGroups93=
     let getMarketGroup id = 
       match id with 
       | 1063 -> { MarketGroupData.id= 1063; name= "Capital"; parentMarketGroupId= Some(1018); typeIds= [| 41475; 27934 |]; description= "Remote hull repair system designs, intended for use on capital-class vessels." } |> Some
-      | 1257 -> { MarketGroupData.id= 1257; name= "Large Energy Weapon Rigs"; parentMarketGroupId= Some(950); typeIds= [| 25969; 25971; 25973; 25975; 25977; 25979; 25981 |]; description= "Blueprints of Large Energy Weapon Rigs." } |> Some
+      | 1257 -> { MarketGroupData.id= 1257; name= ""; parentMarketGroupId= Some(950); typeIds= [| 25969; 25971; 25973; 25975; 25977; 25979; 25981 |]; description= "" } |> Some
       | 1354 -> { MarketGroupData.id= 1354; name= "Shield Hardening Arrays"; parentMarketGroupId= Some(1841); typeIds= [| 2761; 2755; 2757; 2759 |]; description= "Blueprints of Shield Hardening Arrays." } |> Some
       | 1548 -> { MarketGroupData.id= 1548; name= "Shield Hardeners"; parentMarketGroupId= Some(1545); typeIds= [| 1129; 2290; 2292; 2294; 2296; 46011; 41662 |]; description= "Shield Hardeners" } |> Some
       | 1936 -> { MarketGroupData.id= 1936; name= "Warp Scramblers"; parentMarketGroupId= Some(657); typeIds= [| 21512; 16140; 15887; 40750; 14256; 14252; 40754; 14254; 40752; 14258; 14260; 40758; 40756; 40762; 40764; 447; 448; 5443; 5445; 14664; 15433; 14666; 14668; 14670; 41061; 28518; 5439; 15893 |]; description= "" } |> Some
       | 2033 -> { MarketGroupData.id= 2033; name= "Missile Guidance Enhancers"; parentMarketGroupId= Some(143); typeIds= [| 35770; 35771; 35774 |]; description= "" } |> Some
       | 2227 -> { MarketGroupData.id= 2227; name= "Weapon Upgrades"; parentMarketGroupId= Some(2209); typeIds= [|  |]; description= "" } |> Some
-      | 2324 -> { MarketGroupData.id= 2324; name= ""; parentMarketGroupId= Some(477); typeIds= [| 35825; 35826; 35827 |]; description= "" } |> Some
+      | 2324 -> { MarketGroupData.id= 2324; name= "Engineering Complexes"; parentMarketGroupId= Some(477); typeIds= [| 35825; 35826; 35827 |]; description= "" } |> Some
       | 2421 -> { MarketGroupData.id= 2421; name= "Special Battleships"; parentMarketGroupId= Some(2420); typeIds= [| 47650; 49796; 52278; 47655 |]; description= "" } |> Some
       | 2518 -> { MarketGroupData.id= 2518; name= "Precursor Battlecruisers"; parentMarketGroupId= Some(1955); typeIds= [|  |]; description= "Precursor Battlecruisers" } |> Some
       | 287 -> { MarketGroupData.id= 287; name= "Projectile Turrets"; parentMarketGroupId= Some(210); typeIds= [|  |]; description= "Blueprints of projectile turrets for capsule-fitted vessels." } |> Some

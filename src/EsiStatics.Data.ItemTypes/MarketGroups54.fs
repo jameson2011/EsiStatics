@@ -10,7 +10,7 @@ module internal MarketGroups54=
       | 1897 -> { MarketGroupData.id= 1897; name= "Faction Materials"; parentMarketGroupId= Some(533); typeIds= [|  |]; description= "" } |> Some
       | 1994 -> { MarketGroupData.id= 1994; name= "Amarr"; parentMarketGroupId= Some(2035); typeIds= [| 42560; 42561; 48845; 52394; 43496; 43497; 42762; 42763; 34700; 44141; 34702; 34703; 34704; 44140; 35062; 45769; 37497; 37498; 48219; 45770; 46526 |]; description= "" } |> Some
       | 2091 -> { MarketGroupData.id= 2091; name= "Minmatar"; parentMarketGroupId= Some(2087); typeIds= [| 40512; 40513; 45987; 45988; 36841; 36842; 46924; 46925; 36437; 36438; 36794; 36795; 46748; 46749 |]; description= "" } |> Some
-      | 2188 -> { MarketGroupData.id= 2188; name= ""; parentMarketGroupId= Some(2163); typeIds= [| 47357 |]; description= "" } |> Some
+      | 2188 -> { MarketGroupData.id= 2188; name= "Capacitor Power Relays"; parentMarketGroupId= Some(2163); typeIds= [| 47357 |]; description= "" } |> Some
       | 2285 -> { MarketGroupData.id= 2285; name= "Capsules"; parentMarketGroupId= Some(2283); typeIds= [| 47651; 45482; 41579; 41580 |]; description= "" } |> Some
       | 2382 -> { MarketGroupData.id= 2382; name= "Faction Titans"; parentMarketGroupId= Some(1973); typeIds= [|  |]; description= "" } |> Some
       | 2479 -> { MarketGroupData.id= 2479; name= "Abyssal Materials"; parentMarketGroupId= Some(1031); typeIds= [| 48112; 47975 |]; description= "Materials found in Abyssal Deadspace" } |> Some

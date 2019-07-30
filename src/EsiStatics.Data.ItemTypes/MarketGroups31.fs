@@ -21,7 +21,7 @@ module internal MarketGroups31=
       | 354469 -> { MarketGroupData.id= 354469; name= "Damage Amplifiers"; parentMarketGroupId= Some(353592); typeIds= [|  |]; description= "" } |> Some
       | 354566 -> { MarketGroupData.id= 354566; name= "Advanced"; parentMarketGroupId= Some(354563); typeIds= [|  |]; description= "" } |> Some
       | 366206 -> { MarketGroupData.id= 366206; name= "Standard"; parentMarketGroupId= Some(366177); typeIds= [|  |]; description= "" } |> Some
-      | 368922 -> { MarketGroupData.id= 368922; name= ""; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
+      | 368922 -> { MarketGroupData.id= 368922; name= "Advanced"; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
       | 369213 -> { MarketGroupData.id= 369213; name= "Dropsuits"; parentMarketGroupId= Some(369212); typeIds= [|  |]; description= "" } |> Some
       | 419 -> { MarketGroupData.id= 419; name= "Covert Ops"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of covert ops-class vessels." } |> Some
       | 516 -> { MarketGroupData.id= 516; name= "Plagioclase"; parentMarketGroupId= Some(54); typeIds= [| 28421; 28422; 28423; 46701; 17455; 17456; 18; 46685 |]; description= "Sub-types of plagioclase ore." } |> Some

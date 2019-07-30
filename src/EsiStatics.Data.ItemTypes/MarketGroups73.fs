@@ -11,7 +11,7 @@ module internal MarketGroups73=
       | 1625 -> { MarketGroupData.id= 1625; name= "Caldari Subsystems"; parentMarketGroupId= Some(1112); typeIds= [|  |]; description= "Caldari Subsystems" } |> Some
       | 1819 -> { MarketGroupData.id= 1819; name= "Minmatar"; parentMarketGroupId= Some(1815); typeIds= [| 588 |]; description= "Minmatar rookie ship designs." } |> Some
       | 2013 -> { MarketGroupData.id= 2013; name= "Unknown Components"; parentMarketGroupId= Some(19); typeIds= [| 34560; 34575; 36902; 36949; 40541; 34540; 34541; 34542; 34543; 34544; 34545; 34546; 34547; 34548; 34549; 34551; 34552; 34553; 34554; 34555; 34556; 34557; 34558; 34559 |]; description= "Mysterious pieces of technology of unknown origin" } |> Some
-      | 2110 -> { MarketGroupData.id= 2110; name= "Amarr"; parentMarketGroupId= Some(2109); typeIds= [| 42787; 45796; 49819; 49420; 37518; 46805; 50070; 36311; 48857; 42587; 43518 |]; description= "" } |> Some
+      | 2110 -> { MarketGroupData.id= 2110; name= "Amarr"; parentMarketGroupId= Some(2109); typeIds= [| 42787; 45796; 49819; 52585; 49420; 37518; 46805; 50070; 36311; 48857; 42587; 43518 |]; description= "" } |> Some
       | 2207 -> { MarketGroupData.id= 2207; name= "Electronics and Sensor Upgrades"; parentMarketGroupId= Some(2202); typeIds= [|  |]; description= "" } |> Some
       | 2401 -> { MarketGroupData.id= 2401; name= "Exceptional Moon Ores"; parentMarketGroupId= Some(2395); typeIds= [| 45510; 45511; 45512; 45513; 46314; 46315; 46316; 46317; 46318; 46319; 46312; 46313 |]; description= "" } |> Some
       | 2498 -> { MarketGroupData.id= 2498; name= "Sooth Sayer"; parentMarketGroupId= Some(2489); typeIds= [| 28684; 10164; 10165; 10166 |]; description= "Sooth Sayer Boosters" } |> Some

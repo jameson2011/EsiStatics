@@ -5,7 +5,7 @@ module internal MarketGroups87=
     let getMarketGroup id = 
       match id with 
       | 1057 -> { MarketGroupData.id= 1057; name= "Large"; parentMarketGroupId= Some(537); typeIds= [| 16449; 26914; 16451; 41478; 16455; 23416; 11359 |]; description= "Remote armor repair system designs, intended for battleship-class vessels." } |> Some
-      | 1251 -> { MarketGroupData.id= 1251; name= "Large Electronics Superiority Rigs"; parentMarketGroupId= Some(948); typeIds= [| 26113; 25929; 26097; 26107; 26109; 26111 |]; description= "Blueprints of Large Electronics Superiority Rigs." } |> Some
+      | 1251 -> { MarketGroupData.id= 1251; name= ""; parentMarketGroupId= Some(948); typeIds= [| 26113; 25929; 26097; 26107; 26109; 26111 |]; description= "" } |> Some
       | 1348 -> { MarketGroupData.id= 1348; name= "Laser Batteries"; parentMarketGroupId= Some(1534); typeIds= [| 2825; 2826; 2827; 2828; 2829; 2830 |]; description= "Blueprints of Laser Batteries." } |> Some
       | 1542 -> { MarketGroupData.id= 1542; name= "Damage Controls"; parentMarketGroupId= Some(214); typeIds= [| 40720; 40721; 40719; 47259; 2047 |]; description= "Blueprints for Damage Controls" } |> Some
       | 1639 -> { MarketGroupData.id= 1639; name= "Command Processors"; parentMarketGroupId= Some(779); typeIds= [|  |]; description= "Command Processors" } |> Some
@@ -25,7 +25,7 @@ module internal MarketGroups87=
       | 368105 -> { MarketGroupData.id= 368105; name= "Basic"; parentMarketGroupId= Some(368017); typeIds= [|  |]; description= "" } |> Some
       | 378 -> { MarketGroupData.id= 378; name= "Trade"; parentMarketGroupId= Some(150); typeIds= [| 18580; 16598; 16595; 16622; 25233; 16594; 3443; 3444; 16597; 3446; 3447; 16596; 33467; 25235 |]; description= "Skills pertaining to managing commercial activities" } |> Some
       | 475 -> { MarketGroupData.id= 475; name= "Manufacture & Research"; parentMarketGroupId= None; typeIds= [|  |]; description= "The perpetual engine of space industry is driven by vast quantities of materials, components and research equipment that are constantly being traded on the capsuleer market" } |> Some
-      | 572 -> { MarketGroupData.id= 572; name= "Medium"; parentMarketGroupId= Some(558); typeIds= [| 13825; 13828; 6919; 6921; 6923; 6925; 6805; 6807; 6809; 6811; 23842; 3512; 3520; 456; 458; 34274; 13801; 15851; 15854; 13807; 15866; 15869 |]; description= "Medium pulse lasers, suitable for cruiser use." } |> Some
+      | 572 -> { MarketGroupData.id= 572; name= ""; parentMarketGroupId= Some(558); typeIds= [| 13825; 13828; 6919; 6921; 6923; 6925; 6805; 6807; 6809; 6811; 23842; 3512; 3520; 456; 458; 34274; 13801; 15851; 15854; 13807; 15866; 15869 |]; description= "" } |> Some
       | 669 -> { MarketGroupData.id= 669; name= "Signal Amplifiers"; parentMarketGroupId= Some(656); typeIds= [| 1986; 1987; 41196; 41197; 21527; 6296; 1949 |]; description= "Augment a ship's targeting range and target acquisition time." } |> Some
       | 766 -> { MarketGroupData.id= 766; name= "Freighters"; parentMarketGroupId= Some(1381); typeIds= [|  |]; description= "Capital ships, able to transport a world and a half and then some." } |> Some
       | 863 -> { MarketGroupData.id= 863; name= "Large"; parentMarketGroupId= Some(850); typeIds= [| 12803; 12807 |]; description= "Large advanced railgun ammunition, fired by battleship-sized guns." } |> Some

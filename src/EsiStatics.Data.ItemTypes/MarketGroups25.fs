@@ -24,7 +24,7 @@ module internal MarketGroups25=
       | 356597 -> { MarketGroupData.id= 356597; name= "Shield Hardeners"; parentMarketGroupId= Some(353587); typeIds= [|  |]; description= "" } |> Some
       | 366200 -> { MarketGroupData.id= 366200; name= "Standard"; parentMarketGroupId= Some(366173); typeIds= [|  |]; description= "" } |> Some
       | 368916 -> { MarketGroupData.id= 368916; name= "Shield Regulators"; parentMarketGroupId= Some(353587); typeIds= [|  |]; description= "" } |> Some
-      | 413 -> { MarketGroupData.id= 413; name= ""; parentMarketGroupId= Some(408); typeIds= [| 11197; 11199 |]; description= "" } |> Some
+      | 413 -> { MarketGroupData.id= 413; name= "Minmatar"; parentMarketGroupId= Some(408); typeIds= [| 11197; 11199 |]; description= "Blueprints of Minmatar interceptor designs." } |> Some
       | 704 -> { MarketGroupData.id= 704; name= "Medium"; parentMarketGroupId= Some(664); typeIds= [| 41216; 41217; 2018; 3496; 6073; 23803; 41215 |]; description= "Cruiser-sized capacitor batteries." } |> Some
       | 801 -> { MarketGroupData.id= 801; name= "Siege Modules"; parentMarketGroupId= Some(143); typeIds= [| 4292; 4294; 28583; 42890; 27951; 33400; 20280 |]; description= "Modules designed to augment and enhance a capital ship's siege warfare abilities." } |> Some
       | 898 -> { MarketGroupData.id= 898; name= "Gallente"; parentMarketGroupId= Some(881); typeIds= [| 22443; 22467 |]; description= "Blueprints of Gallente command ship designs." } |> Some

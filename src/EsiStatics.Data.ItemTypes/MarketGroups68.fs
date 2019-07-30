@@ -7,7 +7,7 @@ module internal MarketGroups68=
       | 1038 -> { MarketGroupData.id= 1038; name= "Ice Harvesters"; parentMarketGroupId= Some(1713); typeIds= [| 28752; 22229; 16278 |]; description= "Ice harvester designs." } |> Some
       | 1135 -> { MarketGroupData.id= 1135; name= "Caldari Propulsion Subsystems"; parentMarketGroupId= Some(1625); typeIds= [| 45613; 45614; 45615 |]; description= "Caldari propulsion subsystems." } |> Some
       | 1232 -> { MarketGroupData.id= 1232; name= "Medium Missile Launcher Rigs"; parentMarketGroupId= Some(964); typeIds= [| 31616; 31588; 31622; 31594; 31628; 31600; 31634; 31606; 31640; 31652; 31610; 31646 |]; description= "Modifications that affect a medium starship's missile launchers." } |> Some
-      | 1426 -> { MarketGroupData.id= 1426; name= ""; parentMarketGroupId= Some(657); typeIds= [| 4409 |]; description= "" } |> Some
+      | 1426 -> { MarketGroupData.id= 1426; name= "Target Breaker"; parentMarketGroupId= Some(657); typeIds= [| 4409 |]; description= "Clears all locks on you and all your locks." } |> Some
       | 1620 -> { MarketGroupData.id= 1620; name= "Special Edition Battleships"; parentMarketGroupId= Some(1612); typeIds= [| 11936; 11938; 44996; 4005; 47466; 13202; 26840; 26842 |]; description= "Battleships which have been offered to capsuleers on occasion for limited periods." } |> Some
       | 1717 -> { MarketGroupData.id= 1717; name= "Survey Probe Launchers"; parentMarketGroupId= Some(1708); typeIds= [| 33272; 33270 |]; description= "Probes for surveying moons." } |> Some
       | 1814 -> { MarketGroupData.id= 1814; name= "Special Edition Implants"; parentMarketGroupId= Some(1659); typeIds= [| 33329 |]; description= "Special Edition Implants" } |> Some

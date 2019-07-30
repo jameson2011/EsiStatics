@@ -8,7 +8,7 @@ module internal MarketGroups9=
       | 1076 -> { MarketGroupData.id= 1076; name= "Amarr"; parentMarketGroupId= Some(1075); typeIds= [| 22428 |]; description= "Amarr black ops designs." } |> Some
       | 1367 -> { MarketGroupData.id= 1367; name= "Cruisers"; parentMarketGroupId= Some(4); typeIds= [|  |]; description= "Medium-sized spaceships intended for a variety of roles" } |> Some
       | 1561 -> { MarketGroupData.id= 1561; name= "Reactor Control Units"; parentMarketGroupId= Some(1546); typeIds= [| 1354 |]; description= "Reactor Control Units" } |> Some
-      | 1658 -> { MarketGroupData.id= 1658; name= ""; parentMarketGroupId= Some(379); typeIds= [| 17368; 17366; 17367 |]; description= "" } |> Some
+      | 1658 -> { MarketGroupData.id= 1658; name= "Station Containers"; parentMarketGroupId= Some(379); typeIds= [| 17368; 17366; 17367 |]; description= "Station Containers" } |> Some
       | 1852 -> { MarketGroupData.id= 1852; name= "Simple Biochemical Reactions"; parentMarketGroupId= Some(1849); typeIds= [|  |]; description= "Biochemical processes through which raw materials are made into compounds" } |> Some
       | 1949 -> { MarketGroupData.id= 1949; name= "ORE"; parentMarketGroupId= Some(787); typeIds= [| 34329 |]; description= "Designs for ORE freighters." } |> Some
       | 2046 -> { MarketGroupData.id= 2046; name= "Interceptors"; parentMarketGroupId= Some(2042); typeIds= [|  |]; description= "" } |> Some

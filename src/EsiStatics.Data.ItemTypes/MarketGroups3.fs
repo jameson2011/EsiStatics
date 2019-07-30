@@ -25,7 +25,7 @@ module internal MarketGroups3=
       | 364044 -> { MarketGroupData.id= 364044; name= "Light"; parentMarketGroupId= Some(353562); typeIds= [|  |]; description= "Light dropsuit frames." } |> Some
       | 366178 -> { MarketGroupData.id= 366178; name= "Weapons"; parentMarketGroupId= Some(365996); typeIds= [|  |]; description= "" } |> Some
       | 366275 -> { MarketGroupData.id= 366275; name= "Equipment"; parentMarketGroupId= Some(365998); typeIds= [|  |]; description= "" } |> Some
-      | 368021 -> { MarketGroupData.id= 368021; name= ""; parentMarketGroupId= Some(368109); typeIds= [|  |]; description= "" } |> Some
+      | 368021 -> { MarketGroupData.id= 368021; name= "Logistics"; parentMarketGroupId= Some(368109); typeIds= [|  |]; description= "" } |> Some
       | 391 -> { MarketGroupData.id= 391; name= "Shuttles"; parentMarketGroupId= Some(4); typeIds= [|  |]; description= "Fast and cheap vessels for easy transport" } |> Some
       | 488 -> { MarketGroupData.id= 488; name= "Moon Harvesting Arrays"; parentMarketGroupId= Some(1285); typeIds= [| 16221 |]; description= "Deployable arrays designed to gather minerals from moons." } |> Some
       | 585 -> { MarketGroupData.id= 585; name= "Gallente"; parentMarketGroupId= Some(582); typeIds= [| 16241; 32873 |]; description= "Blueprints of Gallente destroyer designs." } |> Some

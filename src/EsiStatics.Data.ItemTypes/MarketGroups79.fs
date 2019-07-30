@@ -18,7 +18,7 @@ module internal MarketGroups79=
       | 273 -> { MarketGroupData.id= 273; name= "Minmatar"; parentMarketGroupId= Some(206); typeIds= [| 976; 692; 974; 975 |]; description= "Blueprints of Minmatar cruiser designs." } |> Some
       | 355196 -> { MarketGroupData.id= 355196; name= "Prototype"; parentMarketGroupId= Some(355193); typeIds= [|  |]; description= "" } |> Some
       | 363441 -> { MarketGroupData.id= 363441; name= "Heavy"; parentMarketGroupId= Some(354448); typeIds= [|  |]; description= " " } |> Some
-      | 364896 -> { MarketGroupData.id= 364896; name= "Prototype"; parentMarketGroupId= Some(364893); typeIds= [|  |]; description= "Prototype heavy frames." } |> Some
+      | 364896 -> { MarketGroupData.id= 364896; name= ""; parentMarketGroupId= Some(364893); typeIds= [|  |]; description= "" } |> Some
       | 365769 -> { MarketGroupData.id= 365769; name= "Rail Rifles"; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "Rail Rifles." } |> Some
       | 366254 -> { MarketGroupData.id= 366254; name= "Advanced"; parentMarketGroupId= Some(366190); typeIds= [|  |]; description= "" } |> Some
       | 366351 -> { MarketGroupData.id= 366351; name= "Faction Booster Gallente"; parentMarketGroupId= Some(354534); typeIds= [|  |]; description= "" } |> Some

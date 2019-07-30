@@ -6,7 +6,7 @@ module internal MarketGroups27=
       match id with 
       | 1094 -> { MarketGroupData.id= 1094; name= "Scripts"; parentMarketGroupId= Some(11); typeIds= [| 40334; 40335; 41517; 41518; 41519; 41520; 41521; 41522; 41523; 41524; 37821; 37822; 37823; 37824; 41155; 28999; 29001; 29003; 29005; 29007; 29009; 35794; 29011; 29013; 29015; 47336; 45010; 35795 |]; description= "Scripts that allow for tuning the effects of certain modules" } |> Some
       | 1191 -> { MarketGroupData.id= 1191; name= "Subsystem Components"; parentMarketGroupId= Some(800); typeIds= [| 30465; 45659; 30467; 30471; 30475; 29993; 29995; 29997; 30477; 30003; 45657; 45656; 30009; 45658; 30479; 34397 |]; description= "Blueprints of Subsystem Components." } |> Some
-      | 1385 -> { MarketGroupData.id= 1385; name= "Advanced Industrial Ships"; parentMarketGroupId= Some(1382); typeIds= [|  |]; description= "Advanced industrial ships are specially modified for specific purposes." } |> Some
+      | 1385 -> { MarketGroupData.id= 1385; name= ""; parentMarketGroupId= Some(1382); typeIds= [|  |]; description= "" } |> Some
       | 1482 -> { MarketGroupData.id= 1482; name= "Implant Slot 08"; parentMarketGroupId= Some(1479); typeIds= [| 27106; 3085; 13262; 3087; 3086; 16247 |]; description= "Implant Slot 08" } |> Some
       | 1579 -> { MarketGroupData.id= 1579; name= "Automated Targeting Systems"; parentMarketGroupId= Some(1578); typeIds= [| 1208 |]; description= "Automated Targeting Systems" } |> Some
       | 1676 -> { MarketGroupData.id= 1676; name= "1600mm Armor Plate"; parentMarketGroupId= Some(133); typeIds= [| 20353; 23785; 28780; 11279; 31900; 11325; 31902; 11327 |]; description= "1600mm Armor Plate" } |> Some
@@ -23,7 +23,7 @@ module internal MarketGroups27=
       | 353592 -> { MarketGroupData.id= 353592; name= "Turret Upgrades"; parentMarketGroupId= Some(353580); typeIds= [|  |]; description= "" } |> Some
       | 366202 -> { MarketGroupData.id= 366202; name= "Prototype"; parentMarketGroupId= Some(366173); typeIds= [|  |]; description= "" } |> Some
       | 368918 -> { MarketGroupData.id= 368918; name= "Heat Sinks"; parentMarketGroupId= Some(353592); typeIds= [|  |]; description= "" } |> Some
-      | 415 -> { MarketGroupData.id= 415; name= "Amarr"; parentMarketGroupId= Some(414); typeIds= [| 11135 |]; description= "Blueprints of Amarr shuttle designs." } |> Some
+      | 415 -> { MarketGroupData.id= 415; name= ""; parentMarketGroupId= Some(414); typeIds= [| 11135 |]; description= "" } |> Some
       | 512 -> { MarketGroupData.id= 512; name= "Arkonor"; parentMarketGroupId= Some(54); typeIds= [| 28385; 28387; 46678; 28367; 17425; 17426; 46691; 22 |]; description= "Sub-types of arkonor ore." } |> Some
       | 609 -> { MarketGroupData.id= 609; name= "Small"; parentMarketGroupId= Some(552); typeIds= [| 13952; 19169; 19171; 6437; 32774; 6439; 6441; 19177; 6443; 399; 400; 19173; 19175; 19179; 10039; 20617; 15898; 15902; 13951 |]; description= "Frigate-class shield boosters." } |> Some
       | 706 -> { MarketGroupData.id= 706; name= "Tracking Computers"; parentMarketGroupId= Some(143); typeIds= [| 6176; 15290; 15792; 22929; 15284; 15286; 15288; 1977; 1978; 6173; 14238 |]; description= "Computerized systems designed to improve turret tracking." } |> Some

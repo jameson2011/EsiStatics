@@ -15,7 +15,7 @@ module internal MarketGroups63=
       | 2100 -> { MarketGroupData.id= 2100; name= "Faction Battlecruisers"; parentMarketGroupId= Some(1955); typeIds= [|  |]; description= "" } |> Some
       | 2197 -> { MarketGroupData.id= 2197; name= "Structure Anticapital Missiles"; parentMarketGroupId= Some(114); typeIds= [| 37843; 37844; 37845 |]; description= "" } |> Some
       | 2294 -> { MarketGroupData.id= 2294; name= "Shield Command Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42883; 42884; 42885 |]; description= "Shield Command Burst Charges" } |> Some
-      | 2391 -> { MarketGroupData.id= 2391; name= "Caldari"; parentMarketGroupId= Some(2309); typeIds= [| 49952; 45832; 48175; 46728; 48566; 46840; 47611; 46109 |]; description= "" } |> Some
+      | 2391 -> { MarketGroupData.id= 2391; name= "Caldari"; parentMarketGroupId= Some(2309); typeIds= [| 49952; 45832; 52554; 48175; 46728; 48566; 46840; 47611; 46109 |]; description= "" } |> Some
       | 2488 -> { MarketGroupData.id= 2488; name= "Booster Slot 01"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "Booster Slot 01" } |> Some
       | 354404 -> { MarketGroupData.id= 354404; name= "Advanced"; parentMarketGroupId= Some(353575); typeIds= [|  |]; description= "" } |> Some
       | 357120 -> { MarketGroupData.id= 357120; name= "Armor Hardeners"; parentMarketGroupId= Some(357121); typeIds= [|  |]; description= "Actively increases resistance to armor damage." } |> Some

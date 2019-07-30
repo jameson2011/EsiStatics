@@ -13,7 +13,7 @@ module internal MarketGroups47=
       | 1987 -> { MarketGroupData.id= 1987; name= "Minmatar"; parentMarketGroupId= Some(1972); typeIds= [| 40514; 45989; 36444; 36843; 46926; 34671; 36796 |]; description= "" } |> Some
       | 2084 -> { MarketGroupData.id= 2084; name= "Minmatar"; parentMarketGroupId= Some(2068); typeIds= [| 36775; 36776; 45962; 45963; 40492; 40493; 36430; 36431; 46899; 46900; 36822; 36823; 48509; 48510 |]; description= "" } |> Some
       | 2181 -> { MarketGroupData.id= 2181; name= "Citadel Service Modules"; parentMarketGroupId= Some(2166); typeIds= [| 37022; 37023 |]; description= "" } |> Some
-      | 2278 -> { MarketGroupData.id= 2278; name= "Amarr"; parentMarketGroupId= Some(2277); typeIds= [| 49825; 46146; 47049; 49421; 41680; 47640; 48858; 42908; 42653 |]; description= "" } |> Some
+      | 2278 -> { MarketGroupData.id= 2278; name= "Amarr"; parentMarketGroupId= Some(2277); typeIds= [| 49825; 46146; 47049; 52588; 49421; 41680; 47640; 48858; 42908; 42653 |]; description= "" } |> Some
       | 2375 -> { MarketGroupData.id= 2375; name= "Faction Carriers"; parentMarketGroupId= Some(1970); typeIds= [|  |]; description= "" } |> Some
       | 338 -> { MarketGroupData.id= 338; name= "Mining Lasers"; parentMarketGroupId= Some(1711); typeIds= [| 38660; 17483; 12109; 785; 25267; 16279 |]; description= "Blueprints of mining lasers." } |> Some
       | 354388 -> { MarketGroupData.id= 354388; name= "Standard"; parentMarketGroupId= Some(353600); typeIds= [|  |]; description= "" } |> Some

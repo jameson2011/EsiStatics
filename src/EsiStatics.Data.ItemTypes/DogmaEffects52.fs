@@ -47,4 +47,5 @@ module internal DogmaEffects52=
       | 6939 -> { DogmaEffectData.id= 6939; name= "subsystemBonusAmarrDefensive2HardenerHeat"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19338; postExpression= 19339 } |> Some
       | 7036 -> { DogmaEffectData.id= 7036; name= "shipBonusHeavyAssaultMissileEMDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19402; postExpression= 19403 } |> Some
       | 7133 -> { DogmaEffectData.id= 7133; name= "selfMaxVelocityBonusPercentage"; description= ""; displayName= ""; effectCategory= 1; preExpression= 19603; postExpression= 19604 } |> Some
+      | 7230 -> { DogmaEffectData.id= 7230; name= "shipBonusDroneTrackingGC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 16970; postExpression= 16971 } |> Some
       | _ -> None
