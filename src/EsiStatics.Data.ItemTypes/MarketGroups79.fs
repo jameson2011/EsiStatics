@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal MarketGroups79=
     let getMarketGroup id = 
       match id with 
-      | 1049 -> { MarketGroupData.id= 1049; name= "Small "; parentMarketGroupId= Some(134); typeIds= [| 15744; 13962; 13963; 17548; 19011; 1183; 4529; 4531; 33076; 4533; 18999; 19001; 19003; 19005; 19007; 19009; 523; 19013; 19015; 13964; 4535; 17494; 21853; 22887; 28556; 23795; 14069; 15741 |]; description= "Armor repair designs, intended for frigate-class vessels." } |> Some
+      | 1049 -> { MarketGroupData.id= 1049; name= "Small "; parentMarketGroupId= Some(134); typeIds= [| 15744; 13962; 13963; 17548; 19011; 1183; 52265; 4529; 4531; 33076; 4533; 18999; 19001; 19003; 19005; 19007; 19009; 523; 19013; 19015; 13964; 4535; 17494; 21853; 22887; 28556; 23795; 14069; 15741 |]; description= "Armor repair designs, intended for frigate-class vessels." } |> Some
       | 1243 -> { MarketGroupData.id= 1243; name= "Small Drone Rigs"; parentMarketGroupId= Some(946); typeIds= [| 32034; 32070; 32042; 32082; 32050; 32026; 32090; 32058 |]; description= "Blueprints of Small Drone Rigs." } |> Some
       | 1340 -> { MarketGroupData.id= 1340; name= "Assembly Arrays"; parentMarketGroupId= Some(1841); typeIds= [|  |]; description= "Blueprints of Assembly Arrays." } |> Some
       | 1534 -> { MarketGroupData.id= 1534; name= "Weapon Batteries"; parentMarketGroupId= Some(1841); typeIds= [|  |]; description= "Weapon Batteries" } |> Some
@@ -18,7 +18,7 @@ module internal MarketGroups79=
       | 273 -> { MarketGroupData.id= 273; name= "Minmatar"; parentMarketGroupId= Some(206); typeIds= [| 976; 692; 974; 975 |]; description= "Blueprints of Minmatar cruiser designs." } |> Some
       | 355196 -> { MarketGroupData.id= 355196; name= "Prototype"; parentMarketGroupId= Some(355193); typeIds= [|  |]; description= "" } |> Some
       | 363441 -> { MarketGroupData.id= 363441; name= "Heavy"; parentMarketGroupId= Some(354448); typeIds= [|  |]; description= " " } |> Some
-      | 364896 -> { MarketGroupData.id= 364896; name= "Prototype"; parentMarketGroupId= Some(364893); typeIds= [|  |]; description= "Prototype heavy frames." } |> Some
+      | 364896 -> { MarketGroupData.id= 364896; name= ""; parentMarketGroupId= Some(364893); typeIds= [|  |]; description= "" } |> Some
       | 365769 -> { MarketGroupData.id= 365769; name= "Rail Rifles"; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "Rail Rifles." } |> Some
       | 366254 -> { MarketGroupData.id= 366254; name= "Advanced"; parentMarketGroupId= Some(366190); typeIds= [|  |]; description= "" } |> Some
       | 366351 -> { MarketGroupData.id= 366351; name= "Faction Booster Gallente"; parentMarketGroupId= Some(354534); typeIds= [|  |]; description= "" } |> Some

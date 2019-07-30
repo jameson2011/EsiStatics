@@ -54,5 +54,6 @@ module internal DogmaEffects27=
       | 6914 -> { DogmaEffectData.id= 6914; name= "subsystemSkillLevelCaldariEngineering3"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13017; postExpression= 13018 } |> Some
       | 706 -> { DogmaEffectData.id= 706; name= "covertOpsWarpResistance"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3463; postExpression= 3464 } |> Some
       | 7108 -> { DogmaEffectData.id= 7108; name= "structureConversionRigInventionTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 227; postExpression= 228 } |> Some
+      | 7205 -> { DogmaEffectData.id= 7205; name= "shipArmorKinResistancePF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19798; postExpression= 19799 } |> Some
       | 900 -> { DogmaEffectData.id= 900; name= "shipDroneScoutThermalDamageGF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4125; postExpression= 4126 } |> Some
       | _ -> None

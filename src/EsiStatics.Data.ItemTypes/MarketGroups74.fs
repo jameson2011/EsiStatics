@@ -22,7 +22,7 @@ module internal MarketGroups74=
       | 462 -> { MarketGroupData.id= 462; name= "Gallente"; parentMarketGroupId= Some(458); typeIds= [| 12043; 12045 |]; description= "Blueprints of Gallente assault frigate designs." } |> Some
       | 559 -> { MarketGroupData.id= 559; name= "Autocannons"; parentMarketGroupId= Some(87); typeIds= [|  |]; description= "Autocannons are effective at close ranges and possess great tracking ability." } |> Some
       | 656 -> { MarketGroupData.id= 656; name= "Electronics and Sensor Upgrades"; parentMarketGroupId= Some(9); typeIds= [|  |]; description= "Modules that strengthen the sensory capabilities of a spaceship" } |> Some
-      | 74 -> { MarketGroupData.id= 74; name= "Amarr"; parentMarketGroupId= Some(6); typeIds= [| 624; 625; 628; 2006 |]; description= "Amarr cruiser designs." } |> Some
+      | 74 -> { MarketGroupData.id= 74; name= "Amarr"; parentMarketGroupId= Some(6); typeIds= [| 624; 625; 52267; 628; 2006 |]; description= "Amarr cruiser designs." } |> Some
       | 753 -> { MarketGroupData.id= 753; name= "Mining Crystals"; parentMarketGroupId= Some(211); typeIds= [| 46359; 18049; 18051; 46357; 18053; 18055; 18057; 18059; 18061; 46350; 18063; 46352; 18065; 18067; 18037; 18039; 18041; 18043; 46361; 18045; 18047 |]; description= "Blueprints of mining crystals." } |> Some
       | 850 -> { MarketGroupData.id= 850; name= "Advanced Railgun Charges"; parentMarketGroupId= Some(100); typeIds= [|  |]; description= "Technologically advanced railgun ammunition." } |> Some
       | _ -> None

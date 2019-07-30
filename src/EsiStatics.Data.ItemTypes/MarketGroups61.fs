@@ -17,8 +17,8 @@ module internal MarketGroups61=
       | 2098 -> { MarketGroupData.id= 2098; name= "Minmatar"; parentMarketGroupId= Some(2094); typeIds= [| 40515; 45990; 36454; 36844; 46927; 36797 |]; description= "" } |> Some
       | 2292 -> { MarketGroupData.id= 2292; name= "Information Command Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42877; 42878; 42879 |]; description= "Information Command Burst Charges" } |> Some
       | 2389 -> { MarketGroupData.id= 2389; name= "Gallente"; parentMarketGroupId= Some(2315); typeIds= [| 46928; 45869; 44887 |]; description= "Gallente Shuttle Skins" } |> Some
-      | 2486 -> { MarketGroupData.id= 2486; name= "Triglavian"; parentMarketGroupId= Some(2484); typeIds= [| 48649; 49922; 48563; 48653; 50139 |]; description= "Triglavian Frigates" } |> Some
-      | 354693 -> { MarketGroupData.id= 354693; name= "Shotguns"; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "Shotguns." } |> Some
+      | 2486 -> { MarketGroupData.id= 2486; name= "Triglavian"; parentMarketGroupId= Some(2484); typeIds= [| 52417; 49922; 48649; 48653; 48563; 52442; 50139 |]; description= "Triglavian Frigates" } |> Some
+      | 354693 -> { MarketGroupData.id= 354693; name= ""; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "" } |> Some
       | 355469 -> { MarketGroupData.id= 355469; name= "Dropsuits"; parentMarketGroupId= Some(355457); typeIds= [|  |]; description= "" } |> Some
       | 449 -> { MarketGroupData.id= 449; name= "Amarr"; parentMarketGroupId= Some(448); typeIds= [| 12003; 12019 |]; description= "Amarr heavy assault cruiser designs." } |> Some
       | 61 -> { MarketGroupData.id= 61; name= "Caldari"; parentMarketGroupId= Some(5); typeIds= [| 582; 583; 584; 602; 603; 605 |]; description= "Caldari frigate designs." } |> Some

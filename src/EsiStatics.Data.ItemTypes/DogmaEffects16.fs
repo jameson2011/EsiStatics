@@ -39,5 +39,6 @@ module internal DogmaEffects16=
       | 6903 -> { DogmaEffectData.id= 6903; name= "shipModuleNonRepeatingArmorHardener"; description= ""; displayName= ""; effectCategory= 1; preExpression= 59; postExpression= 59 } |> Some
       | 7000 -> { DogmaEffectData.id= 7000; name= "shipBonusSHTFalloffGF1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 6892; postExpression= 6893 } |> Some
       | 7097 -> { DogmaEffectData.id= 7097; name= "surgicalStrikeDamageMultiplierBonusPostPercentDamageMultiplierLocationShipGroupPrecursorTurret"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19538; postExpression= 19539 } |> Some
+      | 7194 -> { DogmaEffectData.id= 7194; name= "systemHullHPBonusPercent"; description= ""; displayName= ""; effectCategory= 7; preExpression= 19773; postExpression= 19774 } |> Some
       | 889 -> { DogmaEffectData.id= 889; name= "missileLauncherSpeedMultiplier"; description= ""; displayName= ""; effectCategory= 4; preExpression= 4069; postExpression= 4070 } |> Some
       | _ -> None

@@ -52,5 +52,6 @@ module internal DogmaEffects25=
       | 7009 -> { DogmaEffectData.id= 7009; name= "serviceModuleFullPowerHitpointPostAssign"; description= "Automatically generated effect"; displayName= ""; effectCategory= 4; preExpression= 19371; postExpression= 19372 } |> Some
       | 704 -> { DogmaEffectData.id= 704; name= "covertOpsSkillLevelPreMulEliteBonusCoverOpsShip"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3455; postExpression= 3456 } |> Some
       | 7106 -> { DogmaEffectData.id= 7106; name= "structureConversionRigTETimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 227; postExpression= 228 } |> Some
+      | 7203 -> { DogmaEffectData.id= 7203; name= "systemDroneDamageBonusPercent"; description= "Automatically generated effect"; displayName= ""; effectCategory= 7; preExpression= 19794; postExpression= 19795 } |> Some
       | 898 -> { DogmaEffectData.id= 898; name= "shipMissileKineticDamageCF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4119; postExpression= 4120 } |> Some
       | _ -> None

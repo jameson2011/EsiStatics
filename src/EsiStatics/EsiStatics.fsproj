@@ -24,6 +24,9 @@
     <Compile Include="UniverseSearch.fs" />
     <Compile Include="ItemTypes.fs" />
     <Compile Include="ItemTypesFinder.fs" />
+    <Compile Include="CategoriesFinder.fs" />
+    <Compile Include="GroupsFinder.fs" />
+    <Compile Include="MarketGroupsFinder.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
   <ItemGroup>

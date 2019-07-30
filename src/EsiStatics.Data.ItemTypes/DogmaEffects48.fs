@@ -44,5 +44,6 @@ module internal DogmaEffects48=
       | 6838 -> { DogmaEffectData.id= 6838; name= "rigCapShipManufactureMaterialBonus"; description= "Structure Rig Material effect on Manufacturing of Capital ships"; displayName= ""; effectCategory= 0; preExpression= 1; postExpression= 1 } |> Some
       | 6935 -> { DogmaEffectData.id= 6935; name= "subsystemBonusAmarrCore3EnergyWarHeatBonus"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19336; postExpression= 19337 } |> Some
       | 7032 -> { DogmaEffectData.id= 7032; name= "shipBonusHeavyMissileThermalDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19394; postExpression= 19395 } |> Some
+      | 7226 -> { DogmaEffectData.id= 7226; name= "systemDroneSpeedBonusItem"; description= "Automatically generated effect"; displayName= ""; effectCategory= 7; preExpression= 19788; postExpression= 19789 } |> Some
       | 727 -> { DogmaEffectData.id= 727; name= "shipBonusCargoCI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3549; postExpression= 3550 } |> Some
       | _ -> None

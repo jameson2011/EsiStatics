@@ -11,7 +11,7 @@ module internal MarketGroups83=
       | 1829 -> { MarketGroupData.id= 1829; name= "Mobile Cynosural Inhibitors"; parentMarketGroupId= Some(406); typeIds= [| 33518 |]; description= "Blueprints for Mobile Cynosural Inhibitors" } |> Some
       | 2023 -> { MarketGroupData.id= 2023; name= "Marauders"; parentMarketGroupId= Some(2022); typeIds= [|  |]; description= "" } |> Some
       | 2120 -> { MarketGroupData.id= 2120; name= "Special Edition SKINs"; parentMarketGroupId= Some(2119); typeIds= [| 45552; 46584; 46582; 36854; 43935 |]; description= "" } |> Some
-      | 2314 -> { MarketGroupData.id= 2314; name= "Special Destroyers"; parentMarketGroupId= Some(2313); typeIds= [| 47648; 44259; 47012; 47653; 43531; 49797; 52279; 47545; 47548; 47551 |]; description= "" } |> Some
+      | 2314 -> { MarketGroupData.id= 2314; name= "Special Destroyers"; parentMarketGroupId= Some(2313); typeIds= [| 47648; 44259; 47012; 47653; 52420; 43531; 49797; 52279; 47545; 47548; 47551 |]; description= "" } |> Some
       | 2411 -> { MarketGroupData.id= 2411; name= "Standup Light Fighters"; parentMarketGroupId= Some(2409); typeIds= [| 47138; 47139; 47140; 47141; 47142; 47143; 47144; 47145; 47146; 47147; 47148; 47149; 47150; 47151; 47035; 47036 |]; description= "" } |> Some
       | 2508 -> { MarketGroupData.id= 2508; name= "Mass Entangler"; parentMarketGroupId= Some(214); typeIds= [| 49100 |]; description= "Blueprints for Mass Entanglers." } |> Some
       | 277 -> { MarketGroupData.id= 277; name= "Gallente"; parentMarketGroupId= Some(205); typeIds= [| 939; 940; 941; 954; 955; 956 |]; description= "Blueprints of Gallente frigate designs." } |> Some

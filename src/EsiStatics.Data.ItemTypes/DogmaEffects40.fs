@@ -49,4 +49,5 @@ module internal DogmaEffects40=
       | 6830 -> { DogmaEffectData.id= 6830; name= "rigInventionCostBonus"; description= "Structure Rig Cost effect on Invention"; displayName= ""; effectCategory= 0; preExpression= 1; postExpression= 1 } |> Some
       | 6927 -> { DogmaEffectData.id= 6927; name= "subsystemBonusMinmatarPropulsionWarpCapacitor"; description= ""; displayName= ""; effectCategory= 0; preExpression= 15389; postExpression= 15390 } |> Some
       | 7024 -> { DogmaEffectData.id= 7024; name= "shipBonusDroneTrackingEliteGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19388; postExpression= 19389 } |> Some
+      | 7218 -> { DogmaEffectData.id= 7218; name= "shipNosPowerReductionEliteGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19828; postExpression= 19829 } |> Some
       | _ -> None

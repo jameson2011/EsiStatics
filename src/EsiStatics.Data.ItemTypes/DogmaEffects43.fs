@@ -45,4 +45,5 @@ module internal DogmaEffects43=
       | 6930 -> { DogmaEffectData.id= 6930; name= "subsystemBonusAmarrCore2EnergyResistance"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13826; postExpression= 13827 } |> Some
       | 7027 -> { DogmaEffectData.id= 7027; name= "structureCapacitorCapacityBonus"; description= ""; displayName= ""; effectCategory= 4; preExpression= 227; postExpression= 228 } |> Some
       | 7124 -> { DogmaEffectData.id= 7124; name= "moduleStasisImpedence"; description= ""; displayName= ""; effectCategory= 1; preExpression= 19582; postExpression= 19583 } |> Some
+      | 7221 -> { DogmaEffectData.id= 7221; name= "shipNosPowerReductionEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19836; postExpression= 19837 } |> Some
       | _ -> None

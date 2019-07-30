@@ -41,5 +41,6 @@ module internal DogmaEffects36=
       | 6923 -> { DogmaEffectData.id= 6923; name= "subsystemBonusMinmatarOffensive1HMLHAMVelo"; description= ""; displayName= ""; effectCategory= 0; preExpression= 14113; postExpression= 14114 } |> Some
       | 7020 -> { DogmaEffectData.id= 7020; name= "remoteWebifierMaxRangeBonus"; description= "Stasis Webifier increase max range"; displayName= ""; effectCategory= 0; preExpression= 5539; postExpression= 5540 } |> Some
       | 7117 -> { DogmaEffectData.id= 7117; name= "roleBonusWarpSpeed"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3949; postExpression= 3950 } |> Some
+      | 7214 -> { DogmaEffectData.id= 7214; name= "shipArmorKinresistanceEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19815; postExpression= 19816 } |> Some
       | 909 -> { DogmaEffectData.id= 909; name= "shipArmorHpAC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4158; postExpression= 4159 } |> Some
       | _ -> None

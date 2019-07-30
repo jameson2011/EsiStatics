@@ -11,11 +11,11 @@ module internal MarketGroups45=
       | 1694 -> { MarketGroupData.id= 1694; name= "Explosive Shield Hardeners"; parentMarketGroupId= Some(553); typeIds= [| 20641; 14756; 14757; 14758; 14759; 19276; 19275; 13996; 9646; 13967; 30422; 2289; 19270; 19285; 19286; 17496; 2297; 19259; 19260; 19269 |]; description= "Explosive Shield Hardeners" } |> Some
       | 1791 -> { MarketGroupData.id= 1791; name= "Medium Targeting Rigs"; parentMarketGroupId= Some(1781); typeIds= [| 31324; 31282; 31276; 31330 |]; description= "Modifications that affect a medium starship's targeting." } |> Some
       | 1888 -> { MarketGroupData.id= 1888; name= "Gallente"; parentMarketGroupId= Some(65); typeIds= [| 11553; 11556; 11688; 11695; 11531; 11535; 11541; 11545; 11547 |]; description= "" } |> Some
-      | 1985 -> { MarketGroupData.id= 1985; name= "Caldari"; parentMarketGroupId= Some(1972); typeIds= [| 46144; 36677; 45867; 34668; 36749; 40625; 48210; 46871 |]; description= "" } |> Some
+      | 1985 -> { MarketGroupData.id= 1985; name= "Caldari"; parentMarketGroupId= Some(1972); typeIds= [| 46144; 36677; 45867; 34668; 36749; 52562; 40625; 48210; 46871 |]; description= "" } |> Some
       | 2082 -> { MarketGroupData.id= 2082; name= "Caldari"; parentMarketGroupId= Some(2068); typeIds= [| 46846; 48549; 46118; 45841; 46119; 45842; 46845; 36657; 36658; 36341; 36342; 48185; 48184; 36729; 36730; 40605; 40606 |]; description= "" } |> Some
       | 2179 -> { MarketGroupData.id= 2179; name= "Weapon Upgrades"; parentMarketGroupId= Some(2164); typeIds= [|  |]; description= "" } |> Some
       | 2276 -> { MarketGroupData.id= 2276; name= "Non-Racial"; parentMarketGroupId= Some(912); typeIds= [| 40633; 40634 |]; description= "" } |> Some
-      | 2373 -> { MarketGroupData.id= 2373; name= "Minmatar"; parentMarketGroupId= Some(2369); typeIds= [| 46026; 45964; 46901; 48511 |]; description= "" } |> Some
+      | 2373 -> { MarketGroupData.id= 2373; name= "Minmatar"; parentMarketGroupId= Some(2369); typeIds= [| 52428; 46026; 45964; 46901; 48511 |]; description= "" } |> Some
       | 2470 -> { MarketGroupData.id= 2470; name= "Large"; parentMarketGroupId= Some(2464); typeIds= [| 47934; 47935 |]; description= "Large Advanced Exotic Plasma Charges" } |> Some
       | 353707 -> { MarketGroupData.id= 353707; name= "Dropsuit Command"; parentMarketGroupId= Some(353706); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
       | 354386 -> { MarketGroupData.id= 354386; name= "Prototype"; parentMarketGroupId= Some(353602); typeIds= [|  |]; description= "" } |> Some

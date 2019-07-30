@@ -43,4 +43,5 @@ module internal DogmaEffects37=
       | 7021 -> { DogmaEffectData.id= 7021; name= "structureRigMaxTargetRange"; description= ""; displayName= ""; effectCategory= 0; preExpression= 59; postExpression= 59 } |> Some
       | 7118 -> { DogmaEffectData.id= 7118; name= "eliteBonusCovertOps3PCTdamagePerCycle"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19563; postExpression= 19564 } |> Some
       | 716 -> { DogmaEffectData.id= 716; name= "sensorBoostTargeted"; description= ""; displayName= ""; effectCategory= 2; preExpression= 3525; postExpression= 3526 } |> Some
+      | 7215 -> { DogmaEffectData.id= 7215; name= "shipArmorExpresistanceEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19817; postExpression= 19818 } |> Some
       | _ -> None

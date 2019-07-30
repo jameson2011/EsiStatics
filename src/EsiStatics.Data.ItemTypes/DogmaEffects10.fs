@@ -47,5 +47,6 @@ module internal DogmaEffects10=
       | 6897 -> { DogmaEffectData.id= 6897; name= "subsystemMPTFittingReduction"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19331; postExpression= 19332 } |> Some
       | 6994 -> { DogmaEffectData.id= 6994; name= "eliteReconBonusMHTDamage1"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 18539; postExpression= 18540 } |> Some
       | 7091 -> { DogmaEffectData.id= 7091; name= "shipBonusNosNeutCapNeedRoleBonus2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19527; postExpression= 19528 } |> Some
+      | 7188 -> { DogmaEffectData.id= 7188; name= "npcBehaviorSmartBomb"; description= ""; displayName= ""; effectCategory= 3; preExpression= 59; postExpression= 59 } |> Some
       | 980 -> { DogmaEffectData.id= 980; name= "cloakingWarpSafe"; description= ""; displayName= "Cloaking"; effectCategory= 1; preExpression= 3908; postExpression= 3909 } |> Some
       | _ -> None

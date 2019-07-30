@@ -50,5 +50,6 @@ module internal DogmaEffects45=
       | 6835 -> { DogmaEffectData.id= 6835; name= "rigTEResearchTimeBonus"; description= "Structure Rig Time effect on TE Research"; displayName= ""; effectCategory= 0; preExpression= 1; postExpression= 1 } |> Some
       | 6932 -> { DogmaEffectData.id= 6932; name= "subsystemBonusGallenteCore2EnergyResistance"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13826; postExpression= 13827 } |> Some
       | 7029 -> { DogmaEffectData.id= 7029; name= "structureArmorHPBonus"; description= ""; displayName= ""; effectCategory= 4; preExpression= 509; postExpression= 510 } |> Some
+      | 7223 -> { DogmaEffectData.id= 7223; name= "systemAgilityBonusPercentItem"; description= "Automatically generated effect"; displayName= ""; effectCategory= 7; preExpression= 2250; postExpression= 2251 } |> Some
       | 918 -> { DogmaEffectData.id= 918; name= "shipDronesMaxGC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4184; postExpression= 4185 } |> Some
       | _ -> None

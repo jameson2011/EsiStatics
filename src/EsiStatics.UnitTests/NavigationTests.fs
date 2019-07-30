@@ -10,33 +10,87 @@ module NavigationTests=
     
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>]
-    [<InlineData(30013489, KnownSystems.adirain, 18)>]
-    [<InlineData(30013489, KnownSystems.avenod, 20)>]
-    [<InlineData(30013489, KnownSystems.jita, 10)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
+    [<InlineData(KnownSystems.raeghoscon, KnownSystems.adirain, 6)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 13)>] // should be 6 if symmetric
     let ``findRoute euclidean``(start, finish, expected) =
         let s = start |> knownSystem
         let f = finish |> knownSystem
         
         let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
 
-        Assert.Equal(result.Length, expected)
+        Assert.Equal(expected, result.Length)
+
 
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>]
-    [<InlineData(30013489, KnownSystems.adirain, 18)>]
-    [<InlineData(30013489, KnownSystems.avenod, 20)>]
-    [<InlineData(30013489, KnownSystems.jita, 10)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 13)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.deepari, 19)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.deepari, 16)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.deepari, 10)>]
+    [<InlineData(KnownSystems.raeghoscon, KnownSystems.adirain, 6)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 6)>]
+    let ``findRoute dijkstra``(start, finish, expected) =
+        let s = start |> knownSystem
+        let f = finish |> knownSystem
+        
+        let result = (s, f) |> Navigation.findRoute Navigation.dijkstraSystemDistance
+
+        Assert.Equal(expected, result.Length)
+
+
+    [<Theory>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>] 
+    [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 13)>] 
+    [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.deepari, 18)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.deepari, 20)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.deepari, 10)>]
     let ``findRoute euclidean highsec preferred``(start, finish, expected) =
         let s = start |> knownSystem
         let f = finish |> knownSystem
 
         let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
 
+        Assert.Equal(expected, result.Length)
+    
+    [<Theory>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 15)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 15)>]
+    [<InlineData(KnownSystems.raeghoscon, KnownSystems.adirain, 6)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 6)>]
+    [<InlineData(KnownSystems.heild, KnownSystems.avenod, 27)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.heild, 27)>]
+    let ``findRoute euclidean highsec avoided``(start, finish, expected) =
+        let s = start |> knownSystem
+        let f = finish |> knownSystem
+
+        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistanceAvoidHighsec
+
         Assert.Equal(result.Length, expected)
     
+
     [<Theory>]
     [<InlineData(KnownSystems.thera, KnownSystems.jita)>]
     let ``findRoute on WH returns empty``(start, finish) =
+        let s = start |> knownSystem
+        let f = finish |> knownSystem
+
+        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
+
+        Assert.Equal(result.Length, 0)
+
+    
+    [<Theory>]
+    [<InlineData(KnownSystems.jita, KnownSystems.jita)>]
+    let ``findRoute on self returns empty``(start, finish) =
         let s = start |> knownSystem
         let f = finish |> knownSystem
 

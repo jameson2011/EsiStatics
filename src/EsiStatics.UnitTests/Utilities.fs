@@ -17,8 +17,13 @@ module KnownSystems =
     let thera = 31000005
     [<Literal>]
     let ``QX-LIJ`` = 30004714
+    [<Literal>]
+    let raeghoscon = 30002726
+    [<Literal>]
+    let deepari = 30013489
+    [<Literal>]
+    let heild = 30002390
 
-    
     let knownSystem = EsiStatics.SolarSystems.byId >> Option.get
 
 [<AutoOpen>]

@@ -14,7 +14,7 @@ module internal MarketGroups48=
       | 2085 -> { MarketGroupData.id= 2085; name= "Standard Industrial Ships"; parentMarketGroupId= Some(2006); typeIds= [|  |]; description= "" } |> Some
       | 2182 -> { MarketGroupData.id= 2182; name= "Resource Processing Service Modules"; parentMarketGroupId= Some(2166); typeIds= [| 37032; 37034; 45540; 45541; 45542 |]; description= "" } |> Some
       | 2279 -> { MarketGroupData.id= 2279; name= "Caldari"; parentMarketGroupId= Some(2277); typeIds= [| 49954; 46147; 46276; 47050; 41681; 41682; 41683; 48212; 47642 |]; description= "" } |> Some
-      | 2376 -> { MarketGroupData.id= 2376; name= "Pirate Faction"; parentMarketGroupId= Some(2375); typeIds= [| 46980; 47009; 46044; 46877; 46823 |]; description= "" } |> Some
+      | 2376 -> { MarketGroupData.id= 2376; name= "Pirate Faction"; parentMarketGroupId= Some(2375); typeIds= [| 47009; 46980; 46823; 52598; 46044; 46877 |]; description= "" } |> Some
       | 2473 -> { MarketGroupData.id= 2473; name= "Drone Implants"; parentMarketGroupId= Some(531); typeIds= [|  |]; description= "Drone Implants" } |> Some
       | 339 -> { MarketGroupData.id= 339; name= "Cap Booster Charges"; parentMarketGroupId= Some(211); typeIds= [| 3553; 3555; 11284; 11286; 11288; 1178; 1179; 11290; 41598 |]; description= "Blueprints of cap booster charges." } |> Some
       | 353613 -> { MarketGroupData.id= 353613; name= "Small"; parentMarketGroupId= Some(353605); typeIds= [|  |]; description= "" } |> Some

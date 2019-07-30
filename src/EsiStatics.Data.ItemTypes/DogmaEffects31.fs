@@ -46,5 +46,6 @@ module internal DogmaEffects31=
       | 6918 -> { DogmaEffectData.id= 6918; name= "subsystemSkillLevelMinmatarEngineering3"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13027; postExpression= 13028 } |> Some
       | 7015 -> { DogmaEffectData.id= 7015; name= "eliteBonusGunshipEMMissileDamage1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19377; postExpression= 19378 } |> Some
       | 7112 -> { DogmaEffectData.id= 7112; name= "shipBonusNeutCapNeedRoleBonus2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19545; postExpression= 19546 } |> Some
+      | 7209 -> { DogmaEffectData.id= 7209; name= "shipPCTOptimalBonusEliteGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19806; postExpression= 19807 } |> Some
       | 904 -> { DogmaEffectData.id= 904; name= "ammoInfluenceShieldCapacity"; description= ""; displayName= ""; effectCategory= 0; preExpression= 4136; postExpression= 4137 } |> Some
       | _ -> None

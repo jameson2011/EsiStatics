@@ -44,5 +44,6 @@ module internal DogmaEffects47=
       | 6837 -> { DogmaEffectData.id= 6837; name= "rigCopyTimeBonus"; description= "Structure Rig Time effect on Copying"; displayName= ""; effectCategory= 0; preExpression= 1; postExpression= 1 } |> Some
       | 6934 -> { DogmaEffectData.id= 6934; name= "shipMaxLockedTargetsBonusAddPassive"; description= ""; displayName= ""; effectCategory= 0; preExpression= 798; postExpression= 800 } |> Some
       | 7031 -> { DogmaEffectData.id= 7031; name= "shipBonusHeavyMissileKineticDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19392; postExpression= 19393 } |> Some
+      | 7225 -> { DogmaEffectData.id= 7225; name= "systemDroneDamageBonusItem"; description= "Automatically generated effect"; displayName= ""; effectCategory= 7; preExpression= 19844; postExpression= 19845 } |> Some
       | 726 -> { DogmaEffectData.id= 726; name= "shipBonusCargo2GI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 3547; postExpression= 3548 } |> Some
       | _ -> None

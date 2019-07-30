@@ -8,7 +8,7 @@ module internal Groups22=
       | 1186 -> { GroupData.id= 1186; name= "FW Minmatar Republic Battlecruiser"; categoryId= 11; published= true; typeIds= [| 32974 |] } |> Some
       | 119 -> { GroupData.id= 119; name= "Shield Recharger Blueprint"; categoryId= 9; published= true; typeIds= [| 1026; 1027 |] } |> Some
       | 1283 -> { GroupData.id= 1283; name= "Expedition Frigate"; categoryId= 6; published= true; typeIds= [| 33697; 37135 |] } |> Some
-      | 1768 -> { GroupData.id= 1768; name= "Seeker Scouts"; categoryId= 11; published= false; typeIds= [| 42692; 42693; 46261; 47489; 47490; 47491; 47492; 47542; 47543; 48545; 48567; 48568; 48569; 48570; 48571; 48572; 48573; 48575; 48640; 48647; 50089; 50090; 50092 |] } |> Some
+      | 1768 -> { GroupData.id= 1768; name= "Seeker Scouts"; categoryId= 11; published= false; typeIds= [| 42692; 42693; 46261; 47489; 47490; 47491; 47492; 47542; 47543; 48545; 48567; 48568; 48569; 48570; 48571; 48572; 48573; 48575; 48640; 48647; 50089; 50090; 50092; 50165 |] } |> Some
       | 1865 -> { GroupData.id= 1865; name= "Structure Engineering Rig L - TE Research Optimization"; categoryId= 66; published= true; typeIds= [| 43726; 43727 |] } |> Some
       | 1962 -> { GroupData.id= 1962; name= "Structure QA Modules"; categoryId= 66; published= false; typeIds= [| 47288 |] } |> Some
       | 313 -> { GroupData.id= 313; name= "Drugs"; categoryId= 17; published= true; typeIds= [| 2711; 3703; 3705; 3707; 3709; 3711; 3713; 3818; 3820; 3822; 3824; 3826; 26780 |] } |> Some

@@ -15,13 +15,13 @@ module internal MarketGroups64=
       | 2101 -> { MarketGroupData.id= 2101; name= "Standard Battlecruisers"; parentMarketGroupId= Some(1955); typeIds= [|  |]; description= "" } |> Some
       | 2198 -> { MarketGroupData.id= 2198; name= "Structure Guided Bombs"; parentMarketGroupId= Some(11); typeIds= [| 37849; 37850 |]; description= "" } |> Some
       | 2295 -> { MarketGroupData.id= 2295; name= "Skirmish Command Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42888; 42886; 42887 |]; description= "Skirmish Command Burst Charges" } |> Some
-      | 2392 -> { MarketGroupData.id= 2392; name= "Minmatar"; parentMarketGroupId= Some(2309); typeIds= [| 48528; 45953; 46892 |]; description= "" } |> Some
+      | 2392 -> { MarketGroupData.id= 2392; name= "Minmatar"; parentMarketGroupId= Some(2309); typeIds= [| 48528; 45953; 52426; 46892 |]; description= "" } |> Some
       | 2489 -> { MarketGroupData.id= 2489; name= "Booster Slot 02"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "Booster Slot 02" } |> Some
       | 354405 -> { MarketGroupData.id= 354405; name= "Prototype"; parentMarketGroupId= Some(353575); typeIds= [|  |]; description= "" } |> Some
       | 354696 -> { MarketGroupData.id= 354696; name= "Standard"; parentMarketGroupId= Some(354693); typeIds= [|  |]; description= "" } |> Some
       | 355181 -> { MarketGroupData.id= 355181; name= "Remote Explosives"; parentMarketGroupId= Some(353563); typeIds= [|  |]; description= "" } |> Some
       | 357121 -> { MarketGroupData.id= 357121; name= "Armor Hardeners"; parentMarketGroupId= Some(353588); typeIds= [|  |]; description= "" } |> Some
-      | 364493 -> { MarketGroupData.id= 364493; name= ""; parentMarketGroupId= Some(364491); typeIds= [|  |]; description= "" } |> Some
+      | 364493 -> { MarketGroupData.id= 364493; name= "Advanced"; parentMarketGroupId= Some(364491); typeIds= [|  |]; description= "" } |> Some
       | 452 -> { MarketGroupData.id= 452; name= "Minmatar"; parentMarketGroupId= Some(448); typeIds= [| 12015; 11999 |]; description= "Minmatar heavy assault cruiser designs." } |> Some
       | 64 -> { MarketGroupData.id= 64; name= "Minmatar"; parentMarketGroupId= Some(5); typeIds= [| 598; 585; 586; 587; 3766; 599 |]; description= "Minmatar frigate designs." } |> Some
       | 646 -> { MarketGroupData.id= 646; name= "Gyrostabilizers"; parentMarketGroupId= Some(143); typeIds= [| 518; 519; 520; 14538; 14540; 5933; 14542; 44112; 14536; 13939; 21486; 15447; 15806 |]; description= "Systems designed to improve projectile weapon efficiency." } |> Some

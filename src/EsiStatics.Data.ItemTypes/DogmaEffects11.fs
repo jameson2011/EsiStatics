@@ -44,6 +44,6 @@ module internal DogmaEffects11=
       | 6704 -> { DogmaEffectData.id= 6704; name= "rigDrawbackReductionLauncher"; description= ""; displayName= ""; effectCategory= 0; preExpression= 19285; postExpression= 19286 } |> Some
       | 6801 -> { DogmaEffectData.id= 6801; name= "modeMWDandABBoostPostDiv"; description= ""; displayName= ""; effectCategory= 0; preExpression= 18857; postExpression= 18858 } |> Some
       | 6898 -> { DogmaEffectData.id= 6898; name= "subsystemMRARFittingReduction"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19331; postExpression= 19332 } |> Some
-      | 6995 -> { DogmaEffectData.id= 6995; name= "targetABCAttack"; description= "Atomic Beam Cannon main effect"; displayName= ""; effectCategory= 2; preExpression= 115; postExpression= 89 } |> Some
+      | 6995 -> { DogmaEffectData.id= 6995; name= "targetDisintegratorAttack"; description= "Atomic Beam Cannon main effect"; displayName= ""; effectCategory= 2; preExpression= 115; postExpression= 89 } |> Some
       | 7092 -> { DogmaEffectData.id= 7092; name= "shipBonusRemoteRepCapNeedRoleBonus2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 19529; postExpression= 19530 } |> Some
       | _ -> None

@@ -18,7 +18,7 @@ module internal MarketGroups46=
       | 2180 -> { MarketGroupData.id= 2180; name= "Doomsday Devices"; parentMarketGroupId= Some(2164); typeIds= [| 37030 |]; description= "" } |> Some
       | 2277 -> { MarketGroupData.id= 2277; name= "Force Auxiliaries"; parentMarketGroupId= Some(1968); typeIds= [|  |]; description= "" } |> Some
       | 2374 -> { MarketGroupData.id= 2374; name= "Standard Carriers"; parentMarketGroupId= Some(1970); typeIds= [|  |]; description= "" } |> Some
-      | 2471 -> { MarketGroupData.id= 2471; name= "Entropic Radiation Sinks"; parentMarketGroupId= Some(143); typeIds= [| 47908; 47909; 47911 |]; description= "Increases damage and rate of fire for Entropic Disintegrators" } |> Some
+      | 2471 -> { MarketGroupData.id= 2471; name= "Entropic Radiation Sinks"; parentMarketGroupId= Some(143); typeIds= [| 52244; 52242; 47908; 47909; 47911 |]; description= "Increases damage and rate of fire for Entropic Disintegrators" } |> Some
       | 353708 -> { MarketGroupData.id= 353708; name= "Dropsuit Upgrades"; parentMarketGroupId= Some(365496); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
       | 365251 -> { MarketGroupData.id= 365251; name= "Shield Energizers"; parentMarketGroupId= Some(354433); typeIds= [|  |]; description= "Dropsuit shield energizers." } |> Some
       | 366221 -> { MarketGroupData.id= 366221; name= "Prototype"; parentMarketGroupId= Some(366181); typeIds= [|  |]; description= "" } |> Some
