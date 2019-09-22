@@ -18,12 +18,6 @@ module internal MarketGroups0=
       | 2425 -> { MarketGroupData.id= 2425; name= "Precursor Frigates"; parentMarketGroupId= Some(1361); typeIds= [|  |]; description= "Precursor Frigates" } |> Some
       | 2522 -> { MarketGroupData.id= 2522; name= "Precursor Destroyers"; parentMarketGroupId= Some(1372); typeIds= [|  |]; description= "Precursor Destroyers" } |> Some
       | 291 -> { MarketGroupData.id= 291; name= "Small"; parentMarketGroupId= Some(286); typeIds= [| 10679; 1112; 1113; 1114; 1115; 1116 |]; description= "Blueprints of small hybrid turrets." } |> Some
-      | 353565 -> { MarketGroupData.id= 353565; name= "Vehicle Turrets"; parentMarketGroupId= Some(353566); typeIds= [|  |]; description= "Interchangeable weapons fitted to vehicle hardpoints" } |> Some
-      | 356960 -> { MarketGroupData.id= 356960; name= "Standard"; parentMarketGroupId= Some(354491); typeIds= [|  |]; description= "" } |> Some
-      | 365496 -> { MarketGroupData.id= 365496; name= "Dropsuit Upgrades"; parentMarketGroupId= Some(353633); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
-      | 366175 -> { MarketGroupData.id= 366175; name= "Dropsuits"; parentMarketGroupId= Some(365998); typeIds= [|  |]; description= "" } |> Some
-      | 366272 -> { MarketGroupData.id= 366272; name= "Standard"; parentMarketGroupId= Some(366180); typeIds= [|  |]; description= "" } |> Some
-      | 368018 -> { MarketGroupData.id= 368018; name= "Scout"; parentMarketGroupId= Some(368107); typeIds= [|  |]; description= "" } |> Some
       | 485 -> { MarketGroupData.id= 485; name= "Shield Hardening Arrays"; parentMarketGroupId= Some(1285); typeIds= [| 17184; 17185; 17186; 17187 |]; description= "Anchorable structures for the boosting of a control tower's shield resistances." } |> Some
       | 582 -> { MarketGroupData.id= 582; name= "Destroyers"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of destroyer-class vessels." } |> Some
       | 679 -> { MarketGroupData.id= 679; name= "Remote Sensor Dampeners"; parentMarketGroupId= Some(657); typeIds= [| 22945; 1968; 1969; 5299; 5301; 5302 |]; description= "Decrease the targeting speed and range of target ship." } |> Some

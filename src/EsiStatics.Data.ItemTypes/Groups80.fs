@@ -11,7 +11,7 @@ module internal Groups80=
       | 177 -> { GroupData.id= 177; name= "Mining Drone Blueprint"; categoryId= 9; published= true; typeIds= [| 1218; 10247; 10251; 43911; 43912; 43913; 43914; 43915; 43916; 43934 |] } |> Some
       | 1826 -> { GroupData.id= 1826; name= "Structure Engineering Rig M - Basic Medium Ship ME"; categoryId= 66; published= true; typeIds= [| 37146; 37147 |] } |> Some
       | 1923 -> { GroupData.id= 1923; name= "Exceptional Moon Asteroids"; categoryId= 25; published= true; typeIds= [| 45510; 45511; 45512; 45513; 46312; 46313; 46314; 46315; 46316; 46317; 46318; 46319 |] } |> Some
-      | 2020 -> { GroupData.id= 2020; name= "Cynosural Fields"; categoryId= 2; published= false; typeIds= [| 21094 |] } |> Some
+      | 2020 -> { GroupData.id= 2020; name= "Cynosural Fields"; categoryId= 2; published= false; typeIds= [| 21094; 52696 |] } |> Some
       | 274 -> { GroupData.id= 274; name= "Trade"; categoryId= 16; published= true; typeIds= [| 3443; 3444; 3445; 3446; 3447; 3448; 11015; 12834; 13069; 13070; 13071; 13072; 13073; 13074; 13075; 16594; 16595; 16596; 16597; 16598; 16622; 18580; 25233; 25235; 28261; 33467 |] } |> Some
       | 371 -> { GroupData.id= 371; name= "Mobile Warp Disruptor Blueprint"; categoryId= 9; published= true; typeIds= [| 4387; 12297; 12300; 12301; 26850; 26889; 26891; 26893; 28771; 28773; 28775 |] } |> Some
       | 468 -> { GroupData.id= 468; name= "Mercoxit"; categoryId= 25; published= true; typeIds= [| 11396; 17869; 17870; 28412; 28413; 28414; 28626 |] } |> Some

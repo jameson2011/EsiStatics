@@ -267,3 +267,5 @@ nupkgs/
 .fake/build.fsx/
 paket-files/
 **/BenchmarkDotNet.Artifacts/results/
+
+.data/

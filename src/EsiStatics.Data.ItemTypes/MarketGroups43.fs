@@ -20,11 +20,6 @@ module internal MarketGroups43=
       | 2274 -> { MarketGroupData.id= 2274; name= "Gallente"; parentMarketGroupId= Some(2271); typeIds= [| 42133; 37607 |]; description= "Gallente force auxiliary designs." } |> Some
       | 2371 -> { MarketGroupData.id= 2371; name= "Amarr"; parentMarketGroupId= Some(2369); typeIds= [| 45784; 46793; 46022 |]; description= "" } |> Some
       | 2468 -> { MarketGroupData.id= 2468; name= "Small"; parentMarketGroupId= Some(2464); typeIds= [| 47926; 47927 |]; description= "Small Advanced Exotic Plasma Charges" } |> Some
-      | 353608 -> { MarketGroupData.id= 353608; name= "Missile"; parentMarketGroupId= Some(353565); typeIds= [|  |]; description= "" } |> Some
-      | 354384 -> { MarketGroupData.id= 354384; name= "Standard"; parentMarketGroupId= Some(353602); typeIds= [|  |]; description= "" } |> Some
-      | 363793 -> { MarketGroupData.id= 363793; name= "Prototype"; parentMarketGroupId= Some(363790); typeIds= [|  |]; description= "Prototype" } |> Some
-      | 365248 -> { MarketGroupData.id= 365248; name= "Shield Extenders"; parentMarketGroupId= Some(354432); typeIds= [|  |]; description= "Dropsuit shield extenders." } |> Some
-      | 369225 -> { MarketGroupData.id= 369225; name= "SKIN"; parentMarketGroupId= Some(369224); typeIds= [|  |]; description= "" } |> Some
       | 528 -> { MarketGroupData.id= 528; name= "Hemorphite"; parentMarketGroupId= Some(54); typeIds= [| 17444; 17445; 46697; 1231; 28403; 28404; 28405; 46681 |]; description= "Sub-types of hemorphite ore." } |> Some
       | 722 -> { MarketGroupData.id= 722; name= "Radar Backup Arrays"; parentMarketGroupId= Some(681); typeIds= [|  |]; description= "Reduces the sensors' vulnerability to Radar jamming." } |> Some
       | 819 -> { MarketGroupData.id= 819; name= "Caldari"; parentMarketGroupId= Some(817); typeIds= [| 23915; 23917 |]; description= "Caldari carrier designs." } |> Some

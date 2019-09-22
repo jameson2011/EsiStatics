@@ -18,10 +18,6 @@ module internal MarketGroups30=
       | 2261 -> { MarketGroupData.id= 2261; name= "Advanced High Damage XL Cruise Missiles"; parentMarketGroupId= Some(1316); typeIds= [| 41299; 41291; 41294; 41287 |]; description= "Advanced High Damage XL Cruise Missiles" } |> Some
       | 2358 -> { MarketGroupData.id= 2358; name= "Skill Trading"; parentMarketGroupId= Some(1922); typeIds= [| 40520; 46375; 45635; 40519 |]; description= "Items used to extract and inject skill points." } |> Some
       | 2455 -> { MarketGroupData.id= 2455; name= "Large Engineering Mutaplasmids"; parentMarketGroupId= Some(2440); typeIds= [| 48438; 48424; 48425; 48426; 48436; 47829; 47830; 47831; 48437 |]; description= "Large Engineering Mutaplasmids" } |> Some
-      | 354565 -> { MarketGroupData.id= 354565; name= "Standard"; parentMarketGroupId= Some(354563); typeIds= [|  |]; description= "" } |> Some
-      | 366205 -> { MarketGroupData.id= 366205; name= "Prototype"; parentMarketGroupId= Some(366175); typeIds= [|  |]; description= "" } |> Some
-      | 368921 -> { MarketGroupData.id= 368921; name= "Dispersion Stabilizers"; parentMarketGroupId= Some(368920); typeIds= [|  |]; description= "" } |> Some
-      | 369212 -> { MarketGroupData.id= 369212; name= "Dropsuits"; parentMarketGroupId= Some(367593); typeIds= [|  |]; description= "" } |> Some
       | 418 -> { MarketGroupData.id= 418; name= "Minmatar"; parentMarketGroupId= Some(414); typeIds= [| 11133 |]; description= "Blueprints of Minmatar shuttle designs." } |> Some
       | 515 -> { MarketGroupData.id= 515; name= "Pyroxeres"; parentMarketGroupId= Some(54); typeIds= [| 1224; 28425; 28426; 46702; 28424; 17459; 17460; 46686 |]; description= "Sub-types of Pyroxeres ore." } |> Some
       | 612 -> { MarketGroupData.id= 612; name= "Extra Large"; parentMarketGroupId= Some(552); typeIds= [| 13953; 10882; 10884; 10886; 10888; 14601; 14603; 32780; 13954; 20623; 15897; 19204; 19202; 15901; 19206; 19208; 10840; 10842; 14704; 14705; 14706; 14707; 19195; 19196; 19197; 19198 |]; description= "Supercharged shield boosting units for advanced battleship pilots." } |> Some

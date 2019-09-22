@@ -27,7 +27,7 @@ module internal DogmaAttributes88=
       | 573 -> { DogmaAttributeData.id= 573; name= "eliteBonusdestroyers"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 670 -> { DogmaAttributeData.id= 670; name= "areaOfEffectBonus"; description= ""; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 767 -> { DogmaAttributeData.id= 767; name= "trackingSpeedBonus"; description= "Tracking Speed Bonus"; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
-      | 864 -> { DogmaAttributeData.id= 864; name= "implantSetSansha"; description= ""; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 864 -> { DogmaAttributeData.id= 864; name= "implantSetAmulet"; description= ""; published= true; unitId= Some(104); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 88 -> { DogmaAttributeData.id= 88; name= "shieldDrainAmount"; description= "Amount to drain from shield."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 961 -> { DogmaAttributeData.id= 961; name= "caldarNavyBonus2"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | _ -> None

@@ -18,13 +18,6 @@ module internal MarketGroups41=
       | 2369 -> { MarketGroupData.id= 2369; name= "Strategic Cruisers"; parentMarketGroupId= Some(2064); typeIds= [|  |]; description= "" } |> Some
       | 2466 -> { MarketGroupData.id= 2466; name= "Medium"; parentMarketGroupId= Some(2463); typeIds= [| 47928; 47929; 47886 |]; description= "Medium Exotic Plasma Charges" } |> Some
       | 332 -> { MarketGroupData.id= 332; name= "Propulsion Upgrades"; parentMarketGroupId= Some(252); typeIds= [| 1404; 1245; 11613 |]; description= "Blueprints of propulsion upgrades." } |> Some
-      | 354382 -> { MarketGroupData.id= 354382; name= "Prototype"; parentMarketGroupId= Some(353604); typeIds= [|  |]; description= "" } |> Some
-      | 355449 -> { MarketGroupData.id= 355449; name= "Militia Gear"; parentMarketGroupId= Some(350001); typeIds= [|  |]; description= "Standard-issue gear that requires no skills to use but is less efficient than other gear" } |> Some
-      | 363306 -> { MarketGroupData.id= 363306; name= "60mm Armor Plates"; parentMarketGroupId= Some(354444); typeIds= [|  |]; description= "Light armor plating" } |> Some
-      | 363791 -> { MarketGroupData.id= 363791; name= "Standard"; parentMarketGroupId= Some(363790); typeIds= [|  |]; description= "Standard" } |> Some
-      | 365246 -> { MarketGroupData.id= 365246; name= "Reactive Plates"; parentMarketGroupId= Some(354423); typeIds= [|  |]; description= "Dropsuit armor plates." } |> Some
-      | 366216 -> { MarketGroupData.id= 366216; name= "Standard"; parentMarketGroupId= Some(366185); typeIds= [|  |]; description= "" } |> Some
-      | 369223 -> { MarketGroupData.id= 369223; name= "SKIN"; parentMarketGroupId= Some(369222); typeIds= [|  |]; description= "" } |> Some
       | 429 -> { MarketGroupData.id= 429; name= "Minmatar"; parentMarketGroupId= Some(419); typeIds= [| 12035; 11183 |]; description= "Blueprints of Minmatar covert ops designs." } |> Some
       | 526 -> { MarketGroupData.id= 526; name= "Omber"; parentMarketGroupId= Some(54); typeIds= [| 28416; 28417; 17867; 46700; 1227; 17868; 46684; 28415 |]; description= "Sub-types of omber ore." } |> Some
       | 720 -> { MarketGroupData.id= 720; name= "Gravimetric Backup Arrays"; parentMarketGroupId= Some(681); typeIds= [|  |]; description= "Reduces the sensors' vulnerability to gravimetric jamming." } |> Some
