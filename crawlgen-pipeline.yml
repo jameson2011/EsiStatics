@@ -1,0 +1,23 @@
+
+
+trigger:
+  branches:
+    include:
+      - master
+      - dev
+      - feature/*
+    exclude:
+      - releases/old*
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+- checkout: self
+  persistCredentials: true
+  clean: true
+
+- powershell: ./crawlgen.ps1
+  displayName: 'Crawl ESI & Generate'
+
+
