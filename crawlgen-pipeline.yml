@@ -1,14 +1,5 @@
 
 
-trigger:
-  branches:
-    include:
-      - master
-      - dev
-      - feature/*
-    exclude:
-      - releases/old*
-
 pool:
   vmImage: 'vs2017-win2016'
 
