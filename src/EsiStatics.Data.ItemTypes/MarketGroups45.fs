@@ -17,14 +17,6 @@ module internal MarketGroups45=
       | 2276 -> { MarketGroupData.id= 2276; name= "Non-Racial"; parentMarketGroupId= Some(912); typeIds= [| 40633; 40634 |]; description= "" } |> Some
       | 2373 -> { MarketGroupData.id= 2373; name= "Minmatar"; parentMarketGroupId= Some(2369); typeIds= [| 52428; 46026; 45964; 46901; 48511 |]; description= "" } |> Some
       | 2470 -> { MarketGroupData.id= 2470; name= "Large"; parentMarketGroupId= Some(2464); typeIds= [| 47934; 47935 |]; description= "Large Advanced Exotic Plasma Charges" } |> Some
-      | 353707 -> { MarketGroupData.id= 353707; name= "Dropsuit Command"; parentMarketGroupId= Some(353706); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
-      | 354386 -> { MarketGroupData.id= 354386; name= "Prototype"; parentMarketGroupId= Some(353602); typeIds= [|  |]; description= "" } |> Some
-      | 354483 -> { MarketGroupData.id= 354483; name= "Large"; parentMarketGroupId= Some(353605); typeIds= [|  |]; description= "" } |> Some
-      | 364765 -> { MarketGroupData.id= 364765; name= "Scout"; parentMarketGroupId= Some(353652); typeIds= [|  |]; description= "The Scout is a high speed, highly maneuverable vehicle optimized for guerilla warfare " } |> Some
-      | 365250 -> { MarketGroupData.id= 365250; name= "Shield Rechargers"; parentMarketGroupId= Some(354433); typeIds= [|  |]; description= "Dropsuit shield rechargers." } |> Some
-      | 366220 -> { MarketGroupData.id= 366220; name= "Advanced"; parentMarketGroupId= Some(366181); typeIds= [|  |]; description= "" } |> Some
-      | 367772 -> { MarketGroupData.id= 367772; name= "Containers"; parentMarketGroupId= Some(367771); typeIds= [|  |]; description= "" } |> Some
-      | 369227 -> { MarketGroupData.id= 369227; name= "SKIN"; parentMarketGroupId= Some(369226); typeIds= [|  |]; description= "" } |> Some
       | 433 -> { MarketGroupData.id= 433; name= "Amarr"; parentMarketGroupId= Some(432); typeIds= [| 11393; 11365 |]; description= "Amarr assault frigate designs." } |> Some
       | 530 -> { MarketGroupData.id= 530; name= "Mercoxit"; parentMarketGroupId= Some(54); typeIds= [| 11396; 17869; 17870; 28412; 28413; 28414 |]; description= "An extremely rare and valuable ore, yielding a unique mineral." } |> Some
       | 724 -> { MarketGroupData.id= 724; name= "Multi-Frequency Backup Arrays"; parentMarketGroupId= Some(681); typeIds= [|  |]; description= "Reduces the sensors' vulnerability to multiple forms of jamming." } |> Some

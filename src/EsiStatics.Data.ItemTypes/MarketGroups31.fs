@@ -18,11 +18,6 @@ module internal MarketGroups31=
       | 2262 -> { MarketGroupData.id= 2262; name= "Force Auxiliaries"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of force auxiliary-class vessels." } |> Some
       | 2359 -> { MarketGroupData.id= 2359; name= "Faction Corvettes"; parentMarketGroupId= Some(2306); typeIds= [|  |]; description= "" } |> Some
       | 2456 -> { MarketGroupData.id= 2456; name= "Abyssal Filaments"; parentMarketGroupId= Some(19); typeIds= [|  |]; description= "Abyssal Filaments are used to access Abyssal Deadspace" } |> Some
-      | 354469 -> { MarketGroupData.id= 354469; name= "Damage Amplifiers"; parentMarketGroupId= Some(353592); typeIds= [|  |]; description= "" } |> Some
-      | 354566 -> { MarketGroupData.id= 354566; name= "Advanced"; parentMarketGroupId= Some(354563); typeIds= [|  |]; description= "" } |> Some
-      | 366206 -> { MarketGroupData.id= 366206; name= "Standard"; parentMarketGroupId= Some(366177); typeIds= [|  |]; description= "" } |> Some
-      | 368922 -> { MarketGroupData.id= 368922; name= "Advanced"; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
-      | 369213 -> { MarketGroupData.id= 369213; name= "Dropsuits"; parentMarketGroupId= Some(369212); typeIds= [|  |]; description= "" } |> Some
       | 419 -> { MarketGroupData.id= 419; name= "Covert Ops"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of covert ops-class vessels." } |> Some
       | 516 -> { MarketGroupData.id= 516; name= "Plagioclase"; parentMarketGroupId= Some(54); typeIds= [| 28421; 28422; 28423; 46701; 17455; 17456; 18; 46685 |]; description= "Sub-types of plagioclase ore." } |> Some
       | 613 -> { MarketGroupData.id= 613; name= "Boost Amplifiers"; parentMarketGroupId= Some(552); typeIds= [| 20613; 16529; 16531; 16533; 16535; 15905; 15907; 11561; 14636; 14638; 14045; 14047; 19289; 19293; 19295; 19297; 19299; 19301; 19303; 19311; 14708; 14710; 14712; 14714; 24443 |]; description= "Focus and amplify the efficiency of shield boosting modules." } |> Some

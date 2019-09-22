@@ -16,9 +16,6 @@ module internal MarketGroups65=
       | 2199 -> { MarketGroupData.id= 2199; name= "Citadels"; parentMarketGroupId= Some(477); typeIds= [|  |]; description= "" } |> Some
       | 2393 -> { MarketGroupData.id= 2393; name= "Refineries"; parentMarketGroupId= Some(1338); typeIds= [| 36977; 36978 |]; description= "Blueprints of Refinery structures." } |> Some
       | 2490 -> { MarketGroupData.id= 2490; name= "Booster Slot 03"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "Booster Slot 03" } |> Some
-      | 354697 -> { MarketGroupData.id= 354697; name= "Advanced"; parentMarketGroupId= Some(354693); typeIds= [|  |]; description= "" } |> Some
-      | 364494 -> { MarketGroupData.id= 364494; name= "Prototype"; parentMarketGroupId= Some(364491); typeIds= [|  |]; description= "" } |> Some
-      | 365949 -> { MarketGroupData.id= 365949; name= "Dropship"; parentMarketGroupId= Some(365946); typeIds= [|  |]; description= "Dropship" } |> Some
       | 453 -> { MarketGroupData.id= 453; name= "Heavy Assault Cruisers"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of heavy assault-class vessels." } |> Some
       | 550 -> { MarketGroupData.id= 550; name= "Shield Resistance Amplifiers"; parentMarketGroupId= Some(554); typeIds= [|  |]; description= "Strengthen various aspects of the shields' subatomic containment fields." } |> Some
       | 647 -> { MarketGroupData.id= 647; name= "Heat Sinks"; parentMarketGroupId= Some(143); typeIds= [| 15808; 15810; 1893; 14812; 23902; 44111; 14800; 14802; 14804; 13941; 14806; 13943; 14808; 5849; 14810; 2363; 2364; 14814 |]; description= "Systems designed to improve laser weapon efficiency." } |> Some

@@ -17,14 +17,10 @@ module internal MarketGroups80=
       | 2408 -> { MarketGroupData.id= 2408; name= "Structure Burst Projectors"; parentMarketGroupId= Some(2206); typeIds= [| 47072; 47073; 47074; 35944; 47069; 47070; 47071 |]; description= "" } |> Some
       | 2505 -> { MarketGroupData.id= 2505; name= "Pyrolancea"; parentMarketGroupId= Some(2502); typeIds= [| 46000; 48115; 45998; 45999 |]; description= "Pyrolancea Boosters" } |> Some
       | 274 -> { MarketGroupData.id= 274; name= "Amarr"; parentMarketGroupId= Some(206); typeIds= [| 969; 970; 973; 2007 |]; description= "Blueprints of Amarr cruiser designs." } |> Some
-      | 363442 -> { MarketGroupData.id= 363442; name= "Shield Extenders"; parentMarketGroupId= Some(353587); typeIds= [|  |]; description= " " } |> Some
-      | 365770 -> { MarketGroupData.id= 365770; name= "Standard"; parentMarketGroupId= Some(365769); typeIds= [|  |]; description= "Standard." } |> Some
-      | 366255 -> { MarketGroupData.id= 366255; name= "Prototype"; parentMarketGroupId= Some(366190); typeIds= [|  |]; description= "" } |> Some
-      | 366352 -> { MarketGroupData.id= 366352; name= "Faction Booster Minmatar"; parentMarketGroupId= Some(354534); typeIds= [|  |]; description= "" } |> Some
       | 468 -> { MarketGroupData.id= 468; name= "Minmatar"; parentMarketGroupId= Some(464); typeIds= [| 16242; 32878 |]; description= "Minmatar destroyer designs." } |> Some
       | 565 -> { MarketGroupData.id= 565; name= "Medium"; parentMarketGroupId= Some(555); typeIds= [| 3082; 7327; 7329; 3106; 7331; 7333; 15815; 13868; 13870; 13872; 13873; 567; 13880; 13881; 570; 14272; 14274; 14276; 14278; 7367; 7369; 7371; 15820; 7373; 15821; 12344; 15835; 12346; 15840; 15841; 20589 |]; description= "Medium-sized railguns, for use on cruisers." } |> Some
       | 662 -> { MarketGroupData.id= 662; name= "Energy Nosferatu"; parentMarketGroupId= Some(655); typeIds= [|  |]; description= "Steal a portion of the target ship's capacitor energy." } |> Some
       | 80 -> { MarketGroupData.id= 80; name= "Caldari"; parentMarketGroupId= Some(7); typeIds= [| 640; 24688; 638 |]; description= "Caldari battleship designs." } |> Some
-      | 856 -> { MarketGroupData.id= 856; name= ""; parentMarketGroupId= Some(846); typeIds= [| 12633; 12631 |]; description= "" } |> Some
+      | 856 -> { MarketGroupData.id= 856; name= "Small"; parentMarketGroupId= Some(846); typeIds= [| 12633; 12631 |]; description= "Small ADAR ammunition, fired by frigate-sized guns." } |> Some
       | 953 -> { MarketGroupData.id= 953; name= "Projectile Weapon Rigs"; parentMarketGroupId= Some(943); typeIds= [|  |]; description= "Permanent modification of a ship's projectile weapon facilities." } |> Some
       | _ -> None

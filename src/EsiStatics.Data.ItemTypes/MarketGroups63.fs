@@ -17,9 +17,6 @@ module internal MarketGroups63=
       | 2294 -> { MarketGroupData.id= 2294; name= "Shield Command Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42883; 42884; 42885 |]; description= "Shield Command Burst Charges" } |> Some
       | 2391 -> { MarketGroupData.id= 2391; name= "Caldari"; parentMarketGroupId= Some(2309); typeIds= [| 49952; 45832; 52554; 48175; 46728; 48566; 46840; 47611; 46109 |]; description= "" } |> Some
       | 2488 -> { MarketGroupData.id= 2488; name= "Booster Slot 01"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "Booster Slot 01" } |> Some
-      | 354404 -> { MarketGroupData.id= 354404; name= "Advanced"; parentMarketGroupId= Some(353575); typeIds= [|  |]; description= "" } |> Some
-      | 357120 -> { MarketGroupData.id= 357120; name= "Armor Hardeners"; parentMarketGroupId= Some(357121); typeIds= [|  |]; description= "Actively increases resistance to armor damage." } |> Some
-      | 364492 -> { MarketGroupData.id= 364492; name= "Standard"; parentMarketGroupId= Some(364491); typeIds= [|  |]; description= "" } |> Some
       | 451 -> { MarketGroupData.id= 451; name= "Gallente"; parentMarketGroupId= Some(448); typeIds= [| 12005; 12023 |]; description= "Gallente heavy assault cruiser designs." } |> Some
       | 645 -> { MarketGroupData.id= 645; name= "Ballistic Control Systems"; parentMarketGroupId= Some(143); typeIds= [| 14528; 14688; 14530; 15683; 14532; 14534; 15681; 28563; 16457; 21484; 14690; 13935; 13937; 12274; 22291; 46270; 47447; 47448; 14684; 49790; 14686 |]; description= "Systems designed to improve missile launcher efficiency." } |> Some
       | 742 -> { MarketGroupData.id= 742; name= "Dark Blood"; parentMarketGroupId= Some(739); typeIds= [| 17231; 17232; 17233; 17234; 17235; 17236; 17237; 17238; 17239; 17240 |]; description= "Dark Blood identification tags." } |> Some

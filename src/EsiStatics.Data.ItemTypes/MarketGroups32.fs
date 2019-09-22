@@ -15,10 +15,6 @@ module internal MarketGroups32=
       | 2263 -> { MarketGroupData.id= 2263; name= "Amarr"; parentMarketGroupId= Some(2262); typeIds= [| 41582 |]; description= "Blueprints of Amarr force auxiliary designs." } |> Some
       | 2360 -> { MarketGroupData.id= 2360; name= "Pirate Faction"; parentMarketGroupId= Some(2359); typeIds= [| 45505; 46041 |]; description= "" } |> Some
       | 2457 -> { MarketGroupData.id= 2457; name= "Exotic Filaments"; parentMarketGroupId= Some(2456); typeIds= [| 47888; 47761; 47890; 47891; 47889 |]; description= "Filaments connected to Abyssal pockets with Exotic Particle Storms" } |> Some
-      | 354567 -> { MarketGroupData.id= 354567; name= "Prototype"; parentMarketGroupId= Some(354563); typeIds= [|  |]; description= "" } |> Some
-      | 366207 -> { MarketGroupData.id= 366207; name= "Advanced"; parentMarketGroupId= Some(366177); typeIds= [|  |]; description= "" } |> Some
-      | 368923 -> { MarketGroupData.id= 368923; name= "Prototype"; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
-      | 369214 -> { MarketGroupData.id= 369214; name= "Skins"; parentMarketGroupId= Some(367593); typeIds= [|  |]; description= "" } |> Some
       | 420 -> { MarketGroupData.id= 420; name= "Covert Ops"; parentMarketGroupId= Some(1364); typeIds= [|  |]; description= "Frigates designed for clandestine operations." } |> Some
       | 517 -> { MarketGroupData.id= 517; name= "Spodumain"; parentMarketGroupId= Some(54); typeIds= [| 46688; 28418; 28419; 28420; 46704; 19; 17466; 17467 |]; description= "Sub-types of spodumain ore." } |> Some
       | 614 -> { MarketGroupData.id= 614; name= "Criminal Evidence"; parentMarketGroupId= Some(19); typeIds= [| 47450 |]; description= "Proof positive of a bounty hunter's job well done" } |> Some
