@@ -1,23 +1,26 @@
+name:   $(MajorVersion).$(MinorVersion).$(BuildID)
 
+jobs:
+  - job: build
+    timeoutInMinutes: 180
+    pool:
+      vmImage: 'vs2017-win2016'
 
-pool:
-  vmImage: 'vs2017-win2016'
+    steps:
+    - checkout: self
+      persistCredentials: true
+      clean: true
 
-steps:
-- checkout: self
-  persistCredentials: true
-  clean: true
+    - powershell: ./crawlgen.ps1
+      displayName: 'Crawl ESI & Generate'
 
-- powershell: ./crawlgen.ps1
-  displayName: 'Crawl ESI & Generate'
+    - script: git add .
+      displayName: "Add to Git"
 
-- script: git add .
-  displayName: "Add to Git"
+    - script: git commit -m "source update"
+      displayName: "Commit"
 
-- script: git commit -m "source update"
-  displayName: "Commit"
-
-- script: git push
-  displayName: "Push to Git"
+    - script: git push
+      displayName: "Push to Git"
 
 
