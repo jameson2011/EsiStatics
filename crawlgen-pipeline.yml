@@ -11,4 +11,13 @@ steps:
 - powershell: ./crawlgen.ps1
   displayName: 'Crawl ESI & Generate'
 
+- script: git add .
+  displayName: "Add to Git"
+
+- script: git commit -m "source update"
+  displayName: "Commit"
+
+- script: git push
+  displayName: "Push to Git"
+
 
