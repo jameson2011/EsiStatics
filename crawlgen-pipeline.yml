@@ -16,6 +16,12 @@ jobs:
     - powershell: ./crawlgen.ps1
       displayName: 'Crawl ESI & Generate'
 
+    - script: git config user.email "${git_user_email}"
+      displayName: "Set Git"
+
+    - script: git config user.name "${git_user_name}"
+      displayName: "Set Git"
+
     - script: git add .
       displayName: "Add to Git"
 
