@@ -1,5 +1,7 @@
 name:   $(MajorVersion).$(MinorVersion).$(BuildID)
 
+trigger: none
+
 jobs:
   - job: build
     timeoutInMinutes: 180
