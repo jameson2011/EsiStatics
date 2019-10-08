@@ -28,7 +28,7 @@ jobs:
     - script: git commit -m "source update"
       displayName: "Commit"
 
-    - script: git push
+    - script: git push origin HEAD:${Build.SourceBranchName}
       displayName: "Push to Git"
 
 
