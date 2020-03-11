@@ -60,16 +60,16 @@ type SolarSystemExts=
         solarSystem |> SolarSystems.celestialDistances position
         
     [<Extension>]
-    static member FindRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
-        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistance 
+    static member FindGateRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findGateRoute Navigation.euclideanSystemDistance 
 
     [<Extension>]
-    static member FindHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
-        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
+    static member FindHighsecGateRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findGateRoute Navigation.euclideanSystemDistancePreferHighsec
 
     [<Extension>]
-    static member FindExHighsecRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
-        (solarSystem, finish) |> Navigation.findRoute Navigation.euclideanSystemDistanceAvoidHighsec
+    static member FindExHighsecGateRoute(solarSystem: SolarSystem)(finish: SolarSystem)=
+        (solarSystem, finish) |> Navigation.findGateRoute Navigation.euclideanSystemDistanceAvoidHighsec
 
 
 [<Extension>]
