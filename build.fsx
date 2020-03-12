@@ -42,15 +42,15 @@ let buildOptions = fun (opts: DotNet.BuildOptions) ->
                                                 :: opts.MSBuildParams.Properties 
                                 { opts with
                                     Configuration = DotNet.BuildConfiguration.Release
-                                    OutputPath = buildLibDir |> Path.combine "../../" |> Some
+                                    OutputPath = buildLibDir |> Some
                                     MSBuildParams = { opts.MSBuildParams with Properties = props }
                                     }
 
 let testOptions = fun (opts: DotNet.TestOptions) ->
                                 { opts with
                                     Configuration = DotNet.BuildConfiguration.Release
-                                    Output = buildTestsDir |> Path.combine "../../" |> Some
-                                    ResultsDirectory = buildTestsDir |> Path.combine "../../" |> Some
+                                    Output = buildTestsDir |> Some
+                                    ResultsDirectory = buildTestsDir |> Some
                                     Logger = Some "trx"
                                     }
 
