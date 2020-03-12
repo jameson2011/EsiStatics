@@ -31,7 +31,7 @@ module Navigation=
                |> (*) (avoidHighsec route)
                
     
-    let findRoute (distanceOf: SolarSystem * SolarSystem -> float)  (start: SolarSystem, finish: SolarSystem) =
+    let findGateRoute (distanceOf: SolarSystem * SolarSystem -> float)  (start: SolarSystem, finish: SolarSystem) =
         
         let closed = new HashSet<int>()
         let todo = new MutablePriorityQueue<float, SolarSystem>()

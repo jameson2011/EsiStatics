@@ -19,7 +19,7 @@ module NavigationTests=
         let s = start |> knownSystem
         let f = finish |> knownSystem
         
-        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
+        let result = (s, f) |> Navigation.findGateRoute Navigation.euclideanSystemDistance
 
         Assert.Equal(expected, result.Length)
 
@@ -39,7 +39,7 @@ module NavigationTests=
         let s = start |> knownSystem
         let f = finish |> knownSystem
         
-        let result = (s, f) |> Navigation.findRoute Navigation.dijkstraSystemDistance
+        let result = (s, f) |> Navigation.findGateRoute Navigation.dijkstraSystemDistance
 
         Assert.Equal(expected, result.Length)
 
@@ -57,7 +57,7 @@ module NavigationTests=
         let s = start |> knownSystem
         let f = finish |> knownSystem
 
-        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistancePreferHighsec
+        let result = (s, f) |> Navigation.findGateRoute Navigation.euclideanSystemDistancePreferHighsec
 
         Assert.Equal(expected, result.Length)
     
@@ -72,7 +72,7 @@ module NavigationTests=
         let s = start |> knownSystem
         let f = finish |> knownSystem
 
-        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistanceAvoidHighsec
+        let result = (s, f) |> Navigation.findGateRoute Navigation.euclideanSystemDistanceAvoidHighsec
 
         Assert.Equal(result.Length, expected)
     
@@ -83,7 +83,7 @@ module NavigationTests=
         let s = start |> knownSystem
         let f = finish |> knownSystem
 
-        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
+        let result = (s, f) |> Navigation.findGateRoute Navigation.euclideanSystemDistance
 
         Assert.Equal(result.Length, 0)
 
@@ -94,6 +94,6 @@ module NavigationTests=
         let s = start |> knownSystem
         let f = finish |> knownSystem
 
-        let result = (s, f) |> Navigation.findRoute Navigation.euclideanSystemDistance
+        let result = (s, f) |> Navigation.findGateRoute Navigation.euclideanSystemDistance
 
         Assert.Equal(result.Length, 0)

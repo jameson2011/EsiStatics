@@ -354,7 +354,7 @@ namespace EsiStatics.CSharp.UnitTests
             var s = SolarSystems.Get(start).Value;
             var f = SolarSystems.Get(finish).Value;
 
-            var result = s.FindRoute(f);
+            var result = s.FindGateRoute(f);
 
             Assert.Equal(result.Length, expected);
         }
@@ -369,7 +369,7 @@ namespace EsiStatics.CSharp.UnitTests
             var s = SolarSystems.Get(start).Value;
             var f = SolarSystems.Get(finish).Value;
 
-            var result = s.FindHighsecRoute(f);
+            var result = s.FindHighsecGateRoute(f);
 
             Assert.Equal(result.Length, expected);
         }

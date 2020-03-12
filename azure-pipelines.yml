@@ -8,6 +8,12 @@ trigger:
       - feature/*
     exclude:
       - releases/old*
+  paths:
+    include:
+    - /
+    exclude:
+    - crawlgen-pipeline.yml
+    - README.MD
 
 jobs:
   - job: build
