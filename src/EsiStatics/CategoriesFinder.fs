@@ -5,7 +5,6 @@ type CategoriesFinder(eagerIndex: bool)=
     let categoryIndex =
         lazy (
             Data.ItemTypes.Categories.categories()
-                |> Seq.filter (fun c -> c.published)
                 |> Seq.map (fun c -> (c.name, c.id))
                 |> ReadonlyTrie.Create
         )
