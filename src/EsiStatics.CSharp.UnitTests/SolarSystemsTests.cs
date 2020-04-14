@@ -10,7 +10,9 @@ namespace EsiStatics.CSharp.UnitTests
     {
 
         [Theory]
+        [InlineData(0)]
         [InlineData(-1)]
+        [InlineData(-2)]
         public void SolarSystem_Get_UnknownId_ThrowsException(int solarSystemId)
         {
             Action a = () =>
