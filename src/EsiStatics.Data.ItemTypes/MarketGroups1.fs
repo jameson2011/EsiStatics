@@ -18,6 +18,12 @@ module internal MarketGroups1=
       | 2426 -> { MarketGroupData.id= 2426; name= "Triglavian"; parentMarketGroupId= Some(2425); typeIds= [| 47269 |]; description= "Triglavian Frigates" } |> Some
       | 2523 -> { MarketGroupData.id= 2523; name= "Triglavian"; parentMarketGroupId= Some(2522); typeIds= [| 49710 |]; description= "Triglavian Destroyers" } |> Some
       | 292 -> { MarketGroupData.id= 292; name= "Small"; parentMarketGroupId= Some(288); typeIds= [| 47969; 834; 835; 836; 837; 838; 52237; 48469; 48470; 52348 |]; description= "Blueprints of small laser turrets." } |> Some
+      | 353566 -> { MarketGroupData.id= 353566; name= "Vehicles and Gear"; parentMarketGroupId= Some(350001); typeIds= [|  |]; description= "Ground and aerial vehicles for increased firepower and improved combat effectiveness" } |> Some
+      | 353663 -> { MarketGroupData.id= 353663; name= "Marauder"; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
+      | 356961 -> { MarketGroupData.id= 356961; name= "Advanced"; parentMarketGroupId= Some(354491); typeIds= [|  |]; description= "" } |> Some
+      | 365497 -> { MarketGroupData.id= 365497; name= "Vehicle Upgrades"; parentMarketGroupId= Some(353633); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
+      | 366273 -> { MarketGroupData.id= 366273; name= "Advanced"; parentMarketGroupId= Some(366180); typeIds= [|  |]; description= "" } |> Some
+      | 368019 -> { MarketGroupData.id= 368019; name= "Assault"; parentMarketGroupId= Some(368106); typeIds= [|  |]; description= "" } |> Some
       | 583 -> { MarketGroupData.id= 583; name= "Amarr"; parentMarketGroupId= Some(582); typeIds= [| 32875; 16237 |]; description= "Blueprints of Amarr destroyer designs." } |> Some
       | 680 -> { MarketGroupData.id= 680; name= "Weapon Disruptors"; parentMarketGroupId= Some(657); typeIds= [| 37546; 5319; 5320; 5321; 5322; 37543; 37544; 22931; 22933; 37545; 2108; 2109 |]; description= "Weapon Disruptors" } |> Some
       | 777 -> { MarketGroupData.id= 777; name= "XL Launchers"; parentMarketGroupId= Some(140); typeIds= [| 41180; 3563; 3565; 37294; 37295; 41174; 41175; 41176; 20539; 32444; 41181; 41182 |]; description= "For the launching of XL torpedoes.  Can only be fitted on dreadnoughts and titans." } |> Some

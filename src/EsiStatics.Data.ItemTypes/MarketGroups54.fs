@@ -14,6 +14,9 @@ module internal MarketGroups54=
       | 2285 -> { MarketGroupData.id= 2285; name= "Capsules"; parentMarketGroupId= Some(2283); typeIds= [| 47651; 45482; 41579; 41580 |]; description= "" } |> Some
       | 2382 -> { MarketGroupData.id= 2382; name= "Faction Titans"; parentMarketGroupId= Some(1973); typeIds= [|  |]; description= "" } |> Some
       | 2479 -> { MarketGroupData.id= 2479; name= "Abyssal Materials"; parentMarketGroupId= Some(1031); typeIds= [| 48112; 47975 |]; description= "Materials found in Abyssal Deadspace" } |> Some
+      | 353716 -> { MarketGroupData.id= 353716; name= "Turret Upgrades"; parentMarketGroupId= Some(353713); typeIds= [|  |]; description= "Hardwired neural augmentations used to train new abilities." } |> Some
+      | 354686 -> { MarketGroupData.id= 354686; name= "Laser Rifles"; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "Laser rifles." } |> Some
+      | 355462 -> { MarketGroupData.id= 355462; name= "Weapons"; parentMarketGroupId= Some(355449); typeIds= [|  |]; description= "" } |> Some
       | 442 -> { MarketGroupData.id= 442; name= "Logistics"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of Logistics-class vessels." } |> Some
       | 54 -> { MarketGroupData.id= 54; name= "Standard Ores"; parentMarketGroupId= Some(1031); typeIds= [|  |]; description= "Chunks of raw material harvested from asteroids." } |> Some
       | 636 -> { MarketGroupData.id= 636; name= "Caldari"; parentMarketGroupId= Some(634); typeIds= [| 12730; 12732 |]; description= "Blueprints of Caldari transport designs." } |> Some

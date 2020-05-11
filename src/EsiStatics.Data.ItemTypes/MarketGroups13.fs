@@ -18,6 +18,12 @@ module internal MarketGroups13=
       | 2341 -> { MarketGroupData.id= 2341; name= "Medium Structure Resource Processing Rigs"; parentMarketGroupId= Some(2204); typeIds= [| 46484; 46485; 46486; 46487; 46488; 46489; 46490; 46491; 46492; 46493; 46494; 46495; 37280; 37281; 46633; 46634; 46635; 46636; 46637; 46638; 41422; 41423; 41424; 41425; 41426; 41427; 46323; 46324; 46325; 46326 |]; description= "Medium Structure Reprocessing and Reaction Rigs" } |> Some
       | 2438 -> { MarketGroupData.id= 2438; name= "Shield Mutaplasmids"; parentMarketGroupId= Some(2436); typeIds= [|  |]; description= "Mutaplasmids that can be used on shield modules." } |> Some
       | 2535 -> { MarketGroupData.id= 2535; name= "Triglavian"; parentMarketGroupId= Some(448); typeIds= [| 52252 |]; description= "Triglavian Heavy Assault Cruisers" } |> Some
+      | 354354 -> { MarketGroupData.id= 354354; name= "Prototype"; parentMarketGroupId= Some(353572); typeIds= [|  |]; description= "" } |> Some
+      | 356973 -> { MarketGroupData.id= 356973; name= "Prototype"; parentMarketGroupId= Some(354489); typeIds= [|  |]; description= "" } |> Some
+      | 363472 -> { MarketGroupData.id= 363472; name= "Prototype"; parentMarketGroupId= Some(354340); typeIds= [|  |]; description= "Prototype" } |> Some
+      | 364054 -> { MarketGroupData.id= 364054; name= "Prototype"; parentMarketGroupId= Some(364051); typeIds= [|  |]; description= "Prototype." } |> Some
+      | 366285 -> { MarketGroupData.id= 366285; name= "Prototype"; parentMarketGroupId= Some(366282); typeIds= [|  |]; description= "" } |> Some
+      | 366576 -> { MarketGroupData.id= 366576; name= "Advanced"; parentMarketGroupId= Some(366574); typeIds= [|  |]; description= "Advanced." } |> Some
       | 401 -> { MarketGroupData.id= 401; name= "Caldari"; parentMarketGroupId= Some(399); typeIds= [| 11176; 11178 |]; description= "Caldari interceptor designs." } |> Some
       | 595 -> { MarketGroupData.id= 595; name= "Hybrid Batteries"; parentMarketGroupId= Some(480); typeIds= [| 27616; 27618; 27547; 27621; 27622; 27624; 27619; 16690; 16691; 16692; 27542; 27544; 27545; 17402; 17403; 17404; 27613; 27615 |]; description= "Hybrid turret batteries." } |> Some
       | 692 -> { MarketGroupData.id= 692; name= "Small"; parentMarketGroupId= Some(662); typeIds= [| 19105; 15875; 14148; 14150; 13001; 23821; 5137; 530; 5141; 15881; 19101; 19103 |]; description= "Frigate-sized energy vampires." } |> Some

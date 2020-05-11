@@ -13,7 +13,7 @@ module internal MarketGroups11=
       | 1660 -> { MarketGroupData.id= 1660; name= "Special Edition Tournament Cards"; parentMarketGroupId= Some(1659); typeIds= [|  |]; description= "Special Edition Tournament Cards" } |> Some
       | 1854 -> { MarketGroupData.id= 1854; name= "Polymer Reactions"; parentMarketGroupId= Some(1849); typeIds= [|  |]; description= "Chemical processes through which raw materials are made into hybrid polymers" } |> Some
       | 1951 -> { MarketGroupData.id= 1951; name= "Tactical Destroyers"; parentMarketGroupId= Some(1373); typeIds= [|  |]; description= "" } |> Some
-      | 2048 -> { MarketGroupData.id= 2048; name= "Caldari"; parentMarketGroupId= Some(2043); typeIds= [| 36640; 48161; 48162; 36711; 36712; 40585; 40586; 46828; 46829; 46095; 46096; 36339; 36340; 52629; 52630; 45818; 45819; 36639 |]; description= "" } |> Some
+      | 2048 -> { MarketGroupData.id= 2048; name= "Caldari"; parentMarketGroupId= Some(2043); typeIds= [| 36640; 48161; 48162; 36711; 36712; 40585; 40586; 46828; 46829; 46095; 46096; 36339; 36340; 45818; 45819; 36639 |]; description= "" } |> Some
       | 205 -> { MarketGroupData.id= 205; name= "Frigates"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of frigate-class vessels." } |> Some
       | 2145 -> { MarketGroupData.id= 2145; name= "Minmatar"; parentMarketGroupId= Some(2141); typeIds= [| 46890; 40517; 40326; 45951 |]; description= "" } |> Some
       | 2242 -> { MarketGroupData.id= 2242; name= "Capital"; parentMarketGroupId= Some(664); typeIds= [| 41488; 41484; 41485; 41486; 41487 |]; description= "Capital-sized capacitor batteries." } |> Some
@@ -21,6 +21,15 @@ module internal MarketGroups11=
       | 2436 -> { MarketGroupData.id= 2436; name= "Mutaplasmids"; parentMarketGroupId= Some(955); typeIds= [|  |]; description= "Mutaplasmids permanently alter a module's attributes" } |> Some
       | 2533 -> { MarketGroupData.id= 2533; name= "Damage Control Mutaplasmids"; parentMarketGroupId= Some(2532); typeIds= [| 52224; 52225; 52226 |]; description= "Damage Control Mutaplasmids" } |> Some
       | 302 -> { MarketGroupData.id= 302; name= "Small"; parentMarketGroupId= Some(301); typeIds= [| 1154; 1155; 1156; 1157; 1158; 1159; 1160; 1161 |]; description= "Blueprints of small frequency crystals." } |> Some
+      | 353576 -> { MarketGroupData.id= 353576; name= "Repair Tools"; parentMarketGroupId= Some(353563); typeIds= [|  |]; description= "" } |> Some
+      | 354352 -> { MarketGroupData.id= 354352; name= "Standard"; parentMarketGroupId= Some(353572); typeIds= [|  |]; description= "" } |> Some
+      | 356583 -> { MarketGroupData.id= 356583; name= "Large Missile Damage"; parentMarketGroupId= Some(356576); typeIds= [|  |]; description= "" } |> Some
+      | 356971 -> { MarketGroupData.id= 356971; name= "Standard"; parentMarketGroupId= Some(354489); typeIds= [|  |]; description= "" } |> Some
+      | 363470 -> { MarketGroupData.id= 363470; name= "Standard"; parentMarketGroupId= Some(354340); typeIds= [|  |]; description= "Standard" } |> Some
+      | 364052 -> { MarketGroupData.id= 364052; name= "Standard"; parentMarketGroupId= Some(364051); typeIds= [|  |]; description= "Standard." } |> Some
+      | 366186 -> { MarketGroupData.id= 366186; name= "Turrets"; parentMarketGroupId= Some(365996); typeIds= [|  |]; description= "" } |> Some
+      | 366283 -> { MarketGroupData.id= 366283; name= "Standard"; parentMarketGroupId= Some(366282); typeIds= [|  |]; description= "" } |> Some
+      | 366574 -> { MarketGroupData.id= 366574; name= "Magsec SMGs"; parentMarketGroupId= Some(364048); typeIds= [|  |]; description= "Magsec SMG" } |> Some
       | 399 -> { MarketGroupData.id= 399; name= "Interceptors"; parentMarketGroupId= Some(1364); typeIds= [|  |]; description= "Lightning-fast, highly maneuverable frigates." } |> Some
       | 496 -> { MarketGroupData.id= 496; name= "Mining Barges"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of mining barge-class vessels." } |> Some
       | 593 -> { MarketGroupData.id= 593; name= "Mining Crystals"; parentMarketGroupId= Some(11); typeIds= [| 18048; 18050; 18052; 18054; 18056; 18058; 18060; 18062; 18064; 18066; 46355; 46356; 46365; 18590; 46367; 18592; 46369; 18594; 46371; 18596; 18598; 18600; 18602; 18604; 18606; 18608; 18610; 18612; 46366; 18614; 18616; 18618; 18624; 46368; 46370; 46372; 18036; 18038; 18040; 18042; 18044; 18046 |]; description= "Frequency crystals custom-cut for different ore types" } |> Some

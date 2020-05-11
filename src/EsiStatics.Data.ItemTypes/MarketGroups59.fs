@@ -18,6 +18,8 @@ module internal MarketGroups59=
       | 2290 -> { MarketGroupData.id= 2290; name= "Command Burst Charges"; parentMarketGroupId= Some(211); typeIds= [|  |]; description= "Command Burst Charges" } |> Some
       | 2387 -> { MarketGroupData.id= 2387; name= "Amarr"; parentMarketGroupId= Some(2315); typeIds= [| 46773; 45751 |]; description= "Amarr Shuttle Skins" } |> Some
       | 2484 -> { MarketGroupData.id= 2484; name= "Precursor Frigates"; parentMarketGroupId= Some(1998); typeIds= [|  |]; description= "Precursor Frigates" } |> Some
+      | 354691 -> { MarketGroupData.id= 354691; name= "Advanced"; parentMarketGroupId= Some(354686); typeIds= [|  |]; description= "" } |> Some
+      | 355467 -> { MarketGroupData.id= 355467; name= "Vehicle Modules"; parentMarketGroupId= Some(355459); typeIds= [|  |]; description= "" } |> Some
       | 641 -> { MarketGroupData.id= 641; name= "Rapid Light Missile Launchers"; parentMarketGroupId= Some(140); typeIds= [| 13920; 22566; 8007; 17484; 20597; 1875; 1877; 8023; 8025; 8027; 16061; 13919 |]; description= "Fast-launching, cruiser-sized standard missile bays." } |> Some
       | 738 -> { MarketGroupData.id= 738; name= "Nexus Chips"; parentMarketGroupId= Some(19); typeIds= [| 17793; 17794; 17795; 17643; 17646; 17647; 17848; 33618; 33619; 33620; 17814; 17815; 17816; 17849; 17850 |]; description= "Stores artificial intelligence systems. Used when acquiring special ships from Loyalty Point stores" } |> Some
       | 835 -> { MarketGroupData.id= 835; name= "Minmatar"; parentMarketGroupId= Some(823); typeIds= [| 22456 |]; description= "Minmatar interdictor designs." } |> Some

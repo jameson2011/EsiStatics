@@ -13,7 +13,7 @@ module internal Groups75=
       | 1821 -> { GroupData.id= 1821; name= "Structure Engineering Rig M - Ammunition TE"; categoryId= 66; published= true; typeIds= [| 37150; 37151 |] } |> Some
       | 2015 -> { GroupData.id= 2015; name= "Upwell Monument"; categoryId= 65; published= false; typeIds= [| 35845; 49600; 49601 |] } |> Some
       | 269 -> { GroupData.id= 269; name= "Rigging"; categoryId= 16; published= true; typeIds= [| 26252; 26253; 26254; 26255; 26256; 26257; 26258; 26259; 26260; 26261 |] } |> Some
-      | 366 -> { GroupData.id= 366; name= "Warp Gate"; categoryId= 2; published= false; typeIds= [| 4077; 12273; 17831; 23828; 24706; 28074; 35776; 42902; 47685; 47686; 48964; 49563; 49784; 49785; 49786; 52670 |] } |> Some
+      | 366 -> { GroupData.id= 366; name= "Warp Gate"; categoryId= 2; published= false; typeIds= [| 4077; 12273; 17831; 23828; 24706; 28074; 35776; 42902; 47685; 47686; 48964; 49563; 49784; 49785; 49786 |] } |> Some
       | 463 -> { GroupData.id= 463; name= "Mining Barge"; categoryId= 6; published= true; typeIds= [| 17476; 17478; 17480 |] } |> Some
       | 560 -> { GroupData.id= 560; name= "Asteroid Guristas Battleship"; categoryId= 11; published= false; typeIds= [| 11932; 11933; 11934; 11935; 23337; 23338; 23339; 23340; 23341; 23342 |] } |> Some
       | 657 -> { GroupData.id= 657; name= "Advanced Torpedo"; categoryId= 8; published= true; typeIds= [| 2801; 2811; 24519; 24521; 24523; 24525; 24527; 24529 |] } |> Some

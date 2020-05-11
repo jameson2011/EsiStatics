@@ -18,6 +18,8 @@ module internal MarketGroups29=
       | 2357 -> { MarketGroupData.id= 2357; name= "Faction Force Auxiliaries"; parentMarketGroupId= Some(2271); typeIds= [| 42242; 45645 |]; description= "Faction force auxiliary designs." } |> Some
       | 2454 -> { MarketGroupData.id= 2454; name= "Medium Engineering Mutaplasmids"; parentMarketGroupId= Some(2440); typeIds= [| 48420; 48421; 48422; 48433; 48434; 48432; 47825; 47826; 47827 |]; description= "Medium Engineering Mutaplasmids" } |> Some
       | 320 -> { MarketGroupData.id= 320; name= "Scan Probes"; parentMarketGroupId= Some(1520); typeIds= [| 30029; 30014 |]; description= "Blueprints of scan probes." } |> Some
+      | 366204 -> { MarketGroupData.id= 366204; name= "Advanced"; parentMarketGroupId= Some(366175); typeIds= [|  |]; description= "" } |> Some
+      | 368920 -> { MarketGroupData.id= 368920; name= "Dispersion Stabilizers"; parentMarketGroupId= Some(353592); typeIds= [|  |]; description= "" } |> Some
       | 417 -> { MarketGroupData.id= 417; name= "Gallente"; parentMarketGroupId= Some(414); typeIds= [| 11130 |]; description= "Blueprints of Gallente shuttle designs." } |> Some
       | 514 -> { MarketGroupData.id= 514; name= "Bistot"; parentMarketGroupId= Some(54); typeIds= [| 28388; 28389; 28390; 1223; 46692; 17428; 17429; 46676 |]; description= "Sub-types of bistot ore." } |> Some
       | 611 -> { MarketGroupData.id= 611; name= "Large"; parentMarketGroupId= Some(552); typeIds= [| 10880; 19201; 19203; 14597; 14599; 20621; 15900; 19205; 15904; 4391; 19207; 10838; 19194; 19200; 10876; 10858; 14700; 14701; 14702; 14703; 19193; 10874; 13947; 13948; 10878; 19199 |]; description= "Battleship-class shield boosters." } |> Some

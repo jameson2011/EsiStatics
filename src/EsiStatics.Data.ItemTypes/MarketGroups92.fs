@@ -16,6 +16,11 @@ module internal MarketGroups92=
       | 2420 -> { MarketGroupData.id= 2420; name= "Special Battleships"; parentMarketGroupId= Some(1960); typeIds= [|  |]; description= "" } |> Some
       | 2517 -> { MarketGroupData.id= 2517; name= "Ballistic Control System Mutaplasmids"; parentMarketGroupId= Some(2512); typeIds= [| 49739; 49740; 49741 |]; description= "" } |> Some
       | 286 -> { MarketGroupData.id= 286; name= "Hybrid Turrets"; parentMarketGroupId= Some(210); typeIds= [|  |]; description= "Blueprints of hybrid turrets for capsule-fitted vessels." } |> Some
+      | 353657 -> { MarketGroupData.id= 353657; name= "Standard"; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
+      | 354336 -> { MarketGroupData.id= 354336; name= "Advanced"; parentMarketGroupId= Some(353568); typeIds= [|  |]; description= "" } |> Some
+      | 354433 -> { MarketGroupData.id= 354433; name= "Shield Rechargers"; parentMarketGroupId= Some(353581); typeIds= [|  |]; description= "Dropsuit shield rechargers." } |> Some
+      | 366267 -> { MarketGroupData.id= 366267; name= "Prototype"; parentMarketGroupId= Some(366264); typeIds= [|  |]; description= "" } |> Some
+      | 366752 -> { MarketGroupData.id= 366752; name= "Cloak Fields"; parentMarketGroupId= Some(353563); typeIds= [|  |]; description= "Cloak Fields." } |> Some
       | 383 -> { MarketGroupData.id= 383; name= "Medium"; parentMarketGroupId= Some(141); typeIds= [| 9728; 14210; 9734; 14220; 14222; 21536; 9762; 28550; 15929; 23866; 15937; 9800; 15945; 15953; 15961; 3937; 3939; 3941; 3943; 3947; 3949; 14192; 3953; 14194; 3955 |]; description= "Cruiser-sized smartbombs." } |> Some
       | 480 -> { MarketGroupData.id= 480; name= "Weapon Batteries"; parentMarketGroupId= Some(1285); typeIds= [|  |]; description= "Stationary weapon batteries for starbase defense." } |> Some
       | 577 -> { MarketGroupData.id= 577; name= "Small"; parentMarketGroupId= Some(560); typeIds= [| 2977; 8907; 9413; 8903; 488; 8905; 487; 8909; 13779; 21549; 21547; 9411; 16052; 13781; 9417; 2905; 9415; 16053 |]; description= "Small artillery cannons, suitable for frigate use." } |> Some

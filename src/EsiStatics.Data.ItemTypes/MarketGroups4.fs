@@ -19,6 +19,13 @@ module internal MarketGroups4=
       | 2429 -> { MarketGroupData.id= 2429; name= "Precursor Battleships"; parentMarketGroupId= Some(1376); typeIds= [|  |]; description= "Precursor Battleships" } |> Some
       | 2526 -> { MarketGroupData.id= 2526; name= "Triglavian"; parentMarketGroupId= Some(437); typeIds= [| 49713 |]; description= "Triglavian Logistics Cruisers" } |> Some
       | 295 -> { MarketGroupData.id= 295; name= "Large"; parentMarketGroupId= Some(288); typeIds= [| 47973; 844; 845; 846; 847; 848; 52241; 48473; 48474; 52350 |]; description= "Blueprints of large laser turrets." } |> Some
+      | 353569 -> { MarketGroupData.id= 353569; name= "Assault Rifles"; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "Assault rifles." } |> Some
+      | 354345 -> { MarketGroupData.id= 354345; name= "Prototype"; parentMarketGroupId= Some(353573); typeIds= [|  |]; description= "" } |> Some
+      | 356576 -> { MarketGroupData.id= 356576; name= "Missile Damage Amplifiers"; parentMarketGroupId= Some(354469); typeIds= [|  |]; description= "" } |> Some
+      | 356964 -> { MarketGroupData.id= 356964; name= "Advanced"; parentMarketGroupId= Some(354490); typeIds= [|  |]; description= "" } |> Some
+      | 364045 -> { MarketGroupData.id= 364045; name= "Medium"; parentMarketGroupId= Some(353562); typeIds= [|  |]; description= "Medium dropsuit frames." } |> Some
+      | 366179 -> { MarketGroupData.id= 366179; name= "Weapons"; parentMarketGroupId= Some(365997); typeIds= [|  |]; description= "" } |> Some
+      | 366276 -> { MarketGroupData.id= 366276; name= "Standard"; parentMarketGroupId= Some(366275); typeIds= [|  |]; description= "" } |> Some
       | 4 -> { MarketGroupData.id= 4; name= "Ships"; parentMarketGroupId= None; typeIds= [|  |]; description= "Capsuleer spaceships of all sizes and roles, including advanced and faction variants of many hull types" } |> Some
       | 586 -> { MarketGroupData.id= 586; name= "Minmatar"; parentMarketGroupId= Some(582); typeIds= [| 16243; 32879 |]; description= "Blueprints of Minmatar destroyer designs." } |> Some
       | 683 -> { MarketGroupData.id= 683; name= "Stasis Webifiers"; parentMarketGroupId= Some(657); typeIds= [| 28514; 14652; 30328; 41038; 526; 527; 17500; 14648; 14654; 14262; 17559; 14264; 4025; 14266; 4027; 14268; 14650; 14270 |]; description= "Slow them down, then smack them down." } |> Some

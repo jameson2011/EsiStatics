@@ -16,6 +16,8 @@ module internal MarketGroups47=
       | 2278 -> { MarketGroupData.id= 2278; name= "Amarr"; parentMarketGroupId= Some(2277); typeIds= [| 49825; 46146; 47049; 52588; 49421; 41680; 47640; 48858; 42908; 42653 |]; description= "" } |> Some
       | 2375 -> { MarketGroupData.id= 2375; name= "Faction Carriers"; parentMarketGroupId= Some(1970); typeIds= [|  |]; description= "" } |> Some
       | 338 -> { MarketGroupData.id= 338; name= "Mining Lasers"; parentMarketGroupId= Some(1711); typeIds= [| 38660; 17483; 12109; 785; 25267; 16279 |]; description= "Blueprints of mining lasers." } |> Some
+      | 354388 -> { MarketGroupData.id= 354388; name= "Standard"; parentMarketGroupId= Some(353600); typeIds= [|  |]; description= "" } |> Some
+      | 366222 -> { MarketGroupData.id= 366222; name= "Standard"; parentMarketGroupId= Some(366178); typeIds= [|  |]; description= "" } |> Some
       | 435 -> { MarketGroupData.id= 435; name= "Gallente"; parentMarketGroupId= Some(432); typeIds= [| 12042; 12044 |]; description= "Gallente assault frigate designs." } |> Some
       | 532 -> { MarketGroupData.id= 532; name= "Attribute Enhancers"; parentMarketGroupId= Some(27); typeIds= [|  |]; description= "Implants designed to augment specific aspects of the pilot's mental make-up." } |> Some
       | 629 -> { MarketGroupData.id= 629; name= "Transport Ships"; parentMarketGroupId= Some(1385); typeIds= [|  |]; description= "Advanced technologies for the transportation of valuable materials." } |> Some

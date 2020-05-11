@@ -12,12 +12,20 @@ module internal MarketGroups3=
       | 1652 -> { MarketGroupData.id= 1652; name= "Audit Log Containers"; parentMarketGroupId= Some(379); typeIds= [| 17363; 17364; 17365 |]; description= "Audit Log Containers" } |> Some
       | 1846 -> { MarketGroupData.id= 1846; name= "Bounty Reimbursement Tags"; parentMarketGroupId= Some(19); typeIds= [| 33600; 33601; 33602; 33603; 33604; 33605; 33606; 33607; 33612; 33482; 33483; 33484; 33485; 33597; 33598; 33599 |]; description= "These tags can be turned in, at empire navy stations, in return for ISK" } |> Some
       | 1943 -> { MarketGroupData.id= 1943; name= "Headwear"; parentMarketGroupId= Some(1407); typeIds= [| 34056; 34057; 34058; 34059; 34060; 34061; 34062; 34063; 34064; 34065; 34066; 34067; 34068; 34069; 34070; 34071; 34072; 34073; 34074; 34076; 34077; 34078; 45739; 45740; 44125; 52201; 47477; 42698; 42699; 42708; 42709; 42710; 47191; 42712; 47193; 44122; 42715; 42717; 42718; 42721; 42722; 42723; 42726; 42729; 42730; 42732; 42733; 42734; 42736; 42738; 42739; 42740; 42741; 47478; 42743; 42744; 42745; 50132; 52202; 50133 |]; description= "" } |> Some
-      | 2040 -> { MarketGroupData.id= 2040; name= "Gallente"; parentMarketGroupId= Some(2037); typeIds= [| 46402; 44908; 45890; 36399; 42164; 52725; 37562; 46940 |]; description= "" } |> Some
+      | 2040 -> { MarketGroupData.id= 2040; name= "Gallente"; parentMarketGroupId= Some(2037); typeIds= [| 46402; 44908; 45890; 36399; 42164; 37562; 46940 |]; description= "" } |> Some
       | 2137 -> { MarketGroupData.id= 2137; name= "Amarr"; parentMarketGroupId= Some(2136); typeIds= [| 40320; 45766; 43495; 42759; 42557; 46781 |]; description= "" } |> Some
       | 2234 -> { MarketGroupData.id= 2234; name= "Ballistic Control Systems"; parentMarketGroupId= Some(2227); typeIds= [| 47342; 35959 |]; description= "" } |> Some
       | 2331 -> { MarketGroupData.id= 2331; name= "ORE"; parentMarketGroupId= Some(2330); typeIds= [| 46993; 43675 |]; description= "" } |> Some
       | 2428 -> { MarketGroupData.id= 2428; name= "Triglavian"; parentMarketGroupId= Some(2427); typeIds= [| 49712; 47270 |]; description= "Triglavian Cruisers" } |> Some
       | 2525 -> { MarketGroupData.id= 2525; name= "Triglavian"; parentMarketGroupId= Some(2524); typeIds= [| 49711 |]; description= "Triglavian Battlecruisers." } |> Some
+      | 353568 -> { MarketGroupData.id= 353568; name= "Forge Guns"; parentMarketGroupId= Some(364049); typeIds= [|  |]; description= "Forge guns." } |> Some
+      | 354344 -> { MarketGroupData.id= 354344; name= "Advanced"; parentMarketGroupId= Some(353573); typeIds= [|  |]; description= "" } |> Some
+      | 356575 -> { MarketGroupData.id= 356575; name= "Hybrid Damage Amplifiers"; parentMarketGroupId= Some(354469); typeIds= [|  |]; description= "" } |> Some
+      | 356963 -> { MarketGroupData.id= 356963; name= "Standard"; parentMarketGroupId= Some(354490); typeIds= [|  |]; description= "" } |> Some
+      | 364044 -> { MarketGroupData.id= 364044; name= "Light"; parentMarketGroupId= Some(353562); typeIds= [|  |]; description= "Light dropsuit frames." } |> Some
+      | 366178 -> { MarketGroupData.id= 366178; name= "Weapons"; parentMarketGroupId= Some(365996); typeIds= [|  |]; description= "" } |> Some
+      | 366275 -> { MarketGroupData.id= 366275; name= "Equipment"; parentMarketGroupId= Some(365998); typeIds= [|  |]; description= "" } |> Some
+      | 368021 -> { MarketGroupData.id= 368021; name= "Logistics"; parentMarketGroupId= Some(368109); typeIds= [|  |]; description= "" } |> Some
       | 391 -> { MarketGroupData.id= 391; name= "Shuttles"; parentMarketGroupId= Some(4); typeIds= [|  |]; description= "Fast and cheap vessels for easy transport" } |> Some
       | 488 -> { MarketGroupData.id= 488; name= "Moon Harvesting Arrays"; parentMarketGroupId= Some(1285); typeIds= [| 16221 |]; description= "Deployable arrays designed to gather minerals from moons." } |> Some
       | 585 -> { MarketGroupData.id= 585; name= "Gallente"; parentMarketGroupId= Some(582); typeIds= [| 16241; 32873 |]; description= "Blueprints of Gallente destroyer designs." } |> Some

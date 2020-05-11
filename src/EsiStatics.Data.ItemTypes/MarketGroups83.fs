@@ -15,6 +15,10 @@ module internal MarketGroups83=
       | 2411 -> { MarketGroupData.id= 2411; name= "Standup Light Fighters"; parentMarketGroupId= Some(2409); typeIds= [| 47138; 47139; 47140; 47141; 47142; 47143; 47144; 47145; 47146; 47147; 47148; 47149; 47150; 47151; 47035; 47036 |]; description= "" } |> Some
       | 2508 -> { MarketGroupData.id= 2508; name= "Mass Entangler"; parentMarketGroupId= Some(214); typeIds= [| 49100 |]; description= "Blueprints for Mass Entanglers." } |> Some
       | 277 -> { MarketGroupData.id= 277; name= "Gallente"; parentMarketGroupId= Some(205); typeIds= [| 939; 940; 941; 954; 955; 956 |]; description= "Blueprints of Gallente frigate designs." } |> Some
+      | 354424 -> { MarketGroupData.id= 354424; name= "Armor Repairers"; parentMarketGroupId= Some(353582); typeIds= [|  |]; description= "" } |> Some
+      | 354618 -> { MarketGroupData.id= 354618; name= "Standard"; parentMarketGroupId= Some(354616); typeIds= [|  |]; description= "" } |> Some
+      | 366258 -> { MarketGroupData.id= 366258; name= "Advanced"; parentMarketGroupId= Some(366179); typeIds= [|  |]; description= "" } |> Some
+      | 366743 -> { MarketGroupData.id= 366743; name= "Advanced"; parentMarketGroupId= Some(366741); typeIds= [|  |]; description= "Advanced" } |> Some
       | 374 -> { MarketGroupData.id= 374; name= "Navigation"; parentMarketGroupId= Some(150); typeIds= [| 3456; 4385; 21603; 21610; 21611; 24562; 3449; 3450; 3451; 3452; 3453; 3454; 3455 |]; description= "Skills pertaining to navigating your spaceship as quickly and efficiently as possible" } |> Some
       | 471 -> { MarketGroupData.id= 471; name= "Caldari"; parentMarketGroupId= Some(469); typeIds= [| 4306; 16227; 24698 |]; description= "Caldari battlecruiser designs." } |> Some
       | 568 -> { MarketGroupData.id= 568; name= "Medium"; parentMarketGroupId= Some(557); typeIds= [| 13824; 13827; 13833; 6759; 23840; 23844; 6959; 6961; 6963; 6965; 3009; 459; 455; 457; 6859; 6861; 6863; 3025; 3285; 6865; 15867; 6757; 15846; 13799; 6761; 6763; 15852; 13805; 15855; 15861; 13819; 15870 |]; description= "Medium beam lasers, suitable for cruiser use." } |> Some

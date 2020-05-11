@@ -14,12 +14,15 @@ module internal MarketGroups42=
       | 1691 -> { MarketGroupData.id= 1691; name= "EM Resistance Amplifiers"; parentMarketGroupId= Some(550); typeIds= [| 20611; 1798; 19215; 1808; 14740; 14742; 19223; 14744; 14746; 19231; 19245; 14630; 14634; 15917; 19247; 19255; 14041; 9562; 14043; 15909; 9580; 2553 |]; description= "EM Resistance Amplifiers" } |> Some
       | 1788 -> { MarketGroupData.id= 1788; name= "Large Scanning Rigs"; parentMarketGroupId= Some(1780); typeIds= [| 26342; 25930; 25932; 26350; 25936; 26104; 26362; 26346 |]; description= "Modifications that affect a large starship's scanning." } |> Some
       | 1885 -> { MarketGroupData.id= 1885; name= "Caldari"; parentMarketGroupId= Some(1883); typeIds= [| 29057; 29059; 29093; 29097; 29099; 29101; 29071; 29107; 29055 |]; description= "" } |> Some
-      | 1982 -> { MarketGroupData.id= 1982; name= "Gallente"; parentMarketGroupId= Some(2377); typeIds= [| 36395; 45572; 34663; 34664; 42187; 37583; 44936; 46964; 46430; 52753; 46557; 45918 |]; description= "" } |> Some
-      | 2079 -> { MarketGroupData.id= 2079; name= "Gallente"; parentMarketGroupId= Some(2067); typeIds= [| 36384; 46945; 37570; 45899; 46411; 44917; 42173; 52734; 48725 |]; description= "" } |> Some
+      | 1982 -> { MarketGroupData.id= 1982; name= "Gallente"; parentMarketGroupId= Some(2377); typeIds= [| 36395; 45572; 34663; 34664; 42187; 37583; 44936; 46964; 46430; 46557; 45918 |]; description= "" } |> Some
+      | 2079 -> { MarketGroupData.id= 2079; name= "Gallente"; parentMarketGroupId= Some(2067); typeIds= [| 36384; 46945; 37570; 45899; 46411; 44917; 42173; 48725 |]; description= "" } |> Some
       | 2176 -> { MarketGroupData.id= 2176; name= "Energy Neutralizers"; parentMarketGroupId= Some(2163); typeIds= [| 46576; 37043; 37044 |]; description= "" } |> Some
       | 2273 -> { MarketGroupData.id= 2273; name= "Caldari"; parentMarketGroupId= Some(2271); typeIds= [| 37605 |]; description= "Caldari force auxiliary designs." } |> Some
       | 2370 -> { MarketGroupData.id= 2370; name= "Caldari"; parentMarketGroupId= Some(2369); typeIds= [| 48544; 46024; 45997; 52303; 48816; 46120; 45843; 48186; 48543; 46847 |]; description= "" } |> Some
       | 2467 -> { MarketGroupData.id= 2467; name= "Large"; parentMarketGroupId= Some(2463); typeIds= [| 47932; 47933; 47887 |]; description= "Large Exotic Plasma Charges" } |> Some
+      | 363792 -> { MarketGroupData.id= 363792; name= "Advanced"; parentMarketGroupId= Some(363790); typeIds= [|  |]; description= "Advanced" } |> Some
+      | 365247 -> { MarketGroupData.id= 365247; name= "Armor Repairers"; parentMarketGroupId= Some(354424); typeIds= [|  |]; description= "Dropsuit armor repairers." } |> Some
+      | 369224 -> { MarketGroupData.id= 369224; name= "SKIN"; parentMarketGroupId= Some(365999); typeIds= [|  |]; description= "" } |> Some
       | 430 -> { MarketGroupData.id= 430; name= "Cloaking Devices"; parentMarketGroupId= Some(1578); typeIds= [| 13000 |]; description= "Blueprints of cloaking devices." } |> Some
       | 527 -> { MarketGroupData.id= 527; name= "Hedbergite"; parentMarketGroupId= Some(54); typeIds= [| 17440; 17441; 46696; 28400; 28401; 28402; 21; 46680 |]; description= "Sub-types of hedbergite ore." } |> Some
       | 721 -> { MarketGroupData.id= 721; name= "Ladar Backup Arrays"; parentMarketGroupId= Some(681); typeIds= [|  |]; description= "Reduces the sensors' vulnerability to Ladar jamming." } |> Some

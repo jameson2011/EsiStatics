@@ -19,6 +19,11 @@ module internal MarketGroups88=
       | 2416 -> { MarketGroupData.id= 2416; name= "Flag Cruisers"; parentMarketGroupId= Some(1368); typeIds= [|  |]; description= "" } |> Some
       | 2513 -> { MarketGroupData.id= 2513; name= "Magnetic Field Stabilizer Mutaplasmids"; parentMarketGroupId= Some(2512); typeIds= [| 49723; 49724; 49725 |]; description= "" } |> Some
       | 282 -> { MarketGroupData.id= 282; name= "Minmatar"; parentMarketGroupId= Some(208); typeIds= [| 986; 987; 988 |]; description= "Blueprints of Minmatar industrial designs." } |> Some
+      | 353653 -> { MarketGroupData.id= 353653; name= "Dropships"; parentMarketGroupId= Some(353566); typeIds= [|  |]; description= "" } |> Some
+      | 354332 -> { MarketGroupData.id= 354332; name= "Advanced"; parentMarketGroupId= Some(353569); typeIds= [|  |]; description= "" } |> Some
+      | 354429 -> { MarketGroupData.id= 354429; name= "Melee Upgrades"; parentMarketGroupId= Some(353583); typeIds= [|  |]; description= "" } |> Some
+      | 366263 -> { MarketGroupData.id= 366263; name= "Prototype"; parentMarketGroupId= Some(366260); typeIds= [|  |]; description= "" } |> Some
+      | 368106 -> { MarketGroupData.id= 368106; name= "Assault"; parentMarketGroupId= Some(368017); typeIds= [|  |]; description= "" } |> Some
       | 379 -> { MarketGroupData.id= 379; name= "Cargo Containers"; parentMarketGroupId= Some(404); typeIds= [|  |]; description= "For deep-space storage of valuable materials." } |> Some
       | 573 -> { MarketGroupData.id= 573; name= "Large"; parentMarketGroupId= Some(558); typeIds= [| 15873; 13832; 7001; 7003; 23846; 7083; 7085; 7087; 7089; 4147; 13791; 7005; 460; 462; 6999; 14425; 14427; 14429; 14431; 34276; 15847; 14441; 14443; 14445; 14447; 3057; 15858; 15862; 13815; 13821 |]; description= "Large pulse lasers, suitable for battleship use." } |> Some
       | 670 -> { MarketGroupData.id= 670; name= "Automated Targeting Systems"; parentMarketGroupId= Some(656); typeIds= [| 6041; 6043; 1436; 6045; 1182; 6047 |]; description= "For automated targeting of hostiles." } |> Some
