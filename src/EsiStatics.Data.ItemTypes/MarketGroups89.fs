@@ -8,7 +8,7 @@ module internal MarketGroups89=
       | 1253 -> { MarketGroupData.id= 1253; name= "Medium Engineering Rigs"; parentMarketGroupId= Some(949); typeIds= [| 43904; 31361; 31397; 4396; 31373; 31409; 31385; 31229 |]; description= "Blueprints of Medium Energy Grid Rigs." } |> Some
       | 1350 -> { MarketGroupData.id= 1350; name= "Projectile Batteries"; parentMarketGroupId= Some(1534); typeIds= [| 2816; 2819; 2805; 2807; 2810; 2814 |]; description= "Blueprints of Projectile Batteries." } |> Some
       | 1544 -> { MarketGroupData.id= 1544; name= "Resistance Plating"; parentMarketGroupId= Some(214); typeIds= [| 1285; 1295; 1265; 1204; 1305; 1275 |]; description= "Blueprints for Resistance Plating" } |> Some
-      | 1641 -> { MarketGroupData.id= 1641; name= "Cynosural Field Generators"; parentMarketGroupId= Some(779); typeIds= [| 21096; 28646 |]; description= "Cynosural Field Generators" } |> Some
+      | 1641 -> { MarketGroupData.id= 1641; name= "Cynosural Field Generators"; parentMarketGroupId= Some(779); typeIds= [| 21096; 52694; 28646 |]; description= "Cynosural Field Generators" } |> Some
       | 1835 -> { MarketGroupData.id= 1835; name= "Mobile Siphon Units"; parentMarketGroupId= Some(404); typeIds= [| 33583; 33477; 33581 |]; description= "Steals resources from Player Owned Structures." } |> Some
       | 1932 -> { MarketGroupData.id= 1932; name= "Special Edition Interceptors"; parentMarketGroupId= Some(1612); typeIds= [| 33673; 35779 |]; description= "" } |> Some
       | 2029 -> { MarketGroupData.id= 2029; name= "Faction Cruisers"; parentMarketGroupId= Some(1988); typeIds= [|  |]; description= "" } |> Some

@@ -10,7 +10,7 @@ module internal MarketGroups5=
       | 1557 -> { MarketGroupData.id= 1557; name= "Capacitor Power Relays"; parentMarketGroupId= Some(1546); typeIds= [| 1446 |]; description= "Capacitor Power Relays" } |> Some
       | 1945 -> { MarketGroupData.id= 1945; name= "Compression Array"; parentMarketGroupId= Some(1841); typeIds= [|  |]; description= "Blueprint of the Compression Array." } |> Some
       | 2042 -> { MarketGroupData.id= 2042; name= "Advanced Frigates"; parentMarketGroupId= Some(1998); typeIds= [|  |]; description= "" } |> Some
-      | 2139 -> { MarketGroupData.id= 2139; name= "Gallente"; parentMarketGroupId= Some(2136); typeIds= [| 40323; 44902; 45884; 42160; 46936; 46396 |]; description= "" } |> Some
+      | 2139 -> { MarketGroupData.id= 2139; name= "Gallente"; parentMarketGroupId= Some(2136); typeIds= [| 40323; 44902; 45884; 52719; 42160; 46936; 46396 |]; description= "" } |> Some
       | 2236 -> { MarketGroupData.id= 2236; name= "Fighters"; parentMarketGroupId= Some(157); typeIds= [|  |]; description= "Fighters are small combat craft launched in squadrons from Capital Ships and Structures" } |> Some
       | 2333 -> { MarketGroupData.id= 2333; name= "Industrial Command Ships"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of industrial command ships" } |> Some
       | 2430 -> { MarketGroupData.id= 2430; name= "Triglavian"; parentMarketGroupId= Some(2429); typeIds= [| 47271 |]; description= "Triglavian Battleships" } |> Some

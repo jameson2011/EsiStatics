@@ -12,12 +12,12 @@ module internal MarketGroups1=
       | 1747 -> { MarketGroupData.id= 1747; name= "Shields"; parentMarketGroupId= Some(150); typeIds= [| 3425; 21059; 21802; 12365; 11566; 12367; 24571; 44067; 12366; 3416; 3419; 3420; 3422 |]; description= "Skills pertaining to management of a spaceship's energy barriers" } |> Some
       | 1844 -> { MarketGroupData.id= 1844; name= "Mobile Micro Jump Units"; parentMarketGroupId= Some(404); typeIds= [| 33591 |]; description= "" } |> Some
       | 1941 -> { MarketGroupData.id= 1941; name= "Jump Economizers"; parentMarketGroupId= Some(132); typeIds= [| 34122; 34124; 34126 |]; description= "" } |> Some
-      | 2038 -> { MarketGroupData.id= 2038; name= "Amarr"; parentMarketGroupId= Some(2037); typeIds= [| 46785; 42563; 43499; 45772; 42765; 48846; 36313; 37499 |]; description= "" } |> Some
+      | 2038 -> { MarketGroupData.id= 2038; name= "Amarr"; parentMarketGroupId= Some(2037); typeIds= [| 46785; 42563; 43499; 45772; 42765; 48846; 53614; 36313; 37499 |]; description= "" } |> Some
       | 2135 -> { MarketGroupData.id= 2135; name= "Micro Jump Field Generators"; parentMarketGroupId= Some(52); typeIds= [| 37479 |]; description= "" } |> Some
       | 2232 -> { MarketGroupData.id= 2232; name= "Citadel Service Modules"; parentMarketGroupId= Some(2210); typeIds= [| 35892; 35894 |]; description= "" } |> Some
       | 2426 -> { MarketGroupData.id= 2426; name= "Triglavian"; parentMarketGroupId= Some(2425); typeIds= [| 47269 |]; description= "Triglavian Frigates" } |> Some
       | 2523 -> { MarketGroupData.id= 2523; name= "Triglavian"; parentMarketGroupId= Some(2522); typeIds= [| 49710 |]; description= "Triglavian Destroyers" } |> Some
-      | 292 -> { MarketGroupData.id= 292; name= "Small"; parentMarketGroupId= Some(288); typeIds= [| 47969; 834; 835; 836; 837; 838; 52237; 48469; 48470; 52348 |]; description= "Blueprints of small laser turrets." } |> Some
+      | 292 -> { MarketGroupData.id= 292; name= "Small"; parentMarketGroupId= Some(288); typeIds= [| 47969; 834; 835; 836; 837; 838; 48469; 48470; 52348 |]; description= "Blueprints of small laser turrets." } |> Some
       | 353566 -> { MarketGroupData.id= 353566; name= "Vehicles and Gear"; parentMarketGroupId= Some(350001); typeIds= [|  |]; description= "Ground and aerial vehicles for increased firepower and improved combat effectiveness" } |> Some
       | 353663 -> { MarketGroupData.id= 353663; name= "Marauder"; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
       | 356961 -> { MarketGroupData.id= 356961; name= "Advanced"; parentMarketGroupId= Some(354491); typeIds= [|  |]; description= "" } |> Some

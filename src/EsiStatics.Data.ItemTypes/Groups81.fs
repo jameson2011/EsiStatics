@@ -18,5 +18,5 @@ module internal Groups81=
       | 663 -> { GroupData.id= 663; name= "Mercoxit Mining Crystal"; categoryId= 8; published= true; typeIds= [| 18054; 18608 |] } |> Some
       | 760 -> { GroupData.id= 760; name= "Asteroid Rogue Drone Hauler"; categoryId= 11; published= false; typeIds= [| 32901; 32902; 32903; 32904; 32905; 32906; 32907; 32908; 32909; 32910; 32911; 32912 |] } |> Some
       | 857 -> { GroupData.id= 857; name= "Starbase - Warp Scrambling Battery Blueprints"; categoryId= 9; published= true; typeIds= [| 2736; 2740; 27867; 27868; 27869; 27870 |] } |> Some
-      | 954 -> { GroupData.id= 954; name= "Defensive Systems"; categoryId= 32; published= true; typeIds= [| 45586; 45587; 45588; 45589; 45590; 45591; 45592; 45593; 45594; 45595; 45596; 45597 |] } |> Some
+      | 954 -> { GroupData.id= 954; name= "Defensive Subsystem"; categoryId= 32; published= true; typeIds= [| 45586; 45587; 45588; 45589; 45590; 45591; 45592; 45593; 45594; 45595; 45596; 45597 |] } |> Some
       | _ -> None

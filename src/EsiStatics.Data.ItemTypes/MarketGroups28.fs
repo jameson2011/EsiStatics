@@ -12,13 +12,13 @@ module internal MarketGroups28=
       | 2065 -> { MarketGroupData.id= 2065; name= "Heavy Assault Cruisers"; parentMarketGroupId= Some(2064); typeIds= [|  |]; description= "" } |> Some
       | 2162 -> { MarketGroupData.id= 2162; name= "Electronics and Sensor Upgrades"; parentMarketGroupId= Some(2158); typeIds= [|  |]; description= "" } |> Some
       | 2259 -> { MarketGroupData.id= 2259; name= "Advanced Long Range XL Torpedoes"; parentMarketGroupId= Some(505); typeIds= [| 41272; 41274; 41276; 41270 |]; description= "Advanced Long Range Torpedoes" } |> Some
-      | 2356 -> { MarketGroupData.id= 2356; name= "Gallente"; parentMarketGroupId= Some(2309); typeIds= [| 50146; 46403; 47528; 44909; 45891; 42165; 46552; 45564; 46941 |]; description= "" } |> Some
+      | 2356 -> { MarketGroupData.id= 2356; name= "Gallente"; parentMarketGroupId= Some(2309); typeIds= [| 50146; 46403; 53957; 47528; 44909; 45891; 42165; 52726; 46552; 45564; 46941 |]; description= "" } |> Some
       | 2453 -> { MarketGroupData.id= 2453; name= "Small Engineering Mutaplasmids"; parentMarketGroupId= Some(2440); typeIds= [| 48416; 48417; 48418; 48428; 47821; 47822; 47823; 48430; 48429 |]; description= "Small Engineering Mutaplasmids" } |> Some
       | 354563 -> { MarketGroupData.id= 354563; name= "Heavy Machine Guns"; parentMarketGroupId= Some(364049); typeIds= [|  |]; description= "Heavy Machine guns." } |> Some
       | 366203 -> { MarketGroupData.id= 366203; name= "Standard"; parentMarketGroupId= Some(366175); typeIds= [|  |]; description= "" } |> Some
       | 368919 -> { MarketGroupData.id= 368919; name= "Heat Sinks"; parentMarketGroupId= Some(368918); typeIds= [|  |]; description= "" } |> Some
       | 416 -> { MarketGroupData.id= 416; name= "Caldari"; parentMarketGroupId= Some(414); typeIds= [| 967 |]; description= "Blueprints of Caldari shuttle designs." } |> Some
-      | 610 -> { MarketGroupData.id= 610; name= "Medium"; parentMarketGroupId= Some(552); typeIds= [| 10850; 32772; 20619; 19181; 19183; 19185; 10866; 19187; 10868; 19189; 10870; 19191; 10872; 10836; 15899; 13949; 13950; 15903 |]; description= "Cruiser-class shield boosters." } |> Some
+      | 610 -> { MarketGroupData.id= 610; name= "Medium"; parentMarketGroupId= Some(552); typeIds= [| 10850; 32772; 20619; 19181; 19183; 19185; 19187; 10868; 19189; 19191; 10872; 10836; 15899; 13949; 13950; 15903 |]; description= "Cruiser-class shield boosters." } |> Some
       | 707 -> { MarketGroupData.id= 707; name= "Tracking Enhancers"; parentMarketGroupId= Some(143); typeIds= [| 1998; 1999; 14640; 14642; 14100; 6325; 14646; 14644; 15965; 1951 |]; description= "Hardwired systems designed to improve turret tracking." } |> Some
       | 901 -> { MarketGroupData.id= 901; name= "Caldari"; parentMarketGroupId= Some(882); typeIds= [| 11960; 11958 |]; description= "Blueprints of Caldari recon ship designs." } |> Some
       | 998 -> { MarketGroupData.id= 998; name= "Faction Light Missiles"; parentMarketGroupId= Some(117); typeIds= [| 27361; 27365; 27367; 27369; 27371; 27375; 27385; 27379; 27381; 27383; 27353; 27387 |]; description= "Faction issue light missiles." } |> Some

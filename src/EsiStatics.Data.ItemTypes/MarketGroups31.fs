@@ -17,7 +17,7 @@ module internal MarketGroups31=
       | 2165 -> { MarketGroupData.id= 2165; name= "Fighter Upgrades"; parentMarketGroupId= Some(2158); typeIds= [|  |]; description= "" } |> Some
       | 2262 -> { MarketGroupData.id= 2262; name= "Force Auxiliaries"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of force auxiliary-class vessels." } |> Some
       | 2359 -> { MarketGroupData.id= 2359; name= "Faction Corvettes"; parentMarketGroupId= Some(2306); typeIds= [|  |]; description= "" } |> Some
-      | 2456 -> { MarketGroupData.id= 2456; name= "Abyssal Filaments"; parentMarketGroupId= Some(19); typeIds= [|  |]; description= "Abyssal Filaments are used to access Abyssal Deadspace" } |> Some
+      | 2456 -> { MarketGroupData.id= 2456; name= "Filaments"; parentMarketGroupId= Some(19); typeIds= [|  |]; description= "Abyssal Filaments and Jump Filaments" } |> Some
       | 354469 -> { MarketGroupData.id= 354469; name= "Damage Amplifiers"; parentMarketGroupId= Some(353592); typeIds= [|  |]; description= "" } |> Some
       | 354566 -> { MarketGroupData.id= 354566; name= "Advanced"; parentMarketGroupId= Some(354563); typeIds= [|  |]; description= "" } |> Some
       | 366206 -> { MarketGroupData.id= 366206; name= "Standard"; parentMarketGroupId= Some(366177); typeIds= [|  |]; description= "" } |> Some

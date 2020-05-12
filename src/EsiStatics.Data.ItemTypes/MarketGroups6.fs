@@ -11,7 +11,7 @@ module internal MarketGroups6=
       | 1558 -> { MarketGroupData.id= 1558; name= "Capacitor Batteries"; parentMarketGroupId= Some(1546); typeIds= [| 41640; 1186; 2019; 2021; 41639 |]; description= "Capacitor Batteries" } |> Some
       | 1849 -> { MarketGroupData.id= 1849; name= "Reaction Formulas"; parentMarketGroupId= Some(2); typeIds= [|  |]; description= "Chemical reactions used in Refineries to create many useful materials, as well as various booster drugs" } |> Some
       | 2043 -> { MarketGroupData.id= 2043; name= "Assault Frigates"; parentMarketGroupId= Some(2042); typeIds= [|  |]; description= "" } |> Some
-      | 2140 -> { MarketGroupData.id= 2140; name= "Minmatar"; parentMarketGroupId= Some(2136); typeIds= [| 48498; 45946; 40516; 40325; 46887 |]; description= "" } |> Some
+      | 2140 -> { MarketGroupData.id= 2140; name= "Minmatar"; parentMarketGroupId= Some(2136); typeIds= [| 40516; 40325; 46887; 48498; 52857; 45946 |]; description= "" } |> Some
       | 2237 -> { MarketGroupData.id= 2237; name= "Fighters"; parentMarketGroupId= Some(357); typeIds= [|  |]; description= "" } |> Some
       | 2334 -> { MarketGroupData.id= 2334; name= "ORE"; parentMarketGroupId= Some(2333); typeIds= [| 43910; 28607 |]; description= "Blueprints of ORE industrial command ship designs." } |> Some
       | 2431 -> { MarketGroupData.id= 2431; name= "Precursor Turrets"; parentMarketGroupId= Some(10); typeIds= [|  |]; description= "Precursor Turrets" } |> Some

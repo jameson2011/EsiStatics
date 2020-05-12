@@ -15,7 +15,7 @@ module internal MarketGroups78=
       | 2115 -> { MarketGroupData.id= 2115; name= "Special Edition Heavy Interdiction Cruisers"; parentMarketGroupId= Some(1612); typeIds= [| 35781 |]; description= "Heavy Interdiction Cruisers which have been offered to capsuleers on occasion for limited periods." } |> Some
       | 2212 -> { MarketGroupData.id= 2212; name= "Remote Sensor Dampeners"; parentMarketGroupId= Some(2206); typeIds= [| 47368; 35941 |]; description= "" } |> Some
       | 2309 -> { MarketGroupData.id= 2309; name= "Tactical Destroyers"; parentMarketGroupId= Some(2036); typeIds= [|  |]; description= "" } |> Some
-      | 2406 -> { MarketGroupData.id= 2406; name= "Special Black Ops"; parentMarketGroupId= Some(2109); typeIds= [| 48578; 47683; 48581; 47158; 47159; 47160; 47002 |]; description= "" } |> Some
+      | 2406 -> { MarketGroupData.id= 2406; name= "Special Black Ops"; parentMarketGroupId= Some(2109); typeIds= [| 48578; 47683; 48581; 54218; 47158; 47159; 47160; 47002 |]; description= "" } |> Some
       | 2503 -> { MarketGroupData.id= 2503; name= "Hardshell"; parentMarketGroupId= Some(2502); typeIds= [| 46001; 46002; 46003; 48113 |]; description= "Hardshell Boosters" } |> Some
       | 272 -> { MarketGroupData.id= 272; name= "Amarr"; parentMarketGroupId= Some(205); typeIds= [| 29249; 936; 937; 938; 944; 2162 |]; description= "Blueprints of Amarr frigate designs." } |> Some
       | 355195 -> { MarketGroupData.id= 355195; name= "Advanced"; parentMarketGroupId= Some(355193); typeIds= [|  |]; description= "" } |> Some

@@ -11,8 +11,8 @@ module internal MarketGroups70=
       | 1719 -> { MarketGroupData.id= 1719; name= "Capital Armor Rigs"; parentMarketGroupId= Some(944); typeIds= [| 31076; 31014; 31026; 33903; 30994; 27065; 31002; 31068; 31038 |]; description= "Blueprints of Capital Armor Rigs." } |> Some
       | 1816 -> { MarketGroupData.id= 1816; name= "Amarr"; parentMarketGroupId= Some(1815); typeIds= [| 596 |]; description= "Amarr rookie ship designs." } |> Some
       | 1913 -> { MarketGroupData.id= 1913; name= "Structure Components"; parentMarketGroupId= Some(800); typeIds= [| 21952; 21954; 21956; 21958; 21960; 21962; 21964; 21966; 21968; 21970; 49721; 36953; 36954; 36955; 21948; 21950 |]; description= "" } |> Some
-      | 2010 -> { MarketGroupData.id= 2010; name= "Minmatar"; parentMarketGroupId= Some(2085); typeIds= [| 45984; 45985; 45986; 34757; 36838; 36839; 36840; 46921; 46922; 46923; 36791; 36792; 36793; 46747; 40509; 40510; 40511 |]; description= "" } |> Some
-      | 2107 -> { MarketGroupData.id= 2107; name= "Minmatar"; parentMarketGroupId= Some(2102); typeIds= [| 36448; 47169; 45970; 49958; 46908; 46907; 36780; 36781; 52431; 52304; 40498; 40499; 48819; 45971; 36827; 36828; 36446 |]; description= "" } |> Some
+      | 2010 -> { MarketGroupData.id= 2010; name= "Minmatar"; parentMarketGroupId= Some(2085); typeIds= [| 45984; 45985; 45986; 34757; 36838; 36839; 36840; 46921; 46922; 46923; 52896; 52897; 36791; 36792; 36793; 46747; 52895; 40509; 40510; 40511 |]; description= "" } |> Some
+      | 2107 -> { MarketGroupData.id= 2107; name= "Minmatar"; parentMarketGroupId= Some(2102); typeIds= [| 36448; 47169; 45970; 49958; 46908; 46907; 36780; 36781; 52431; 52304; 52881; 40498; 40499; 48819; 52882; 45971; 36827; 36828; 36446 |]; description= "" } |> Some
       | 2204 -> { MarketGroupData.id= 2204; name= "Structure Resource Processing Rigs"; parentMarketGroupId= Some(2203); typeIds= [|  |]; description= "Structure Reprocessing and Reaction Rigs" } |> Some
       | 2301 -> { MarketGroupData.id= 2301; name= "Shield Command Burst Charges"; parentMarketGroupId= Some(2297); typeIds= [| 42696; 42694; 42695 |]; description= "Shield Command Burst Charges" } |> Some
       | 2398 -> { MarketGroupData.id= 2398; name= "Uncommon Moon Ores"; parentMarketGroupId= Some(2395); typeIds= [| 46299; 46298; 46300; 46301; 46296; 46297; 45498; 45499; 45500; 45501; 46302; 46303 |]; description= "" } |> Some
@@ -23,7 +23,7 @@ module internal MarketGroups70=
       | 364887 -> { MarketGroupData.id= 364887; name= "Advanced"; parentMarketGroupId= Some(364885); typeIds= [|  |]; description= "Advanced light frame dropsuits." } |> Some
       | 458 -> { MarketGroupData.id= 458; name= "Assault Frigates"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of assault-class vessels." } |> Some
       | 555 -> { MarketGroupData.id= 555; name= "Railguns"; parentMarketGroupId= Some(86); typeIds= [|  |]; description= "Railguns use magnetic rails to fire solid chunks of matter at hypersonic speed." } |> Some
-      | 749 -> { MarketGroupData.id= 749; name= ""; parentMarketGroupId= Some(739); typeIds= [| 17252; 17253; 17254; 17255; 17256; 17257; 17258; 17259; 17260; 17261 |]; description= "" } |> Some
+      | 749 -> { MarketGroupData.id= 749; name= "True Sansha"; parentMarketGroupId= Some(739); typeIds= [| 17252; 17253; 17254; 17255; 17256; 17257; 17258; 17259; 17260; 17261 |]; description= "True Sansha identification tags." } |> Some
       | 846 -> { MarketGroupData.id= 846; name= "Advanced Artillery Ammo"; parentMarketGroupId= Some(99); typeIds= [|  |]; description= "Ultra-heavy shells incorporating cutting-edge technology." } |> Some
       | 943 -> { MarketGroupData.id= 943; name= "Ship Modifications"; parentMarketGroupId= Some(2); typeIds= [|  |]; description= "Blueprints of rigs used to modify ship performance" } |> Some
       | _ -> None

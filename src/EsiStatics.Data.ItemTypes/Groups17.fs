@@ -7,8 +7,8 @@ module internal Groups17=
       | 1084 -> { GroupData.id= 1084; name= "Tattoos"; categoryId= 30; published= true; typeIds= [| 33377; 33378; 33379; 33380; 33381; 33382; 33383; 33384; 33995; 33996; 33997; 33998; 33999; 34000; 34001; 34002; 34003; 34004; 34005; 34006; 34007; 34008; 34009; 34010; 34011; 34012; 34013; 34014; 34015; 34016 |] } |> Some
       | 1181 -> { GroupData.id= 1181; name= "FW Gallente Federation Cruiser"; categoryId= 11; published= true; typeIds= [| 32969 |] } |> Some
       | 1569 -> { GroupData.id= 1569; name= "Guidance Disruption Script"; categoryId= 8; published= true; typeIds= [| 40334; 40335 |] } |> Some
-      | 1666 -> { GroupData.id= 1666; name= "Irregular Battlecruiser"; categoryId= 11; published= false; typeIds= [| 36941; 38657; 42129; 42514; 47721; 48959; 49537 |] } |> Some
-      | 17 -> { GroupData.id= 17; name= "Money"; categoryId= 4; published= false; typeIds= [| 29 |] } |> Some
+      | 1666 -> { GroupData.id= 1666; name= "Irregular Battlecruiser"; categoryId= 11; published= false; typeIds= [| 36941; 38657; 42129; 42514; 47721; 48959; 49537; 53523; 53943; 53944; 54664 |] } |> Some
+      | 17 -> { GroupData.id= 17; name= "Money"; categoryId= 4; published= false; typeIds= [| 29; 52996 |] } |> Some
       | 1860 -> { GroupData.id= 1860; name= "Structure Engineering Rig L - Advanced Component Efficiency"; categoryId= 66; published= true; typeIds= [| 37174; 37175; 45641 |] } |> Some
       | 211 -> { GroupData.id= 211; name= "Tracking Enhancer"; categoryId= 7; published= true; typeIds= [| 1951; 1998; 1999; 6321; 6322; 6323; 6324; 6325; 6326; 6327; 6328; 14100; 14640; 14642; 14644; 14646; 15965 |] } |> Some
       | 308 -> { GroupData.id= 308; name= "Countermeasure Launcher"; categoryId= 7; published= false; typeIds= [| 10642 |] } |> Some

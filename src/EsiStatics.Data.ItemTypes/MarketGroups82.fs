@@ -5,7 +5,7 @@ module internal MarketGroups82=
     let getMarketGroup id = 
       match id with 
       | 1052 -> { MarketGroupData.id= 1052; name= "Capital"; parentMarketGroupId= Some(134); typeIds= [| 3534; 41501; 41498; 41499; 41500; 20701; 41502; 41503 |]; description= "Armor repair designs, intended for capital-class vessels." } |> Some
-      | 1343 -> { MarketGroupData.id= 1343; name= "Cynosural System Jammers"; parentMarketGroupId= Some(1841); typeIds= [| 2789 |]; description= "Blueprints of Cynosural System Jammers." } |> Some
+      | 1343 -> { MarketGroupData.id= 1343; name= "Cynosural System Jammers"; parentMarketGroupId= Some(1841); typeIds= [|  |]; description= "Blueprints of Cynosural System Jammers." } |> Some
       | 1537 -> { MarketGroupData.id= 1537; name= "Hull Repairers"; parentMarketGroupId= Some(214); typeIds= [| 3654; 1100; 3664; 41627; 41628; 41629 |]; description= "Blueprints for Hull Repairers" } |> Some
       | 1731 -> { MarketGroupData.id= 1731; name= "Capital Projectile Weapon Rigs"; parentMarketGroupId= Some(979); typeIds= [| 31714; 31684; 31690; 31660; 31696; 31666; 31702; 31672; 31708; 31678 |]; description= "Modifications that affect a capital starship's projectile weapons." } |> Some
       | 1828 -> { MarketGroupData.id= 1828; name= "Mobile Depots"; parentMarketGroupId= Some(406); typeIds= [| 33517 |]; description= "Blueprints for Mobile Depots" } |> Some
@@ -14,6 +14,7 @@ module internal MarketGroups82=
       | 2216 -> { MarketGroupData.id= 2216; name= "Warp Disruptors"; parentMarketGroupId= Some(2206); typeIds= [| 35949; 47334 |]; description= "" } |> Some
       | 2313 -> { MarketGroupData.id= 2313; name= "Special Destroyers"; parentMarketGroupId= Some(1989); typeIds= [|  |]; description= "" } |> Some
       | 2410 -> { MarketGroupData.id= 2410; name= "Carrier-based Fighters"; parentMarketGroupId= Some(2236); typeIds= [|  |]; description= "" } |> Some
+      | 2701 -> { MarketGroupData.id= 2701; name= "HyperNet Relay"; parentMarketGroupId= Some(1922); typeIds= [| 52568 |]; description= "Items used in the HyperNet Relay" } |> Some
       | 276 -> { MarketGroupData.id= 276; name= "Gallente"; parentMarketGroupId= Some(206); typeIds= [| 978; 971; 972; 979 |]; description= "Blueprints of Gallente cruiser designs." } |> Some
       | 354423 -> { MarketGroupData.id= 354423; name= "Armor Plates"; parentMarketGroupId= Some(353582); typeIds= [|  |]; description= "" } |> Some
       | 365772 -> { MarketGroupData.id= 365772; name= "Prototype"; parentMarketGroupId= Some(365769); typeIds= [|  |]; description= "Prototype." } |> Some

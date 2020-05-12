@@ -12,7 +12,7 @@ module internal MarketGroups9=
       | 1852 -> { MarketGroupData.id= 1852; name= "Simple Biochemical Reactions"; parentMarketGroupId= Some(1849); typeIds= [|  |]; description= "Biochemical processes through which raw materials are made into compounds" } |> Some
       | 1949 -> { MarketGroupData.id= 1949; name= "ORE"; parentMarketGroupId= Some(787); typeIds= [| 34329 |]; description= "Designs for ORE freighters." } |> Some
       | 2046 -> { MarketGroupData.id= 2046; name= "Interceptors"; parentMarketGroupId= Some(2042); typeIds= [|  |]; description= "" } |> Some
-      | 2143 -> { MarketGroupData.id= 2143; name= "Caldari"; parentMarketGroupId= Some(2141); typeIds= [| 40322; 45830; 48173; 40595; 46838; 48728; 46107 |]; description= "" } |> Some
+      | 2143 -> { MarketGroupData.id= 2143; name= "Caldari"; parentMarketGroupId= Some(2141); typeIds= [| 40322; 45830; 48173; 53167; 40595; 46838; 48728; 46107; 54557 |]; description= "" } |> Some
       | 2240 -> { MarketGroupData.id= 2240; name= "25000mm Armor Plate"; parentMarketGroupId= Some(133); typeIds= [| 41456; 41457; 41458; 40348; 40349; 40350; 40351 |]; description= "25000mm Armor Plate" } |> Some
       | 2337 -> { MarketGroupData.id= 2337; name= "Industrial Command Ships"; parentMarketGroupId= Some(2006); typeIds= [|  |]; description= "" } |> Some
       | 2434 -> { MarketGroupData.id= 2434; name= "Medium"; parentMarketGroupId= Some(2432); typeIds= [| 47273; 47916; 47917; 52238; 47919; 47918 |]; description= "Medium Entropic Disintegrators" } |> Some

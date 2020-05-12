@@ -24,6 +24,6 @@ module internal MarketGroups30=
       | 369212 -> { MarketGroupData.id= 369212; name= "Dropsuits"; parentMarketGroupId= Some(367593); typeIds= [|  |]; description= "" } |> Some
       | 418 -> { MarketGroupData.id= 418; name= "Minmatar"; parentMarketGroupId= Some(414); typeIds= [| 11133 |]; description= "Blueprints of Minmatar shuttle designs." } |> Some
       | 515 -> { MarketGroupData.id= 515; name= "Pyroxeres"; parentMarketGroupId= Some(54); typeIds= [| 1224; 28425; 28426; 46702; 28424; 17459; 17460; 46686 |]; description= "Sub-types of Pyroxeres ore." } |> Some
-      | 612 -> { MarketGroupData.id= 612; name= "Extra Large"; parentMarketGroupId= Some(552); typeIds= [| 13953; 10882; 10884; 10886; 10888; 14601; 14603; 32780; 13954; 20623; 15897; 19204; 19202; 15901; 19206; 19208; 10840; 10842; 14704; 14705; 14706; 14707; 19195; 19196; 19197; 19198 |]; description= "Supercharged shield boosting units for advanced battleship pilots." } |> Some
+      | 612 -> { MarketGroupData.id= 612; name= "Extra Large"; parentMarketGroupId= Some(552); typeIds= [| 13953; 13954; 10884; 19206; 10888; 14601; 14603; 32780; 19202; 20623; 15897; 19204; 15901; 19208; 10840; 10842; 14704; 14705; 14706; 14707; 19195; 19196; 19197; 19198 |]; description= "Supercharged shield boosting units for advanced battleship pilots." } |> Some
       | 903 -> { MarketGroupData.id= 903; name= "Minmatar"; parentMarketGroupId= Some(882); typeIds= [| 11962; 11964 |]; description= "Blueprints of Minmatar recon ship designs." } |> Some
       | _ -> None

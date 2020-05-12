@@ -18,5 +18,5 @@ module internal Groups84=
       | 666 -> { GroupData.id= 666; name= "Mission Amarr Empire Battlecruiser"; categoryId= 11; published= false; typeIds= [| 24956; 24957; 24958; 24959; 24960; 24962; 28169; 28170; 30737; 30738; 50110; 50111 |] } |> Some
       | 763 -> { GroupData.id= 763; name= "Nanofiber Internal Structure"; categoryId= 7; published= true; typeIds= [| 1242; 2603; 2605; 5559; 5561; 5591; 5593; 5595; 5597; 5599; 5601; 14127; 15813; 21500 |] } |> Some
       | 860 -> { GroupData.id= 860; name= "Starbase - Energy Neutralizing Battery Blueprints"; categoryId= 9; published= true; typeIds= [| 2799; 27875; 27876; 27877; 27878 |] } |> Some
-      | 957 -> { GroupData.id= 957; name= "Propulsion Systems"; categoryId= 32; published= true; typeIds= [| 45610; 45611; 45612; 45613; 45614; 45615; 45616; 45617; 45618; 45619; 45620; 45621 |] } |> Some
+      | 957 -> { GroupData.id= 957; name= "Propulsion Subsystem"; categoryId= 32; published= true; typeIds= [| 45610; 45611; 45612; 45613; 45614; 45615; 45616; 45617; 45618; 45619; 45620; 45621 |] } |> Some
       | _ -> None

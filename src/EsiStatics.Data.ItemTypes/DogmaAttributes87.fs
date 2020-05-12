@@ -25,7 +25,7 @@ module internal DogmaAttributes87=
       | 475 -> { DogmaAttributeData.id= 475; name= "entityAttackDelayMin"; description= "Minimum attack delay time for entity."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 669 -> { DogmaAttributeData.id= 669; name= "moduleReactivationDelay"; description= "Amount of time that has to be waited after the deactivation of this module until it can be reactivated."; published= true; unitId= Some(101); defaultValue= 0.000000; stackable= true; highIsGood= false } |> Some
       | 766 -> { DogmaAttributeData.id= 766; name= "controlTowerHybridDamageBonus"; description= ""; published= false; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
-      | 863 -> { DogmaAttributeData.id= 863; name= "implantSetAngel"; description= ""; published= true; unitId= Some(104); defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
+      | 863 -> { DogmaAttributeData.id= 863; name= "implantSetHalo"; description= ""; published= true; unitId= Some(104); defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
       | 87 -> { DogmaAttributeData.id= 87; name= "shieldTransferRange"; description= "Maximum range for use of a shield transfer."; published= true; unitId= Some(1); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 960 -> { DogmaAttributeData.id= 960; name= "caldariNavyBonusMultiplier2"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | _ -> None

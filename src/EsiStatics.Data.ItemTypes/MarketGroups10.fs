@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal MarketGroups10=
     let getMarketGroup id = 
       match id with 
-      | 10 -> { MarketGroupData.id= 10; name= "Turrets & Bays"; parentMarketGroupId= Some(9); typeIds= [|  |]; description= "Weapon systems to inflict damage on enemy targets" } |> Some
+      | 10 -> { MarketGroupData.id= 10; name= "Turrets & Launchers"; parentMarketGroupId= Some(9); typeIds= [|  |]; description= "Weapon systems to inflict damage on enemy targets" } |> Some
       | 107 -> { MarketGroupData.id= 107; name= "Small"; parentMarketGroupId= Some(848); typeIds= [| 215; 216; 217; 218; 219; 220; 221; 222 |]; description= "Small hybrid shells, fired by frigate-sized guns." } |> Some
       | 1077 -> { MarketGroupData.id= 1077; name= "Caldari"; parentMarketGroupId= Some(1075); typeIds= [| 22436 |]; description= "Caldari black ops designs." } |> Some
       | 1368 -> { MarketGroupData.id= 1368; name= "Advanced Cruisers"; parentMarketGroupId= Some(1367); typeIds= [|  |]; description= "Cruiser variants intended for specialized purposes." } |> Some
@@ -13,8 +13,8 @@ module internal MarketGroups10=
       | 1853 -> { MarketGroupData.id= 1853; name= "Complex Biochemical Reactions"; parentMarketGroupId= Some(1849); typeIds= [|  |]; description= "Biochemical processes through which compounds are combined into complex materials" } |> Some
       | 1950 -> { MarketGroupData.id= 1950; name= "ORE"; parentMarketGroupId= Some(766); typeIds= [| 34328 |]; description= "Freighters designed by ORE." } |> Some
       | 204 -> { MarketGroupData.id= 204; name= "Ships"; parentMarketGroupId= Some(2); typeIds= [|  |]; description= "Blueprints of capsuleer spaceships" } |> Some
-      | 2047 -> { MarketGroupData.id= 2047; name= "Amarr"; parentMarketGroupId= Some(2043); typeIds= [| 42752; 42753; 36291; 36292; 46774; 43489; 52572; 46775; 37490; 37491; 43488; 42550; 42551; 52571; 45760; 45759 |]; description= "" } |> Some
-      | 2144 -> { MarketGroupData.id= 2144; name= "Gallente"; parentMarketGroupId= Some(2141); typeIds= [| 46401; 40324; 47527; 45889; 44907; 42163; 46939 |]; description= "" } |> Some
+      | 2047 -> { MarketGroupData.id= 2047; name= "Amarr"; parentMarketGroupId= Some(2043); typeIds= [| 42752; 42753; 53602; 36291; 36292; 46774; 43489; 52572; 46775; 53601; 37490; 37491; 43488; 42550; 42551; 52571; 45760; 45759 |]; description= "" } |> Some
+      | 2144 -> { MarketGroupData.id= 2144; name= "Gallente"; parentMarketGroupId= Some(2141); typeIds= [| 46401; 40324; 47527; 45889; 44907; 42163; 52724; 46939 |]; description= "" } |> Some
       | 2241 -> { MarketGroupData.id= 2241; name= "Capital"; parentMarketGroupId= Some(551); typeIds= [| 40354; 40355; 40356; 40357; 41459; 41460; 41461; 41462 |]; description= "Capital-class shield extension systems." } |> Some
       | 2338 -> { MarketGroupData.id= 2338; name= "ORE"; parentMarketGroupId= Some(2337); typeIds= [| 42624; 43786; 43788; 46991; 46995; 46741; 43799; 43801; 42651; 43812; 43814; 43825; 43827; 42681; 43838; 43840; 43673; 43851; 43853; 34645; 44068; 43759; 43761; 43772; 43774 |]; description= "" } |> Some
       | 2435 -> { MarketGroupData.id= 2435; name= "Large"; parentMarketGroupId= Some(2432); typeIds= [| 52240; 47274; 47920; 47921; 47922; 47923 |]; description= "Large Entropic Disintegrators" } |> Some

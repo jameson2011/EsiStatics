@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal DogmaAttributes77=
     let getDogmaAttribute id = 
       match id with 
-      | 1047 -> { DogmaAttributeData.id= 1047; name= "canNotBeTrainedOnTrial"; description= "If set to 1 on a skill then this skill can not be trained on accounts that are marked as Trial."; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
+      | 1047 -> { DogmaAttributeData.id= 1047; name= "canNotBeTrainedOnTrial"; description= "If set to 1 then this skill can not be trained on accounts that are marked as Alpha Clone. Any other value (although you should probably use 0) will result in all accounts being able to train this skill."; published= false; unitId= None; defaultValue= 1.000000; stackable= true; highIsGood= true } |> Some
       | 1144 -> { DogmaAttributeData.id= 1144; name= "boosterTurretOptimalRangePenalty"; description= ""; published= true; unitId= Some(105); defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 1435 -> { DogmaAttributeData.id= 1435; name= "subsystemBonusAmarrPropulsion"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some
       | 1532 -> { DogmaAttributeData.id= 1532; name= "subsystemBonusGallenteOffensive3"; description= ""; published= false; unitId= None; defaultValue= 0.000000; stackable= true; highIsGood= true } |> Some

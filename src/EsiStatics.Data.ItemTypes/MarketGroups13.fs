@@ -11,7 +11,7 @@ module internal MarketGroups13=
       | 1662 -> { MarketGroupData.id= 1662; name= "Special Edition Apparel"; parentMarketGroupId= Some(1659); typeIds= [| 34210; 34211; 33767; 33064; 33769; 33770; 33803; 33804; 33768; 33812; 33813 |]; description= "Special Edition Apparel" } |> Some
       | 1856 -> { MarketGroupData.id= 1856; name= "Alloys & Compounds"; parentMarketGroupId= Some(1031); typeIds= [| 11724; 11725; 11732; 11733; 11734; 11735; 11736; 11737; 11738; 11739; 11740; 11741 |]; description= "Various compounds composed of asteroid ores." } |> Some
       | 1953 -> { MarketGroupData.id= 1953; name= "Minmatar"; parentMarketGroupId= Some(1951); typeIds= [| 34562 |]; description= "" } |> Some
-      | 2050 -> { MarketGroupData.id= 2050; name= "Minmatar"; parentMarketGroupId= Some(2043); typeIds= [| 46880; 46881; 48491; 36804; 36805; 52423; 52424; 36427; 48492; 36429; 45939; 45940; 36757; 36758; 40473; 40474 |]; description= "" } |> Some
+      | 2050 -> { MarketGroupData.id= 2050; name= "Minmatar"; parentMarketGroupId= Some(2043); typeIds= [| 46880; 46881; 48491; 36804; 36805; 52851; 52423; 52424; 36427; 48492; 36429; 52850; 45939; 45940; 36757; 36758; 40473; 40474 |]; description= "" } |> Some
       | 207 -> { MarketGroupData.id= 207; name= "Battleships"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of battleship-class vessels." } |> Some
       | 2147 -> { MarketGroupData.id= 2147; name= "Amarr"; parentMarketGroupId= Some(2146); typeIds= [| 37457 |]; description= "Amarr Logistics Frigates" } |> Some
       | 2244 -> { MarketGroupData.id= 2244; name= "Capital"; parentMarketGroupId= Some(538); typeIds= [| 41512; 41513; 41514; 41511 |]; description= "Hull repair system designs, intended for Capital vessels." } |> Some
