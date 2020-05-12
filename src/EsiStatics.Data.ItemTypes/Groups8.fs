@@ -16,6 +16,6 @@ module internal Groups8=
       | 590 -> { GroupData.id= 590; name= "Jump Portal Generator"; categoryId= 7; published= true; typeIds= [| 23953; 28652 |] } |> Some
       | 687 -> { GroupData.id= 687; name= "Mission Khanid Frigate"; categoryId= 11; published= false; typeIds= [| 11947; 12029; 16171; 16172; 16178; 16212; 29200; 29201 |] } |> Some
       | 784 -> { GroupData.id= 784; name= "Large Collidable Ship"; categoryId= 11; published= false; typeIds= [| 25829 |] } |> Some
-      | 8 -> { GroupData.id= 8; name= "Moon"; categoryId= 2; published= false; typeIds= [| 14 |] } |> Some
+      | 8 -> { GroupData.id= 8; name= "Moon"; categoryId= 2; published= false; typeIds= [| 14; 52673 |] } |> Some
       | 881 -> { GroupData.id= 881; name= "Freedom Programs"; categoryId= 24; published= false; typeIds= [| 28320 |] } |> Some
       | _ -> None

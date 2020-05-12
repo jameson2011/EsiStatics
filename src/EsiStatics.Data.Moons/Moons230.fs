@@ -28,7 +28,7 @@ module internal Moons230=
       | 40008208 -> { MoonData.id= 40008208; name= "Sirseshin V - Moon 1"; planetId= 40008207; solarSystemId= 30000127; position= {x = -3.017497603e+11;  y = -4.778515249e+10;  z = 1.030381856e+11;} } |> Some
       | 40008501 -> { MoonData.id= 40008501; name= "Hirtamon VII - Moon 6"; planetId= 40008495; solarSystemId= 30000133; position= {x = 1.681312683e+12;  y = 4.89976288e+10;  z = -3.366809071e+11;} } |> Some
       | 40008794 -> { MoonData.id= 40008794; name= "Eskunen III - Moon 1"; planetId= 40008793; solarSystemId= 30000137; position= {x = -7.381847693e+10;  y = -9455597300.0;  z = 5.833141464e+10;} } |> Some
-      | 40009087 -> { MoonData.id= 40009087; name= "Jita IV - Moon 4"; planetId= 40009082; solarSystemId= 30000142; position= {x = -1.073040914e+11;  y = -1.87449659e+10;  z = 4.364897621e+11;} } |> Some
+      | 40009087 -> { MoonData.id= 40009087; name= "Jita IV - Moon 4"; planetId= 40009082; solarSystemId= 30000142; position= {x = -1.073063199e+11;  y = -1.874493941e+10;  z = 4.364918602e+11;} } |> Some
       | 40009380 -> { MoonData.id= 40009380; name= "Abagawa VIII - Moon 3"; planetId= 40009375; solarSystemId= 30000147; position= {x = -5.423478388e+11;  y = 6.292101351e+10;  z = 2.425976124e+12;} } |> Some
       | 40009673 -> { MoonData.id= 40009673; name= "Hampinen VII - Moon 16"; planetId= 40009652; solarSystemId= 30000152; position= {x = -1.04282305e+12;  y = 1.873563192e+10;  z = 2.24857508e+11;} } |> Some
       | 40009966 -> { MoonData.id= 40009966; name= "Otela III - Moon 8"; planetId= 40009955; solarSystemId= 30000157; position= {x = -1.82347186e+11;  y = 2159254136.0;  z = -3.448790425e+11;} } |> Some

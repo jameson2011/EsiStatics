@@ -16,6 +16,12 @@ module internal MarketGroups5=
       | 2430 -> { MarketGroupData.id= 2430; name= "Triglavian"; parentMarketGroupId= Some(2429); typeIds= [| 47271 |]; description= "Triglavian Battleships" } |> Some
       | 2527 -> { MarketGroupData.id= 2527; name= "Mutadaptive Remote Armor Repairers"; parentMarketGroupId= Some(14); typeIds= [|  |]; description= "" } |> Some
       | 296 -> { MarketGroupData.id= 296; name= "Small"; parentMarketGroupId= Some(287); typeIds= [| 819; 820; 821; 822; 823 |]; description= "Blueprints of small projectile turrets." } |> Some
+      | 353570 -> { MarketGroupData.id= 353570; name= "Sniper Rifles"; parentMarketGroupId= Some(364047); typeIds= [|  |]; description= "Sniper rifles." } |> Some
+      | 356965 -> { MarketGroupData.id= 356965; name= "Prototype"; parentMarketGroupId= Some(354490); typeIds= [|  |]; description= "" } |> Some
+      | 363464 -> { MarketGroupData.id= 363464; name= "Standard"; parentMarketGroupId= Some(354338); typeIds= [|  |]; description= "Standard" } |> Some
+      | 364046 -> { MarketGroupData.id= 364046; name= "Heavy"; parentMarketGroupId= Some(353562); typeIds= [|  |]; description= "Heavy dropsuit frames." } |> Some
+      | 366180 -> { MarketGroupData.id= 366180; name= "Weapons"; parentMarketGroupId= Some(365998); typeIds= [|  |]; description= "" } |> Some
+      | 366277 -> { MarketGroupData.id= 366277; name= "Advanced"; parentMarketGroupId= Some(366275); typeIds= [|  |]; description= "" } |> Some
       | 393 -> { MarketGroupData.id= 393; name= "Amarr"; parentMarketGroupId= Some(391); typeIds= [| 11134 |]; description= "Amarr shuttle designs." } |> Some
       | 490 -> { MarketGroupData.id= 490; name= "Reactors"; parentMarketGroupId= Some(1285); typeIds= [| 30656; 22634; 24684; 16869; 20175 |]; description= "Deployable structures where chemical processes take place." } |> Some
       | 5 -> { MarketGroupData.id= 5; name= "Standard Frigates"; parentMarketGroupId= Some(1361); typeIds= [|  |]; description= "Small, fast vessels suited to a variety of purposes." } |> Some

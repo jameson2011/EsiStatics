@@ -12,12 +12,20 @@ module internal MarketGroups9=
       | 1852 -> { MarketGroupData.id= 1852; name= "Simple Biochemical Reactions"; parentMarketGroupId= Some(1849); typeIds= [|  |]; description= "Biochemical processes through which raw materials are made into compounds" } |> Some
       | 1949 -> { MarketGroupData.id= 1949; name= "ORE"; parentMarketGroupId= Some(787); typeIds= [| 34329 |]; description= "Designs for ORE freighters." } |> Some
       | 2046 -> { MarketGroupData.id= 2046; name= "Interceptors"; parentMarketGroupId= Some(2042); typeIds= [|  |]; description= "" } |> Some
-      | 2143 -> { MarketGroupData.id= 2143; name= "Caldari"; parentMarketGroupId= Some(2141); typeIds= [| 40322; 45830; 48173; 40595; 46838; 48728; 46107 |]; description= "" } |> Some
+      | 2143 -> { MarketGroupData.id= 2143; name= "Caldari"; parentMarketGroupId= Some(2141); typeIds= [| 40322; 45830; 48173; 53167; 40595; 46838; 48728; 46107; 54557 |]; description= "" } |> Some
       | 2240 -> { MarketGroupData.id= 2240; name= "25000mm Armor Plate"; parentMarketGroupId= Some(133); typeIds= [| 41456; 41457; 41458; 40348; 40349; 40350; 40351 |]; description= "25000mm Armor Plate" } |> Some
       | 2337 -> { MarketGroupData.id= 2337; name= "Industrial Command Ships"; parentMarketGroupId= Some(2006); typeIds= [|  |]; description= "" } |> Some
       | 2434 -> { MarketGroupData.id= 2434; name= "Medium"; parentMarketGroupId= Some(2432); typeIds= [| 47273; 47916; 47917; 52238; 47919; 47918 |]; description= "Medium Entropic Disintegrators" } |> Some
       | 2531 -> { MarketGroupData.id= 2531; name= "Booster Slot 14"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "" } |> Some
       | 300 -> { MarketGroupData.id= 300; name= "Hybrid Charges"; parentMarketGroupId= Some(211); typeIds= [|  |]; description= "Hybrid charge blueprints." } |> Some
+      | 353574 -> { MarketGroupData.id= 353574; name= "Nanohives"; parentMarketGroupId= Some(353563); typeIds= [|  |]; description= "" } |> Some
+      | 353671 -> { MarketGroupData.id= 353671; name= "Standard"; parentMarketGroupId= Some(353653); typeIds= [|  |]; description= "" } |> Some
+      | 354350 -> { MarketGroupData.id= 354350; name= "Prototype"; parentMarketGroupId= Some(353570); typeIds= [|  |]; description= "" } |> Some
+      | 356581 -> { MarketGroupData.id= 356581; name= "Railgun Damage Amplifiers"; parentMarketGroupId= Some(356575); typeIds= [|  |]; description= "" } |> Some
+      | 356969 -> { MarketGroupData.id= 356969; name= "Advanced"; parentMarketGroupId= Some(354488); typeIds= [|  |]; description= "" } |> Some
+      | 363468 -> { MarketGroupData.id= 363468; name= "Advanced"; parentMarketGroupId= Some(354339); typeIds= [|  |]; description= "Advanced" } |> Some
+      | 366281 -> { MarketGroupData.id= 366281; name= "Prototype"; parentMarketGroupId= Some(366193); typeIds= [|  |]; description= "" } |> Some
+      | 366572 -> { MarketGroupData.id= 366572; name= "Advanced"; parentMarketGroupId= Some(366570); typeIds= [|  |]; description= "Advanced." } |> Some
       | 494 -> { MarketGroupData.id= 494; name= "Mining Barges"; parentMarketGroupId= Some(1384); typeIds= [| 17480; 17476; 17478 |]; description= "Lumbering, voracious hulks, expressly created for ore accumulation." } |> Some
       | 591 -> { MarketGroupData.id= 591; name= "Gallente"; parentMarketGroupId= Some(588); typeIds= [| 4309; 16230; 24701 |]; description= "Blueprints of Gallente battlecruiser designs." } |> Some
       | 688 -> { MarketGroupData.id= 688; name= "Shield Power Relays"; parentMarketGroupId= Some(554); typeIds= [| 1419; 1422; 8335; 8337; 2331; 37820 |]; description= "Divert power from ship's core to shields, increasing shield recharge rate." } |> Some

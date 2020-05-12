@@ -10,11 +10,15 @@ module internal MarketGroups32=
       | 1584 -> { MarketGroupData.id= 1584; name= "CPU Upgrades"; parentMarketGroupId= Some(1578); typeIds= [| 11619 |]; description= "CPU Upgrades" } |> Some
       | 1681 -> { MarketGroupData.id= 1681; name= "EM Armor Hardeners"; parentMarketGroupId= Some(535); typeIds= [| 18949; 15244; 18957; 15246; 15248; 13970; 13972; 18965; 16359; 18973; 13986; 11301; 18929; 15016; 15018; 15020; 15022; 15024; 15026; 15028; 15030; 18885; 18887; 18901; 18903; 17502; 15711; 16353; 16355; 16357; 15719; 28522; 14059; 15250; 17832; 18931; 18933; 18935; 11642 |]; description= "EM Armor Hardeners" } |> Some
       | 1972 -> { MarketGroupData.id= 1972; name= "Freighters"; parentMarketGroupId= Some(1968); typeIds= [|  |]; description= "" } |> Some
-      | 2069 -> { MarketGroupData.id= 2069; name= "Amarr"; parentMarketGroupId= Some(2065); typeIds= [| 37504; 37505; 46787; 46788; 52581; 47622; 36296; 42569; 36298; 45778; 43504; 43505; 42770; 42771; 46528; 45779; 48850; 52580; 42570; 48831 |]; description= "" } |> Some
+      | 2069 -> { MarketGroupData.id= 2069; name= "Amarr"; parentMarketGroupId= Some(2065); typeIds= [| 37504; 37505; 47622; 42770; 42771; 42570; 48831; 46528; 53954; 46787; 46788; 36296; 42569; 36298; 45778; 45779; 52580; 52581; 48850; 43504; 43505; 53620; 53621 |]; description= "" } |> Some
       | 2166 -> { MarketGroupData.id= 2166; name= "Service Modules"; parentMarketGroupId= Some(2158); typeIds= [|  |]; description= "" } |> Some
       | 2263 -> { MarketGroupData.id= 2263; name= "Amarr"; parentMarketGroupId= Some(2262); typeIds= [| 41582 |]; description= "Blueprints of Amarr force auxiliary designs." } |> Some
       | 2360 -> { MarketGroupData.id= 2360; name= "Pirate Faction"; parentMarketGroupId= Some(2359); typeIds= [| 45505; 46041 |]; description= "" } |> Some
       | 2457 -> { MarketGroupData.id= 2457; name= "Exotic Filaments"; parentMarketGroupId= Some(2456); typeIds= [| 47888; 47761; 47890; 47891; 47889 |]; description= "Filaments connected to Abyssal pockets with Exotic Particle Storms" } |> Some
+      | 354567 -> { MarketGroupData.id= 354567; name= "Prototype"; parentMarketGroupId= Some(354563); typeIds= [|  |]; description= "" } |> Some
+      | 366207 -> { MarketGroupData.id= 366207; name= "Advanced"; parentMarketGroupId= Some(366177); typeIds= [|  |]; description= "" } |> Some
+      | 368923 -> { MarketGroupData.id= 368923; name= "Prototype"; parentMarketGroupId= Some(353651); typeIds= [|  |]; description= "" } |> Some
+      | 369214 -> { MarketGroupData.id= 369214; name= "Skins"; parentMarketGroupId= Some(367593); typeIds= [|  |]; description= "" } |> Some
       | 420 -> { MarketGroupData.id= 420; name= "Covert Ops"; parentMarketGroupId= Some(1364); typeIds= [|  |]; description= "Frigates designed for clandestine operations." } |> Some
       | 517 -> { MarketGroupData.id= 517; name= "Spodumain"; parentMarketGroupId= Some(54); typeIds= [| 46688; 28418; 28419; 28420; 46704; 19; 17466; 17467 |]; description= "Sub-types of spodumain ore." } |> Some
       | 614 -> { MarketGroupData.id= 614; name= "Criminal Evidence"; parentMarketGroupId= Some(19); typeIds= [| 47450 |]; description= "Proof positive of a bounty hunter's job well done" } |> Some

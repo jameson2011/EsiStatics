@@ -18,6 +18,9 @@ module internal MarketGroups69=
       | 2300 -> { MarketGroupData.id= 2300; name= "Mining Foreman Burst Charges"; parentMarketGroupId= Some(2297); typeIds= [| 42829; 42830; 42831 |]; description= "Mining Foreman Burst Charges" } |> Some
       | 2397 -> { MarketGroupData.id= 2397; name= "Common Moon Ores"; parentMarketGroupId= Some(2395); typeIds= [| 46294; 46295; 46288; 46289; 46290; 46291; 46292; 46293; 45494; 45495; 45496; 45497 |]; description= "" } |> Some
       | 2494 -> { MarketGroupData.id= 2494; name= "X-Instinct"; parentMarketGroupId= Some(2488); typeIds= [| 15457; 15458; 15459; 28682 |]; description= "X-Instinct Boosters" } |> Some
+      | 354410 -> { MarketGroupData.id= 354410; name= "Standard"; parentMarketGroupId= Some(353574); typeIds= [|  |]; description= "" } |> Some
+      | 364886 -> { MarketGroupData.id= 364886; name= "Standard"; parentMarketGroupId= Some(364885); typeIds= [|  |]; description= "Standard light frames." } |> Some
+      | 365274 -> { MarketGroupData.id= 365274; name= "Standard"; parentMarketGroupId= Some(365272); typeIds= [|  |]; description= "Standard pilot dropsuits." } |> Some
       | 457 -> { MarketGroupData.id= 457; name= "Minmatar"; parentMarketGroupId= Some(453); typeIds= [| 12000; 12016 |]; description= "Blueprints of Minmatar heavy assault cruiser designs." } |> Some
       | 554 -> { MarketGroupData.id= 554; name= "Shield"; parentMarketGroupId= Some(9); typeIds= [|  |]; description= "Modules that strengthen the energy barrier surrounding spaceships against external dangers" } |> Some
       | 748 -> { MarketGroupData.id= 748; name= "Shadow Serpentis"; parentMarketGroupId= Some(739); typeIds= [| 17262; 17263; 17264; 17266; 17267; 17268; 17269; 17270; 17271; 17272 |]; description= "Shadow Serpentis identification tags." } |> Some

@@ -16,6 +16,10 @@ module internal MarketGroups77=
       | 2211 -> { MarketGroupData.id= 2211; name= "Electronic Counter Measures"; parentMarketGroupId= Some(2206); typeIds= [| 46577; 47338; 35940 |]; description= "" } |> Some
       | 2308 -> { MarketGroupData.id= 2308; name= "Amarr"; parentMarketGroupId= Some(2307); typeIds= [| 45752; 44146; 42909; 42543 |]; description= "" } |> Some
       | 2502 -> { MarketGroupData.id= 2502; name= "Booster Slot 11"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "Booster Slot 11" } |> Some
+      | 355194 -> { MarketGroupData.id= 355194; name= "Standard"; parentMarketGroupId= Some(355193); typeIds= [|  |]; description= "" } |> Some
+      | 364894 -> { MarketGroupData.id= 364894; name= "Standard"; parentMarketGroupId= Some(364893); typeIds= [|  |]; description= "Standard heavy frames." } |> Some
+      | 365282 -> { MarketGroupData.id= 365282; name= "Prototype"; parentMarketGroupId= Some(365278); typeIds= [|  |]; description= "Prototype commando dropsuits." } |> Some
+      | 365767 -> { MarketGroupData.id= 365767; name= "Advanced"; parentMarketGroupId= Some(365765); typeIds= [|  |]; description= "Advanced." } |> Some
       | 368 -> { MarketGroupData.id= 368; name= "Engineering"; parentMarketGroupId= Some(150); typeIds= [| 3424; 3426; 28164; 11207; 3432; 32797; 28879; 28880; 3413; 3318; 3417; 3418; 24572; 3421; 3423 |]; description= "Skills pertaining to management of a spaceship's hardware" } |> Some
       | 465 -> { MarketGroupData.id= 465; name= "Amarr"; parentMarketGroupId= Some(464); typeIds= [| 32874; 16236 |]; description= "Amarr destroyer designs." } |> Some
       | 562 -> { MarketGroupData.id= 562; name= "Medium"; parentMarketGroupId= Some(556); typeIds= [| 7703; 7705; 7707; 7709; 566; 568; 569; 3130; 13884; 13885; 3138; 7619; 13892; 7621; 7623; 7625; 3146; 15830; 15831; 15832; 34280; 7663; 7665; 7667; 7669; 22905; 22907; 22909 |]; description= "Medium-sized blasters, for use on cruisers." } |> Some

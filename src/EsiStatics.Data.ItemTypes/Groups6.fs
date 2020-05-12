@@ -15,5 +15,5 @@ module internal Groups6=
       | 685 -> { GroupData.id= 685; name= "Mission Minmatar Republic Battlecruiser"; categoryId= 11; published= false; typeIds= [| 24843; 24847; 24848; 24851; 24855; 24857; 28179; 28180 |] } |> Some
       | 782 -> { GroupData.id= 782; name= "Rig Navigation"; categoryId= 7; published= true; typeIds= [| 26056; 26058; 26060; 26062; 26064; 26066; 26068; 26070; 26072; 26304; 26306; 26308; 26310; 26312; 26314; 26318; 26320; 26322; 31105; 31107; 31109; 31111; 31113; 31115; 31117; 31119; 31121; 31123; 31125; 31127; 31129; 31131; 31133; 31135; 31137; 31139; 31141; 31143; 31145; 31147; 31149; 31151; 31153; 31155; 31157; 31159; 31161; 31163; 31165; 31167; 31169; 31171; 31173; 31175; 31177; 31179; 31181; 31183; 31185; 31187; 31189; 31191; 31193; 31195; 31197; 31199 |] } |> Some
       | 879 -> { GroupData.id= 879; name= "Slave Reception"; categoryId= 17; published= true; typeIds= [| 18029 |] } |> Some
-      | 976 -> { GroupData.id= 976; name= "Festival Charges Expired"; categoryId= 63; published= true; typeIds= [| 19658; 30222 |] } |> Some
+      | 976 -> { GroupData.id= 976; name= "Festival Charges Expired"; categoryId= 63; published= true; typeIds= [| 19658; 30221; 30222; 33569 |] } |> Some
       | _ -> None

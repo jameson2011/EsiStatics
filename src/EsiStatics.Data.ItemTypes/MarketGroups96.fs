@@ -14,8 +14,13 @@ module internal MarketGroups96=
       | 2133 -> { MarketGroupData.id= 2133; name= "Minmatar"; parentMarketGroupId= Some(2125); typeIds= [| 37480 |]; description= "" } |> Some
       | 2230 -> { MarketGroupData.id= 2230; name= "Structure Anticapital Launcher"; parentMarketGroupId= Some(2226); typeIds= [| 35921; 47323 |]; description= "" } |> Some
       | 2327 -> { MarketGroupData.id= 2327; name= "Refineries"; parentMarketGroupId= Some(477); typeIds= [| 35835; 35836 |]; description= "" } |> Some
-      | 2521 -> { MarketGroupData.id= 2521; name= "Triglavian"; parentMarketGroupId= Some(2520); typeIds= [| 52352; 52321; 49923; 49933; 50158; 52698; 50140 |]; description= "Triglavian Destroyers" } |> Some
+      | 2521 -> { MarketGroupData.id= 2521; name= "Triglavian"; parentMarketGroupId= Some(2520); typeIds= [| 52352; 52321; 53666; 49923; 53316; 54220; 49933; 50158; 52698; 50140; 53024 |]; description= "Triglavian Destroyers" } |> Some
       | 290 -> { MarketGroupData.id= 290; name= "Medium"; parentMarketGroupId= Some(286); typeIds= [| 1120; 1121; 12345; 1117; 1118; 1119 |]; description= "Blueprints of medium hybrid turrets." } |> Some
+      | 354340 -> { MarketGroupData.id= 354340; name= "Flux Grenades"; parentMarketGroupId= Some(353557); typeIds= [|  |]; description= "" } |> Some
+      | 354534 -> { MarketGroupData.id= 354534; name= "Boosters"; parentMarketGroupId= Some(369234); typeIds= [|  |]; description= "" } |> Some
+      | 366174 -> { MarketGroupData.id= 366174; name= "Dropsuits"; parentMarketGroupId= Some(365997); typeIds= [|  |]; description= "" } |> Some
+      | 366271 -> { MarketGroupData.id= 366271; name= "Prototype"; parentMarketGroupId= Some(366191); typeIds= [|  |]; description= "" } |> Some
+      | 368017 -> { MarketGroupData.id= 368017; name= "Loadouts"; parentMarketGroupId= Some(350001); typeIds= [|  |]; description= "" } |> Some
       | 387 -> { MarketGroupData.id= 387; name= "Torpedoes"; parentMarketGroupId= Some(114); typeIds= [|  |]; description= "Devastating jet-propelled projectiles carrying huge payloads." } |> Some
       | 484 -> { MarketGroupData.id= 484; name= "Ship Maintenance Arrays"; parentMarketGroupId= Some(1285); typeIds= [| 12237; 24646 |]; description= "Mobile hangar and fitting structures." } |> Some
       | 581 -> { MarketGroupData.id= 581; name= "Heavy Missiles"; parentMarketGroupId= Some(114); typeIds= [|  |]; description= "Jet-propelled projectiles for heavy launchers." } |> Some

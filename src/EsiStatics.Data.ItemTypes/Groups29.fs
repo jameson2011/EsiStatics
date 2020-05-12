@@ -15,6 +15,6 @@ module internal Groups29=
       | 417 -> { GroupData.id= 417; name= "Mobile Missile Sentry"; categoryId= 23; published= true; typeIds= [| 16222; 16695; 16696; 16697; 17773; 27560; 27562; 27638; 27640; 27641; 27643 |] } |> Some
       | 514 -> { GroupData.id= 514; name= "ECM Stabilizer"; categoryId= 7; published= true; typeIds= [| 25561; 25563; 25565; 25567; 25569; 25571 |] } |> Some
       | 611 -> { GroupData.id= 611; name= "Deadspace Guristas BattleCruiser"; categoryId= 11; published= false; typeIds= [| 24001; 24014; 24015; 24016; 24017; 24018; 24187; 24188; 24189; 24190; 24191; 24192 |] } |> Some
-      | 805 -> { GroupData.id= 805; name= "Deadspace Rogue Drone Frigate"; categoryId= 11; published= false; typeIds= [| 3744; 3748; 3749; 3750; 16210; 16211; 18070; 18071; 18072; 18079; 18080; 18085; 18086; 18087; 18088; 18564; 22284; 22285; 23481; 23482; 23483; 23484; 23485; 23486; 27293 |] } |> Some
+      | 805 -> { GroupData.id= 805; name= "Deadspace Rogue Drone Frigate"; categoryId= 11; published= false; typeIds= [| 3744; 3748; 3749; 3750; 16210; 16211; 18070; 18071; 18072; 18079; 18080; 18085; 18086; 18087; 18088; 18564; 22284; 22285; 23481; 23482; 23483; 23484; 23485; 23486; 27293; 53323 |] } |> Some
       | 902 -> { GroupData.id= 902; name= "Jump Freighter"; categoryId= 6; published= true; typeIds= [| 28844; 28846; 28848; 28850 |] } |> Some
       | _ -> None

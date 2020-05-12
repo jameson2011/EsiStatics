@@ -13,6 +13,7 @@ module internal Groups56=
       | 1996 -> { GroupData.id= 1996; name= "Abyssal Materials"; categoryId= 4; published= true; typeIds= [| 47975; 48080; 48112 |] } |> Some
       | 347 -> { GroupData.id= 347; name= "Signal Amplifier Blueprint"; categoryId= 9; published= true; typeIds= [| 11634; 11812; 11820; 11821; 11824; 11825; 11828; 11829; 11832; 11833; 11836; 11837; 20239; 20241; 20243; 20245; 20247; 20249; 20251; 20253; 20255; 20261; 20263; 20265; 21522; 21524; 21526; 21528; 21530 |] } |> Some
       | 368656 -> { GroupData.id= 368656; name= "Battle Salvage"; categoryId= 350001; published= false; typeIds= [| 366967; 366968; 366969; 366970; 366971 |] } |> Some
+      | 4033 -> { GroupData.id= 4033; name= "Destructible Effect Beacon"; categoryId= 2; published= false; typeIds= [| 52693 |] } |> Some
       | 444 -> { GroupData.id= 444; name= "Shield Hardening Array"; categoryId= 23; published= true; typeIds= [| 17184; 17185; 17186; 17187 |] } |> Some
       | 541 -> { GroupData.id= 541; name= "Interdictor"; categoryId= 6; published= true; typeIds= [| 22452; 22456; 22460; 22464 |] } |> Some
       | 56 -> { GroupData.id= 56; name= "Missile Launcher"; categoryId= 7; published= false; typeIds= [|  |] } |> Some

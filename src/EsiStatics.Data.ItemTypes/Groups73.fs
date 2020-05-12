@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal Groups73=
     let getGroup id = 
       match id with 
-      | 170 -> { GroupData.id= 170; name= "Defender Missile Blueprint"; categoryId= 9; published= true; typeIds= [| 1215; 32783 |] } |> Some
+      | 170 -> { GroupData.id= 170; name= "Defender Missile Blueprint"; categoryId= 9; published= true; typeIds= [| 32783 |] } |> Some
       | 1722 -> { GroupData.id= 1722; name= "Roaming Serpentis Frigate"; categoryId= 11; published= false; typeIds= [| 42141 |] } |> Some
       | 1819 -> { GroupData.id= 1819; name= "Structure Engineering Rig M - Equipment TE"; categoryId= 66; published= true; typeIds= [| 37160; 37161 |] } |> Some
       | 2013 -> { GroupData.id= 2013; name= "Stasis Nullifiers"; categoryId= 7; published= true; typeIds= [| 48944 |] } |> Some
