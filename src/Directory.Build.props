@@ -5,7 +5,7 @@
     <FileVersion>0.0.1.0</FileVersion>
     <Company />
     <Version>0.0.1</Version>
-    <Copyright>Copyright © Jameson2011 2019 Data Copyright © CCP hf 2019</Copyright>
+    <Copyright>Copyright © Jameson2011 2019-2020 Data Copyright © CCP hf 2019-2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
