@@ -10,7 +10,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>EsiStatics</description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright Jameson2011 2019 Data Copyright CCP hf 2019</copyright>
+    <copyright>Copyright Jameson2011 2019-2020 Data Copyright CCP hf 2019-2020</copyright>
     <tags></tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
