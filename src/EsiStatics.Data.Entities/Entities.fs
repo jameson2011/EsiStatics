@@ -44,3 +44,5 @@ type ItemTypeData = { id: int; name: string; published: bool; description: strin
 type DogmaAttributeData = { id: int; name: string; description: string; published: bool; unitId: int option; defaultValue: float; stackable: bool; highIsGood: bool }
 [<Struct>]
 type DogmaEffectData = { id: int; name: string; description: string; displayName: string; effectCategory: int; preExpression: int; postExpression: int }
+[<Struct>]
+type NameData = { id: int; name: string }

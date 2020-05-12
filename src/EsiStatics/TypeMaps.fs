@@ -120,3 +120,8 @@ module internal TypeMaps=
             GraphicId = value.graphicId;
         }
         
+    let ofNpcCorp (value: NameData) =
+        {
+            NpcCorp.Id = value.id;
+                    Name = value.name;
+        }
