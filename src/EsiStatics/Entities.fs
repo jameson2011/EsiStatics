@@ -185,3 +185,9 @@ type ItemType =
         Volume:         float<m3>;
         GraphicId:      int option;
     }
+
+type NpcCorp =
+    {
+        Id:             int;
+        Name:           string;
+    }

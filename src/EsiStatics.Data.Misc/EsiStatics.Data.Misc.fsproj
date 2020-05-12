@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="NpcCorps0.fs" />
+    <Compile Include="NpcCorps1.fs" />
+    <Compile Include="NpcCorps2.fs" />
+    <Compile Include="NpcCorps3.fs" />
+    <Compile Include="NpcCorps4.fs" />
+    <Compile Include="NpcCorps5.fs" />
+    <Compile Include="NpcCorps6.fs" />
+    <Compile Include="NpcCorps7.fs" />
+    <Compile Include="NpcCorps8.fs" />
+    <Compile Include="NpcCorps9.fs" />
+    <Compile Include="NpcCorps10.fs" />
+    <Compile Include="NpcCorps.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EsiStatics.Data.Entities\EsiStatics.Data.Entities.fsproj" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

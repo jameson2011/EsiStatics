@@ -23,6 +23,7 @@
     <Compile Include="UniverseExtensions.fs" />
     <Compile Include="UniverseSearch.fs" />
     <Compile Include="ItemTypes.fs" />
+    <Compile Include="Corporations.fs" />
     <Compile Include="ItemTypesFinder.fs" />
     <Compile Include="CategoriesFinder.fs" />
     <Compile Include="GroupsFinder.fs" />
@@ -35,6 +36,9 @@
     </Reference>
     <Reference Include="EsiStatics.Data.ItemTypes">
       <HintPath>..\..\build\lib\EsiStatics.Data.ItemTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="EsiStatics.Data.Misc">
+      <HintPath>..\..\build\lib\EsiStatics.Data.Misc.dll</HintPath>
     </Reference>
     <Reference Include="EsiStatics.Data.Moons">
       <HintPath>..\..\build\lib\EsiStatics.Data.Moons.dll</HintPath>
