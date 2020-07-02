@@ -54,6 +54,8 @@ let testOptions = fun (opts: DotNet.TestOptions) ->
                                     Output = buildTestsDir |> Some
                                     ResultsDirectory = buildTestsDir |> Some
                                     Logger = Some "trx"
+                                    MSBuildParams = { opts.MSBuildParams with 
+                                                                DisableInternalBinLog = true }
                                     }
 
 let nugetOptions = fun (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->  
