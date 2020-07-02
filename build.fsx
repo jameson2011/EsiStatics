@@ -43,7 +43,9 @@ let buildOptions = fun (opts: DotNet.BuildOptions) ->
                                 { opts with
                                     Configuration = DotNet.BuildConfiguration.Release
                                     OutputPath = buildLibDir |> Some
-                                    MSBuildParams = { opts.MSBuildParams with Properties = props }
+                                    MSBuildParams = { opts.MSBuildParams with 
+                                                                DisableInternalBinLog = true
+                                                                Properties = props }
                                     }
 
 let testOptions = fun (opts: DotNet.TestOptions) ->
