@@ -19,7 +19,7 @@ jobs:
   - job: build
     timeoutInMinutes: 180
     pool:
-      vmImage: 'vs2017-win2016'
+      vmImage: 'windows-2019'
 
     steps:
     - powershell: ./.tools/discord/sendazurewebhook.ps1 start $(WEBHOOK_URL)
