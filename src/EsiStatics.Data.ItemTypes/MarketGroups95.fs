@@ -15,11 +15,6 @@ module internal MarketGroups95=
       | 2229 -> { MarketGroupData.id= 2229; name= "Guided Bomb Launchers"; parentMarketGroupId= Some(2209); typeIds= [| 35923; 47325 |]; description= "" } |> Some
       | 2520 -> { MarketGroupData.id= 2520; name= "Precursor Destroyers"; parentMarketGroupId= Some(1989); typeIds= [|  |]; description= "Precursor Destroyers" } |> Some
       | 289 -> { MarketGroupData.id= 289; name= "Large"; parentMarketGroupId= Some(286); typeIds= [| 1122; 1123; 1124; 1125; 1126; 12355 |]; description= "Blueprints of large hybrid turrets." } |> Some
-      | 353563 -> { MarketGroupData.id= 353563; name= "Dropsuit Equipment"; parentMarketGroupId= Some(353562); typeIds= [|  |]; description= "Deployable and handheld equipment used by infantry" } |> Some
-      | 354339 -> { MarketGroupData.id= 354339; name= "Anti-Vehicle Grenades"; parentMarketGroupId= Some(353557); typeIds= [|  |]; description= "" } |> Some
-      | 363457 -> { MarketGroupData.id= 363457; name= "Light"; parentMarketGroupId= Some(363442); typeIds= [|  |]; description= "Lightweight shield extenders add a moderate amount of shield hit points with less cost to CPU and power grid usage." } |> Some
-      | 366173 -> { MarketGroupData.id= 366173; name= "Dropsuits"; parentMarketGroupId= Some(365996); typeIds= [|  |]; description= "" } |> Some
-      | 366755 -> { MarketGroupData.id= 366755; name= "Prototype"; parentMarketGroupId= Some(366752); typeIds= [|  |]; description= "Prototype." } |> Some
       | 483 -> { MarketGroupData.id= 483; name= "Silos"; parentMarketGroupId= Some(1285); typeIds= [| 25280; 14343; 25270; 25271; 25821; 17982; 30655 |]; description= "For storing or providing resources, or regulating material flow in industrial processes. " } |> Some
       | 580 -> { MarketGroupData.id= 580; name= "Cruise Missiles"; parentMarketGroupId= Some(114); typeIds= [|  |]; description= "Lifting-wing, jet-propelled guided missiles with heavy payloads." } |> Some
       | 677 -> { MarketGroupData.id= 677; name= "Electronic Counter Measures"; parentMarketGroupId= Some(657); typeIds= [|  |]; description= "Designed to disrupt and lock down enemy ships' sensor arrays." } |> Some

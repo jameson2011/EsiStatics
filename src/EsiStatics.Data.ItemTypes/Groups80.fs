@@ -14,6 +14,7 @@ module internal Groups80=
       | 2020 -> { GroupData.id= 2020; name= "Cynosural Fields"; categoryId= 2; published= false; typeIds= [| 21094; 52696 |] } |> Some
       | 274 -> { GroupData.id= 274; name= "Trade"; categoryId= 16; published= true; typeIds= [| 3443; 3444; 3445; 3446; 3447; 3448; 11015; 12834; 13069; 13070; 13071; 13072; 13073; 13074; 13075; 16594; 16595; 16596; 16597; 16598; 16622; 18580; 25233; 25235; 28261; 33467 |] } |> Some
       | 371 -> { GroupData.id= 371; name= "Mobile Warp Disruptor Blueprint"; categoryId= 9; published= true; typeIds= [| 4387; 12297; 12300; 12301; 26850; 26889; 26891; 26893; 28771; 28773; 28775 |] } |> Some
+      | 4057 -> { GroupData.id= 4057; name= "Masks"; categoryId= 30; published= true; typeIds= [| 54714; 54715; 54716; 54718; 54719; 54720; 54830 |] } |> Some
       | 468 -> { GroupData.id= 468; name= "Mercoxit"; categoryId= 25; published= true; typeIds= [| 11396; 17869; 17870; 28412; 28413; 28414; 28626 |] } |> Some
       | 565 -> { GroupData.id= 565; name= "Asteroid Sansha's Nation Battleship"; categoryId= 11; published= false; typeIds= [| 11913; 11914; 11915; 11916; 23372; 23373; 23374; 23375; 23376; 23377 |] } |> Some
       | 662 -> { GroupData.id= 662; name= "Complex Biochemical Reactions"; categoryId= 24; published= true; typeIds= [| 25240; 25282; 25289; 25290; 25291; 25292; 25293; 25294; 25295; 25296; 25297; 25298; 25299; 25300; 25301; 25302 |] } |> Some

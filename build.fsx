@@ -43,7 +43,9 @@ let buildOptions = fun (opts: DotNet.BuildOptions) ->
                                 { opts with
                                     Configuration = DotNet.BuildConfiguration.Release
                                     OutputPath = buildLibDir |> Some
-                                    MSBuildParams = { opts.MSBuildParams with Properties = props }
+                                    MSBuildParams = { opts.MSBuildParams with 
+                                                                DisableInternalBinLog = true
+                                                                Properties = props }
                                     }
 
 let testOptions = fun (opts: DotNet.TestOptions) ->
@@ -52,6 +54,8 @@ let testOptions = fun (opts: DotNet.TestOptions) ->
                                     Output = buildTestsDir |> Some
                                     ResultsDirectory = buildTestsDir |> Some
                                     Logger = Some "trx"
+                                    MSBuildParams = { opts.MSBuildParams with 
+                                                                DisableInternalBinLog = true }
                                     }
 
 let nugetOptions = fun (p:Fake.DotNet.NuGet.NuGet.NuGetParams) ->  
@@ -120,7 +124,7 @@ Target.create "All" ignore
 "Clean"
   ==> "Build Data"
   ==> "Build Facade"
-  ==> "Test"
+  // ==> "Test"
   ==> "Nuget Package"
   ==> "All"
 

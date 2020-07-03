@@ -6,24 +6,16 @@ module internal DogmaEffects86=
       match id with 
       | 1056 -> { DogmaEffectData.id= 1056; name= "eliteBonusHeavyGunshipHybridOptimal1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 1638 -> { DogmaEffectData.id= 1638; name= "skillAdvancedWeaponUpgradesPowerNeedBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 2608 -> { DogmaEffectData.id= 2608; name= "scanLadarStrengthBonusPercentageScanStrengthBonus"; description= ""; displayName= ""; effectCategory= 4; preExpression= 9463; postExpression= 9464 } |> Some
       | 280 -> { DogmaEffectData.id= 280; name= "shieldManagementSkillBoostShieldCapacityBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 2802 -> { DogmaEffectData.id= 2802; name= "hybridWeaponDamageMultiplyPassive"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 2899 -> { DogmaEffectData.id= 2899; name= "missileEMDmgBonusHeavy"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 3093 -> { DogmaEffectData.id= 3093; name= "controlTowerGenericHullKineticResistanceBonusMissile"; description= ""; displayName= ""; effectCategory= 0; preExpression= 10865; postExpression= 10866 } |> Some
-      | 3384 -> { DogmaEffectData.id= 3384; name= "droneHPBonusOnline"; description= ""; displayName= ""; effectCategory= 4; preExpression= 11687; postExpression= 11688 } |> Some
-      | 3481 -> { DogmaEffectData.id= 3481; name= "shipBonusLargeEnergyTurretDamageCB2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 11972; postExpression= 11973 } |> Some
-      | 3675 -> { DogmaEffectData.id= 3675; name= "shipBonusArmorRepairAmountGC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 12581; postExpression= 12582 } |> Some
       | 3772 -> { DogmaEffectData.id= 3772; name= "subSystem"; description= "Must be installed into an available subsystem slot on a Tech III ship."; displayName= "Sub System"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 3869 -> { DogmaEffectData.id= 3869; name= "subsystemBonusMinmatarPropulsion2MWDPenalty"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 3966 -> { DogmaEffectData.id= 3966; name= "subsystemBonusMinmatarDefensiveShieldBoostAmount"; description= ""; displayName= ""; effectCategory= 0; preExpression= 13297; postExpression= 13298 } |> Some
       | 4063 -> { DogmaEffectData.id= 4063; name= "systemStandardMissileExplosiveDamage"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 4160 -> { DogmaEffectData.id= 4160; name= "massAddPassive"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4257 -> { DogmaEffectData.id= 4257; name= "subsystemBonusMinmatarOffensiveAssaultMissileLauncherROF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 4354 -> { DogmaEffectData.id= 4354; name= "shipMissileLightVelocityBonusCR3"; description= ""; displayName= ""; effectCategory= 0; preExpression= 14332; postExpression= 14333 } |> Some
       | 4451 -> { DogmaEffectData.id= 4451; name= "ScanRadarStrengthModifierEffect"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4645 -> { DogmaEffectData.id= 4645; name= "eliteBonusHeavyGunshipHeavyAndHeavyAssaultAndAssaultMissileLauncherROF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 474 -> { DogmaEffectData.id= 474; name= "shipTargetRangeBonusGF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 2566; postExpression= 2567 } |> Some
       | 4936 -> { DogmaEffectData.id= 4936; name= "fueledShieldBoosting"; description= ""; displayName= ""; effectCategory= 1; preExpression= 0; postExpression= 0 } |> Some
       | 5227 -> { DogmaEffectData.id= 5227; name= "shipHeavyMissileKinDmgPirateCruiser"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5324 -> { DogmaEffectData.id= 5324; name= "shipArmorKineticResistance1ABC1"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
@@ -44,5 +36,6 @@ module internal DogmaEffects86=
       | 6973 -> { DogmaEffectData.id= 6973; name= "rigReactionCompMatBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7070 -> { DogmaEffectData.id= 7070; name= "precursorBattleshipSkillLevelPreMulShipBonusPBS2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7167 -> { DogmaEffectData.id= 7167; name= "shipBonusRemoteCapacitorTransferRangeRole1"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8040 -> { DogmaEffectData.id= 8040; name= "upwellSkillaoeVelocityaoeCloudSizeBonusSkilllevel"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 959 -> { DogmaEffectData.id= 959; name= "shipArmorExplosiveResistanceAC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

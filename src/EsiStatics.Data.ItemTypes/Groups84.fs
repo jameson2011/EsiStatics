@@ -13,6 +13,7 @@ module internal Groups84=
       | 2024 -> { GroupData.id= 2024; name= "Fluorite"; categoryId= 25; published= false; typeIds= [| 50015 |] } |> Some
       | 278 -> { GroupData.id= 278; name= "Social"; categoryId= 16; published= true; typeIds= [| 3355; 3356; 3357; 3358; 3359; 3361; 3362; 3893; 3894; 3895 |] } |> Some
       | 375 -> { GroupData.id= 375; name= "Advanced Pulse Laser Crystal"; categoryId= 8; published= true; typeIds= [| 12561; 12563; 12565; 12810; 12812; 12814; 12816; 12818; 12820; 41330; 41332 |] } |> Some
+      | 4061 -> { GroupData.id= 4061; name= "Advanced Condenser Pack"; categoryId= 8; published= true; typeIds= [| 54781; 54782; 54783; 54784; 54785; 54786 |] } |> Some
       | 472 -> { GroupData.id= 472; name= "System Scanner"; categoryId= 7; published= true; typeIds= [| 17696; 17873; 17884; 21047 |] } |> Some
       | 569 -> { GroupData.id= 569; name= "Asteroid Sansha's Nation Officer"; categoryId= 11; published= false; typeIds= [| 13609; 13615; 13622; 13635 |] } |> Some
       | 666 -> { GroupData.id= 666; name= "Mission Amarr Empire Battlecruiser"; categoryId= 11; published= false; typeIds= [| 24956; 24957; 24958; 24959; 24960; 24962; 28169; 28170; 30737; 30738; 50110; 50111 |] } |> Some

@@ -12,6 +12,7 @@ module internal Groups85=
       | 1928 -> { GroupData.id= 1928; name= "Irregular Container"; categoryId= 11; published= false; typeIds= [| 49759 |] } |> Some
       | 279 -> { GroupData.id= 279; name= "LCO Drone"; categoryId= 11; published= false; typeIds= [| 3457 |] } |> Some
       | 376 -> { GroupData.id= 376; name= "Advanced Artillery Ammo"; categoryId= 8; published= true; typeIds= [| 12629; 12631; 12633; 12761; 12763; 12765; 12767; 12769; 12771; 41318; 41320 |] } |> Some
+      | 4062 -> { GroupData.id= 4062; name= "Condenser Pack"; categoryId= 8; published= true; typeIds= [| 54769; 54770; 54771; 54772; 54773; 54774; 54775; 54776; 54777; 54778; 54779; 54780 |] } |> Some
       | 473 -> { GroupData.id= 473; name= "Tracking Array"; categoryId= 23; published= true; typeIds= [| 17701 |] } |> Some
       | 570 -> { GroupData.id= 570; name= "Asteroid Serpentis Battleship"; categoryId= 11; published= false; typeIds= [| 11921; 11922; 11923; 11924; 23450; 23451; 23452; 23453; 23454; 23455 |] } |> Some
       | 667 -> { GroupData.id= 667; name= "Mission Amarr Empire Battleship"; categoryId= 11; published= false; typeIds= [| 2594; 12388; 14356; 15328; 15329; 15335; 15336; 15411; 20330; 24976; 24977; 24978; 24979; 24982; 24983; 24985; 24988; 24991; 24992; 28167; 28168; 29665; 29667; 29671; 29673; 29674; 29675; 29676; 29677; 29678; 32268 |] } |> Some

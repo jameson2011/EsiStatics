@@ -13,6 +13,7 @@ module internal Groups88=
       | 185 -> { GroupData.id= 185; name= "Pirate Drone"; categoryId= 11; published= false; typeIds= [| 12245; 12246; 12248; 12249; 21845; 21846; 21847; 21848; 21849; 22053; 25215; 27801 |] } |> Some
       | 282 -> { GroupData.id= 282; name= "Radioactive"; categoryId= 17; published= true; typeIds= [| 3727; 3729; 17475 |] } |> Some
       | 379 -> { GroupData.id= 379; name= "Target Painter"; categoryId= 7; published= true; typeIds= [| 12709; 19806; 19808; 19810; 19812; 19814; 21540; 31944; 32414 |] } |> Some
+      | 4065 -> { GroupData.id= 4065; name= "Condenser Pack Blueprint"; categoryId= 9; published= true; typeIds= [| 54861; 54862; 54863; 54864; 54865; 54866; 54867; 54868; 54869; 54870; 54871; 54872; 54875; 54877; 54878; 54879; 54880; 54881; 54882; 54883 |] } |> Some
       | 476 -> { GroupData.id= 476; name= "XL Torpedo"; categoryId= 8; published= true; typeIds= [| 17857; 17859; 17861; 17863; 29616; 29618; 29620; 29622 |] } |> Some
       | 573 -> { GroupData.id= 573; name= "Asteroid Serpentis Hauler"; categoryId= 11; published= false; typeIds= [| 13702; 13703; 13704; 13705; 13706; 13707; 13708; 13709; 13710; 13711; 13712; 13713; 24377; 24378; 24379; 24380 |] } |> Some
       | 670 -> { GroupData.id= 670; name= "Mission Amarr Empire Other"; categoryId= 11; published= false; typeIds= [| 25557; 30974 |] } |> Some

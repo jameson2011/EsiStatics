@@ -14,13 +14,8 @@ module internal MarketGroups94=
       | 2131 -> { MarketGroupData.id= 2131; name= "Caldari"; parentMarketGroupId= Some(2125); typeIds= [| 37482 |]; description= "" } |> Some
       | 2228 -> { MarketGroupData.id= 2228; name= "Doomsday Devices"; parentMarketGroupId= Some(2209); typeIds= [| 35928 |]; description= "" } |> Some
       | 2325 -> { MarketGroupData.id= 2325; name= "ORE"; parentMarketGroupId= Some(912); typeIds= [| 42522 |]; description= "" } |> Some
-      | 2519 -> { MarketGroupData.id= 2519; name= "Triglavian"; parentMarketGroupId= Some(2518); typeIds= [| 49936; 50144; 52419; 52444; 49927 |]; description= "Triglavian Battlecruisers" } |> Some
+      | 2519 -> { MarketGroupData.id= 2519; name= "Triglavian"; parentMarketGroupId= Some(2518); typeIds= [| 50144; 52419; 49927; 49936; 54915; 54906; 52444 |]; description= "Triglavian Battlecruisers" } |> Some
       | 288 -> { MarketGroupData.id= 288; name= "Energy Turrets"; parentMarketGroupId= Some(210); typeIds= [|  |]; description= "Blueprints of energy turrets for capsule-fitted ships." } |> Some
-      | 353562 -> { MarketGroupData.id= 353562; name= "Dropsuits and Gear"; parentMarketGroupId= Some(350001); typeIds= [|  |]; description= "Infantry dropsuits designed to protect and sustain the wearer in even the harshest environments" } |> Some
-      | 354338 -> { MarketGroupData.id= 354338; name= "Locus Grenades"; parentMarketGroupId= Some(353557); typeIds= [|  |]; description= "" } |> Some
-      | 363456 -> { MarketGroupData.id= 363456; name= "Heavy"; parentMarketGroupId= Some(363442); typeIds= [|  |]; description= "Heavy duty shield extenders add a large amount of shield hit points at the cost of increased CPU and power grid usage." } |> Some
-      | 366269 -> { MarketGroupData.id= 366269; name= "Advanced"; parentMarketGroupId= Some(366191); typeIds= [|  |]; description= "" } |> Some
-      | 366754 -> { MarketGroupData.id= 366754; name= "Advanced"; parentMarketGroupId= Some(366752); typeIds= [|  |]; description= "Advanced." } |> Some
       | 482 -> { MarketGroupData.id= 482; name= "Reprocessing Arrays"; parentMarketGroupId= Some(1285); typeIds= [| 19470; 12238 |]; description= "Anchorable reprocessing structures." } |> Some
       | 579 -> { MarketGroupData.id= 579; name= "Large"; parentMarketGroupId= Some(560); typeIds= [| 14465; 14467; 9367; 2961; 9491; 9493; 9495; 9369; 9371; 9497; 9373; 9377; 16047; 16048; 2865; 21559; 21561; 13774; 13775; 497; 498; 14461; 14463 |]; description= "Large artillery cannons, suitable for battleship use." } |> Some
       | 676 -> { MarketGroupData.id= 676; name= "CPU Upgrades"; parentMarketGroupId= Some(656); typeIds= [| 15314; 14768; 15312; 14774; 15308; 8748; 3469; 15310; 3887; 3888; 28561; 14770; 14772; 14230; 20567; 14232; 20569; 15675; 15677 |]; description= "Provide an increase in the ship's CPU output." } |> Some

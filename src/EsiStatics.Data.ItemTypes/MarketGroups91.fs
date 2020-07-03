@@ -16,10 +16,6 @@ module internal MarketGroups91=
       | 2419 -> { MarketGroupData.id= 2419; name= "CONCORD"; parentMarketGroupId= Some(2418); typeIds= [| 47682; 47684 |]; description= "" } |> Some
       | 2516 -> { MarketGroupData.id= 2516; name= "Entropic Radiation Sink Mutaplasmids"; parentMarketGroupId= Some(2512); typeIds= [| 49736; 49737; 49735 |]; description= "" } |> Some
       | 285 -> { MarketGroupData.id= 285; name= "Amarr"; parentMarketGroupId= Some(208); typeIds= [| 1945; 19745 |]; description= "Blueprints of Amarr industrial designs." } |> Some
-      | 354335 -> { MarketGroupData.id= 354335; name= "Standard"; parentMarketGroupId= Some(353568); typeIds= [|  |]; description= "" } |> Some
-      | 354432 -> { MarketGroupData.id= 354432; name= "Shield Extenders"; parentMarketGroupId= Some(353581); typeIds= [|  |]; description= "Dropsuit shield extenders." } |> Some
-      | 366266 -> { MarketGroupData.id= 366266; name= "Advanced"; parentMarketGroupId= Some(366264); typeIds= [|  |]; description= "" } |> Some
-      | 368109 -> { MarketGroupData.id= 368109; name= "Logistics"; parentMarketGroupId= Some(368017); typeIds= [|  |]; description= "" } |> Some
       | 382 -> { MarketGroupData.id= 382; name= "Small"; parentMarketGroupId= Some(141); typeIds= [| 14214; 1547; 1549; 1551; 9744; 1553; 14226; 14228; 1557; 1559; 1563; 1565; 21534; 15925; 9784; 15935; 15941; 9670; 15949; 28557; 9680; 23864; 15957; 14200; 14202 |]; description= "Frigate-sized smartbombs." } |> Some
       | 479 -> { MarketGroupData.id= 479; name= "Missile Batteries"; parentMarketGroupId= Some(480); typeIds= [| 27560; 27562; 17773; 27640; 27638; 27641; 16696; 16697; 27643 |]; description= "Stationary missile batteries for starbase defense." } |> Some
       | 576 -> { MarketGroupData.id= 576; name= "Large"; parentMarketGroupId= Some(559); typeIds= [| 2945; 14469; 14471; 2953; 14475; 9327; 9247; 9249; 9251; 9253; 2929; 21557; 14473; 16057; 16059; 16060; 9287; 9289; 9291; 9293; 34288; 13785; 13787; 13788; 494; 495; 496; 9329; 9331; 9333; 14457; 14459 |]; description= "Battleship-sized autocannons. Deal massive damage, up close and personal." } |> Some

@@ -7,7 +7,7 @@ module internal Groups18=
       | 1085 -> { GroupData.id= 1085; name= "Piercings"; categoryId= 30; published= false; typeIds= [|  |] } |> Some
       | 1182 -> { GroupData.id= 1182; name= "FW Minmatar Republic Cruiser"; categoryId= 11; published= true; typeIds= [| 32970 |] } |> Some
       | 1570 -> { GroupData.id= 1570; name= "Structure Assembly Rig M - Small Tech I Ship"; categoryId= 66; published= false; typeIds= [|  |] } |> Some
-      | 1667 -> { GroupData.id= 1667; name= "Irregular Battleship"; categoryId= 11; published= false; typeIds= [| 40727; 40728; 42238; 46348; 46349; 47275; 47723; 47724; 48131; 48799; 48800; 48801; 48936; 48957; 49118; 49120; 49122; 49124; 49765; 53520; 53945; 53946; 53947; 53948 |] } |> Some
+      | 1667 -> { GroupData.id= 1667; name= "Irregular Battleship"; categoryId= 11; published= false; typeIds= [| 40727; 40728; 42238; 46348; 46349; 47275; 47723; 47724; 48131; 48799; 48800; 48801; 48936; 48957; 49118; 49120; 49122; 49124; 49765; 53520; 53945; 53946; 53947; 53948; 55024; 55026; 55027 |] } |> Some
       | 1764 -> { GroupData.id= 1764; name= "♦ Mining Frigate"; categoryId= 11; published= false; typeIds= [| 42533 |] } |> Some
       | 18 -> { GroupData.id= 18; name= "Mineral"; categoryId= 4; published= true; typeIds= [| 34; 35; 36; 37; 38; 39; 40; 11399; 27029; 48927 |] } |> Some
       | 1861 -> { GroupData.id= 1861; name= "Structure Engineering Rig L - Basic Capital Component Efficiency"; categoryId= 66; published= true; typeIds= [| 43718; 43719; 45546 |] } |> Some
