@@ -18,6 +18,6 @@ module internal Groups75=
       | 463 -> { GroupData.id= 463; name= "Mining Barge"; categoryId= 6; published= true; typeIds= [| 17476; 17478; 17480 |] } |> Some
       | 560 -> { GroupData.id= 560; name= "Asteroid Guristas Battleship"; categoryId= 11; published= false; typeIds= [| 11932; 11933; 11934; 11935; 23337; 23338; 23339; 23340; 23341; 23342 |] } |> Some
       | 657 -> { GroupData.id= 657; name= "Advanced Torpedo"; categoryId= 8; published= true; typeIds= [| 2801; 2811; 24519; 24521; 24523; 24525; 24527; 24529 |] } |> Some
-      | 754 -> { GroupData.id= 754; name= "Salvaged Materials"; categoryId= 4; published= true; typeIds= [| 25588; 25589; 25590; 25591; 25592; 25593; 25594; 25595; 25596; 25597; 25598; 25599; 25600; 25601; 25602; 25603; 25604; 25605; 25606; 25607; 25608; 25609; 25610; 25611; 25612; 25613; 25614; 25615; 25616; 25617; 25618; 25619; 25620; 25621; 25622; 25623; 25624; 25625 |] } |> Some
+      | 754 -> { GroupData.id= 754; name= "Salvaged Materials"; categoryId= 4; published= true; typeIds= [| 25588; 25589; 25590; 25591; 25592; 25593; 25594; 25595; 25596; 25597; 25598; 25599; 25600; 25601; 25602; 25603; 25604; 25605; 25606; 25607; 25608; 25609; 25610; 25611; 25612; 25613; 25614; 25615; 25616; 25617; 25618; 25619; 25620; 25621; 25622; 25623; 25624; 25625; 54970; 54971; 54972 |] } |> Some
       | 851 -> { GroupData.id= 851; name= "Asteroid Sansha's Nation Commander Battleship"; categoryId= 11; published= false; typeIds= [| 13606; 13614; 13620; 13621; 13633; 13634; 23400; 23401; 23402; 23403 |] } |> Some
       | _ -> None

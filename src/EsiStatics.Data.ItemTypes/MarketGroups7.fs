@@ -16,16 +16,6 @@ module internal MarketGroups7=
       | 2432 -> { MarketGroupData.id= 2432; name= "Entropic Disintegrators"; parentMarketGroupId= Some(2431); typeIds= [|  |]; description= "Entropic Disintegrators" } |> Some
       | 2529 -> { MarketGroupData.id= 2529; name= "Medium"; parentMarketGroupId= Some(2527); typeIds= [| 49770; 49771; 49772; 49773; 49774 |]; description= "Medium Mutadaptive Remote Armor Repairers" } |> Some
       | 298 -> { MarketGroupData.id= 298; name= "Large"; parentMarketGroupId= Some(287); typeIds= [| 832; 833; 829; 830; 831 |]; description= "Blueprints of large projectile turrets." } |> Some
-      | 353572 -> { MarketGroupData.id= 353572; name= "Submachine Guns"; parentMarketGroupId= Some(364048); typeIds= [|  |]; description= "Submachine guns." } |> Some
-      | 353669 -> { MarketGroupData.id= 353669; name= "Logistics"; parentMarketGroupId= Some(353652); typeIds= [|  |]; description= "" } |> Some
-      | 354348 -> { MarketGroupData.id= 354348; name= "Advanced"; parentMarketGroupId= Some(353570); typeIds= [|  |]; description= "" } |> Some
-      | 354542 -> { MarketGroupData.id= 354542; name= "Passive Boosters"; parentMarketGroupId= Some(354534); typeIds= [|  |]; description= "" } |> Some
-      | 356579 -> { MarketGroupData.id= 356579; name= "Blaster Damage Amplifiers"; parentMarketGroupId= Some(356575); typeIds= [|  |]; description= "" } |> Some
-      | 363466 -> { MarketGroupData.id= 363466; name= "Prototype"; parentMarketGroupId= Some(354338); typeIds= [|  |]; description= "Prototype" } |> Some
-      | 364048 -> { MarketGroupData.id= 364048; name= "Sidearm"; parentMarketGroupId= Some(353567); typeIds= [|  |]; description= "Sidearm handheld weapons." } |> Some
-      | 366182 -> { MarketGroupData.id= 366182; name= "Vehicles"; parentMarketGroupId= Some(365996); typeIds= [|  |]; description= "" } |> Some
-      | 366279 -> { MarketGroupData.id= 366279; name= "Standard"; parentMarketGroupId= Some(366193); typeIds= [|  |]; description= "" } |> Some
-      | 366570 -> { MarketGroupData.id= 366570; name= "Bolt Pistols"; parentMarketGroupId= Some(364048); typeIds= [|  |]; description= "Bolt Pistols." } |> Some
       | 395 -> { MarketGroupData.id= 395; name= "Gallente"; parentMarketGroupId= Some(391); typeIds= [| 11129 |]; description= "Gallente shuttle designs." } |> Some
       | 492 -> { MarketGroupData.id= 492; name= "Consumer Products"; parentMarketGroupId= Some(19); typeIds= [| 3715; 3717; 11585; 17423; 17424; 14358; 11944; 42; 43; 45; 15410; 12865; 11069; 12478; 3647; 3777; 12994; 12995; 16712; 16713; 16714; 11855; 15316; 3673; 3699; 9844; 17143; 9850; 9852 |]; description= "Products in high demand with the materialistic public. Can be bought and sold for profit" } |> Some
       | 589 -> { MarketGroupData.id= 589; name= "Amarr"; parentMarketGroupId= Some(588); typeIds= [| 4305; 16234; 24697 |]; description= "Blueprints of Amarr battlecruiser designs." } |> Some

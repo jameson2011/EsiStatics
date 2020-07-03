@@ -16,10 +16,6 @@ module internal MarketGroups82=
       | 2410 -> { MarketGroupData.id= 2410; name= "Carrier-based Fighters"; parentMarketGroupId= Some(2236); typeIds= [|  |]; description= "" } |> Some
       | 2701 -> { MarketGroupData.id= 2701; name= "HyperNet Relay"; parentMarketGroupId= Some(1922); typeIds= [| 52568 |]; description= "Items used in the HyperNet Relay" } |> Some
       | 276 -> { MarketGroupData.id= 276; name= "Gallente"; parentMarketGroupId= Some(206); typeIds= [| 978; 971; 972; 979 |]; description= "Blueprints of Gallente cruiser designs." } |> Some
-      | 354423 -> { MarketGroupData.id= 354423; name= "Armor Plates"; parentMarketGroupId= Some(353582); typeIds= [|  |]; description= "" } |> Some
-      | 365772 -> { MarketGroupData.id= 365772; name= "Prototype"; parentMarketGroupId= Some(365769); typeIds= [|  |]; description= "Prototype." } |> Some
-      | 366257 -> { MarketGroupData.id= 366257; name= "Standard"; parentMarketGroupId= Some(366179); typeIds= [|  |]; description= "" } |> Some
-      | 366742 -> { MarketGroupData.id= 366742; name= "Standard"; parentMarketGroupId= Some(366741); typeIds= [|  |]; description= "Standard" } |> Some
       | 373 -> { MarketGroupData.id= 373; name= "Missiles"; parentMarketGroupId= Some(150); typeIds= [| 12441; 12442; 21668; 28073; 32435; 41409; 41410; 3319; 21071; 20312; 20314; 20315; 20209; 20210; 20211; 20212; 20213; 25718; 25719; 3320; 3321; 3322; 3323; 3324; 3325; 3326 |]; description= "Skills pertaining to the efficient use of self-propelled warheads" } |> Some
       | 470 -> { MarketGroupData.id= 470; name= "Amarr"; parentMarketGroupId= Some(469); typeIds= [| 24696; 16233; 4302 |]; description= "Amarr battlecruiser designs." } |> Some
       | 567 -> { MarketGroupData.id= 567; name= "Small"; parentMarketGroupId= Some(557); typeIds= [| 15872; 13829; 23834; 23838; 13809; 2993; 6715; 6717; 6719; 6721; 452; 454; 3033; 13795; 6631; 6633; 15850; 6635; 6637; 15857; 15865; 13822 |]; description= "Small beam lasers, suitable for frigate use." } |> Some

@@ -12,7 +12,7 @@ module internal Groups69=
       | 1718 -> { GroupData.id= 1718; name= "Force Auxiliary Blueprint"; categoryId= 9; published= true; typeIds= [| 41582; 41583; 41584; 41585; 42135; 45043; 45644 |] } |> Some
       | 1815 -> { GroupData.id= 1815; name= "Titan Phenomena Generator"; categoryId= 7; published= true; typeIds= [| 43658; 43660; 43662; 43664 |] } |> Some
       | 1912 -> { GroupData.id= 1912; name= "Structure Drilling Rig M - Efficiency"; categoryId= 66; published= true; typeIds= [| 46323; 46324 |] } |> Some
-      | 2009 -> { GroupData.id= 2009; name= "Precursor Cache"; categoryId= 11; published= false; typeIds= [| 47951; 49661; 49662; 49663; 49689; 49690; 53294 |] } |> Some
+      | 2009 -> { GroupData.id= 2009; name= "Precursor Cache"; categoryId= 11; published= false; typeIds= [| 47951; 49661; 49662; 49663; 49689; 49690; 53294; 55799 |] } |> Some
       | 360 -> { GroupData.id= 360; name= "Shield Boost Amplifier Blueprint"; categoryId= 9; published= true; typeIds= [| 11562; 15906; 15908; 20614; 24444 |] } |> Some
       | 457 -> { GroupData.id= 457; name= "Kernite"; categoryId= 25; published= true; typeIds= [| 20; 17452; 17453; 28409; 28410; 28411; 28620; 46683; 46699 |] } |> Some
       | 554 -> { GroupData.id= 554; name= "Asteroid Angel Cartel Hauler"; categoryId= 11; published= false; typeIds= [| 13678; 13679; 13680; 13681; 13682; 13683; 13684; 13685; 13686; 13687; 13688; 13689; 22025; 22026; 22027; 22028; 35679 |] } |> Some

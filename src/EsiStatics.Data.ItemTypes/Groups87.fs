@@ -11,6 +11,7 @@ module internal Groups87=
       | 1833 -> { GroupData.id= 1833; name= "Structure Engineering Rig M - Advanced Medium Ship TE"; categoryId= 66; published= true; typeIds= [| 43860; 43861 |] } |> Some
       | 281 -> { GroupData.id= 281; name= "Frozen"; categoryId= 17; published= true; typeIds= [| 45; 3715; 3717; 3777; 11855; 21564; 29470; 29481; 29482 |] } |> Some
       | 378 -> { GroupData.id= 378; name= "Cruise Control"; categoryId= 7; published= false; typeIds= [|  |] } |> Some
+      | 4064 -> { GroupData.id= 4064; name= "Vorton Projector Blueprint"; categoryId= 9; published= true; typeIds= [| 54845; 54846; 54847; 54848; 54849; 54850; 54851; 54852; 54853; 54854; 54855; 54856; 54857; 54858; 54859; 54860 |] } |> Some
       | 475 -> { GroupData.id= 475; name= "Microwarpdrive"; categoryId= 7; published= false; typeIds= [|  |] } |> Some
       | 572 -> { GroupData.id= 572; name= "Asteroid Serpentis Frigate"; categoryId= 11; published= false; typeIds= [| 2370; 2379; 10283; 10284; 10285; 10286; 11045; 11046; 11047; 11048; 13049; 13050; 13051; 13052; 23429; 23430; 23431; 23432; 23434; 23435; 24361; 24362; 24363; 24364; 24365; 24366; 24367; 24368 |] } |> Some
       | 669 -> { GroupData.id= 669; name= "Mission Amarr Empire Destroyer"; categoryId= 11; published= false; typeIds= [| 24911; 24912; 24913; 24915; 24917; 24919; 27001; 45051 |] } |> Some

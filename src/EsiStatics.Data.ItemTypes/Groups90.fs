@@ -12,6 +12,7 @@ module internal Groups90=
       | 1933 -> { GroupData.id= 1933; name= "Structure Composite Reactor Rig M - TE"; categoryId= 66; published= true; typeIds= [| 46484; 46485 |] } |> Some
       | 284 -> { GroupData.id= 284; name= "Biohazard"; categoryId= 17; published= true; typeIds= [| 3771; 3773; 4091; 19398; 20510; 26777; 29504 |] } |> Some
       | 381 -> { GroupData.id= 381; name= "Elite Battleship"; categoryId= 6; published= false; typeIds= [|  |] } |> Some
+      | 4067 -> { GroupData.id= 4067; name= "Vorton Projector Upgrade"; categoryId= 7; published= true; typeIds= [| 54973; 54974; 54975 |] } |> Some
       | 478 -> { GroupData.id= 478; name= "System Scanner Blueprint"; categoryId= 9; published= true; typeIds= [| 17874; 17885 |] } |> Some
       | 575 -> { GroupData.id= 575; name= "Asteroid Angel Cartel Destroyer"; categoryId= 11; published= false; typeIds= [| 22812; 22813; 22814; 22815; 22816; 22817 |] } |> Some
       | 672 -> { GroupData.id= 672; name= "Mission Caldari State Battlecruiser"; categoryId= 11; published= false; typeIds= [| 25063; 25064; 25065; 25066; 25067; 25069; 28172; 28173; 32390 |] } |> Some
