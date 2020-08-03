@@ -34,4 +34,5 @@ module internal DogmaEffects22=
       | 6812 -> { DogmaEffectData.id= 6812; name= "rigSmallshipManufactureMaterialBonus"; description= "Structure Rig Material effect on Manufacturing of small Ships"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 6909 -> { DogmaEffectData.id= 6909; name= "shipBonusStrategicCruiserAmarrNaniteRepairTime2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7103 -> { DogmaEffectData.id= 7103; name= "structureConversionRigCapCompManTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8073 -> { DogmaEffectData.id= 8073; name= "eliteBonusCommandShipShieldHPCS1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

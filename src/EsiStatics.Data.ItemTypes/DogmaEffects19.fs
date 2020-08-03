@@ -38,6 +38,7 @@ module internal DogmaEffects19=
       | 698 -> { DogmaEffectData.id= 698; name= "signatureAnalysisSkillLevelPreMulScanResolutionBonusSelf"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7003 -> { DogmaEffectData.id= 7003; name= "eliteBonusCovertOpsSHTDamage3"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7100 -> { DogmaEffectData.id= 7100; name= "structureConversionRigT1ShipManTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8070 -> { DogmaEffectData.id= 8070; name= "eliteBonusCommandShipsHeavyHAMvelocityCS2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 892 -> { DogmaEffectData.id= 892; name= "shipTorpedosVelocityBonusCB3"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 989 -> { DogmaEffectData.id= 989; name= "eliteBonusGunshipHybridOptimal1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

@@ -22,7 +22,7 @@ module internal DogmaEffects71=
       | 5018 -> { DogmaEffectData.id= 5018; name= "shipVelocityBonusRookie"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5212 -> { DogmaEffectData.id= 5212; name= "shipDroneMWDSpeedBonusRookie"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5309 -> { DogmaEffectData.id= 5309; name= "shipHybridFallOff1GD1"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 5503 -> { DogmaEffectData.id= 5503; name= "eliteBonusCommandShipHeavyDroneTrackingCS2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 5503 -> { DogmaEffectData.id= 5503; name= "eliteBonusCommandShipDroneTrackingCS2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 556 -> { DogmaEffectData.id= 556; name= "caldariBattleshipSkillLevelPreMulShipBonus2CBShip"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5891 -> { DogmaEffectData.id= 5891; name= "eliteIndustrialArmorHardenerHeatBonus"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 6085 -> { DogmaEffectData.id= 6085; name= "shipMissileRoFCaldariTacticalDestroyer1"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some

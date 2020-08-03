@@ -41,4 +41,5 @@ module internal DogmaEffects20=
       | 7004 -> { DogmaEffectData.id= 7004; name= "npcStructureEwarBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7101 -> { DogmaEffectData.id= 7101; name= "structureConversionRigT2ShipManTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 796 -> { DogmaEffectData.id= 796; name= "escortShieldUpgradeCpu Bonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8071 -> { DogmaEffectData.id= 8071; name= " eliteBonusCommandShipDroneRangeCS1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

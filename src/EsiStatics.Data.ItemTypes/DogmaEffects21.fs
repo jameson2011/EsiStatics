@@ -35,5 +35,6 @@ module internal DogmaEffects21=
       | 6908 -> { DogmaEffectData.id= 6908; name= "shipBonusStrategicCruiserCaldariNaniteRepairTime2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7102 -> { DogmaEffectData.id= 7102; name= "structureConversionRigT2CompManTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 797 -> { DogmaEffectData.id= 797; name= "caldariBattleshipSkillLevelPreMulShipBonusCB3Ship"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8072 -> { DogmaEffectData.id= 8072; name= "shipArmorResistanceBonusGBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 991 -> { DogmaEffectData.id= 991; name= "eliteBonusGunshipLaserOptimal1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None
