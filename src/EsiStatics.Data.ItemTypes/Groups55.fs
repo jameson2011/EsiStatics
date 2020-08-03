@@ -11,7 +11,7 @@ module internal Groups55=
       | 152 -> { GroupData.id= 152; name= "Smart Bomb Blueprint"; categoryId= 9; published= true; typeIds= [| 1548; 1550; 1552; 1554; 1558; 1560; 1564; 1566; 3938; 3940; 3942; 3944; 3948; 3950; 3954; 3956; 3978; 3980; 3982; 3984; 3988; 3990; 3994; 3996; 15926; 15928; 15930; 15932; 15936; 15938; 15940; 15942; 15946; 15948; 15950; 15954; 15956; 15958; 15960; 15962; 15964; 21535; 21537; 21539; 23865; 23867; 23869; 28546; 28551; 28558 |] } |> Some
       | 1607 -> { GroupData.id= 1607; name= "Structure Laboratory Rig L - Capital Component"; categoryId= 66; published= false; typeIds= [| 37204; 37205 |] } |> Some
       | 1704 -> { GroupData.id= 1704; name= "Super Weapon Beacon"; categoryId= 2; published= false; typeIds= [| 41233; 41235; 41342; 41343; 41344; 41345; 41346; 41347; 41348; 41349; 41540 |] } |> Some
-      | 1995 -> { GroupData.id= 1995; name= "Triglavian Data"; categoryId= 17; published= true; typeIds= [| 48121 |] } |> Some
+      | 1995 -> { GroupData.id= 1995; name= "Triglavian Data"; categoryId= 17; published= true; typeIds= [| 48121; 55830; 55831; 55832 |] } |> Some
       | 346 -> { GroupData.id= 346; name= "Co-Processor Blueprint"; categoryId= 9; published= true; typeIds= [| 11619; 11747; 15676; 15678; 20568; 20570; 28562 |] } |> Some
       | 443 -> { GroupData.id= 443; name= "Warp Scrambling Battery"; categoryId= 23; published= true; typeIds= [| 17181; 17182; 27563; 27565; 27567; 27569 |] } |> Some
       | 540 -> { GroupData.id= 540; name= "Command Ship"; categoryId= 6; published= true; typeIds= [| 22442; 22444; 22446; 22448; 22466; 22468; 22470; 22474 |] } |> Some
