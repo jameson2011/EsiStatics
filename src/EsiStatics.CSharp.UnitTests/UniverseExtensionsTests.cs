@@ -290,7 +290,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(-2)]
         public void SolarSystem_Celestials_UnknownReturnsEmpty(int solarSystemId)
         {
-            var ss = new SolarSystem(solarSystemId, 0, "", 0, SecurityLevel.Lowsec, Position.Empty);
+            var ss = new SolarSystem(solarSystemId, 0, "", 0, SecurityLevel.Lowsec, Position.Empty, null);
 
             var celestials = ss.Celestials().ToList();
 
@@ -331,7 +331,7 @@ namespace EsiStatics.CSharp.UnitTests
         [InlineData(-2)]
         public void SolarSystem_CelestialDistances_Unknown_ReturnsEmpty(int solarSystemId)
         {
-            var ss = new SolarSystem(solarSystemId, 0, "", 0, SecurityLevel.Lowsec, Position.Empty);
+            var ss = new SolarSystem(solarSystemId, 0, "", 0, SecurityLevel.Lowsec, Position.Empty, null);
 
             var pos = Position.FromCoordinates(1, 1, 1);
 
