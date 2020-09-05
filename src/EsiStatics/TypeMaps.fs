@@ -26,6 +26,7 @@ module internal TypeMaps=
                         ConstellationId = value.constellationId;
                         Security = value.secStatus; 
                         Level = ofSystemSecurity value.secRating; 
+                        InvasionStatus = None;
                         Position = ofPositionData value.position  }
 
     let ofStarData (value: StarData) =

@@ -26,6 +26,12 @@ type SecurityLevel =
     | Wormhole
     | Abyssal
 
+type TriglavianInvasionStatus=
+    | StellarReconnaisance
+    | EdencomMinorVictory
+    | Fortress
+    | TriglavianMinorVictory
+    | FinalLiminality
 
 type INavigable =
     abstract member Id:         int
@@ -56,6 +62,7 @@ type SolarSystem =
         Security:           float;
         Level:              SecurityLevel;
         Position:           Position;
+        InvasionStatus:     TriglavianInvasionStatus option;
     }
     interface INavigable with
         member x.Id =       x.Id
