@@ -29,8 +29,12 @@ type SecurityLevel =
 type TriglavianInvasionStatus=
     | StellarReconnaisance
     | EdencomMinorVictory
+    | Redoubt
+    | Bulwark
     | Fortress
     | TriglavianMinorVictory
+    | FirstLiminality
+    | SecondLiminality
     | FinalLiminality
 
 type INavigable =
