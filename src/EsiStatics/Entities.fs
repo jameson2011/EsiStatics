@@ -115,6 +115,8 @@ type Station =
         Services:           string [];
         TypeId:             int;
         MaxDockableVolume:  int;
+        Radius:             float<m> option;
+        DockingRange:       float<m> option;
     }
     interface INavigable with
         member x.Id =       x.Id
