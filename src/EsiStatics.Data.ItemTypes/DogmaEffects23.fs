@@ -28,5 +28,6 @@ module internal DogmaEffects23=
       | 6813 -> { DogmaEffectData.id= 6813; name= "rigSmallshipManufactureTimeBonus"; description= "Structure Rig time effect on Manufacturing of small ships"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 6910 -> { DogmaEffectData.id= 6910; name= "shipBonusStrategicCruiserGallenteNaniteRepairTime2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7104 -> { DogmaEffectData.id= 7104; name= "structureConversionRigEquipManTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8074 -> { DogmaEffectData.id= 8074; name= "shipBonusPC2maxRange"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 896 -> { DogmaEffectData.id= 896; name= "covertOpsCpuBonus1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

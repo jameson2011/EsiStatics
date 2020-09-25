@@ -42,5 +42,6 @@ module internal DogmaEffects29=
       | 708 -> { DogmaEffectData.id= 708; name= "bomberLightsRangeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7110 -> { DogmaEffectData.id= 7110; name= "structureConversionRigResearchCostBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7207 -> { DogmaEffectData.id= 7207; name= "shipArmorExpResistancePF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8080 -> { DogmaEffectData.id= 8080; name= "systemProbeStrengthBonus"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 999 -> { DogmaEffectData.id= 999; name= "eliteBonusGunshipShieldBoost2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

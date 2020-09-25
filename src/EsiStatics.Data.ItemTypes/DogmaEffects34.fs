@@ -29,5 +29,6 @@ module internal DogmaEffects34=
       | 6921 -> { DogmaEffectData.id= 6921; name= "subSystemBonusAmarrDefensive2ScanProbeStrength"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7018 -> { DogmaEffectData.id= 7018; name= "shipSETROFAF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 713 -> { DogmaEffectData.id= 713; name= "stealthActive"; description= ""; displayName= ""; effectCategory= 1; preExpression= 0; postExpression= 0 } |> Some
+      | 8085 -> { DogmaEffectData.id= 8085; name= "systemFighterExplosionRadius"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 907 -> { DogmaEffectData.id= 907; name= "shipLaserRofAC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

@@ -37,5 +37,6 @@ module internal DogmaEffects27=
       | 706 -> { DogmaEffectData.id= 706; name= "covertOpsWarpResistance"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7108 -> { DogmaEffectData.id= 7108; name= "structureConversionRigInventionTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7205 -> { DogmaEffectData.id= 7205; name= "shipArmorKinResistancePF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8078 -> { DogmaEffectData.id= 8078; name= "systemHullExplosiveResistance"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 900 -> { DogmaEffectData.id= 900; name= "shipDroneScoutThermalDamageGF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

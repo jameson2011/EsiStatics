@@ -40,4 +40,5 @@ module internal DogmaEffects24=
       | 703 -> { DogmaEffectData.id= 703; name= "interceptorsSkillLevelPreMulEliteBonusInterceptorShip"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7105 -> { DogmaEffectData.id= 7105; name= "structureConversionRigMETimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7202 -> { DogmaEffectData.id= 7202; name= "systemDroneSpeedBonusPercent"; description= "Automatically generated effect"; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
+      | 8075 -> { DogmaEffectData.id= 8075; name= "systemHullEmResistance"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

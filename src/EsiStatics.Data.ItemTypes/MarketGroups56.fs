@@ -15,7 +15,7 @@ module internal MarketGroups56=
       | 2287 -> { MarketGroupData.id= 2287; name= "Faction Titans"; parentMarketGroupId= Some(812); typeIds= [| 42241; 42126; 45649 |]; description= "Faction Titan designs." } |> Some
       | 2481 -> { MarketGroupData.id= 2481; name= "Precursor Battleships"; parentMarketGroupId= Some(1960); typeIds= [|  |]; description= "Precursor Battleships" } |> Some
       | 444 -> { MarketGroupData.id= 444; name= "Caldari"; parentMarketGroupId= Some(442); typeIds= [| 11986 |]; description= "Blueprints of Caldari logistics designs." } |> Some
-      | 541 -> { MarketGroupData.id= 541; name= "Energized Plating"; parentMarketGroupId= Some(14); typeIds= [|  |]; description= "An advanced form of mechanically enhanced armor plating upgrades." } |> Some
+      | 541 -> { MarketGroupData.id= 541; name= "Energized Armor Resistance Membranes"; parentMarketGroupId= Some(14); typeIds= [|  |]; description= "Energized Armor Resistance Membranes" } |> Some
       | 638 -> { MarketGroupData.id= 638; name= "Minmatar"; parentMarketGroupId= Some(634); typeIds= [| 12736; 12748 |]; description= "Blueprints of Minmatar transport designs." } |> Some
       | 735 -> { MarketGroupData.id= 735; name= "Khanid Navy"; parentMarketGroupId= Some(616); typeIds= [| 15981; 16179; 16180; 16181; 16182; 16183; 16184; 16185; 16186; 16187; 16188; 16189 |]; description= "Officially sanctioned Khanid Navy insignias." } |> Some
       | 832 -> { MarketGroupData.id= 832; name= "Gallente"; parentMarketGroupId= Some(823); typeIds= [| 22460 |]; description= "Gallente interdictor designs." } |> Some
