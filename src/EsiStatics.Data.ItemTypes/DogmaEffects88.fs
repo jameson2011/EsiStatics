@@ -18,7 +18,7 @@ module internal DogmaEffects88=
       | 476 -> { DogmaEffectData.id= 476; name= "amarrFrigateSkillLevelPreMulShipBonusAFShip"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5035 -> { DogmaEffectData.id= 5035; name= "shipBonusDroneHitpointsRookie"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5132 -> { DogmaEffectData.id= 5132; name= "shipPTurretFalloffBonusMC2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 5229 -> { DogmaEffectData.id= 5229; name= "shipScanProbeStrengthBonusPirateCruiser"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 5229 -> { DogmaEffectData.id= 5229; name= "shipScanProbeStrengthBonusPirateCruiser"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5326 -> { DogmaEffectData.id= 5326; name= "shipBonusDroneDamageMultiplierABC2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5811 -> { DogmaEffectData.id= 5811; name= "shipBonusKineticMissileDamageGB2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5908 -> { DogmaEffectData.id= 5908; name= "advancedIndustrySkillBoostAdvancedIndustrySkillIndustryJobTimeBonus"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some

@@ -35,6 +35,7 @@ module internal DogmaEffects26=
       | 7010 -> { DogmaEffectData.id= 7010; name= "doomsdayTargetedWarpableBeacon"; description= ""; displayName= ""; effectCategory= 1; preExpression= 0; postExpression= 0 } |> Some
       | 7107 -> { DogmaEffectData.id= 7107; name= "structureConversionRigCopyTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7204 -> { DogmaEffectData.id= 7204; name= "shipArmorEMResistancePF2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8077 -> { DogmaEffectData.id= 8077; name= "systemHullKineticResistance"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 899 -> { DogmaEffectData.id= 899; name= "shipMissileKineticDamageCC"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 996 -> { DogmaEffectData.id= 996; name= "eliteBonusGunshipHybridTracking2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

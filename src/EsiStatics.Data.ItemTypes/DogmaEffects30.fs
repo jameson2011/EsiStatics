@@ -32,5 +32,6 @@ module internal DogmaEffects30=
       | 7014 -> { DogmaEffectData.id= 7014; name= "eliteBonusGunshipThermalMissileDamage1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 709 -> { DogmaEffectData.id= 709; name= "interceptorSignatoreRadiusBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7111 -> { DogmaEffectData.id= 7111; name= "systemSmallPrecursorTurretDamage"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
+      | 8081 -> { DogmaEffectData.id= 8081; name= "systemDisallowCloaking"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 903 -> { DogmaEffectData.id= 903; name= "ammoInfluenceSignatureRadius"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

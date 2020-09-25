@@ -36,5 +36,6 @@ module internal DogmaEffects25=
       | 704 -> { DogmaEffectData.id= 704; name= "covertOpsSkillLevelPreMulEliteBonusCoverOpsShip"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7106 -> { DogmaEffectData.id= 7106; name= "structureConversionRigTETimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7203 -> { DogmaEffectData.id= 7203; name= "systemDroneDamageBonusPercent"; description= "Automatically generated effect"; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
+      | 8076 -> { DogmaEffectData.id= 8076; name= "systemHullThermalResistance"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 898 -> { DogmaEffectData.id= 898; name= "shipMissileKineticDamageCF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

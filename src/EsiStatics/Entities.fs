@@ -202,3 +202,75 @@ type NpcCorp =
         Id:             int;
         Name:           string;
     }
+
+type ItemLocation =
+    | Unknown
+    | NoLocation // None
+    | Hangar
+    | Wardrobe
+    | CargoHold
+    | HighSlot
+    | MidSlot
+    | LowSlot
+    | FixedSlot
+    | Capsule
+    | Pilot
+    | RigSlot
+    | Subsystem
+    | Implant
+    | DroneBay
+    | ShipHangar
+    | ShipHold
+    | SecondaryStorage
+    | FleetHangar
+    | FighterBay
+    | FighterTube
+    | SubsystemBay
+    | OreHold
+    | FuelBay
+    | StructureServiceSlots
+    | StructureFuelBay
+    | GasHold
+    | PlanetaryCommoditiesHold
+    | MineralHold
+    | SpecialisedAmmoHold
+    | CommandCentreHold
+    | MaterialBay
+    | FrigateEscapeBay
+    | CoreRoom
+with static member ofId(id) = 
+        match id with
+        | 0 ->      ItemLocation.NoLocation
+        | 3 ->      ItemLocation.Wardrobe
+        | 4 ->      ItemLocation.Hangar
+        | 5 ->      ItemLocation.CargoHold
+        | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 -> ItemLocation.HighSlot
+        | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 -> ItemLocation.MidSlot
+        | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 -> ItemLocation.LowSlot
+        | 35 ->     ItemLocation.FixedSlot
+        | 56 ->     ItemLocation.Capsule
+        | 57 ->     ItemLocation.Pilot
+        | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 -> ItemLocation.RigSlot
+        | 125 | 126 | 127 | 128 | 129 | 130 | 131 | 132 -> ItemLocation.Subsystem
+        | 89 ->     ItemLocation.Implant
+        | 87 ->     ItemLocation.DroneBay
+        | 90 ->     ItemLocation.ShipHangar
+        | 138 | 139 | 140 | 141 | 142 ->    ItemLocation.ShipHold
+        | 122 ->    ItemLocation.SecondaryStorage
+        | 155 ->    ItemLocation.FleetHangar
+        | 158 ->    ItemLocation.FighterBay
+        | 159 | 160 | 161 | 162 | 163 ->    ItemLocation.FighterTube
+        | 177 ->    ItemLocation.SubsystemBay
+        | 134 ->    ItemLocation.OreHold
+        | 133 ->    ItemLocation.FuelBay
+        | 164 | 165 | 166 | 167 | 168 | 169 | 170 | 171 ->      ItemLocation.StructureServiceSlots
+        | 172 ->    ItemLocation.StructureFuelBay
+        | 135 ->    ItemLocation.GasHold
+        | 149 ->    ItemLocation.PlanetaryCommoditiesHold
+        | 136 ->    ItemLocation.MineralHold
+        | 143 ->    ItemLocation.SpecialisedAmmoHold
+        | 148 ->    ItemLocation.CommandCentreHold
+        | 151 ->    ItemLocation.MaterialBay
+        | 179 ->    ItemLocation.FrigateEscapeBay
+        | 180 ->    ItemLocation.CoreRoom
+        | _ ->      ItemLocation.Unknown

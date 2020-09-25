@@ -27,7 +27,7 @@ module internal DogmaEffects59=
       | 6849 -> { DogmaEffectData.id= 6849; name= "shipModuleFocusedWarpDisruptionScript"; description= ""; displayName= ""; effectCategory= 2; preExpression= 0; postExpression= 0 } |> Some
       | 6946 -> { DogmaEffectData.id= 6946; name= "subsystemBonusMinmatarDefensive3LocalRepHeat"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7043 -> { DogmaEffectData.id= 7043; name= "shipShieldHitpointsCC1"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 7237 -> { DogmaEffectData.id= 7237; name= "	systemWarpSpeed"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
+      | 7237 -> { DogmaEffectData.id= 7237; name= "systemWarpSpeedBonus"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 8013 -> { DogmaEffectData.id= 8013; name= "setBonusNirvana"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 835 -> { DogmaEffectData.id= 835; name= "freightSkillBoostCargoCapacityBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

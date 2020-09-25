@@ -12,7 +12,7 @@ module internal Groups49=
       | 1698 -> { GroupData.id= 1698; name= "Ancillary Remote Armor Repairer"; categoryId= 7; published= true; typeIds= [| 41476; 41477; 41478; 41479 |] } |> Some
       | 1795 -> { GroupData.id= 1795; name= "Hidden Zenith Gallente Battleship"; categoryId= 11; published= false; typeIds= [| 42823 |] } |> Some
       | 1989 -> { GroupData.id= 1989; name= "Advanced Exotic Plasma Charge"; categoryId= 8; published= true; typeIds= [| 47926; 47927; 47930; 47931; 47934; 47935 |] } |> Some
-      | 340 -> { GroupData.id= 340; name= "Secure Cargo Container"; categoryId= 2; published= true; typeIds= [| 3465; 3466; 3467; 11488; 11489; 11490 |] } |> Some
+      | 340 -> { GroupData.id= 340; name= "Secure Cargo Container"; categoryId= 2; published= true; typeIds= [| 3465; 3466; 3467; 11488; 11489; 11490; 56362 |] } |> Some
       | 367776 -> { GroupData.id= 367776; name= "Salvage Decryptors"; categoryId= 350001; published= false; typeIds= [| 367770; 367777; 367778; 367779 |] } |> Some
       | 49 -> { GroupData.id= 49; name= "Survey Scanner"; categoryId= 7; published= true; typeIds= [| 444; 2333; 6567; 6569; 6571; 6573 |] } |> Some
       | 534 -> { GroupData.id= 534; name= "Storyline Mission Battleship"; categoryId= 11; published= false; typeIds= [| 21127; 21181; 21448; 21452; 21735; 21788; 21792; 21794; 21795; 21796; 21886; 22040; 22041; 22048; 22075; 22079; 22097; 22153; 22154; 22235; 22238; 22246; 22273; 22276; 23271; 23616; 23623; 23873; 24260; 24282; 24583; 24662; 26139; 26212; 26227; 26244; 26246; 26279; 26284; 26285; 26454; 26742; 26806; 26848; 26882; 26884; 26885 |] } |> Some

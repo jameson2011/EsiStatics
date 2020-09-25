@@ -32,4 +32,5 @@ module internal DogmaEffects37=
       | 6924 -> { DogmaEffectData.id= 6924; name= "subsystemBonusMinmatarOffensive3MissileExpVelo"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7021 -> { DogmaEffectData.id= 7021; name= "structureRigMaxTargetRange"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7118 -> { DogmaEffectData.id= 7118; name= "eliteBonusCovertOps3PCTdamagePerCycle"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8088 -> { DogmaEffectData.id= 8088; name= "EntityChainLightning"; description= ""; displayName= ""; effectCategory= 2; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

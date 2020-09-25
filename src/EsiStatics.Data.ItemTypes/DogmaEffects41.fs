@@ -31,4 +31,5 @@ module internal DogmaEffects41=
       | 6734 -> { DogmaEffectData.id= 6734; name= "moduleBonusWarfareLinkSkirmish"; description= ""; displayName= ""; effectCategory= 1; preExpression= 0; postExpression= 0 } |> Some
       | 6831 -> { DogmaEffectData.id= 6831; name= "rigInventionTimeBonus"; description= "Structure Rig Time effect on Invention"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 6928 -> { DogmaEffectData.id= 6928; name= "subsystemBonusCaldariPropulsion2PropModHeatBenefit"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8092 -> { DogmaEffectData.id= 8092; name= "shipBonusForceAuxiliaryM2CapBoosterStrength"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None
