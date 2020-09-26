@@ -124,7 +124,7 @@ Target.create "All" ignore
 "Clean"
   ==> "Build Data"
   ==> "Build Facade"
-  ==> "Test"
+  // ==> "Test"
   ==> "Nuget Package"
   ==> "All"
 
