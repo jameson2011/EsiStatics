@@ -67,6 +67,8 @@ module internal TypeMaps=
             TypeId = value.typeId;
             Services = value.services;
             MaxDockableVolume = value.maxDockableShipVolume;
+            Radius = None;
+            DockingRange = None;
         }
 
     let ofStargateData (value: StargateData) =
