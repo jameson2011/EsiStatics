@@ -36,6 +36,24 @@ type TriglavianInvasionStatus=
     | FirstLiminality
     | SecondLiminality
     | FinalLiminality
+with
+    static member isEdencom = 
+        function
+        | EdencomMinorVictory
+        | Redoubt
+        | Bulwark
+        | Fortress -> true
+        | _ -> false
+
+    static member isTriglavian = 
+        function
+        | TriglavianMinorVictory
+        | FirstLiminality
+        | SecondLiminality
+        | FinalLiminality -> true
+        | _ -> false
+    
+
 
 type INavigable =
     abstract member Id:         int
