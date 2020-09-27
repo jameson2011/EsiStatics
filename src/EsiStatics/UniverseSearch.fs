@@ -16,11 +16,9 @@ type SolarSystemFinder(eagerIndex) =
         )
 
     
-    do  if eagerIndex then
-            index.Value |> ignore
+    do  if eagerIndex then index.Value |> ignore
 
-    new() = 
-        SolarSystemFinder(false)
+    new() = SolarSystemFinder(false)
 
     member this.Find(search: string) =
         search
@@ -41,11 +39,9 @@ type ConstellationFinder(eagerIndex) =
                             |> ReadonlyTrie.Create
         )
             
-    do  if eagerIndex then
-            index.Value |> ignore
+    do  if eagerIndex then index.Value |> ignore
 
-    new() = 
-        ConstellationFinder(false)
+    new() = ConstellationFinder(false)
 
     member this.Find(search: string) =
         search
@@ -63,11 +59,9 @@ type RegionFinder(eagerIndex) =
                             |> ReadonlyTrie.Create
         )
 
-    do  if eagerIndex then
-            index.Value |> ignore
+    do  if eagerIndex then index.Value |> ignore
 
-    new() = 
-        RegionFinder(false)
+    new() = RegionFinder(false)
 
     member this.Find(search: string) =
         search

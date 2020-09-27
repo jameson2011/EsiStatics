@@ -9,11 +9,9 @@ type ItemTypesFinder(eagerIndex: bool)=
                 |> ReadonlyTrie.Create
         )
                 
-    do  if eagerIndex then
-            itemTypeIndex.Value |> ignore
+    do  if eagerIndex then itemTypeIndex.Value |> ignore
             
-    new() = 
-        ItemTypesFinder(false)
+    new() = ItemTypesFinder(false)
                         
     member this.Find(search: string) =
         search

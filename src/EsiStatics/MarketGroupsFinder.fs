@@ -9,11 +9,9 @@ type MarketGroupsFinder(eagerIndex: bool)=
                     |> ReadonlyTrie.Create
         )
         
-    do  if eagerIndex then
-            marketGroupIndex.Value |> ignore
+    do  if eagerIndex then marketGroupIndex.Value |> ignore
 
-    new() = 
-        MarketGroupsFinder(false)
+    new() = MarketGroupsFinder(false)
 
     member this.Find(search: string) =
         search

@@ -9,11 +9,9 @@ type CategoriesFinder(eagerIndex: bool)=
                 |> ReadonlyTrie.Create
         )
             
-    do  if eagerIndex then
-            categoryIndex.Value |> ignore
+    do  if eagerIndex then categoryIndex.Value |> ignore
             
-    new() = 
-        CategoriesFinder(false)
+    new() = CategoriesFinder(false)
         
     member this.Find(search: string) =
         search
