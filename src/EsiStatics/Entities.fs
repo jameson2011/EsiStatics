@@ -140,7 +140,20 @@ type Station =
         member x.Id =       x.Id
         member x.Name =     x.Name
         member x.Position = x.Position
-       
+
+type Structure = 
+    {
+        Id:                 int
+        Name:               string
+        Position:           Position
+        SolarSystemId:      int 
+        TypeId:             int option
+    }
+    interface INavigable with
+        member x.Id =       x.Id
+        member x.Name =     x.Name
+        member x.Position = x.Position
+
 type Moon = 
     {
         Id:             int
