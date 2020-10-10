@@ -9,11 +9,9 @@ type GroupsFinder(eagerIndex: bool)=
                 |> ReadonlyTrie.Create
         )
         
-    do  if eagerIndex then
-            groupIndex.Value |> ignore
+    do  if eagerIndex then groupIndex.Value |> ignore
 
-    new() = 
-        GroupsFinder(false)
+    new() = GroupsFinder(false)
         
     member this.Find(search: string) =
         search

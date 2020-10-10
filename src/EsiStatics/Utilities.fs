@@ -3,9 +3,7 @@
 open System
 
 [<AutoOpen>]
-module internal Throws=
-    open System
-
+module internal Throws=    
     let argNull name value =
         if Object.ReferenceEquals(value, null) then
             ArgumentNullException(name) |> raise 
