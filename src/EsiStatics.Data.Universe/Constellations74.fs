@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal Constellations74=
     let getConstellation id = 
       match id with 
-      | 20000019 -> { ConstellationData.id= 20000019; name= "Ihilakken"; regionId= 10000002; solarSystemIds= [| 30000132; 30000133; 30000134; 30000135; 30000136; 30000137; 30000138; 30010141; 30021407 |]; position= {x = -1.436456547e+17;  y = 5.290958025e+16;  z = 1.096193769e+17;} } |> Some
+      | 20000019 -> { ConstellationData.id= 20000019; name= "Ihilakken"; regionId= 10000002; solarSystemIds= [| 30000132; 30000133; 30000134; 30000135; 30000136; 30000137; 30000138; 30021407 |]; position= {x = -1.436456547e+17;  y = 5.290958025e+16;  z = 1.096193769e+17;} } |> Some
       | 20000116 -> { ConstellationData.id= 20000116; name= "0EA3-8"; regionId= 10000009; solarSystemIds= [| 30000789; 30000790; 30000791; 30000792; 30000793; 30000794; 30000795 |]; position= {x = 1.083816419e+17;  y = -3.650128614e+15;  z = -1.326093818e+17;} } |> Some
       | 20000213 -> { ConstellationData.id= 20000213; name= "1-Z95W"; regionId= 10000017; solarSystemIds= [| 30001449; 30001450; 30001451; 30001452; 30001453; 30001454 |]; position= {x = 3.68006685e+15;  y = 6.602729773e+16;  z = 2.171942543e+17;} } |> Some
       | 20000310 -> { ConstellationData.id= 20000310; name= "Q-IPAA"; regionId= 10000025; solarSystemIds= [| 30002103; 30002104; 30002105; 30002106; 30002107; 30002108 |]; position= {x = 7.415183584e+15;  y = -2.129678431e+16;  z = -2.18319827e+17;} } |> Some

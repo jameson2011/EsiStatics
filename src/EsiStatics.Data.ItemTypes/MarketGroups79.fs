@@ -12,7 +12,7 @@ module internal MarketGroups79=
       | 1728 -> { MarketGroupData.id= 1728; name= "Capital Projectile Weapon Rigs"; parentMarketGroupId= Some(953); typeIds= [| 31673; 31697; 31661; 31709; 31685 |]; description= "Blueprints of Capital Projectile Weapon Rigs." } |> Some
       | 1922 -> { MarketGroupData.id= 1922; name= "Pilot's Services"; parentMarketGroupId= None; typeIds= [|  |]; description= "Services available to capsuleers include PLEX, Multiple Pilot Training, Pilot's Body Resculpt Certificates, and Skill Trading items" } |> Some
       | 2213 -> { MarketGroupData.id= 2213; name= "Stasis Webifiers"; parentMarketGroupId= Some(2206); typeIds= [| 47351; 35943 |]; description= "" } |> Some
-      | 2310 -> { MarketGroupData.id= 2310; name= "Amarr"; parentMarketGroupId= Some(2309); typeIds= [| 53953; 46786; 42564; 44101; 45773; 53615; 52770; 50069; 49816; 42907; 55325; 46527 |]; description= "" } |> Some
+      | 2310 -> { MarketGroupData.id= 2310; name= "Amarr"; parentMarketGroupId= Some(2309); typeIds= [| 53953; 46786; 42564; 44101; 45773; 56590; 53615; 52770; 50069; 49816; 42907; 55325; 46527 |]; description= "" } |> Some
       | 2407 -> { MarketGroupData.id= 2407; name= "Structure Burst Projectors"; parentMarketGroupId= Some(2161); typeIds= [| 47107; 47109; 47110; 47111; 47112; 47113; 47114 |]; description= "" } |> Some
       | 2504 -> { MarketGroupData.id= 2504; name= "Overclocker"; parentMarketGroupId= Some(2502); typeIds= [| 48114; 46004; 46005; 46006 |]; description= "Overclocker Boosters" } |> Some
       | 273 -> { MarketGroupData.id= 273; name= "Minmatar"; parentMarketGroupId= Some(206); typeIds= [| 976; 692; 974; 975 |]; description= "Blueprints of Minmatar cruiser designs." } |> Some

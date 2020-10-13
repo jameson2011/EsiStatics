@@ -8,7 +8,7 @@ module internal Stars66=
       | 40006455 -> { StarData.id= 40006455; name= "Arena - Star"; solarSystemId= 30000099; typeId= 3800; age= 73009352829L; luminosity= 0.023550; radius= 620000000L; spectralClass= "M7 V"; temperature= 2283 } |> Some
       | 40007716 -> { StarData.id= 40007716; name= "Uanzin - Star"; solarSystemId= 30000118; typeId= 45030; age= 3602935559L; luminosity= 0.410500; radius= 482300000L; spectralClass= "G6 V"; temperature= 5289 } |> Some
       | 40009268 -> { StarData.id= 40009268; name= "Saisio - Star"; solarSystemId= 30000146; typeId= 45040; age= 16084873004L; luminosity= 0.017960; radius= 257100000L; spectralClass= "M0 V"; temperature= 3313 } |> Some
-      | 40009947 -> { StarData.id= 40009947; name= "Otela - Star"; solarSystemId= 30000157; typeId= 9; age= 2789819269L; luminosity= 2.370000; radius= 800700032L; spectralClass= "F7 V"; temperature= 6363 } |> Some
+      | 40009947 -> { StarData.id= 40009947; name= "Otela - Star"; solarSystemId= 30000157; typeId= 56083; age= 2789819269L; luminosity= 2.370000; radius= 800700032L; spectralClass= "F7 V"; temperature= 6363 } |> Some
       | 40012663 -> { StarData.id= 40012663; name= "Paala - Star"; solarSystemId= 30000198; typeId= 45041; age= 6949197636L; luminosity= 0.043410; radius= 100450000L; spectralClass= "K1 V"; temperature= 4673 } |> Some
       | 40014700 -> { StarData.id= 40014700; name= "NFM-0V - Star"; solarSystemId= 30000230; typeId= 45039; age= 57038559347L; luminosity= 0.030940; radius= 510500000L; spectralClass= "M4 V"; temperature= 2693 } |> Some
       | 40019453 -> { StarData.id= 40019453; name= "G5ED-Y - Star"; solarSystemId= 30000310; typeId= 45041; age= 9702892612L; luminosity= 0.110900; radius= 145100000L; spectralClass= "K0 V"; temperature= 4916 } |> Some

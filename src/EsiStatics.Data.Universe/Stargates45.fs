@@ -144,4 +144,5 @@ module internal Stargates45=
       | 50014215 -> { StargateData.id= 50014215; name= "Stargate (C-4D0W)"; solarSystemId= 30000986; position= {x = 1.558129459e+11;  y = 3.991536845e+11;  z = 3.208440177e+12;}; typeId= 29635; destinationSolarSystemId= 30002375; destinationStargateId= 50014216 } |> Some
       | 50016252 -> { StargateData.id= 50016252; name= "Stargate (Iralaja)"; solarSystemId= 30045318; position= {x = -3.556563763e+11;  y = -2.443087872e+10;  z = 3.625994035e+12;}; typeId= 16; destinationSolarSystemId= 30045317; destinationStargateId= 50016251 } |> Some
       | 50016349 -> { StargateData.id= 50016349; name= "Stargate (Manjonakko)"; solarSystemId= 30045334; position= {x = 5.466067354e+11;  y = -1.887810478e+12;  z = -3.259282637e+11;}; typeId= 29629; destinationSolarSystemId= 30002760; destinationStargateId= 50016350 } |> Some
+      | 50016543 -> { StargateData.id= 50016543; name= "Stargate (Ala)"; solarSystemId= 30005029; position= {x = 1.357324692e+11;  y = 1.725537852e+10;  z = -3.894813134e+11;}; typeId= 56317; destinationSolarSystemId= 30002652; destinationStargateId= 50016542 } |> Some
       | _ -> None

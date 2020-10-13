@@ -14,7 +14,7 @@ module internal MarketGroups89=
       | 2029 -> { MarketGroupData.id= 2029; name= "Faction Cruisers"; parentMarketGroupId= Some(1988); typeIds= [|  |]; description= "" } |> Some
       | 2126 -> { MarketGroupData.id= 2126; name= "Amarr"; parentMarketGroupId= Some(2125); typeIds= [| 37481 |]; description= "" } |> Some
       | 2223 -> { MarketGroupData.id= 2223; name= "Energy Neutralizers"; parentMarketGroupId= Some(2208); typeIds= [| 47332; 47330; 35924; 35925; 46575 |]; description= "" } |> Some
-      | 2320 -> { MarketGroupData.id= 2320; name= "Expedition Frigates"; parentMarketGroupId= Some(2042); typeIds= [| 43777; 43778; 46982; 46983; 43790; 43791; 43803; 43804; 43816; 43817; 42672; 42673; 43829; 43830; 43842; 43843; 43750; 43751; 43763; 43764; 42615; 42616 |]; description= "" } |> Some
+      | 2320 -> { MarketGroupData.id= 2320; name= "Expedition Frigates"; parentMarketGroupId= Some(2042); typeIds= [| 43777; 43778; 46982; 46983; 43790; 43791; 43803; 43804; 56605; 56607; 43816; 43817; 42672; 42673; 43829; 43830; 43842; 43843; 43750; 43751; 43763; 43764; 42615; 42616 |]; description= "" } |> Some
       | 2417 -> { MarketGroupData.id= 2417; name= "CONCORD"; parentMarketGroupId= Some(2416); typeIds= [| 45534 |]; description= "" } |> Some
       | 2514 -> { MarketGroupData.id= 2514; name= "Heat Sink Mutaplasmids"; parentMarketGroupId= Some(2512); typeIds= [| 49728; 49729; 49727 |]; description= "" } |> Some
       | 283 -> { MarketGroupData.id= 283; name= "Gallente"; parentMarketGroupId= Some(208); typeIds= [| 992; 985; 989; 990; 991 |]; description= "Blueprints of Gallente industrial designs." } |> Some

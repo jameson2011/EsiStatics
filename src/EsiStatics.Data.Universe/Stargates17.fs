@@ -146,4 +146,5 @@ module internal Stargates17=
       | 50014187 -> { StargateData.id= 50014187; name= "Stargate (Krilmokenur)"; solarSystemId= 30002568; position= {x = -5.425045094e+11;  y = 9.991286784e+10;  z = 1.5880704e+11;}; typeId= 29633; destinationSolarSystemId= 30022547; destinationStargateId= 50014188 } |> Some
       | 50014284 -> { StargateData.id= 50014284; name= "Stargate (CUT-0V)"; solarSystemId= 30004194; position= {x = -1.23412181e+12;  y = -3.759855821e+12;  z = 5.270686802e+12;}; typeId= 3874; destinationSolarSystemId= 30004200; destinationStargateId= 50014283 } |> Some
       | 50016321 -> { StargateData.id= 50016321; name= "Stargate (Uuhulanen)"; solarSystemId= 30045323; position= {x = 3.004387738e+11;  y = 65986560.0;  z = 1.193545728e+10;}; typeId= 16; destinationSolarSystemId= 30045326; destinationStargateId= 50016322 } |> Some
+      | 50016515 -> { StargateData.id= 50016515; name= "Stargate (Nalvula)"; solarSystemId= 30002737; position= {x = 4136345324.0;  y = 598953591.8;  z = 8.503949767e+10;}; typeId= 56317; destinationSolarSystemId= 30001445; destinationStargateId= 50016514 } |> Some
       | _ -> None

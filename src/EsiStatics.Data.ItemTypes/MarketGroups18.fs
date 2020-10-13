@@ -18,7 +18,7 @@ module internal MarketGroups18=
       | 2249 -> { MarketGroupData.id= 2249; name= "Burst Projectors"; parentMarketGroupId= Some(657); typeIds= [| 40699; 40700; 40696; 40697; 40698; 40635; 40636; 27678 |]; description= "" } |> Some
       | 2346 -> { MarketGroupData.id= 2346; name= "X-Large Structure Combat Rigs"; parentMarketGroupId= Some(2205); typeIds= [| 37268; 37269; 37272; 37273; 37274; 37275 |]; description= "X-Large Structure Combat Rigs" } |> Some
       | 2443 -> { MarketGroupData.id= 2443; name= "Small Armor Mutaplasmids"; parentMarketGroupId= Some(2437); typeIds= [| 47809; 47810; 47811; 47841; 47766; 47767; 47768 |]; description= "Small Armor Mutaplasmids" } |> Some
-      | 2540 -> { MarketGroupData.id= 2540; name= "Talassonite"; parentMarketGroupId= Some(54); typeIds= [| 52306 |]; description= "Talassonite" } |> Some
+      | 2540 -> { MarketGroupData.id= 2540; name= "Talassonite"; parentMarketGroupId= Some(54); typeIds= [| 56625; 52306; 56626 |]; description= "Talassonite" } |> Some
       | 2734 -> { MarketGroupData.id= 2734; name= "Small"; parentMarketGroupId= Some(2729); typeIds= [| 54769; 54770; 54771; 54772 |]; description= "" } |> Some
       | 309 -> { MarketGroupData.id= 309; name= "Large"; parentMarketGroupId= Some(299); typeIds= [| 896; 897; 898; 899; 900; 901; 902; 895 |]; description= "Blueprints of large projectile ammunition." } |> Some
       | 406 -> { MarketGroupData.id= 406; name= "Deployable Structures"; parentMarketGroupId= Some(1338); typeIds= [|  |]; description= "Blueprints of deployable structures." } |> Some

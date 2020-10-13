@@ -17,6 +17,7 @@ module internal MarketGroups40=
       | 2174 -> { MarketGroupData.id= 2174; name= "Signal Amplifiers"; parentMarketGroupId= Some(2162); typeIds= [| 37541 |]; description= "" } |> Some
       | 2271 -> { MarketGroupData.id= 2271; name= "Force Auxiliaries"; parentMarketGroupId= Some(1381); typeIds= [|  |]; description= "Capital warships, able to support fleets with their logistics power." } |> Some
       | 2465 -> { MarketGroupData.id= 2465; name= "Small"; parentMarketGroupId= Some(2463); typeIds= [| 47924; 47885; 47925 |]; description= "Small Exotic Plasma Charge" } |> Some
+      | 2756 -> { MarketGroupData.id= 2756; name= "Triglavian Space Outbound"; parentMarketGroupId= Some(2456); typeIds= [| 56065; 56066; 56067; 56068; 56069 |]; description= "Filaments that jump users out of the Triglavian Region Pochven" } |> Some
       | 331 -> { MarketGroupData.id= 331; name= "Microwarpdrives"; parentMarketGroupId= Some(252); typeIds= [| 41313; 41256; 41257; 41258; 1067; 12053; 12055 |]; description= "Blueprints of microwarpdrives." } |> Some
       | 428 -> { MarketGroupData.id= 428; name= "Gallente"; parentMarketGroupId= Some(419); typeIds= [| 11378; 11173 |]; description= "Blueprints of Gallente covert ops designs." } |> Some
       | 525 -> { MarketGroupData.id= 525; name= "Gneiss"; parentMarketGroupId= Some(54); typeIds= [| 28397; 46695; 17865; 17866; 1229; 28398; 28399; 46679 |]; description= "Sub-types of gneiss ore." } |> Some
