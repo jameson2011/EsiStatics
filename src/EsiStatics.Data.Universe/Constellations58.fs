@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal Constellations58=
     let getConstellation id = 
       match id with 
-      | 20000003 -> { ConstellationData.id= 20000003; name= "Mamouna"; regionId= 10000001; solarSystemIds= [| 30000017; 30000018; 30000019; 30000020; 30000021; 30000022 |]; position= {x = -6.654483433e+16;  y = 3.947721775e+16;  z = -1.02442842e+17;} } |> Some
+      | 20000003 -> { ConstellationData.id= 20000003; name= "Mamouna"; regionId= 10000001; solarSystemIds= [| 30000017; 30000018; 30000019; 30000020; 30000022 |]; position= {x = -6.654483433e+16;  y = 3.947721775e+16;  z = -1.02442842e+17;} } |> Some
       | 20000100 -> { ConstellationData.id= 20000100; name= "Y-M7ML"; regionId= 10000008; solarSystemIds= [| 30000685; 30000686; 30000687; 30000688; 30000689; 30000690 |]; position= {x = 1.863666087e+16;  y = -2.148566036e+16;  z = -1.580656127e+17;} } |> Some
       | 20000197 -> { ConstellationData.id= 20000197; name= "0KTC-R"; regionId= 10000015; solarSystemIds= [| 30001350; 30001351; 30001352; 30001353; 30001354; 30001355 |]; position= {x = -8.244773216e+16;  y = 9.245443999e+16;  z = 3.604184951e+17;} } |> Some
       | 20000294 -> { ConstellationData.id= 20000294; name= "LY-FY6"; regionId= 10000023; solarSystemIds= [| 30001998; 30001999; 30002000; 30002001; 30002002; 30002003 |]; position= {x = -2.570220793e+17;  y = 1.08211622e+17;  z = 2.149123058e+17;} } |> Some

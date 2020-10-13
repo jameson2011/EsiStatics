@@ -19,6 +19,7 @@ module internal MarketGroups44=
       | 2275 -> { MarketGroupData.id= 2275; name= "Minmatar"; parentMarketGroupId= Some(2271); typeIds= [| 37606 |]; description= "Minmatar force auxiliary designs." } |> Some
       | 2372 -> { MarketGroupData.id= 2372; name= "Gallente"; parentMarketGroupId= Some(2369); typeIds= [| 52737; 46948; 46025; 46414; 55604; 45902 |]; description= "" } |> Some
       | 2469 -> { MarketGroupData.id= 2469; name= "Medium"; parentMarketGroupId= Some(2464); typeIds= [| 47930; 47931 |]; description= "Medium Advanced Exotic Plasma Charges" } |> Some
+      | 2760 -> { MarketGroupData.id= 2760; name= "Special Edition Deployable Structures"; parentMarketGroupId= Some(1659); typeIds= [| 56701 |]; description= "Special Edition Deployable Structures" } |> Some
       | 335 -> { MarketGroupData.id= 335; name= "Hull Upgrades"; parentMarketGroupId= Some(214); typeIds= [| 2604; 1334; 1318 |]; description= "Blueprints of hull upgrades." } |> Some
       | 432 -> { MarketGroupData.id= 432; name= "Assault Frigates"; parentMarketGroupId= Some(1364); typeIds= [|  |]; description= "Sturdy and powerful frigates built for all-out combat." } |> Some
       | 529 -> { MarketGroupData.id= 529; name= "Jaspet"; parentMarketGroupId= Some(54); typeIds= [| 17448; 17449; 1226; 28406; 28407; 28408; 46682; 46698 |]; description= "Sub-types of jaspet ore." } |> Some

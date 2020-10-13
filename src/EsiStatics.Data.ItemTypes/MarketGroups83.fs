@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal MarketGroups83=
     let getMarketGroup id = 
       match id with 
-      | 1053 -> { MarketGroupData.id= 1053; name= "Small"; parentMarketGroupId= Some(538); typeIds= [| 21504; 2355; 524; 5743; 5745; 5747; 5693 |]; description= "Hull repair system designs, intended for frigate-class vessels." } |> Some
+      | 1053 -> { MarketGroupData.id= 1053; name= ""; parentMarketGroupId= Some(538); typeIds= [| 21504; 2355; 524; 5743; 5745; 5747; 5693 |]; description= "" } |> Some
       | 1344 -> { MarketGroupData.id= 1344; name= "Electronic Warfare Batteries"; parentMarketGroupId= Some(1534); typeIds= [| 2792; 2794; 2763; 2796; 2798; 2736; 2740; 2741 |]; description= "Blueprints of Electronic Warfare Batteries." } |> Some
       | 1538 -> { MarketGroupData.id= 1538; name= "Remote Hull Repairers"; parentMarketGroupId= Some(214); typeIds= [| 27905; 27931; 27933; 27935 |]; description= "Blueprints for Remote Hull Repairers" } |> Some
       | 1732 -> { MarketGroupData.id= 1732; name= "Capital Shield Rigs"; parentMarketGroupId= Some(965); typeIds= [| 31744; 31780; 31814; 31750; 31720; 31820; 31786; 31756; 31826; 31726; 31792; 31762; 31732; 31798; 31768; 31738; 31804; 31774 |]; description= "Modifications that affect a capital starship's shields." } |> Some

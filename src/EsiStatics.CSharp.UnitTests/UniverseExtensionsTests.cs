@@ -344,11 +344,11 @@ namespace EsiStatics.CSharp.UnitTests
         [Theory]
         [InlineData(30005003, 30002089, 14)]
         [InlineData(30013489, 30005003, 18)]
-        [InlineData(30013489, 30002089, 20)]
-        [InlineData(30013489, 30000142, 10)]
+        [InlineData(30013489, 30002089, 18)]
+        [InlineData(30013489, 30000142, 26)]
         [InlineData(30004714, 30000142, 45)] // 1 sec + high GC
         [InlineData(30004483, 30000142, 50)] // 100ms
-        [InlineData(30001375, 30000055, 28)]
+        [InlineData(30001375, 30000055, 25)]
         public void SolarSystem_FindRoute(int start, int finish, int expected)
         {
             var s = SolarSystems.Get(start).Value;
@@ -361,9 +361,9 @@ namespace EsiStatics.CSharp.UnitTests
 
         [Theory]
         [InlineData(30005003, 30002089, 14)]
-        [InlineData(30013489, 30005003, 18)]
-        [InlineData(30013489, 30002089, 20)]
-        [InlineData(30013489, 30000142, 10)]
+        [InlineData(30013489, 30005003, 25)]
+        [InlineData(30013489, 30002089, 37)]
+        [InlineData(30013489, 30000142, 26)]
         public void SolarSystem_FindHighsecRoute(int start, int finish, int expected)
         {
             var s = SolarSystems.Get(start).Value;
@@ -371,7 +371,7 @@ namespace EsiStatics.CSharp.UnitTests
 
             var result = s.FindHighsecGateRoute(f);
 
-            Assert.Equal(result.Length, expected);
+            Assert.Equal(expected, result.Length);
         }
 
 

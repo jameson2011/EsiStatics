@@ -6,7 +6,7 @@ module internal MarketGroups70=
       match id with 
       | 1040 -> { MarketGroupData.id= 1040; name= "Strip Miners"; parentMarketGroupId= Some(1713); typeIds= [| 17912; 24305; 17482; 28754 |]; description= "Strip miner designs." } |> Some
       | 1137 -> { MarketGroupData.id= 1137; name= "Minmatar Propulsion Subsystems"; parentMarketGroupId= Some(1626); typeIds= [| 45619; 45620; 45621 |]; description= "Minmatar propulsion subsystems." } |> Some
-      | 1234 -> { MarketGroupData.id= 1234; name= ""; parentMarketGroupId= Some(965); typeIds= [| 31776; 31746; 31716; 31782; 31752; 31722; 31788; 31810; 31758; 31728; 31816; 31794; 31764; 31822; 31734; 31800; 31770; 31740 |]; description= "" } |> Some
+      | 1234 -> { MarketGroupData.id= 1234; name= "Small Shield Rigs"; parentMarketGroupId= Some(965); typeIds= [| 31776; 31746; 31716; 31782; 31752; 31722; 31788; 31810; 31758; 31728; 31816; 31794; 31764; 31822; 31734; 31800; 31770; 31740 |]; description= "Modifications that affect a small starship's shields." } |> Some
       | 1525 -> { MarketGroupData.id= 1525; name= "Afterburners"; parentMarketGroupId= Some(252); typeIds= [| 12067; 1072; 12057; 41242; 41243; 41244 |]; description= "Blueprints of afterburners." } |> Some
       | 1719 -> { MarketGroupData.id= 1719; name= "Capital Armor Rigs"; parentMarketGroupId= Some(944); typeIds= [| 31076; 31014; 31026; 33903; 30994; 27065; 31002; 31068; 31038 |]; description= "Blueprints of Capital Armor Rigs." } |> Some
       | 1816 -> { MarketGroupData.id= 1816; name= "Amarr"; parentMarketGroupId= Some(1815); typeIds= [| 596 |]; description= "Amarr rookie ship designs." } |> Some

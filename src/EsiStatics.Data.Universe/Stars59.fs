@@ -21,7 +21,7 @@ module internal Stars59=
       | 40074542 -> { StarData.id= 40074542; name= "L7XS-5 - Star"; solarSystemId= 30001174; typeId= 3802; age= 13128374826L; luminosity= 0.094100; radius= 157500000L; spectralClass= "K2 V"; temperature= 4528 } |> Some
       | 40076191 -> { StarData.id= 40076191; name= "4M-HGL - Star"; solarSystemId= 30001201; typeId= 45031; age= 3644130095L; luminosity= 0.048200; radius= 362400000L; spectralClass= "K9 V"; temperature= 3572 } |> Some
       | 40085988 -> { StarData.id= 40085988; name= "G9D-XW - Star"; solarSystemId= 30001348; typeId= 7; age= 35554034775L; luminosity= 0.023690; radius= 227100000L; spectralClass= "K7 V"; temperature= 3777 } |> Some
-      | 40087443 -> { StarData.id= 40087443; name= "Kino - Star"; solarSystemId= 30001372; typeId= 3801; age= 4917991243L; luminosity= 0.900900; radius= 257700000L; spectralClass= "F8 V"; temperature= 6227 } |> Some
+      | 40087443 -> { StarData.id= 40087443; name= "Kino - Star"; solarSystemId= 30001372; typeId= 56085; age= 4917991243L; luminosity= 0.900900; radius= 257700000L; spectralClass= "F8 V"; temperature= 6227 } |> Some
       | 40094330 -> { StarData.id= 40094330; name= "PBXG-A - Star"; solarSystemId= 30001483; typeId= 45032; age= 5396481543L; luminosity= 0.144700; radius= 558700032L; spectralClass= "K7 V"; temperature= 3786 } |> Some
       | 40102575 -> { StarData.id= 40102575; name= "90G-OA - Star"; solarSystemId= 30001609; typeId= 3800; age= 40560753507L; luminosity= 0.044950; radius= 383400000L; spectralClass= "M0 V"; temperature= 3412 } |> Some
       | 40105970 -> { StarData.id= 40105970; name= "Gyerzen - Star"; solarSystemId= 30001661; typeId= 45032; age= 20929981983L; luminosity= 0.061330; radius= 347700000L; spectralClass= "K7 V"; temperature= 3872 } |> Some

@@ -5,7 +5,6 @@ module internal AsteroidBelts44=
     let getAsteroidBelt id = 
       match id with 
       | 40001001 -> { AsteroidBeltData.id= 40001001; name= "Nazhgete I - Asteroid Belt 1"; planetId= 40001000; solarSystemId= 30000016; position= {x = 5194997760.0;  y = 183951360.0;  z = -4.365275136e+10;} } |> Some
-      | 40001486 -> { AsteroidBeltData.id= 40001486; name= "Kuharah VI - Asteroid Belt 4"; planetId= 40001463; solarSystemId= 30000021; position= {x = 2.087997235e+12;  y = 1.414549094e+11;  z = 1.531803034e+12;} } |> Some
       | 40001777 -> { AsteroidBeltData.id= 40001777; name= "Rashy V - Asteroid Belt 3"; planetId= 40001754; solarSystemId= 30000025; position= {x = 6.638212301e+11;  y = 6.497243136e+10;  z = -1.462216827e+12;} } |> Some
       | 40002456 -> { AsteroidBeltData.id= 40002456; name= "Uplingur IV (Ndoria) - Asteroid Belt 1"; planetId= 40002444; solarSystemId= 30000037; position= {x = -5.528785428e+12;  y = -1.084784763e+12;  z = 7.791245844e+12;} } |> Some
       | 40002747 -> { AsteroidBeltData.id= 40002747; name= "Moh VI - Asteroid Belt 1"; planetId= 40002746; solarSystemId= 30000042; position= {x = -4.388907049e+12;  y = -5.94730967e+11;  z = 3.888744161e+12;} } |> Some
@@ -371,7 +370,6 @@ module internal AsteroidBelts44=
       | 40221288 -> { AsteroidBeltData.id= 40221288; name= "Arbaz VII - Asteroid Belt 1"; planetId= 40221287; solarSystemId= 30003487; position= {x = -1.947057807e+12;  y = 5.67760896e+10;  z = 1.224688558e+12;} } |> Some
       | 40221385 -> { AsteroidBeltData.id= 40221385; name= "Khopa VI - Asteroid Belt 3"; planetId= 40221382; solarSystemId= 30003490; position= {x = 1.53901056e+10;  y = 1112432640.0;  z = -4.353890304e+11;} } |> Some
       | 40221482 -> { AsteroidBeltData.id= 40221482; name= "Ashab II - Asteroid Belt 1"; planetId= 40221481; solarSystemId= 30003491; position= {x = 1.640116224e+10;  y = 1603706880.0;  z = 1.237882061e+11;} } |> Some
-      | 40221773 -> { AsteroidBeltData.id= 40221773; name= "Raravoss IV - Asteroid Belt 1"; planetId= 40221772; solarSystemId= 30003495; position= {x = 2.678917939e+11;  y = -1.32028416e+10;  z = -6.118354944e+10;} } |> Some
       | 40222452 -> { AsteroidBeltData.id= 40222452; name= "Fabum III - Asteroid Belt 1"; planetId= 40222451; solarSystemId= 30003505; position= {x = -4.006244352e+10;  y = -8071864320.0;  z = -2.737035264e+11;} } |> Some
       | 40223325 -> { AsteroidBeltData.id= 40223325; name= "Mahrokht VI - Asteroid Belt 1"; planetId= 40223322; solarSystemId= 30003520; position= {x = 7.86143232e+10;  y = -1.434488832e+10;  z = -5.174600909e+11;} } |> Some
       | 40223422 -> { AsteroidBeltData.id= 40223422; name= "Mahrokht X - Asteroid Belt 1"; planetId= 40223421; solarSystemId= 30003520; position= {x = 2.103528038e+12;  y = -3.833242829e+11;  z = -4.492077097e+12;} } |> Some

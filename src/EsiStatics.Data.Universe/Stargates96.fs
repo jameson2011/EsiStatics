@@ -151,4 +151,5 @@ module internal Stargates96=
       | 50014266 -> { StargateData.id= 50014266; name= "Stargate (D-OJEZ)"; solarSystemId= 30001563; position= {x = -4.09785815e+12;  y = -2.039433339e+12;  z = 4.726144819e+12;}; typeId= 29632; destinationSolarSystemId= 30002366; destinationStargateId= 50014265 } |> Some
       | 50016303 -> { StargateData.id= 50016303; name= "Stargate (Samanuni)"; solarSystemId= 30045321; position= {x = 1.832714772e+12;  y = 4.373925888e+10;  z = 1.896480154e+12;}; typeId= 16; destinationSolarSystemId= 30045322; destinationStargateId= 50016304 } |> Some
       | 50016400 -> { StargateData.id= 50016400; name= "Stargate (Thelan)"; solarSystemId= 30002050; position= {x = -1.496896758e+12;  y = -4.215672422e+11;  z = 1.871846646e+12;}; typeId= 29634; destinationSolarSystemId= 30002720; destinationStargateId= 50016401 } |> Some
+      | 50016497 -> { StargateData.id= 50016497; name= "Stargate (Raravoss)"; solarSystemId= 30003504; position= {x = -1575903855.0;  y = -277788063.2;  z = -450.1796875;}; typeId= 56317; destinationSolarSystemId= 30003495; destinationStargateId= 50016496 } |> Some
       | _ -> None

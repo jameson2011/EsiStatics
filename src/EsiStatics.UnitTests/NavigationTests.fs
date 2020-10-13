@@ -11,8 +11,8 @@ module NavigationTests=
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>]
     [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
-    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
-    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 18)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 26)>]
     [<InlineData(KnownSystems.raeghoscon, KnownSystems.adirain, 6)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 13)>] // should be 6 if symmetric
     let ``findRoute euclidean``(start, finish, expected) =
@@ -29,10 +29,10 @@ module NavigationTests=
     [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 13)>]
     [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.deepari, 19)>]
-    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
-    [<InlineData(KnownSystems.avenod, KnownSystems.deepari, 16)>]
-    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
-    [<InlineData(KnownSystems.jita, KnownSystems.deepari, 10)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 18)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.deepari, 18)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 27)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.deepari, 27)>]
     [<InlineData(KnownSystems.raeghoscon, KnownSystems.adirain, 6)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, 6)>]
     let ``findRoute dijkstra``(start, finish, expected) =
@@ -47,12 +47,12 @@ module NavigationTests=
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, 14)>] 
     [<InlineData(KnownSystems.avenod, KnownSystems.adirain, 13)>] 
-    [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 18)>]
-    [<InlineData(KnownSystems.adirain, KnownSystems.deepari, 18)>]
-    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 20)>]
-    [<InlineData(KnownSystems.avenod, KnownSystems.deepari, 20)>]
-    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 10)>]
-    [<InlineData(KnownSystems.jita, KnownSystems.deepari, 10)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.adirain, 25)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.deepari, 26)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.avenod, 37)>]
+    [<InlineData(KnownSystems.avenod, KnownSystems.deepari, 37)>]
+    [<InlineData(KnownSystems.deepari, KnownSystems.jita, 26)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.deepari, 49)>]
     let ``findRoute euclidean highsec preferred``(start, finish, expected) =
         let s = start |> knownSystem
         let f = finish |> knownSystem

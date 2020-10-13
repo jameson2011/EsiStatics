@@ -20,7 +20,6 @@ module internal AsteroidBelts23=
       | 40008158 -> { AsteroidBeltData.id= 40008158; name= "Geras VIII - Asteroid Belt 1"; planetId= 40008157; solarSystemId= 30000126; position= {x = 8.120641536e+11;  y = -1.483616256e+10;  z = -3.957747302e+11;} } |> Some
       | 40008255 -> { AsteroidBeltData.id= 40008255; name= "Unpas VI - Asteroid Belt 5"; planetId= 40008242; solarSystemId= 30000129; position= {x = 1.097774285e+11;  y = -8078745600.0;  z = -3.181873152e+11;} } |> Some
       | 40008643 -> { AsteroidBeltData.id= 40008643; name= "Outuni IX - Asteroid Belt 1"; planetId= 40008640; solarSystemId= 30000135; position= {x = 5.52182784e+11;  y = 4.425412608e+10;  z = 7.696538419e+11;} } |> Some
-      | 40010001 -> { AsteroidBeltData.id= 40010001; name= "Otela V - Asteroid Belt 1"; planetId= 40009997; solarSystemId= 30000157; position= {x = 5.717560934e+11;  y = -6769827840.0;  z = -1.333864489e+12;} } |> Some
       | 40010486 -> { AsteroidBeltData.id= 40010486; name= "Ishisomo VIII - Asteroid Belt 1"; planetId= 40010484; solarSystemId= 30000165; position= {x = 9.346000896e+11;  y = 1.148413133e+11;  z = -2.680541184e+10;} } |> Some
       | 40011456 -> { AsteroidBeltData.id= 40011456; name= "Inaya III - Asteroid Belt 1"; planetId= 40011455; solarSystemId= 30000182; position= {x = -1.42153728e+10;  y = -692428800.0;  z = 8.355926016e+10;} } |> Some
       | 40012620 -> { AsteroidBeltData.id= 40012620; name= "Uemon X - Asteroid Belt 1"; planetId= 40012616; solarSystemId= 30000197; position= {x = -8.307851674e+11;  y = 9.296080896e+10;  z = 4.29178921e+11;} } |> Some
@@ -550,7 +549,6 @@ module internal AsteroidBelts23=
       | 40332041 -> { AsteroidBeltData.id= 40332041; name= "Anyed XIII - Asteroid Belt 15"; planetId= 40332001; solarSystemId= 30005249; position= {x = -5.780814766e+12;  y = 3.552621773e+11;  z = 2.277272986e+12;} } |> Some
       | 40335630 -> { AsteroidBeltData.id= 40335630; name= "Aidart VI - Asteroid Belt 3"; planetId= 40335606; solarSystemId= 30005307; position= {x = 8.850848563e+11;  y = 1.669864243e+11;  z = -5.306158694e+11;} } |> Some
       | 40336406 -> { AsteroidBeltData.id= 40336406; name= "Raneilles VI - Asteroid Belt 2"; planetId= 40336391; solarSystemId= 30005319; position= {x = 6.780888269e+11;  y = 1.147410432e+11;  z = -4.62075863e+11;} } |> Some
-      | 40342420 -> { AsteroidBeltData.id= 40342420; name= "Senda VII - Asteroid Belt 1"; planetId= 40342419; solarSystemId= 30020141; position= {x = 9.824181043e+11;  y = -1.19221248e+11;  z = -1.158206792e+12;} } |> Some
       | 40346203 -> { AsteroidBeltData.id= 40346203; name= "Hadaugago I - Asteroid Belt 1"; planetId= 40346202; solarSystemId= 30012547; position= {x = -3.679260672e+10;  y = 1434132480.0;  z = 1.959186432e+10;} } |> Some
       | 40349598 -> { AsteroidBeltData.id= 40349598; name= "Aivonen IV - Asteroid Belt 2"; planetId= 40349596; solarSystemId= 30045340; position= {x = 8.128436645e+10;  y = 5432187361.0;  z = 2.41800085e+11;} } |> Some
       | _ -> None

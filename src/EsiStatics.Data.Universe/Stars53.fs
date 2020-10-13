@@ -24,7 +24,7 @@ module internal Stars53=
       | 40120514 -> { StarData.id= 40120514; name= "7-X3RN - Star"; solarSystemId= 30001884; typeId= 45047; age= 3884959441L; luminosity= 0.338000; radius= 460600000L; spectralClass= "G8 V"; temperature= 5155 } |> Some
       | 40120999 -> { StarData.id= 40120999; name= "V1V-6F - Star"; solarSystemId= 30001892; typeId= 45038; age= 3853271441L; luminosity= 1.767000; radius= 393300000L; spectralClass= "G0 V"; temperature= 5965 } |> Some
       | 40130214 -> { StarData.id= 40130214; name= "DT-TCD - Star"; solarSystemId= 30002041; typeId= 3800; age= 28867848492L; luminosity= 0.013910; radius= 294700000L; spectralClass= "M3 V"; temperature= 2903 } |> Some
-      | 40141854 -> { StarData.id= 40141854; name= "Harva - Star"; solarSystemId= 30002225; typeId= 6; age= 12668897054L; luminosity= 0.807500; radius= 746200000L; spectralClass= "G9 V"; temperature= 5035 } |> Some
+      | 40141854 -> { StarData.id= 40141854; name= "Harva - Star"; solarSystemId= 30002225; typeId= 56082; age= 12668897054L; luminosity= 0.807500; radius= 746200000L; spectralClass= "G9 V"; temperature= 5035 } |> Some
       | 40146801 -> { StarData.id= 40146801; name= "BY-7PY - Star"; solarSystemId= 30002305; typeId= 45033; age= 4198671596L; luminosity= 0.066690; radius= 338100000L; spectralClass= "K6 V"; temperature= 4010 } |> Some
       | 40146995 -> { StarData.id= 40146995; name= "0M-24X - Star"; solarSystemId= 30002308; typeId= 45047; age= 6869977500L; luminosity= 0.010250; radius= 74430000L; spectralClass= "G6 VI"; temperature= 5352 } |> Some
       | 40152524 -> { StarData.id= 40152524; name= "Orien - Star"; solarSystemId= 30002399; typeId= 3798; age= 19510355218L; luminosity= 0.013080; radius= 129400000L; spectralClass= "K4 V"; temperature= 4313 } |> Some

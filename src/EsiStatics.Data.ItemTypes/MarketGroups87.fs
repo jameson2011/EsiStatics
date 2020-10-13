@@ -13,7 +13,7 @@ module internal MarketGroups87=
       | 1833 -> { MarketGroupData.id= 1833; name= "Mobile Tractor Units"; parentMarketGroupId= Some(404); typeIds= [| 33475; 33700; 33702 |]; description= "" } |> Some
       | 2027 -> { MarketGroupData.id= 2027; name= "Minmatar"; parentMarketGroupId= Some(2023); typeIds= [| 36833; 46914; 48518; 47176; 55689; 48522; 52432; 52888; 36786; 45977; 40504; 35705 |]; description= "" } |> Some
       | 2221 -> { MarketGroupData.id= 2221; name= "Point Defense Batteries"; parentMarketGroupId= Some(2208); typeIds= [| 35926; 47327 |]; description= "" } |> Some
-      | 2318 -> { MarketGroupData.id= 2318; name= "ORE"; parentMarketGroupId= Some(1972); typeIds= [| 43811; 43785; 43850; 43758; 43824; 43672; 46990; 43798; 42680; 43771; 43837; 42623 |]; description= "" } |> Some
+      | 2318 -> { MarketGroupData.id= 2318; name= "ORE"; parentMarketGroupId= Some(1972); typeIds= [| 43811; 56614; 43785; 43850; 43758; 43824; 43672; 46990; 43798; 42680; 43771; 43837; 42623 |]; description= "" } |> Some
       | 2415 -> { MarketGroupData.id= 2415; name= "Armor Reinforcers"; parentMarketGroupId= Some(2163); typeIds= [| 47361 |]; description= "" } |> Some
       | 2512 -> { MarketGroupData.id= 2512; name= "Weapon Upgrade Mutaplasmids"; parentMarketGroupId= Some(2436); typeIds= [|  |]; description= "" } |> Some
       | 2706 -> { MarketGroupData.id= 2706; name= "Jump Filaments"; parentMarketGroupId= Some(2456); typeIds= [| 53984; 53985; 53986; 53987; 53977; 53983 |]; description= "Filaments that jump fleets unpredictably to other locations in known space." } |> Some

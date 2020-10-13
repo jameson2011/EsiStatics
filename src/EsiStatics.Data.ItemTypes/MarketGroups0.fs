@@ -14,7 +14,7 @@ module internal MarketGroups0=
       | 2037 -> { MarketGroupData.id= 2037; name= "Interdictors"; parentMarketGroupId= Some(2036); typeIds= [|  |]; description= "" } |> Some
       | 2134 -> { MarketGroupData.id= 2134; name= "Micro Jump Field Generators"; parentMarketGroupId= Some(252); typeIds= [| 37621 |]; description= "" } |> Some
       | 2231 -> { MarketGroupData.id= 2231; name= "Structure Antisubcapital Launcher"; parentMarketGroupId= Some(2226); typeIds= [| 35922; 47298 |]; description= "" } |> Some
-      | 2328 -> { MarketGroupData.id= 2328; name= "ORE"; parentMarketGroupId= Some(2085); typeIds= [| 54920; 46994; 54911; 43676; 46743 |]; description= "" } |> Some
+      | 2328 -> { MarketGroupData.id= 2328; name= "ORE"; parentMarketGroupId= Some(2085); typeIds= [| 54920; 56618; 46994; 46743; 43676; 54911 |]; description= "" } |> Some
       | 2425 -> { MarketGroupData.id= 2425; name= "Precursor Frigates"; parentMarketGroupId= Some(1361); typeIds= [|  |]; description= "Precursor Frigates" } |> Some
       | 2522 -> { MarketGroupData.id= 2522; name= "Precursor Destroyers"; parentMarketGroupId= Some(1372); typeIds= [|  |]; description= "Precursor Destroyers" } |> Some
       | 291 -> { MarketGroupData.id= 291; name= "Small"; parentMarketGroupId= Some(286); typeIds= [| 10679; 1112; 1113; 1114; 1115; 1116 |]; description= "Blueprints of small hybrid turrets." } |> Some

@@ -5,7 +5,7 @@ module internal Stars2=
     let getStar id = 
       match id with 
       | 40011144 -> { StarData.id= 40011144; name= "Keikaken - Star"; solarSystemId= 30000176; typeId= 8; age= 27891855364L; luminosity= 0.025350; radius= 211800000L; spectralClass= "K6 V"; temperature= 3978 } |> Some
-      | 40012114 -> { StarData.id= 40012114; name= "Otanuomi - Star"; solarSystemId= 30000192; typeId= 3796; age= 1436104170L; luminosity= 4.135000; radius= 808300032L; spectralClass= "F1 V"; temperature= 7278 } |> Some
+      | 40012114 -> { StarData.id= 40012114; name= "Otanuomi - Star"; solarSystemId= 30000192; typeId= 56084; age= 1436104170L; luminosity= 4.135000; radius= 808300032L; spectralClass= "F1 V"; temperature= 7278 } |> Some
       | 40013375 -> { StarData.id= 40013375; name= "B-588R - Star"; solarSystemId= 30000211; typeId= 45032; age= 8213552519L; luminosity= 0.056260; radius= 371700000L; spectralClass= "K8 V"; temperature= 3665 } |> Some
       | 40030544 -> { StarData.id= 40030544; name= "J-L9MA - Star"; solarSystemId= 30000489; typeId= 45032; age= 11959084760L; luminosity= 0.062430; radius= 353400000L; spectralClass= "K7 V"; temperature= 3858 } |> Some
       | 40040341 -> { StarData.id= 40040341; name= "U93O-A - Star"; solarSystemId= 30000644; typeId= 45033; age= 15831369002L; luminosity= 0.071420; radius= 337800000L; spectralClass= "K5 V"; temperature= 4082 } |> Some
