@@ -51,6 +51,7 @@
     <Compile Include="Regions46.fs" />
     <Compile Include="Regions47.fs" />
     <Compile Include="Regions48.fs" />
+    <Compile Include="Regions49.fs" />
     <Compile Include="Regions61.fs" />
     <Compile Include="Regions77.fs" />
     <Compile Include="Regions78.fs" />

@@ -5,7 +5,6 @@ module internal AsteroidBelts76=
     let getAsteroidBelt id = 
       match id with 
       | 40001130 -> { AsteroidBeltData.id= 40001130; name= "Futzchag VIII - Asteroid Belt 1"; planetId= 40001128; solarSystemId= 30000017; position= {x = -4.615848346e+11;  y = -7.162343424e+10;  z = -1.083827528e+12;} } |> Some
-      | 40001421 -> { AsteroidBeltData.id= 40001421; name= "Kuharah III - Asteroid Belt 1"; planetId= 40001419; solarSystemId= 30000021; position= {x = -2.395656192e+10;  y = -1633689600.0;  z = 1.856831078e+11;} } |> Some
       | 40003070 -> { AsteroidBeltData.id= 40003070; name= "Ihal IV - Asteroid Belt 1"; planetId= 40003069; solarSystemId= 30000048; position= {x = -2.261846016e+11;  y = -3357941760.0;  z = -1.701849907e+11;} } |> Some
       | 40003458 -> { AsteroidBeltData.id= 40003458; name= "Khankenirdia VIII - Asteroid Belt 1"; planetId= 40003457; solarSystemId= 30000056; position= {x = 8.441745408e+10;  y = 8650874880.0;  z = -3.371318354e+12;} } |> Some
       | 40004040 -> { AsteroidBeltData.id= 40004040; name= "Akhrad III - Asteroid Belt 1"; planetId= 40004039; solarSystemId= 30000065; position= {x = 3.486437376e+10;  y = -1362862080.0;  z = 7.006629888e+10;} } |> Some
@@ -21,8 +20,6 @@ module internal AsteroidBelts76=
       | 40008114 -> { AsteroidBeltData.id= 40008114; name= "Ahtulaima VIII - Asteroid Belt 3"; planetId= 40008092; solarSystemId= 30000125; position= {x = -1.114454385e+12;  y = -2.231229235e+11;  z = 3.036488909e+11;} } |> Some
       | 40008211 -> { AsteroidBeltData.id= 40008211; name= "Sirseshin VI - Asteroid Belt 1"; planetId= 40008209; solarSystemId= 30000127; position= {x = 4.563199181e+11;  y = 7.24137984e+10;  z = -5.78893824e+10;} } |> Some
       | 40008696 -> { AsteroidBeltData.id= 40008696; name= "Outuni XII - Asteroid Belt 2"; planetId= 40008690; solarSystemId= 30000135; position= {x = 3.837464371e+12;  y = 3.075874406e+11;  z = -5.471420006e+11;} } |> Some
-      | 40009957 -> { AsteroidBeltData.id= 40009957; name= "Otela III - Asteroid Belt 2"; planetId= 40009955; solarSystemId= 30000157; position= {x = -1.820778086e+11;  y = 2156666880.0;  z = -3.449451725e+11;} } |> Some
-      | 40010054 -> { AsteroidBeltData.id= 40010054; name= "Otela VI - Asteroid Belt 12"; planetId= 40010023; solarSystemId= 30000157; position= {x = 1.13151873e+12;  y = -1.423478784e+10;  z = -5.42016e+12;} } |> Some
       | 40011606 -> { AsteroidBeltData.id= 40011606; name= "Nuken IX - Asteroid Belt 1"; planetId= 40011605; solarSystemId= 30000183; position= {x = 2.64086016e+12;  y = 2.319039283e+11;  z = 1.339238277e+12;} } |> Some
       | 40011897 -> { AsteroidBeltData.id= 40011897; name= "Kiainti III - Asteroid Belt 1"; planetId= 40011896; solarSystemId= 30000189; position= {x = 7.327076352e+10;  y = -410787840.0;  z = 4987576320.0;} } |> Some
       | 40012382 -> { AsteroidBeltData.id= 40012382; name= "Otsela VIII - Asteroid Belt 1"; planetId= 40012381; solarSystemId= 30000194; position= {x = 7.416281088e+11;  y = -9597788160.0;  z = 3.543241482e+12;} } |> Some
@@ -305,7 +302,6 @@ module internal AsteroidBelts76=
       | 40174954 -> { AsteroidBeltData.id= 40174954; name= "Usi VI - Asteroid Belt 1"; planetId= 40174953; solarSystemId= 30002755; position= {x = 3.195716444e+12;  y = -3.868155494e+11;  z = 6.277515264e+11;} } |> Some
       | 40175342 -> { AsteroidBeltData.id= 40175342; name= "Yashunen IX - Asteroid Belt 1"; planetId= 40175341; solarSystemId= 30002762; position= {x = -2.090108068e+12;  y = 2.252580864e+11;  z = -1.571480986e+12;} } |> Some
       | 40175633 -> { AsteroidBeltData.id= 40175633; name= "Iivinen X - Asteroid Belt 2"; planetId= 40175625; solarSystemId= 30002766; position= {x = 1.707405435e+12;  y = -2.868578304e+11;  z = 3.549424312e+12;} } |> Some
-      | 40175924 -> { AsteroidBeltData.id= 40175924; name= "Tunudan IX - Asteroid Belt 4"; planetId= 40175901; solarSystemId= 30002770; position= {x = 3.003426816e+11;  y = -9948979200.0;  z = -3.01132075e+12;} } |> Some
       | 40176312 -> { AsteroidBeltData.id= 40176312; name= "Ono VI - Asteroid Belt 1"; planetId= 40176311; solarSystemId= 30002779; position= {x = 1.474751324e+12;  y = 1.509178982e+11;  z = 1.523461939e+12;} } |> Some
       | 40177476 -> { AsteroidBeltData.id= 40177476; name= "Hysera VII - Asteroid Belt 1"; planetId= 40177474; solarSystemId= 30002796; position= {x = 5.334352159e+12;  y = -4.4831232e+11;  z = -4.236464579e+12;} } |> Some
       | 40178349 -> { AsteroidBeltData.id= 40178349; name= "Onatoh VII - Asteroid Belt 1"; planetId= 40178326; solarSystemId= 30002811; position= {x = 1.252296253e+12;  y = 9.088217088e+10;  z = 9.55173888e+11;} } |> Some

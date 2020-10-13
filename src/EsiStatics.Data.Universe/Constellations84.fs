@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal Constellations84=
     let getConstellation id = 
       match id with 
-      | 20000029 -> { ConstellationData.id= 20000029; name= "Orpana"; regionId= 10000002; solarSystemIds= [| 30000201; 30000202; 30000203; 30000204; 30000205; 30000206; 30000207 |]; position= {x = -9.77662679e+16;  y = 7.148116632e+16;  z = 1.444526032e+17;} } |> Some
+      | 20000029 -> { ConstellationData.id= 20000029; name= "Orpana"; regionId= 10000002; solarSystemIds= [| 30000201; 30000202; 30000203; 30000204; 30000205; 30000207 |]; position= {x = -9.77662679e+16;  y = 7.148116632e+16;  z = 1.444526032e+17;} } |> Some
       | 20000126 -> { ConstellationData.id= 20000126; name= "LLAP-1"; regionId= 10000010; solarSystemIds= [| 30000861; 30000862; 30000863; 30000864; 30000865; 30000866 |]; position= {x = -1.319755616e+17;  y = 1.04012241e+17;  z = 2.169351762e+17;} } |> Some
       | 20000223 -> { ConstellationData.id= 20000223; name= "2RX9-6"; regionId= 10000017; solarSystemIds= [| 30001512; 30001513; 30001514; 30001515; 30001516; 30001517 |]; position= {x = -2.260163057e+16;  y = 9.006804692e+16;  z = 2.417335668e+17;} } |> Some
       | 20000320 -> { ConstellationData.id= 20000320; name= "WTE-CK"; regionId= 10000025; solarSystemIds= [| 30002172; 30002173; 30002174; 30002175; 30002176; 30002177 |]; position= {x = 4.288299095e+16;  y = -1.58598755e+16;  z = -2.454462934e+17;} } |> Some

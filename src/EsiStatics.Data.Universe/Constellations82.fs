@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal Constellations82=
     let getConstellation id = 
       match id with 
-      | 20000027 -> { ConstellationData.id= 20000027; name= "Etsala"; regionId= 10000002; solarSystemIds= [| 30000188; 30000189; 30000190; 30000191; 30000192; 30000193; 30000194 |]; position= {x = -9.179470434e+16;  y = 7.9537338e+16;  z = 1.360239214e+17;} } |> Some
+      | 20000027 -> { ConstellationData.id= 20000027; name= "Etsala"; regionId= 10000002; solarSystemIds= [| 30000188; 30000189; 30000190; 30000191; 30000193; 30000194 |]; position= {x = -9.179470434e+16;  y = 7.9537338e+16;  z = 1.360239214e+17;} } |> Some
       | 20000124 -> { ConstellationData.id= 20000124; name= "1P-VL2"; regionId= 10000010; solarSystemIds= [| 30000846; 30000847; 30000848; 30000849; 30000850; 30000851 |]; position= {x = -1.489413427e+17;  y = 8.43219575e+16;  z = 1.998143572e+17;} } |> Some
       | 20000221 -> { ConstellationData.id= 20000221; name= "F-8DMX"; regionId= 10000017; solarSystemIds= [| 30001500; 30001501; 30001502; 30001503; 30001504; 30001505 |]; position= {x = 4.622110045e+16;  y = 6.459300259e+16;  z = 2.116418865e+17;} } |> Some
       | 20000318 -> { ConstellationData.id= 20000318; name= "EL8Z-M"; regionId= 10000025; solarSystemIds= [| 30002159; 30002160; 30002161; 30002162; 30002163; 30002164 |]; position= {x = 3.8867358e+16;  y = -1.643237991e+16;  z = -2.283891846e+17;} } |> Some

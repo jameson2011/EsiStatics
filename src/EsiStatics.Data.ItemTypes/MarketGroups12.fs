@@ -16,7 +16,7 @@ module internal MarketGroups12=
       | 206 -> { MarketGroupData.id= 206; name= "Cruisers"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of cruiser-class vessels." } |> Some
       | 2146 -> { MarketGroupData.id= 2146; name= "Logistics Frigates"; parentMarketGroupId= Some(1364); typeIds= [|  |]; description= "Frigates specialized in repairing their allies" } |> Some
       | 2243 -> { MarketGroupData.id= 2243; name= "Capital"; parentMarketGroupId= Some(668); typeIds= [| 41491; 41492; 41493; 41494; 41495 |]; description= "Capital-sized capacitor boosters." } |> Some
-      | 2340 -> { MarketGroupData.id= 2340; name= ""; parentMarketGroupId= Some(2203); typeIds= [|  |]; description= "" } |> Some
+      | 2340 -> { MarketGroupData.id= 2340; name= "Structure Engineering Rigs"; parentMarketGroupId= Some(2203); typeIds= [|  |]; description= "Structure Engineering Rigs" } |> Some
       | 2437 -> { MarketGroupData.id= 2437; name= "Armor Mutaplasmids"; parentMarketGroupId= Some(2436); typeIds= [|  |]; description= "Mutaplasmids that are used on Armor modules" } |> Some
       | 2534 -> { MarketGroupData.id= 2534; name= "Assault Damage Control Mutaplasmids"; parentMarketGroupId= Some(2532); typeIds= [| 52228; 52229; 52231 |]; description= "Assault Damage Control Mutaplasmids" } |> Some
       | 2728 -> { MarketGroupData.id= 2728; name= "Condenser Packs"; parentMarketGroupId= Some(11); typeIds= [|  |]; description= "Condenser Pack charges used in Vorton Projectors" } |> Some

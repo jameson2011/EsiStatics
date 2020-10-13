@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal Stars69=
     let getStar id = 
       match id with 
-      | 40001414 -> { StarData.id= 40001414; name= "Kuharah - Star"; solarSystemId= 30000021; typeId= 45046; age= 4639136296L; luminosity= 2.566000; radius= 810600000L; spectralClass= "F6 V"; temperature= 6450 } |> Some
+      | 40001414 -> { StarData.id= 40001414; name= "Kuharah - Star"; solarSystemId= 30000021; typeId= 56098; age= 4639136296L; luminosity= 2.566000; radius= 810600000L; spectralClass= "F6 V"; temperature= 6450 } |> Some
       | 40002287 -> { StarData.id= 40002287; name= "Nimambal - Star"; solarSystemId= 30000035; typeId= 45047; age= 5637310889L; luminosity= 0.172100; radius= 310900000L; spectralClass= "G6 V"; temperature= 5300 } |> Some
       | 40027410 -> { StarData.id= 40027410; name= "DG-8VJ - Star"; solarSystemId= 30000441; typeId= 10; age= 2872208341L; luminosity= 1.372000; radius= 506100000L; spectralClass= "F3 V"; temperature= 6980 } |> Some
       | 40036528 -> { StarData.id= 40036528; name= "YI-GV6 - Star"; solarSystemId= 30000583; typeId= 3798; age= 16934114132L; luminosity= 0.013240; radius= 123900000L; spectralClass= "K3 V"; temperature= 4422 } |> Some

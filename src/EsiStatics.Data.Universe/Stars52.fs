@@ -19,7 +19,7 @@ module internal Stars52=
       | 40080840 -> { StarData.id= 40080840; name= "1-Y6KI - Star"; solarSystemId= 30001270; typeId= 3800; age= 44395012693L; luminosity= 0.030000; radius= 578499968L; spectralClass= "M5 V"; temperature= 2511 } |> Some
       | 40083168 -> { StarData.id= 40083168; name= "EIV-1W - Star"; solarSystemId= 30001307; typeId= 3800; age= 28718914483L; luminosity= 0.028730; radius= 549800000L; spectralClass= "M5 V"; temperature= 2548 } |> Some
       | 40087048 -> { StarData.id= 40087048; name= "Hageken - Star"; solarSystemId= 30001367; typeId= 10; age= 2889002995L; luminosity= 1.413000; radius= 518500000L; spectralClass= "F3 V"; temperature= 6947 } |> Some
-      | 40089958 -> { StarData.id= 40089958; name= "Nani - Star"; solarSystemId= 30001413; typeId= 45030; age= 6334448527L; luminosity= 0.764000; radius= 717800000L; spectralClass= "G9 V"; temperature= 5063 } |> Some
+      | 40089958 -> { StarData.id= 40089958; name= "Nani - Star"; solarSystemId= 30001413; typeId= 56086; age= 6334448527L; luminosity= 0.764000; radius= 717800000L; spectralClass= "G9 V"; temperature= 5063 } |> Some
       | 40095002 -> { StarData.id= 40095002; name= "WDJQ-G - Star"; solarSystemId= 30001493; typeId= 45032; age= 9978578623L; luminosity= 0.121300; radius= 597500032L; spectralClass= "K9 V"; temperature= 3503 } |> Some
       | 40105187 -> { StarData.id= 40105187; name= "Nafomeh - Star"; solarSystemId= 30001651; typeId= 45036; age= 968704874L; luminosity= 0.447800; radius= 473300000L; spectralClass= "G5 V"; temperature= 5456 } |> Some
       | 40111880 -> { StarData.id= 40111880; name= "O-O2GN - Star"; solarSystemId= 30001751; typeId= 45047; age= 4917991243L; luminosity= 0.309700; radius= 455100000L; spectralClass= "G9 V"; temperature= 5074 } |> Some

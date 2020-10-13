@@ -15,7 +15,7 @@ module internal MarketGroups3=
       | 2040 -> { MarketGroupData.id= 2040; name= "Gallente"; parentMarketGroupId= Some(2037); typeIds= [| 46402; 55628; 44908; 45890; 36399; 42164; 52725; 37562; 46940 |]; description= "" } |> Some
       | 2137 -> { MarketGroupData.id= 2137; name= "Amarr"; parentMarketGroupId= Some(2136); typeIds= [| 40320; 45766; 43495; 53608; 42759; 42557; 55353; 46781 |]; description= "" } |> Some
       | 2234 -> { MarketGroupData.id= 2234; name= "Ballistic Control Systems"; parentMarketGroupId= Some(2227); typeIds= [| 47342; 35959 |]; description= "" } |> Some
-      | 2331 -> { MarketGroupData.id= 2331; name= "ORE"; parentMarketGroupId= Some(2330); typeIds= [| 46993; 43675 |]; description= "" } |> Some
+      | 2331 -> { MarketGroupData.id= 2331; name= "ORE"; parentMarketGroupId= Some(2330); typeIds= [| 46993; 43675; 56611 |]; description= "" } |> Some
       | 2428 -> { MarketGroupData.id= 2428; name= "Triglavian"; parentMarketGroupId= Some(2427); typeIds= [| 49712; 47270 |]; description= "Triglavian Cruisers" } |> Some
       | 2525 -> { MarketGroupData.id= 2525; name= "Triglavian"; parentMarketGroupId= Some(2524); typeIds= [| 49711 |]; description= "Triglavian Battlecruisers." } |> Some
       | 391 -> { MarketGroupData.id= 391; name= "Shuttles"; parentMarketGroupId= Some(4); typeIds= [|  |]; description= "Fast and cheap vessels for easy transport" } |> Some
