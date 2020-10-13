@@ -14,9 +14,9 @@ module SolarSystemDistanceFinder=
 
     [<Theory>]
     [<InlineData("adirain", 2.<LY>, false, 9)>]
-    [<InlineData("adirain", 2.<LY>, true, 1)>]
+    [<InlineData("adirain", 2.<LY>, true, 2)>]
     [<InlineData("adirain", 8.<LY>, false, 391)>]
-    [<InlineData("adirain", 8.<LY>, true, 140)>]
+    [<InlineData("adirain", 8.<LY>, true, 143)>]
     let ``find neighbours``(search: string, distance: float<LY>, ignoreHighsec: bool, expectedCount: int)=
                 
         let system = search  |> finder.Find |> Seq.head
