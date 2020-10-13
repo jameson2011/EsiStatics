@@ -17,6 +17,10 @@ module Geometry=
             |> euclidean'
             |> Units.toMetres
 
-
+    let internal euclideanData (p1: Data.Entities.PositionData) (p2: Data.Entities.PositionData) =
+        [ p1.x - p2.x; p1.y - p2.y; p1.z - p2.z ]
+            |> Seq.map float
+            |> euclidean'
+            |> Units.toMetres
     
     
