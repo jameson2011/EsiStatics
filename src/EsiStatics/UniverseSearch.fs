@@ -28,7 +28,7 @@ type SolarSystemFinder(eagerIndex) =
         
 type SolarSystemDistanceFinder(eagerIndex) =
 
-    let neighbourMaxDistance = 10.<LY> 
+    let neighbourMaxDistance = 10.1<LY> 
     
     let distance (x: Data.Entities.SolarSystemData) (y: Data.Entities.SolarSystemData)= Geometry.euclideanData x.position y.position |> metresToLY
     
