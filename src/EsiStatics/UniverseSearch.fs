@@ -54,7 +54,7 @@ type SolarSystemDistanceFinder(eagerIndex) =
 
             let systems = systems |> Array.ofSeq
             systems
-                |> Seq.map (fun s -> (s.id, neighbours systems s) )
+                |> Array.Parallel.map (fun s -> (s.id, neighbours systems s) )
                 |> Map.ofSeq
         )
             
