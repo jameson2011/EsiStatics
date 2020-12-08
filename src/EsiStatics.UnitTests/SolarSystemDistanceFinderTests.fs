@@ -7,10 +7,10 @@ open EsiStatics.Units
 open FluentAssertions
 
 module SolarSystemDistanceFinder=
-    
-
+        
     let finder = new SolarSystemFinder()
-    let distances = new SolarSystemDistanceFinder()
+    let distances = new SolarSystemDistanceFinder(true)
+    
 
     [<Theory>]
     [<InlineData("adirain", 2.<LY>, false, 9)>]

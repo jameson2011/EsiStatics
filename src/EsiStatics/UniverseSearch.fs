@@ -15,8 +15,7 @@ type SolarSystemFinder(eagerIndex) =
                             |> Seq.map (fun s -> (s.name,  s.id))
                             |> ReadonlyTrie.Create
         )
-
-    
+            
     do  if eagerIndex then index.Value |> ignore
 
     new() = SolarSystemFinder(false)
@@ -29,37 +28,39 @@ type SolarSystemFinder(eagerIndex) =
         
 type SolarSystemDistanceFinder(eagerIndex) =
 
-    let neighbourMaxDistance = 10.<LY>
-
+    let neighbourMaxDistance = 10.<LY> 
+    
+    let distance (x: Data.Entities.SolarSystemData) (y: Data.Entities.SolarSystemData)= Geometry.euclideanData x.position y.position |> metresToLY
+    
+    let systems = Regions.regions()
+                        |> Seq.collect (fun r -> r.constellationIds)
+                        |> Seq.map (Constellations.getConstellation >> Option.get)
+                        |> Seq.collect (fun c -> c.solarSystemIds)
+                        |> Seq.map (SolarSystems.getSolarSystem >> Option.get)
+                        |> Seq.filter (fun ss ->    ss.secRating = Data.Entities.SystemSecurity.Lowsec || 
+                                                    ss.secRating = Data.Entities.SystemSecurity.Highsec ||
+                                                    ss.secRating = Data.Entities.SystemSecurity.Nullsec)
+    
     let index =
         lazy (                            
             // Approximately O(n^2) 
-            let neighbours (allSystems: Data.Entities.SolarSystemData[]) (system: Data.Entities.SolarSystemData)=
-                let distance (x: Data.Entities.SolarSystemData)= Geometry.euclideanData system.position x.position |> metresToLY                                
+            let neighbours (allSystems: Data.Entities.SolarSystemData seq) (system: Data.Entities.SolarSystemData)=                
                 allSystems 
                     |> Seq.filter (fun s -> s <> system)
-                    |> Seq.map (fun s -> (distance s, s.id))
+                    |> Seq.map (fun s -> (distance s system, s.id))
                     |> Seq.filter (fun (d,_) -> d <= neighbourMaxDistance)
-                    |> Seq.sortBy fst
+                    |> Seq.sortBy fst                    
                     |> Array.ofSeq
-            
-            let systems = Regions.regions()
-                                |> Seq.collect (fun r -> r.constellationIds)
-                                |> Seq.map (Constellations.getConstellation >> Option.get)
-                                |> Seq.collect (fun c -> c.solarSystemIds)
-                                |> Seq.map (SolarSystems.getSolarSystem >> Option.get)
-                                |> Seq.filter (fun ss ->    ss.secRating = Data.Entities.SystemSecurity.Lowsec || 
-                                                            ss.secRating = Data.Entities.SystemSecurity.Highsec ||
-                                                            ss.secRating = Data.Entities.SystemSecurity.Nullsec)
-                                |> Array.ofSeq
-            
-            systems 
+
+            let systems = systems |> Array.ofSeq
+            systems
                 |> Seq.map (fun s -> (s.id, neighbours systems s) )
                 |> Map.ofSeq
         )
-
+            
     do  if eagerIndex then index.Value |> ignore
     
+
     new() = SolarSystemDistanceFinder(false)
 
     member this.Find(system: SolarSystem) (distance: float<LY>)= 
