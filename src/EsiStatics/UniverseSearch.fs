@@ -41,17 +41,17 @@ type SolarSystemDistanceFinder(eagerIndex) =
                                                     ss.secRating = Data.Entities.SystemSecurity.Highsec ||
                                                     ss.secRating = Data.Entities.SystemSecurity.Nullsec)
     
-    let index =
-        lazy (                            
-            // Approximately O(n^2) 
-            let neighbours (allSystems: Data.Entities.SolarSystemData seq) (system: Data.Entities.SolarSystemData)=                
-                allSystems 
-                    |> Seq.filter (fun s -> s <> system)
-                    |> Seq.map (fun s -> (distance s system, s.id))
-                    |> Seq.filter (fun (d,_) -> d <= neighbourMaxDistance)
-                    |> Seq.sortBy fst                    
-                    |> Array.ofSeq
+    // Approximately O(n^2) 
+    let neighbours (allSystems: Data.Entities.SolarSystemData seq) (system: Data.Entities.SolarSystemData)=                
+        allSystems 
+            |> Seq.filter (fun s -> s <> system)
+            |> Seq.map (fun s -> (distance s system, s.id))
+            |> Seq.filter (fun (d,_) -> d <= neighbourMaxDistance)
+            |> Seq.sortBy fst                    
+            |> Array.ofSeq
 
+    let index =
+        lazy (                                        
             let systems = systems |> Array.ofSeq
             systems
                 |> Array.Parallel.map (fun s -> (s.id, neighbours systems s) )
@@ -60,11 +60,15 @@ type SolarSystemDistanceFinder(eagerIndex) =
             
     do  if eagerIndex then index.Value |> ignore
     
+    let findNeighbours (system: SolarSystem) = 
+        match eagerIndex with
+        | true ->   index.Value |> Map.tryFind system.Id
+        | _ ->      system.Id |> SolarSystems.getSolarSystem |> Option.get |> neighbours systems  |> Some
 
     new() = SolarSystemDistanceFinder(false)
 
     member this.Find(system: SolarSystem) (distance: float<LY>)= 
-        match index.Value |> Map.tryFind system.Id with
+        match findNeighbours system with
         | Some xs -> xs |> Seq.takeWhile (fun (d, _) -> d <= distance)
                         |> Seq.map (fun (d, s) -> (SolarSystems.knownSystem s, d)) 
                         |> Array.ofSeq
