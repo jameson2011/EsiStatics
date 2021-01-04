@@ -14,6 +14,10 @@ module KnownSystems =
     [<Literal>]
     let avenod = 30002089
     [<Literal>]
+    let schoorasana = 30002654
+    [<Literal>]
+    let amamake = 30002537
+    [<Literal>]
     let thera = 31000005
     [<Literal>]
     let ``QX-LIJ`` = 30004714
@@ -25,6 +29,19 @@ module KnownSystems =
     let heild = 30002390
 
     let knownSystem = EsiStatics.SolarSystems.byId >> Option.get
+
+[<AutoOpen>]
+module KnownItemTypes=
+    [<Literal>]
+    let rifter = 587
+    [<Literal>]
+    let sin = 22430
+    [<Literal>]
+    let thanatos = 23911
+    [<Literal>]
+    let rhea = 28844
+
+    let knownItemType = EsiStatics.ItemTypes.itemType >> Option.get
 
 [<AutoOpen>]
 module UniverseHelpers=
