@@ -60,19 +60,25 @@ type SolarSystemDistanceFinder(eagerIndex) =
             
     do  if eagerIndex then index.Value |> ignore
     
-    let findNeighbours (system: SolarSystem) = 
+    let findNeighbours (systemId) = 
         match eagerIndex with
-        | true ->   index.Value |> Map.tryFind system.Id
-        | _ ->      system.Id |> SolarSystems.getSolarSystem |> Option.get |> neighbours systems  |> Some
+        | true ->   index.Value |> Map.tryFind systemId
+        | _ ->      systemId |> SolarSystems.getSolarSystem |> Option.get |> neighbours systems  |> Some
 
     new() = SolarSystemDistanceFinder(false)
 
     member this.Find(system: SolarSystem) (distance: float<LY>)= 
-        match findNeighbours system with
+        match findNeighbours system.Id with
         | Some xs -> xs |> Seq.takeWhile (fun (d, _) -> d <= distance)
                         |> Seq.map (fun (d, s) -> (SolarSystems.knownSystem s, d)) 
                         |> Array.ofSeq
         | _ -> [| |]
+    member internal this.FindData(system: EsiStatics.Data.Entities.SolarSystemData) (distance: float<LY>)= 
+        match findNeighbours system.id with
+        | Some xs -> xs |> Seq.takeWhile (fun (d, _) -> d <= distance)
+                        |> Seq.map (fun (d, s) -> (Data.Universe.SolarSystems.getSolarSystem s |> Option.get, d)) 
+                        |> Array.ofSeq
+        | _ -> [| |]        
 
 type ConstellationFinder(eagerIndex) =
     

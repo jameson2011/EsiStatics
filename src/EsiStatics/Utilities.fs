@@ -37,4 +37,5 @@ module internal Seq=
 
 module internal Math=
     let sq (x: float) = x * x
+    let abs (x: float) = Math.Abs(x)
 
