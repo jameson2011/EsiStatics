@@ -24,8 +24,8 @@ type JumpPlan =
     } with
     [<CompiledName("Empty")>]
     static member empty = 
-        { JumpPlan.ship = None; jumpDriveCalibration = 0; jumpDriveConservation = 0; jumpFreighter = None; route = [||]; plans = 1; 
-                    distanceWeight = 1.; stationDockingWeight = 1.; avoidPochvenWeight = 1.; emptyStationsWeight = 1. }
+        { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; plans = 1; 
+                    distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1. }
     static member setCalibration (level) (plan: JumpPlan)=
         { plan with jumpDriveCalibration = level }
     static member setConservation (level) (plan: JumpPlan)=
@@ -88,15 +88,14 @@ type JumpPlanResult =
         isotopes:   float
     }
 
-// TODO: internal / private
-module JumpNavigation =
+module internal JumpNavigation =
 
     [<Literal>]
-    let internal jumpDriveRangeAttributeId = 867
+    let jumpDriveRangeAttributeId = 867
     [<Literal>]
-    let internal jumpDriveRangeBonusAttributeId = 870
+    let jumpDriveRangeBonusAttributeId = 870
     [<Literal>]
-    let internal jumpDriveConsumptionAmountAttributeId = 868
+    let jumpDriveConsumptionAmountAttributeId = 868
 
     let dogmaAttribute = DogmaAttributes.getDogmaAttribute >> Option.get
     let systemData = EsiStatics.Data.Universe.SolarSystems.getSolarSystem >> Option.get
@@ -178,7 +177,7 @@ type JumpNavigator(plan: JumpPlan, distanceFinder: SolarSystemDistanceFinder)=
     
 
     let systemStations (system: Data.Entities.SolarSystemData) = system.stationIds |> Array.map (Data.Universe.Stations.getStation >> Option.get)
-    let fuelConsumption = JumpNavigation.fuelConsumption 5 None shipData
+    let fuelConsumption = JumpNavigation.fuelConsumption plan.jumpDriveConservation None shipData
     let validateSystems (systems: SolarSystemData list) = 
         let rec validate (systems: SolarSystemData list) count result= 
             match systems with
