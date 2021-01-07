@@ -44,6 +44,15 @@ module KnownItemTypes=
     let knownItemType = EsiStatics.ItemTypes.itemType >> Option.get
 
 [<AutoOpen>]
+module KnownStations = 
+    [<Literal>]
+    let instadockStation = 60013870
+    [<Literal>]
+    let averageStation = 60003715
+    [<Literal>]
+    let kickoutStation = 60005203
+
+[<AutoOpen>]
 module UniverseHelpers=
     open EsiStatics.Data.Entities
     open EsiStatics.Data.Universe
@@ -68,3 +77,4 @@ module UniverseHelpers=
                             |> Seq.map (fun sg -> sg.destinationSolarSystemId)
                             |> Seq.map getSolarSystem
                             |> Array.ofSeq
+

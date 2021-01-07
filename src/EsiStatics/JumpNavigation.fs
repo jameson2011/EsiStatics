@@ -140,9 +140,12 @@ module internal JumpNavigation =
 
     let dockableStationScore (station: Station) =                                    
         match station.DockingRange, station.Radius with
-        | Some dr, Some r -> if float dr > float r then 1. else 0.
-        | Some dr, _ -> 0.
-        | _, Some r -> 0.
+        | Some dr, Some r ->    match float dr / float r with
+                                | x when x > 1. -> 1.
+                                | x when x > 0.5 -> 0.5
+                                | _ -> 0.                                
+        | Some dr, _ -> 0.5
+        | _, Some r -> 0.5
         | _ -> 0.
        
 
