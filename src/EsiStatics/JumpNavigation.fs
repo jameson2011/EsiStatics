@@ -26,26 +26,7 @@ type JumpPlan =
     static member empty = 
         { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; plans = 1; 
                     distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1. }
-    static member setCalibration (level) (plan: JumpPlan)=
-        { plan with jumpDriveCalibration = level }
-    static member setConservation (level) (plan: JumpPlan)=
-        { plan with jumpDriveConservation = level }
-    static member setJumpFreighter (level) (plan: JumpPlan)=
-        { plan with jumpFreighter = level }
-    static member setShip (ship: ItemType) (plan: JumpPlan)=
-        { plan with ship = Some ship }
-    static member setRoute (route: SolarSystem[]) (plan: JumpPlan)=
-        { plan with route = route }
-    static member setPlans (value) (plan: JumpPlan)=
-        { plan with plans = value }
-    static member setDistanceWeight (value) (plan: JumpPlan)=
-        { plan with distanceWeight = value }
-    static member setStationDockingWeight (value) (plan: JumpPlan)=
-        { plan with stationDockingWeight = value }
-    static member setEmptyStationsWeight (value) (plan: JumpPlan)=
-        { plan with emptyStationsWeight = value }
-    static member setAvoidPochvenWeight (value) (plan: JumpPlan)=
-        { plan with avoidPochvenWeight = value }
+    
 
 type JumpStage = 
     {
@@ -165,8 +146,8 @@ module internal JumpNavigation =
         | _ -> 0.
        
 
-type JumpNavigator(plan: JumpPlan, distanceFinder: SolarSystemDistanceFinder)=  
-    
+type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: JumpPlan)=  
+    // TODO: validate plan, skills, etc.    
     let ship = plan.ship |> Option.get
     let shipData = EsiStatics.Data.ItemTypes.ItemTypes.getItemType ship.Id |> Option.get
     let shipRange = ship.Id |> Data.ItemTypes.ItemTypes.getItemType |> Option.get |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
@@ -336,7 +317,7 @@ type JumpNavigator(plan: JumpPlan, distanceFinder: SolarSystemDistanceFinder)=
         systems |> Seq.windowed 2
                 |> Seq.map (fun (ss) -> stage ss.[0] ss.[1])
     
-    new(plan) = JumpNavigator(plan, new SolarSystemDistanceFinder(false))
+    new(plan) = JumpNavigator(new SolarSystemDistanceFinder(false), plan)
 
     member this.FindRoute()=
         let stages = plan.route 
@@ -353,3 +334,28 @@ type JumpNavigator(plan: JumpPlan, distanceFinder: SolarSystemDistanceFinder)=
 
         [ { JumpPlanResult.score = 1.; stages = stages; distance = totalDistance; isotopes = totalIsotopes }  ]
         
+module JumpRouteNavigation =
+    let findRoute distanceFinder plan = 
+        let nav = new JumpNavigator(distanceFinder, plan)
+        nav.FindRoute()
+
+    let calibration (level) (plan: JumpPlan)=
+        { plan with jumpDriveCalibration = level }
+    let conservation (level) (plan: JumpPlan)=
+        { plan with jumpDriveConservation = level }
+    let jumpFreighter (level) (plan: JumpPlan)=
+        { plan with jumpFreighter = level }
+    let ship (ship: ItemType) (plan: JumpPlan)=
+        { plan with ship = Some ship }
+    let route (route: SolarSystem[]) (plan: JumpPlan)=
+        { plan with route = route }
+    let plans (value) (plan: JumpPlan)=
+        { plan with plans = value }
+    let distanceWeight (value) (plan: JumpPlan)=
+        { plan with distanceWeight = value }
+    let stationDockingWeight (value) (plan: JumpPlan)=
+        { plan with stationDockingWeight = value }
+    let emptyStationsWeight (value) (plan: JumpPlan)=
+        { plan with emptyStationsWeight = value }
+    let avoidPochvenWeight (value) (plan: JumpPlan)=
+        { plan with avoidPochvenWeight = value }

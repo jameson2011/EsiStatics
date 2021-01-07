@@ -7,6 +7,8 @@ open FluentAssertions
 
 module JumpNavigatorTests=
 
+    let distanceFinder = new SolarSystemDistanceFinder(true)
+
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, KnownItemTypes.sin, 5, 5, 1., 1)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, KnownItemTypes.sin, 5, 5, 0, 1)>]
@@ -30,18 +32,16 @@ module JumpNavigatorTests=
         let ship = knownItemType ship
 
         let plan = JumpPlan.empty 
-                    |> JumpPlan.setCalibration callibration
-                    |> JumpPlan.setConservation conservation
-                    |> JumpPlan.setRoute route
-                    |> JumpPlan.setShip ship
-                    |> JumpPlan.setDistanceWeight 1.
-                    |> JumpPlan.setStationDockingWeight 0.
-                    |> JumpPlan.setAvoidPochvenWeight 1.
-                    |> JumpPlan.setEmptyStationsWeight emptyStationsWeight
-        
-        let jn = new JumpNavigator(plan)
-
-        let r = jn.FindRoute()
+                    |> JumpRouteNavigation.calibration callibration
+                    |> JumpRouteNavigation.conservation conservation
+                    |> JumpRouteNavigation.route route
+                    |> JumpRouteNavigation.ship ship
+                    |> JumpRouteNavigation.distanceWeight 1.
+                    |> JumpRouteNavigation.stationDockingWeight 0.
+                    |> JumpRouteNavigation.avoidPochvenWeight 1.
+                    |> JumpRouteNavigation.emptyStationsWeight emptyStationsWeight
+                
+        let r = JumpRouteNavigation.findRoute distanceFinder plan
 
         r.Head.stages.Length.Should().NotBe(0, "") |> ignore
         r.Head.stages.Length.Should().Be(expectedJumps, "") |> ignore
@@ -57,19 +57,17 @@ module JumpNavigatorTests=
         let ship = knownItemType ship
 
         let plan = JumpPlan.empty 
-                    |> JumpPlan.setCalibration callibration
-                    |> JumpPlan.setConservation conservation
-                    |> JumpPlan.setRoute route
-                    |> JumpPlan.setShip ship
-                    |> JumpPlan.setDistanceWeight 1.
-                    |> JumpPlan.setStationDockingWeight 1.
-                    |> JumpPlan.setAvoidPochvenWeight 1.
-                    |> JumpPlan.setEmptyStationsWeight 1.
-                    |> JumpPlan.setEmptyStationsWeight emptyStationsWeight
+                    |> JumpRouteNavigation.calibration callibration
+                    |> JumpRouteNavigation.conservation conservation
+                    |> JumpRouteNavigation.route route
+                    |> JumpRouteNavigation.ship ship
+                    |> JumpRouteNavigation.distanceWeight 1.
+                    |> JumpRouteNavigation.stationDockingWeight 1.
+                    |> JumpRouteNavigation.avoidPochvenWeight 1.
+                    |> JumpRouteNavigation.emptyStationsWeight emptyStationsWeight
         
-        let jn = new JumpNavigator(plan)
-
-        let r = jn.FindRoute()
+        
+        let r = JumpRouteNavigation.findRoute distanceFinder plan
 
         r.Head.stages.Length.Should().NotBe(0, "") |> ignore
         r.Head.stages.Length.Should().Be(expectedJumps, "") |> ignore
