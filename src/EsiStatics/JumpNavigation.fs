@@ -308,11 +308,17 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
         let stage (start: SolarSystem) (finish: SolarSystem)= 
             let distanceToDestination = Geometry.euclidean start.Position finish.Position |> metresToLY;
             let isotopesToDestination = fuelConsumption distanceToDestination
-            
+                         
+            let station = finish.Stations()
+                            |> Seq.map (fun s -> (s, JumpNavigation.dockableStationScore s))
+                            |> Seq.sortByDescending snd
+                            |> Seq.map fst
+                            |> Seq.tryHead
+
             { JumpStage.system = finish; 
                         distance = distanceToDestination;
                         isotopes = isotopesToDestination;
-                        station = None } // TODO: pick the best station
+                        station = station }
             
         systems |> Seq.windowed 2
                 |> Seq.map (fun (ss) -> stage ss.[0] ss.[1])
