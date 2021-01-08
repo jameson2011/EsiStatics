@@ -3,4 +3,3 @@ FSharp.Core
 xunit.runner.visualstudio
 FluentAssertions
 FsCheck.XUnit
-FsUnit.xUnit

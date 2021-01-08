@@ -1,6 +1,5 @@
 ﻿namespace EsiStatics
 
-open System
 open System.Collections.Generic
 open EsiStatics.Data.Entities;
 open EsiStatics.Data.ItemTypes;
@@ -151,6 +150,7 @@ module internal JumpNavigation =
        
 
 type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: JumpPlan)=  
+    // TODO: validate plan, skills, etc.    
     let ship = plan.ship |> Option.get
     let shipData = EsiStatics.Data.ItemTypes.ItemTypes.getItemType ship.Id |> Option.get
     let shipRange = ship.Id |> Data.ItemTypes.ItemTypes.getItemType |> Option.get |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
@@ -344,28 +344,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
         [ { JumpPlanResult.score = 1.; stages = stages; distance = totalDistance; isotopes = totalIsotopes }  ]
         
 module JumpRouteNavigation =
-    let internal (||++) = List.append 
-
-    let internal validate (predication: bool) (error: unit -> string) =
-        if predication then [ error() ] else []
-
-    let internal validateSkill (skillName) (value: int)=
-        validate (value < 1 || value > 5) (fun () -> sprintf "Invalid skill value for %s" skillName)
-        
-    let internal validationErrors (plan: JumpPlan)=
-        validateSkill "jumpDriveConservation" plan.jumpDriveConservation 
-            ||++ (validateSkill "jumpDriveCalibration" plan.jumpDriveCalibration)
-            ||++ (plan.jumpFreighter |> Option.map (validateSkill "jumpFreighter") |> Option.defaultValue [])
-            ||++ (validate (Option.isNone plan.ship) (fun () -> "Missing ship") )
-            ||++ (validate (plan.route.Length = 0)   (fun () -> "Missing route") )
-        
-    let internal validatePlan (plan: JumpPlan)=
-        plan |> validationErrors |> invalidOpIfNotEmpty
-        plan
-                
-
     let findRoute distanceFinder plan = 
-        let plan = validatePlan plan
         let nav = new JumpNavigator(distanceFinder, plan)
         nav.FindRoute()
 
@@ -373,8 +352,8 @@ module JumpRouteNavigation =
         { plan with jumpDriveCalibration = level }
     let conservation (level) (plan: JumpPlan)=
         { plan with jumpDriveConservation = level }
-    let jumpFreighter (level: int) (plan: JumpPlan)=        
-        { plan with jumpFreighter = Some level}
+    let jumpFreighter (level) (plan: JumpPlan)=
+        { plan with jumpFreighter = level }
     let ship (ship: ItemType) (plan: JumpPlan)=
         { plan with ship = Some ship }
     let route (route: SolarSystem[]) (plan: JumpPlan)=
