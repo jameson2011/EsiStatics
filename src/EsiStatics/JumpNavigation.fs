@@ -150,7 +150,6 @@ module internal JumpNavigation =
        
 
 type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: JumpPlan)=  
-    // TODO: validate plan, skills, etc.    
     let ship = plan.ship |> Option.get
     let shipData = EsiStatics.Data.ItemTypes.ItemTypes.getItemType ship.Id |> Option.get
     let shipRange = ship.Id |> Data.ItemTypes.ItemTypes.getItemType |> Option.get |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
