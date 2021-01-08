@@ -344,6 +344,25 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
         [ { JumpPlanResult.score = 1.; stages = stages; distance = totalDistance; isotopes = totalIsotopes }  ]
         
 module JumpRouteNavigation =
+    let internal (||++) = List.append 
+    
+    let internal validate (predication: bool) (error: unit -> string) =
+        if predication then [ error() ] else []
+    
+    let internal validateSkill (skillName) (value: int)=
+        validate (value < 1 || value > 5) (fun () -> sprintf "Invalid skill value for %s" skillName)
+    
+    let internal validationErrors (plan: JumpPlan)=
+        validateSkill "jumpDriveConservation" plan.jumpDriveConservation 
+            ||++ (validateSkill "jumpDriveCalibration" plan.jumpDriveCalibration)
+            ||++ (plan.jumpFreighter |> Option.map (validateSkill "jumpFreighter") |> Option.defaultValue [])
+            ||++ (validate (Option.isNone plan.ship) (fun () -> "Missing ship") )
+            ||++ (validate (plan.route.Length = 0)   (fun () -> "Missing route") )
+    
+    let internal validatePlan (plan: JumpPlan)=
+        plan |> validationErrors |> invalidOpIfNotEmpty
+        plan
+
     let findRoute distanceFinder plan = 
         let nav = new JumpNavigator(distanceFinder, plan)
         nav.FindRoute()
