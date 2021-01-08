@@ -18,10 +18,9 @@ module internal Throws=
             InvalidOperationException(message) |> raise
         value
 
-    let invalidOpIfNotEmpty (messages: seq<string>) =
-        let msgs = messages |> Array.ofSeq
-        if msgs.Length > 0 then 
-            let msg = msgs |> String.join Environment.NewLine
+    let invalidOpIfNotEmpty (messages: seq<string>) =        
+        let msg = messages |> String.join Environment.NewLine
+        if msg.Length > 0 then 
             InvalidOperationException(msg) |> raise
         
 
