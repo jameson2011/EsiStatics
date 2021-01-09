@@ -12,11 +12,10 @@ type internal stationPicker = (Station -> (float * Station) [] )
 type JumpPlan =
     {
         ship:                   ItemType option
+        route:                  SolarSystem[]
         jumpDriveCalibration:   int
         jumpDriveConservation:  int
         jumpFreighter:          int option
-        route:                  SolarSystem[]
-        plans:                  int
         avoidPochvenWeight:     float
         distanceWeight:         float
         stationDockingWeight:   float
@@ -24,7 +23,7 @@ type JumpPlan =
     } with
     [<CompiledName("Empty")>]
     static member empty = 
-        { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; plans = 1; 
+        { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; 
                     distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1. }
     
 
@@ -68,6 +67,28 @@ type JumpPlanResult =
         distance:   float<LY>
         isotopes:   float
     }
+
+type SolarSystemInfo = 
+    {
+        solarSystemId:      int
+
+        jumps:              int option
+        shipKills:          int option
+        podKills:           int option
+        npcKills:           int option
+
+        incursion:          bool option
+
+        triglavian:         bool option
+        edencom:            bool option
+    }
+
+type ISolarSystemInfoProvider =
+    abstract member GetSolarSystemInfos : unit -> SolarSystemInfo []
+
+type SolarSystemInfoProvider =
+    interface ISolarSystemInfoProvider with 
+        member this.GetSolarSystemInfos() = [||]
 
 module internal JumpNavigation =
 
@@ -184,6 +205,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
     let jumpStageData  (destination: SolarSystemData) (system: SolarSystemData) =
         let distanceToDestination = Geometry.euclideanData system.position destination.position |> metresToLY;
         let isotopesToDestination = fuelConsumption distanceToDestination
+
         { JumpStageData.system =                    system;
                         score =                     0.;
                         relativeDistanceScore =     0.;
@@ -191,7 +213,12 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
                         isotopesToDestination =     isotopesToDestination;
                         stations =                  systemStations system;
                         neighbours =                systemNeighbours system;
-                        nearestHighsecSystem =      None; kills = None; podKills = None; incursion =  None; triglavian = None; edencom = None;
+                        nearestHighsecSystem =      None; 
+                        kills =                     None; 
+                        podKills =                  None; 
+                        incursion =                 None; 
+                        triglavian =                None; 
+                        edencom =                   None;
         }
        
     
@@ -237,7 +264,6 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
 
             // TODO: future scores:
             // total kills per system
-            // total docking range per station?
             // midpoints - distance to highsec            
             // incursion / trig / edencom
             // ganks / gatecamps
@@ -376,8 +402,6 @@ module JumpRouteNavigation =
         { plan with ship = Some ship }
     let route (route: SolarSystem[]) (plan: JumpPlan)=
         { plan with route = route }
-    let plans (value) (plan: JumpPlan)=
-        { plan with plans = value }
     let distanceWeight (value) (plan: JumpPlan)=
         { plan with distanceWeight = value }
     let stationDockingWeight (value) (plan: JumpPlan)=
