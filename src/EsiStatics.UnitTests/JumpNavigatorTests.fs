@@ -8,6 +8,9 @@ open FluentAssertions
 module JumpNavigatorTests=
 
     let distanceFinder = new SolarSystemDistanceFinder(true)
+    let solarSystemInfoProvider =  { 
+        new ISolarSystemInfoProvider with
+            member this.GetSolarSystemInfos() = [| |] }
 
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, KnownItemTypes.sin, 5, 5, 0., 1., 1)>]
@@ -43,11 +46,38 @@ module JumpNavigatorTests=
                     |> JumpRouteNavigation.stationDockingWeight dockingStationsWeight
                     |> JumpRouteNavigation.emptyStationsWeight emptyStationsWeight
                 
-        let r = JumpRouteNavigation.findRoute distanceFinder plan
+        
+        let r = JumpRouteNavigation.findRoute distanceFinder solarSystemInfoProvider plan
 
         r.Head.stages.Length.Should().NotBe(0, "") |> ignore
         r.Head.stages.Length.Should().Be(expectedJumps, "") |> ignore
 
+    [<Theory>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, KnownItemTypes.sin, KnownSystems.schoorasana, 2)>]
+    let findRouteWithSolarSystemInfo(start, finish, ship, expectedMid, expectedJumps: int) =
+        let route = [| start; finish |] |> Array.map knownSystem
+        
+        let solarSystemInfoProviderMock =  { 
+            new ISolarSystemInfoProvider with
+                member this.GetSolarSystemInfos() = [|  { SolarSystemInfo.solarSystemId = expectedMid; 
+                                                                            jumps = Some 10; shipKills = None; podKills = None; npcKills = None;
+                                                                            incursion = Some false; triglavian = Some false; edencom = Some false } |] 
+            }
+
+        let plan = JumpPlan.empty 
+                    |> JumpRouteNavigation.calibration 5
+                    |> JumpRouteNavigation.conservation 5
+                    |> JumpRouteNavigation.route route
+                    |> JumpRouteNavigation.ship (knownItemType ship)
+                    |> JumpRouteNavigation.stationDockingWeight 1.
+                    |> JumpRouteNavigation.emptyStationsWeight 1.
+
+        let r = JumpRouteNavigation.findRoute distanceFinder solarSystemInfoProviderMock plan
+
+        r.Head.stages.Length.Should().NotBe(0, "") |> ignore
+        r.Head.stages.Length.Should().Be(expectedJumps, "") |> ignore
+    
+                    
     
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.schoorasana, KnownSystems.avenod, KnownItemTypes.sin, 5, 5, 1., 2)>]
@@ -69,7 +99,7 @@ module JumpNavigatorTests=
                     |> JumpRouteNavigation.emptyStationsWeight emptyStationsWeight
         
         
-        let r = JumpRouteNavigation.findRoute distanceFinder plan
+        let r = JumpRouteNavigation.findRoute distanceFinder solarSystemInfoProvider plan
 
         r.Head.stages.Length.Should().NotBe(0, "") |> ignore
         r.Head.stages.Length.Should().Be(expectedJumps, "") |> ignore

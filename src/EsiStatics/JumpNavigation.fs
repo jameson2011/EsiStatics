@@ -20,11 +20,13 @@ type JumpPlan =
         distanceWeight:         float
         stationDockingWeight:   float
         emptyStationsWeight:    float
+        jumpsWeight:            float
     } with
     [<CompiledName("Empty")>]
     static member empty = 
         { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; 
-                    distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1. }
+                    distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1.;
+                    jumpsWeight = 0.}
     
 
 type JumpStage = 
@@ -45,7 +47,8 @@ type internal JumpStageData =
         stations:                       StationData []
         neighbours:                     (SolarSystemData * float<LY>) []
         nearestHighsecSystem:           SolarSystemData option
-        kills:                          int option
+        jumps:                          int option
+        shipKills:                      int option
         podKills:                       int option
         incursion:                      bool option
         triglavian:                     bool option
@@ -56,8 +59,12 @@ type internal JumpStageDataStats =
     {
         maxDistance:    float
         minDistance:    float
-        distanceOffset:  float
+        distanceOffset: float
         distanceScale:  float
+
+        maxJumps:       float
+        minJumps:       float
+        jumpsScale:     float
     }
 
 type JumpPlanResult =
@@ -85,10 +92,6 @@ type SolarSystemInfo =
 
 type ISolarSystemInfoProvider =
     abstract member GetSolarSystemInfos : unit -> SolarSystemInfo []
-
-type SolarSystemInfoProvider =
-    interface ISolarSystemInfoProvider with 
-        member this.GetSolarSystemInfos() = [||]
 
 module internal JumpNavigation =
 
@@ -170,7 +173,7 @@ module internal JumpNavigation =
         | _ -> 0.
        
 
-type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: JumpPlan)=  
+type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSystemInfoProvider: ISolarSystemInfoProvider, plan: JumpPlan)=  
     let ship = plan.ship |> Option.get
     let shipData = EsiStatics.Data.ItemTypes.ItemTypes.getItemType ship.Id |> Option.get
     let shipRange = ship.Id |> Data.ItemTypes.ItemTypes.getItemType |> Option.get |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
@@ -178,7 +181,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
     let systemNeighbours system = distanceFinder.FindData system shipRange 
                                     |> Array.filter (fst >> JumpNavigation.jumpableSystem)
 
-    
+    let solarSystemInfos = solarSystemInfoProvider.GetSolarSystemInfos() |> Seq.map (fun i -> (i.solarSystemId, i)) |> Map.ofSeq
 
     let systemStations (system: Data.Entities.SolarSystemData) = system.stationIds |> Array.map (Data.Universe.Stations.getStation >> Option.get)
     let fuelConsumption = JumpNavigation.fuelConsumption plan.jumpDriveConservation None shipData
@@ -206,21 +209,33 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
         let distanceToDestination = Geometry.euclideanData system.position destination.position |> metresToLY;
         let isotopesToDestination = fuelConsumption distanceToDestination
 
-        { JumpStageData.system =                    system;
-                        score =                     0.;
-                        relativeDistanceScore =     0.;
-                        distanceToDestination =     distanceToDestination;
-                        isotopesToDestination =     isotopesToDestination;
-                        stations =                  systemStations system;
-                        neighbours =                systemNeighbours system;
-                        nearestHighsecSystem =      None; 
-                        kills =                     None; 
-                        podKills =                  None; 
-                        incursion =                 None; 
-                        triglavian =                None; 
-                        edencom =                   None;
-        }
-       
+        let systemInfo = solarSystemInfos |> Map.tryFind system.id
+
+        let result =    { JumpStageData.system =                    system;
+                                        score =                     0.;
+                                        relativeDistanceScore =     0.;
+                                        distanceToDestination =     distanceToDestination;
+                                        isotopesToDestination =     isotopesToDestination;
+                                        stations =                  systemStations system;
+                                        neighbours =                systemNeighbours system;
+                                        nearestHighsecSystem =      None; 
+                                        jumps =                     None;
+                                        shipKills =                 None; 
+                                        podKills =                  None; 
+                                        incursion =                 None; 
+                                        triglavian =                None; 
+                                        edencom =                   None;
+                        }
+
+        match systemInfo with
+        | None ->       result
+        | Some si ->    { result with   jumps = si.jumps;
+                                        shipKills = si.shipKills;
+                                        podKills = si.podKills;
+                                        incursion = si.incursion;
+                                        triglavian = si.triglavian;
+                                        edencom = si.edencom;
+                        }
     
     let relativeValues (totalDistanceToDestination: float<LY>) (stage: JumpStageData) =                     
         let distance =  if stage.distanceToDestination > totalDistanceToDestination then System.Double.MaxValue
@@ -232,14 +247,22 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
         let distances = stages |> Seq.map (fun s -> s.relativeDistanceScore ) |> Seq.cache
         let maxDistance = distances |> Seq.max
         let minDistance = distances |> Seq.min
-                
+                        
         let diffDistance = maxDistance - minDistance |> Math.abs
-        let factor = if diffDistance = 0. then 1. else 1. / diffDistance 
-                
+        let distanceFactor = if diffDistance = 0. then 1. else 1. / diffDistance 
+        
+        let jumps = stages |> Seq.map (fun s -> s.jumps) |> Seq.reduceOptions |> Seq.cache
+        let maxJumps = jumps |> Seq.maxSafe 0 |> float
+        let minJumps = jumps |> Seq.minSafe 0 |> float
+
         { JumpStageDataStats.minDistance = minDistance; 
                             maxDistance = maxDistance;
                             distanceOffset = minDistance;
-                            distanceScale = factor }
+                            distanceScale = distanceFactor;
+                            maxJumps = maxJumps; 
+                            minJumps = minJumps;
+                            jumpsScale = if maxJumps <> 0. then minJumps / maxJumps else 0.
+                            }
 
     let scoreJumpState (stats: JumpStageDataStats)(plan: JumpPlan) (destination: SolarSystemData) (stage: JumpStageData)  = 
                 
@@ -262,17 +285,22 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
                 | [] -> 1.
                 | xs -> xs |> Seq.map (fun x -> 1. - x) |> Seq.max
 
+            
+            let jumpsScore =  stage.jumps 
+                                |> Option.map (float >> (*) stats.jumpsScale)
+                                |> Option.defaultValue 0.
+                                
             // TODO: future scores:
-            // total kills per system
+            // total kills per system            
             // midpoints - distance to highsec            
             // incursion / trig / edencom
             // ganks / gatecamps
-            
-            
+                        
             let result =    (distanceScore  * plan.distanceWeight) + 
                             (pochvenAvoidScore * plan.avoidPochvenWeight) + 
                             (stationDockingScore * plan.stationDockingWeight) + 
-                            (emptyStationScores * plan.emptyStationsWeight)
+                            (emptyStationScores * plan.emptyStationsWeight) + 
+                            (jumpsScore * plan.jumpsWeight)
 
             result
 
@@ -351,8 +379,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, plan: Jum
         systems |> Seq.windowed 2
                 |> Seq.map (fun (ss) -> stage ss.[0] ss.[1])
     
-    new(plan) = JumpNavigator(new SolarSystemDistanceFinder(false), plan)
-
+    
     member this.FindRoute()=
         let stages = plan.route 
                         |> Seq.map (fun ss -> ss.Id |> JumpNavigation.systemData)
@@ -388,8 +415,8 @@ module JumpRouteNavigation =
         plan |> validationErrors |> invalidOpIfNotEmpty
         plan
 
-    let findRoute distanceFinder plan = 
-        let nav = new JumpNavigator(distanceFinder, plan)
+    let findRoute distanceFinder solarSystemInfoProvider plan = 
+        let nav = new JumpNavigator(distanceFinder, solarSystemInfoProvider, plan)
         nav.FindRoute()
 
     let calibration (level) (plan: JumpPlan)=

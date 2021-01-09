@@ -34,6 +34,13 @@ module internal Seq=
             | h::t ->   let tail = t |> List.skipWhile(fun x -> x = h)
                         reduce (h::result) tail
         values |> List.ofSeq |> reduce [] |> List.rev
+    let maxSafe defaultValue values = 
+        if values |> Seq.isEmpty then defaultValue
+        else values |> Seq.max
+    let minSafe defaultValue values = 
+        if values |> Seq.isEmpty then defaultValue
+        else values |> Seq.min
+
 
 module internal Math=
     let sq (x: float) = x * x
