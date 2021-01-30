@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Utilities.fs" />
     <Compile Include="Collections.fs" />
     <Compile Include="Units.fs" />
@@ -23,6 +24,7 @@
     <Compile Include="UniverseExtensions.fs" />
     <Compile Include="UniverseSearch.fs" />
     <Compile Include="ItemTypes.fs" />
+    <Compile Include="JumpNavigation.fs" />
     <Compile Include="Corporations.fs" />
     <Compile Include="ItemTypesFinder.fs" />
     <Compile Include="CategoriesFinder.fs" />

@@ -12,7 +12,7 @@ module internal MarketGroups4=
       | 1653 -> { MarketGroupData.id= 1653; name= "Freight Containers"; parentMarketGroupId= Some(379); typeIds= [| 33003; 33005; 33007; 33009; 33011; 24445 |]; description= "Freight Containers" } |> Some
       | 1847 -> { MarketGroupData.id= 1847; name= "Encounter Surveillance Systems"; parentMarketGroupId= Some(404); typeIds= [| 33608; 33585; 33610; 33595 |]; description= "Deployables that monitor bounty payout activity in the system" } |> Some
       | 1944 -> { MarketGroupData.id= 1944; name= "Bottoms, extras"; parentMarketGroupId= Some(1402); typeIds= [| 34048; 34049; 34050; 34051; 34052; 33989; 34054; 34055; 34053; 34045; 34046; 34047 |]; description= "" } |> Some
-      | 2041 -> { MarketGroupData.id= 2041; name= "Minmatar"; parentMarketGroupId= Some(2037); typeIds= [| 45952; 40482; 50083; 48838; 52425; 46891; 36813; 52863; 45557; 55694; 52287; 36766; 36447 |]; description= "" } |> Some
+      | 2041 -> { MarketGroupData.id= 2041; name= "Minmatar"; parentMarketGroupId= Some(2037); typeIds= [| 45952; 40482; 50083; 48838; 52425; 46891; 36813; 52863; 57013; 45557; 55694; 52287; 36766; 36447 |]; description= "" } |> Some
       | 2138 -> { MarketGroupData.id= 2138; name= "Caldari"; parentMarketGroupId= Some(2136); typeIds= [| 40321; 55557; 45825; 48168; 53162; 40592; 46835; 46102 |]; description= "" } |> Some
       | 2235 -> { MarketGroupData.id= 2235; name= "Missile Guidance Enhancers"; parentMarketGroupId= Some(2227); typeIds= [| 35962; 47340 |]; description= "" } |> Some
       | 2332 -> { MarketGroupData.id= 2332; name= "Engineering Service Modules"; parentMarketGroupId= Some(2210); typeIds= [| 35877; 35878; 35881; 45550; 35891; 35886 |]; description= "" } |> Some

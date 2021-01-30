@@ -14,7 +14,7 @@ module internal MarketGroups61=
       | 1807 -> { MarketGroupData.id= 1807; name= "Large Targeting Rigs"; parentMarketGroupId= Some(1796); typeIds= [| 26101; 26103 |]; description= "Blueprints of Large Targeting Rigs." } |> Some
       | 1904 -> { MarketGroupData.id= 1904; name= "Yan Jung"; parentMarketGroupId= Some(1897); typeIds= [| 23168; 23169; 23138; 23139; 23140; 23141; 23142; 23170; 23172; 23171; 23128; 23129; 23130; 23131; 23132 |]; description= "Artifacts of the Yan Jung civilization." } |> Some
       | 2001 -> { MarketGroupData.id= 2001; name= "Standard Frigates"; parentMarketGroupId= Some(1998); typeIds= [|  |]; description= "" } |> Some
-      | 2098 -> { MarketGroupData.id= 2098; name= "Minmatar"; parentMarketGroupId= Some(2094); typeIds= [| 55680; 40515; 45990; 36454; 36844; 46927; 36797; 52901 |]; description= "" } |> Some
+      | 2098 -> { MarketGroupData.id= 2098; name= "Minmatar"; parentMarketGroupId= Some(2094); typeIds= [| 55680; 40515; 45990; 36454; 56937; 36844; 46927; 36797; 52901 |]; description= "" } |> Some
       | 2292 -> { MarketGroupData.id= 2292; name= "Information Command Burst Charges"; parentMarketGroupId= Some(2290); typeIds= [| 42877; 42878; 42879 |]; description= "Information Command Burst Charges" } |> Some
       | 2389 -> { MarketGroupData.id= 2389; name= "Gallente"; parentMarketGroupId= Some(2315); typeIds= [| 46928; 55594; 45869; 44887 |]; description= "Gallente Shuttle Skins" } |> Some
       | 2486 -> { MarketGroupData.id= 2486; name= "Triglavian"; parentMarketGroupId= Some(2484); typeIds= [| 52417; 49922; 53315; 53665; 48649; 54219; 48653; 48563; 52697; 52442; 50139; 53022; 52351 |]; description= "Triglavian Frigates" } |> Some

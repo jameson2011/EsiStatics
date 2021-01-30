@@ -9,6 +9,7 @@ module internal Groups5=
       | 1945 -> { GroupData.id= 1945; name= "Structure Resource Rig XL - Reprocessing"; categoryId= 66; published= true; typeIds= [| 46641; 46642 |] } |> Some
       | 199 -> { GroupData.id= 199; name= "Career Bonus"; categoryId= 14; published= false; typeIds= [| 1675; 1676; 1677; 1678; 1679; 1680 |] } |> Some
       | 296 -> { GroupData.id= 296; name= "Shield Resistance Amplifier Blueprint"; categoryId= 9; published= true; typeIds= [| 1809; 2530; 2532; 2538; 2540; 2546; 2548; 2554; 15910; 15912; 15914; 15916; 15918; 15920; 15922; 15924; 20606; 20608; 20610; 20612 |] } |> Some
+      | 4079 -> { GroupData.id= 4079; name= "Encounter Surveillance System"; categoryId= 2; published= true; typeIds= [| 55914 |] } |> Some
       | 490 -> { GroupData.id= 490; name= "Strip Miner Blueprint"; categoryId= 9; published= true; typeIds= [| 16279; 17483; 17913; 22230; 24306; 28753; 28755 |] } |> Some
       | 5 -> { GroupData.id= 5; name= "Solar System"; categoryId= 2; published= false; typeIds= [| 5 |] } |> Some
       | 684 -> { GroupData.id= 684; name= "Mission Minmatar Republic Destroyer"; categoryId= 11; published= false; typeIds= [| 24797; 24798; 24799; 24801; 24805; 24810; 45468 |] } |> Some

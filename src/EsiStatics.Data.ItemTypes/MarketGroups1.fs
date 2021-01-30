@@ -12,7 +12,7 @@ module internal MarketGroups1=
       | 1747 -> { MarketGroupData.id= 1747; name= "Shields"; parentMarketGroupId= Some(150); typeIds= [| 3425; 21059; 21802; 12365; 11566; 12367; 24571; 44067; 12366; 3416; 3419; 3420; 3422 |]; description= "Skills pertaining to management of a spaceship's energy barriers" } |> Some
       | 1844 -> { MarketGroupData.id= 1844; name= "Mobile Micro Jump Units"; parentMarketGroupId= Some(404); typeIds= [| 33591 |]; description= "" } |> Some
       | 1941 -> { MarketGroupData.id= 1941; name= "Jump Economizers"; parentMarketGroupId= Some(132); typeIds= [| 34122; 34124; 34126 |]; description= "" } |> Some
-      | 2038 -> { MarketGroupData.id= 2038; name= "Amarr"; parentMarketGroupId= Some(2037); typeIds= [| 46785; 42563; 43499; 45772; 42765; 48846; 55345; 53614; 36313; 37499 |]; description= "" } |> Some
+      | 2038 -> { MarketGroupData.id= 2038; name= "Amarr"; parentMarketGroupId= Some(2037); typeIds= [| 46785; 42563; 43499; 45772; 42765; 48846; 55345; 57010; 53614; 36313; 37499 |]; description= "" } |> Some
       | 2135 -> { MarketGroupData.id= 2135; name= "Micro Jump Field Generators"; parentMarketGroupId= Some(52); typeIds= [| 37479 |]; description= "" } |> Some
       | 2232 -> { MarketGroupData.id= 2232; name= "Citadel Service Modules"; parentMarketGroupId= Some(2210); typeIds= [| 35892; 35894 |]; description= "" } |> Some
       | 2426 -> { MarketGroupData.id= 2426; name= "Triglavian"; parentMarketGroupId= Some(2425); typeIds= [| 47269 |]; description= "Triglavian Frigates" } |> Some

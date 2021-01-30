@@ -12,7 +12,7 @@ module internal MarketGroups2=
       | 1845 -> { MarketGroupData.id= 1845; name= "Mobile Scan Inhibitors"; parentMarketGroupId= Some(404); typeIds= [| 33589 |]; description= "" } |> Some
       | 1942 -> { MarketGroupData.id= 1942; name= "Pilot's Services"; parentMarketGroupId= Some(1922); typeIds= [| 34132; 34133 |]; description= "Services available for various customization for capsuleers" } |> Some
       | 2 -> { MarketGroupData.id= 2; name= "Blueprints & Reactions"; parentMarketGroupId= None; typeIds= [|  |]; description= "Blueprints are data items used in industry for manufacturing, research and invention jobs" } |> Some
-      | 2039 -> { MarketGroupData.id= 2039; name= "Caldari"; parentMarketGroupId= Some(2037); typeIds= [| 53168; 36357; 45831; 36648; 48174; 36720; 55560; 40596; 46839; 52632; 46108 |]; description= "" } |> Some
+      | 2039 -> { MarketGroupData.id= 2039; name= "Caldari"; parentMarketGroupId= Some(2037); typeIds= [| 53168; 36357; 45831; 36648; 48174; 36720; 55560; 40596; 46839; 52632; 57012; 46108 |]; description= "" } |> Some
       | 2136 -> { MarketGroupData.id= 2136; name= "Logistics Frigates"; parentMarketGroupId= Some(2042); typeIds= [|  |]; description= "" } |> Some
       | 2233 -> { MarketGroupData.id= 2233; name= "Resource Processing Service Modules"; parentMarketGroupId= Some(2210); typeIds= [| 45539; 45009; 45538; 35899; 45537 |]; description= "" } |> Some
       | 2330 -> { MarketGroupData.id= 2330; name= "Special Edition Industrial Ships"; parentMarketGroupId= Some(2006); typeIds= [|  |]; description= "" } |> Some

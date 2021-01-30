@@ -28,5 +28,6 @@ module internal DogmaEffects54=
       | 6941 -> { DogmaEffectData.id= 6941; name= "subsystemBonusCaldariDefensive2HardenerHeat"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7038 -> { DogmaEffectData.id= 7038; name= "shipBonusHeavyAssaultMissileKineticDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7232 -> { DogmaEffectData.id= 7232; name= "modifyDamageMultiplierBonusMax"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8105 -> { DogmaEffectData.id= 8105; name= "skillMultiplierAccessDifficultyBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 927 -> { DogmaEffectData.id= 927; name= "caldariCruiserSkillLevelPreMulShipBonusCC2Ship"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

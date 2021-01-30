@@ -17,6 +17,10 @@ type ConstellationData = { id: int; name: string; regionId: int; solarSystemIds:
 [<Struct>]
 type SolarSystemData = { id: int; name: string; constellationId: int; position: PositionData; secRating: SystemSecurity; secClass: string; secStatus: float; stargateIds: int[]; stationIds: int[]; starIds: int[]; planets: PlanetRefData[] }
 [<Struct>]
+type SolarSystemJumpData = { distance: float; solarSystemId: int }
+[<Struct>]
+type SolarSystemJumpsData = { solarSystemId: int; jumps: SolarSystemJumpData[] }
+[<Struct>]
 type PlanetData = { id: int; name: string; solarSystemId: int; position: PositionData; typeId: int; asteroidBeltIds: int[]; moonIds: int[] }
 [<Struct>]
 type StarData = { id: int; name: string; solarSystemId: int; typeId: int; age: int64; luminosity: float; radius: int64; spectralClass: string; temperature: int }

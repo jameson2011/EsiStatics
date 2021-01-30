@@ -4,7 +4,7 @@ open EsiStatics.Data.Entities
 module internal DogmaEffects11=
     let getDogmaEffect id = 
       match id with 
-      | 11 -> { DogmaEffectData.id= 11; name= "loPower"; description= "Requires a low power slot."; displayName= "Low power"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 11 -> { DogmaEffectData.id= 11; name= "loPower"; description= "Requires a low power slot"; displayName= "Low power"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 1660 -> { DogmaEffectData.id= 1660; name= "freighterA2SkillLevel"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 205 -> { DogmaEffectData.id= 205; name= "signatureAnalysisScanspeedBonusPostPercentScanSpeedLocationShip"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 2727 -> { DogmaEffectData.id= 2727; name= "gasCloudHarvestingMaxGroupSkillLevel"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some

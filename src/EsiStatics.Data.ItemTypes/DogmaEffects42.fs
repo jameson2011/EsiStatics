@@ -12,7 +12,7 @@ module internal DogmaEffects42=
       | 3340 -> { DogmaEffectData.id= 3340; name= "shipArmorThermalResistanceMC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 3922 -> { DogmaEffectData.id= 3922; name= "subsystemBonusGallenteDefensiveArmorResistance"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4019 -> { DogmaEffectData.id= 4019; name= "systemDamageExplosiveMissiles"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
-      | 42 -> { DogmaEffectData.id= 42; name= "turretFitted"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 42 -> { DogmaEffectData.id= 42; name= "turretFitted"; description= "Requries a turret hardpoint"; displayName= "Turret"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4213 -> { DogmaEffectData.id= 4213; name= "subsystemSkillLevelGallentePropulsion2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 430 -> { DogmaEffectData.id= 430; name= "scienceSkillBoostCopySpeedBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4407 -> { DogmaEffectData.id= 4407; name= "subSystemBonusCaldariElectronic2TractorBeamRange"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
@@ -32,4 +32,5 @@ module internal DogmaEffects42=
       | 6832 -> { DogmaEffectData.id= 6832; name= "rigMEResearchCostBonus"; description= "Structure Rig Cost effect on ME Research"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 6929 -> { DogmaEffectData.id= 6929; name= "subsystemBonusGallentePropulsion2PropModHeatBenefit"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7026 -> { DogmaEffectData.id= 7026; name= "scriptStandupWarpScram"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8093 -> { DogmaEffectData.id= 8093; name= "cloneRespawnBay"; description= ""; displayName= ""; effectCategory= 1; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

@@ -11,7 +11,7 @@ module internal Groups52=
       | 1604 -> { GroupData.id= 1604; name= "Structure Laboratory Rig L - Module, Consumable, Drone"; categoryId= 66; published= false; typeIds= [| 37196; 37197 |] } |> Some
       | 1701 -> { GroupData.id= 1701; name= "Flex Armor Hardener Script"; categoryId= 8; published= true; typeIds= [| 41517; 41518; 41519; 41520 |] } |> Some
       | 1798 -> { GroupData.id= 1798; name= "Hidden Zenith Minmatar Battleship"; categoryId= 11; published= false; typeIds= [| 42826 |] } |> Some
-      | 1895 -> { GroupData.id= 1895; name= "Irregular Industrial"; categoryId= 11; published= false; typeIds= [| 48119; 48132; 49793 |] } |> Some
+      | 1895 -> { GroupData.id= 1895; name= "Irregular Industrial"; categoryId= 11; published= false; typeIds= [| 48119; 48132; 49793; 56943 |] } |> Some
       | 1992 -> { GroupData.id= 1992; name= "Entropic Radiation Sink Blueprint"; categoryId= 9; published= true; typeIds= [| 48095; 48096; 52243; 52245 |] } |> Some
       | 343 -> { GroupData.id= 343; name= "Weapon Disruptor Blueprint"; categoryId= 9; published= true; typeIds= [| 11614; 11844; 22932; 22934; 40338; 40339 |] } |> Some
       | 4029 -> { GroupData.id= 4029; name= "Talassonite"; categoryId= 25; published= true; typeIds= [| 52306; 56625; 56626 |] } |> Some

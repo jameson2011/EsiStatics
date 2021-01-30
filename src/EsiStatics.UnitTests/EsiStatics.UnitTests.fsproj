@@ -20,6 +20,8 @@
     <Compile Include="MarketGroupsTests.fs" />
     <Compile Include="ItemTypesTests.fs" />
     <Compile Include="ItemTypesFinderTests.fs" />
+    <Compile Include="JumpNavigationTests.fs" />
+    <Compile Include="JumpNavigatorTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>

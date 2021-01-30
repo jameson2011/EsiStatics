@@ -34,4 +34,5 @@ module internal DogmaEffects44=
       | 6834 -> { DogmaEffectData.id= 6834; name= "rigTEResearchCostBonus"; description= "Structure Rig Cost effect on TE Research"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 6931 -> { DogmaEffectData.id= 6931; name= "subsystemBonusMinmatarCore2EnergyResistance"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7028 -> { DogmaEffectData.id= 7028; name= "structureModifyPowerRechargeRate"; description= ""; displayName= ""; effectCategory= 4; preExpression= 0; postExpression= 0 } |> Some
+      | 8095 -> { DogmaEffectData.id= 8095; name= "eliteBonusInterdictors1massAddition"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

@@ -24,6 +24,18 @@ module Units=
     [<CompiledName("ToMetres")>]
     let toMetres (x: float) = x * 1.0<m>
 
+    /// Convert an arbitrary float to Kilometres
+    [<CompiledName("ToKilometres")>]
+    let toKilometres (x: float) = x * 1.0<km>
+
+    /// Convert an arbitrary float to AU
+    [<CompiledName("ToAU")>]
+    let toAU (x: float) = x * 1.0<AU>
+
+    /// Convert an arbitrary float to LY
+    [<CompiledName("ToLY")>]
+    let toLY (x: float) = x * 1.0<LY>
+
     /// Convert Metres to Kilometres
     [<CompiledName("MetresToKm")>]
     let metresToKm (x: float<m>) = 

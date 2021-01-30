@@ -18,7 +18,7 @@ module internal DogmaEffects0=
       | 4462 -> { DogmaEffectData.id= 4462; name= "caldarisetLGbonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4559 -> { DogmaEffectData.id= 4559; name= "gunneryMaxRangeFalloffTrackingSpeedBonus"; description= ""; displayName= ""; effectCategory= 1; preExpression= 0; postExpression= 0 } |> Some
       | 4656 -> { DogmaEffectData.id= 4656; name= "NPCRemoteECM"; description= ""; displayName= ""; effectCategory= 1; preExpression= 0; postExpression= 0 } |> Some
-      | 485 -> { DogmaEffectData.id= 485; name= "energysystemsoperationCapRechargeBonusPostPercentRechargeRateLocationShipGroupCapacitor"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 485 -> { DogmaEffectData.id= 485; name= "capacitorRechargeTimeBonusPostPercentPassive"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4850 -> { DogmaEffectData.id= 4850; name= "battlecruiserSkillLevelPreMulShipBonusBC3Ship"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5335 -> { DogmaEffectData.id= 5335; name= "shipShieldEmResistance1CBC2"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 5723 -> { DogmaEffectData.id= 5723; name= "eliteBonusInterdictorsMWDSigRadius2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some

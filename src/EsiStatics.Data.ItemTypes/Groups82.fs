@@ -12,7 +12,7 @@ module internal Groups82=
       | 1731 -> { GroupData.id= 1731; name= "Irregular Super Carrier"; categoryId= 11; published= false; typeIds= [|  |] } |> Some
       | 1828 -> { GroupData.id= 1828; name= "Structure Engineering Rig M - Basic Large Ship ME"; categoryId= 66; published= true; typeIds= [| 37152; 43732 |] } |> Some
       | 1925 -> { GroupData.id= 1925; name= "Irregular Industrial Command Ship"; categoryId= 11; published= false; typeIds= [|  |] } |> Some
-      | 2022 -> { GroupData.id= 2022; name= "Temporal Resources"; categoryId= 25; published= false; typeIds= [| 49789 |] } |> Some
+      | 2022 -> { GroupData.id= 2022; name= "Temporal Resources"; categoryId= 25; published= false; typeIds= [| 49789; 56950; 57027; 57028 |] } |> Some
       | 373 -> { GroupData.id= 373; name= "Advanced Railgun Charge"; categoryId= 8; published= true; typeIds= [| 12616; 12618; 12620; 12797; 12799; 12801; 12803; 12805; 12807; 41326; 41328 |] } |> Some
       | 470 -> { GroupData.id= 470; name= "Unanchoring Drone"; categoryId= 18; published= false; typeIds= [| 17565 |] } |> Some
       | 567 -> { GroupData.id= 567; name= "Asteroid Sansha's Nation Frigate"; categoryId= 11; published= false; typeIds= [| 10025; 10026; 10027; 10028; 10273; 11032; 11033; 11034; 11035; 13045; 13046; 13047; 13048; 23360; 23361; 23362; 23363; 23364; 23365 |] } |> Some

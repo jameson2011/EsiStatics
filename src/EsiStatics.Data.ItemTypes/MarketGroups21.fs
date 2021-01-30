@@ -13,7 +13,7 @@ module internal MarketGroups21=
       | 1767 -> { MarketGroupData.id= 1767; name= "Implant Slot 10"; parentMarketGroupId= Some(1762); typeIds= [| 22534; 22535; 22570; 22571; 27149; 27150; 27151; 27102; 27103 |]; description= "Implant Slot 10" } |> Some
       | 1864 -> { MarketGroupData.id= 1864; name= "Construction Platforms"; parentMarketGroupId= Some(1021); typeIds= [|  |]; description= "Outpost Construction Platforms" } |> Some
       | 1961 -> { MarketGroupData.id= 1961; name= "Faction Battleships"; parentMarketGroupId= Some(1960); typeIds= [|  |]; description= "" } |> Some
-      | 2058 -> { MarketGroupData.id= 2058; name= "Minmatar"; parentMarketGroupId= Some(2045); typeIds= [| 46884; 36808; 55691; 36428; 48495; 52854; 45943; 36761; 40477 |]; description= "" } |> Some
+      | 2058 -> { MarketGroupData.id= 2058; name= "Minmatar"; parentMarketGroupId= Some(2045); typeIds= [| 46884; 36808; 55691; 36428; 48495; 52854; 45943; 36761; 40477; 56895 |]; description= "" } |> Some
       | 2155 -> { MarketGroupData.id= 2155; name= "Named Components"; parentMarketGroupId= Some(533); typeIds= [| 41312; 54562; 41263; 41264; 41265; 41266; 41267; 41268; 41269; 41302; 41303; 41304; 41305; 41306; 41307; 41308; 41309; 41310; 41311 |]; description= "" } |> Some
       | 2252 -> { MarketGroupData.id= 2252; name= "Extra Large"; parentMarketGroupId= Some(846); typeIds= [| 41320; 41318 |]; description= "Fired by dreadnaught-sized guns and stationary defense systems." } |> Some
       | 2349 -> { MarketGroupData.id= 2349; name= "X-Large Structure Engineering Rigs"; parentMarketGroupId= Some(2340); typeIds= [| 45548; 43704; 43705; 37178; 37179; 37180; 37181; 37182; 37183 |]; description= "X-Large Structure Engineering Rigs" } |> Some
