@@ -167,7 +167,7 @@ module internal JumpNavigation =
         | Some dr, Some r ->    match float dr / float r with
                                 | x when x > 1. -> 1.
                                 | x when x > 0.5 -> 0.5
-                                | _ -> 0.                                
+                                | _ -> 0.
         | Some dr, _ -> 0.5
         | _, Some r -> 0.5
         | _ -> 0.
