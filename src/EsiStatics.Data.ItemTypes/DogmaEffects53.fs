@@ -30,5 +30,6 @@ module internal DogmaEffects53=
       | 7037 -> { DogmaEffectData.id= 7037; name= "shipBonusHeavyAssaultMissileThermalDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7231 -> { DogmaEffectData.id= 7231; name= "shipBonusArmorRepAmountGC3"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 732 -> { DogmaEffectData.id= 732; name= "shipVelocityBonusAI"; description= "Automatically generated effect"; displayName= "ShipVelocityBonusAI"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8104 -> { DogmaEffectData.id= 8104; name= "salvageDroneSpecBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 926 -> { DogmaEffectData.id= 926; name= "amarrCruiserSkillLevelPreMulShipBonusAC2Ship"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

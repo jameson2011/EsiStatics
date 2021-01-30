@@ -16,7 +16,7 @@ module internal DogmaEffects40=
       | 331 -> { DogmaEffectData.id= 331; name= "refineryEfficiencySkillBoostRefiningYieldMutator"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 3532 -> { DogmaEffectData.id= 3532; name= "skillJumpDriveConsumptionAmountBonusPercentage"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 3726 -> { DogmaEffectData.id= 3726; name= "agilityMultiplierEffectPassive"; description= "Automatically generated effect"; displayName= "AgilityMultiplierEffectPassive"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 40 -> { DogmaEffectData.id= 40; name= "launcherFitted"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 40 -> { DogmaEffectData.id= 40; name= "launcherFitted"; description= "Requries a launcher hardpoint"; displayName= "Launcher"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4017 -> { DogmaEffectData.id= 4017; name= "systemDamageThermalMissiles"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 4114 -> { DogmaEffectData.id= 4114; name= "subsystemBonusMinmatarOffensiveProjectileWeaponFalloff"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 4211 -> { DogmaEffectData.id= 4211; name= "subsystemSkillLevelAmarrPropulsion2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some

@@ -31,5 +31,6 @@ module internal DogmaEffects46=
       | 6836 -> { DogmaEffectData.id= 6836; name= "rigCopyCostBonus"; description= "Structure Rig Cost effect on Copying"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 6933 -> { DogmaEffectData.id= 6933; name= "subsystemBonusCaldariCore2EnergyResistance"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7030 -> { DogmaEffectData.id= 7030; name= "structureAoERoFRoleBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8097 -> { DogmaEffectData.id= 8097; name= "eliteBonusInterdictors1ShieldCapacity"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 919 -> { DogmaEffectData.id= 919; name= "shipHybridTrackingGC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

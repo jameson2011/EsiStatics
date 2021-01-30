@@ -7,7 +7,7 @@ module internal MarketGroups94=
       | 1258 -> { MarketGroupData.id= 1258; name= "Small Hybrid Weapon Rigs"; parentMarketGroupId= Some(951); typeIds= [| 31527; 31563; 31503; 31539; 31575; 31515; 31551 |]; description= "Blueprints of Small Hybrid Weapon Rigs." } |> Some
       | 1355 -> { MarketGroupData.id= 1355; name= "Silos"; parentMarketGroupId= Some(1841); typeIds= [|  |]; description= "Blueprints of Silos." } |> Some
       | 1549 -> { MarketGroupData.id= 1549; name= "Shield Extenders"; parentMarketGroupId= Some(1545); typeIds= [| 3840; 41600; 41601; 1010; 3830; 41599 |]; description= "Shield Extenders" } |> Some
-      | 1646 -> { MarketGroupData.id= 1646; name= "Salvage Drones"; parentMarketGroupId= Some(157); typeIds= [| 32787 |]; description= "Drones capable of salvaging wrecks for valuables" } |> Some
+      | 1646 -> { MarketGroupData.id= 1646; name= "Salvage Drones"; parentMarketGroupId= Some(157); typeIds= [| 55760; 55761; 32787 |]; description= "Drones capable of salvaging wrecks for valuables" } |> Some
       | 1840 -> { MarketGroupData.id= 1840; name= "Covert Research Tools"; parentMarketGroupId= Some(19); typeIds= [| 33577; 33988 |]; description= "These covert operation items are in demand by various factions" } |> Some
       | 1937 -> { MarketGroupData.id= 1937; name= "Interdiction Sphere Launchers"; parentMarketGroupId= Some(657); typeIds= [| 22782 |]; description= "" } |> Some
       | 2034 -> { MarketGroupData.id= 2034; name= "Gallente"; parentMarketGroupId= Some(1951); typeIds= [| 35683 |]; description= "" } |> Some

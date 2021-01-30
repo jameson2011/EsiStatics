@@ -27,4 +27,5 @@ module internal DogmaEffects49=
       | 7033 -> { DogmaEffectData.id= 7033; name= "shipBonusHeavyMissileEMDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7227 -> { DogmaEffectData.id= 7227; name= "	systemHullHPBonusPercentItem"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | 728 -> { DogmaEffectData.id= 728; name= "shipBonusCargoMI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8100 -> { DogmaEffectData.id= 8100; name= "shipBonusECMJamDroneDurationCF"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

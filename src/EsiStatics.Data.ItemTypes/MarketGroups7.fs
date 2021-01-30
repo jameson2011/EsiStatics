@@ -23,5 +23,5 @@ module internal MarketGroups7=
       | 7 -> { MarketGroupData.id= 7; name= "Standard Battleships"; parentMarketGroupId= Some(1376); typeIds= [|  |]; description= "The foundations of any respectable fighting force." } |> Some
       | 783 -> { MarketGroupData.id= 783; name= "Amarr"; parentMarketGroupId= Some(782); typeIds= [| 19721 |]; description= "Blueprints of Amarr dreadnought designs." } |> Some
       | 880 -> { MarketGroupData.id= 880; name= "Interdictors"; parentMarketGroupId= Some(204); typeIds= [|  |]; description= "Blueprints of interdictor-class vessels." } |> Some
-      | 977 -> { MarketGroupData.id= 977; name= "Booster"; parentMarketGroupId= Some(24); typeIds= [|  |]; description= "Illegal substances that give temporary effects, but with adverse side-effects as well" } |> Some
+      | 977 -> { MarketGroupData.id= 977; name= "Booster"; parentMarketGroupId= Some(24); typeIds= [| 56733 |]; description= "Illegal substances that give temporary effects, but with adverse side-effects as well" } |> Some
       | _ -> None

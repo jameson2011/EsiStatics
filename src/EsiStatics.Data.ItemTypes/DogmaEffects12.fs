@@ -7,7 +7,7 @@ module internal DogmaEffects12=
       | 1079 -> { DogmaEffectData.id= 1079; name= "warshipSkillMultiplier1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 109 -> { DogmaEffectData.id= 109; name= "turretWeaponCapacitorNeedMultiply"; description= "Scales the capacitor need for all the fitted turret weapons."; displayName= "turretWeaponCapacitorMultiply"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 1176 -> { DogmaEffectData.id= 1176; name= "accerationControlSkillAb&MwdSpeedBoost"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 12 -> { DogmaEffectData.id= 12; name= "hiPower"; description= "Requires a high power slot."; displayName= "High power"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 12 -> { DogmaEffectData.id= 12; name= "hiPower"; description= "Requires a high power slot"; displayName= "High power"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 1370 -> { DogmaEffectData.id= 1370; name= "ewSkillTpCapNeedBonusSkillLevel"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 1467 -> { DogmaEffectData.id= 1467; name= "missileSkillAoeVelocityBonusSkillLevel"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 1661 -> { DogmaEffectData.id= 1661; name= "freighterC1SkillLevel"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some

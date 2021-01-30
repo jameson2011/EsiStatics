@@ -11,7 +11,7 @@ module internal Groups1=
       | 1844 -> { GroupData.id= 1844; name= "Structure Engineering Rig M - ME Research Cost Optimization"; categoryId= 66; published= true; typeIds= [| 43884; 43885 |] } |> Some
       | 1941 -> { GroupData.id= 1941; name= "Structure Resource Rig M - Asteroid Ore Reprocessing"; categoryId= 66; published= true; typeIds= [| 46633; 46634 |] } |> Some
       | 195 -> { GroupData.id= 195; name= "Amarr Education"; categoryId= 14; published= false; typeIds= [| 1650; 1651; 1652; 1653; 1654; 1655 |] } |> Some
-      | 486 -> { GroupData.id= 486; name= "Scan Probe Blueprint"; categoryId= 9; published= true; typeIds= [| 22779; 30014; 30029 |] } |> Some
+      | 486 -> { GroupData.id= 486; name= "Scan Probe Blueprint"; categoryId= 9; published= true; typeIds= [| 22779; 30014; 30029; 56749 |] } |> Some
       | 583 -> { GroupData.id= 583; name= "Asteroid Serpentis Destroyer"; categoryId= 11; published= false; typeIds= [| 23423; 23424; 23425; 23426; 23427; 23428 |] } |> Some
       | 680 -> { GroupData.id= 680; name= "Mission Gallente Federation Battleship"; categoryId= 11; published= false; typeIds= [| 12390; 15330; 15337; 15351; 15355; 20335; 25187; 25188; 25189; 25190; 25193; 25194; 25196; 25198; 25201; 25202; 28177; 28178; 29689; 29690; 29691; 29692; 29693; 29694; 29695; 29696; 29697 |] } |> Some
       | 777 -> { GroupData.id= 777; name= "Rig Projectile Weapon"; categoryId= 7; published= true; typeIds= [| 26036; 26038; 26040; 26042; 26044; 26046; 26048; 26422; 26424; 26426; 26428; 26430; 26432; 26434; 31656; 31658; 31660; 31662; 31664; 31666; 31668; 31670; 31672; 31674; 31676; 31678; 31680; 31682; 31684; 31686; 31688; 31690; 31692; 31694; 31696; 31698; 31700; 31702; 31704; 31706; 31708; 31710; 31712; 31714 |] } |> Some

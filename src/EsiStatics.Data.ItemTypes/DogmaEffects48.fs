@@ -32,4 +32,5 @@ module internal DogmaEffects48=
       | 6935 -> { DogmaEffectData.id= 6935; name= "subsystemBonusAmarrCore3EnergyWarHeatBonus"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7032 -> { DogmaEffectData.id= 7032; name= "shipBonusHeavyMissileThermalDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 727 -> { DogmaEffectData.id= 727; name= "shipBonusCargoCI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8099 -> { DogmaEffectData.id= 8099; name= "systemHeatDamageBonus"; description= ""; displayName= ""; effectCategory= 7; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

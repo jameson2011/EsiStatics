@@ -29,4 +29,5 @@ module internal DogmaEffects50=
       | 7034 -> { DogmaEffectData.id= 7034; name= "shipBonusHeavyMissileExplosiveDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7228 -> { DogmaEffectData.id= 7228; name= "shipMediumPrecursorWeaponOptimalEliteHeavyGunship2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 729 -> { DogmaEffectData.id= 729; name= "shipBonusVelocityGI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8101 -> { DogmaEffectData.id= 8101; name= "roleBonusDroneDamage"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

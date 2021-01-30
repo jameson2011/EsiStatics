@@ -13,7 +13,7 @@ module internal Groups64=
       | 2004 -> { GroupData.id= 2004; name= "Citizen Mining Laser"; categoryId= 7; published= false; typeIds= [| 48780 |] } |> Some
       | 258 -> { GroupData.id= 258; name= "Fleet Support"; categoryId= 16; published= true; typeIds= [| 3348; 3349; 3350; 3351; 3352; 3354; 11569; 11572; 11574; 20494; 20495; 22536; 22552; 24764; 43728 |] } |> Some
       | 355 -> { GroupData.id= 355; name= "Refinables"; categoryId= 17; published= true; typeIds= [| 11724; 11725; 11732; 11733; 11734; 11735; 11736; 11737; 11738; 11739; 11740; 11741 |] } |> Some
-      | 4041 -> { GroupData.id= 4041; name= "Jump Filaments"; categoryId= 17; published= true; typeIds= [| 53977; 53983; 53984; 53985; 53986; 53987 |] } |> Some
+      | 4041 -> { GroupData.id= 4041; name= "Jump Filaments"; categoryId= 17; published= true; typeIds= [| 53330; 53331; 53332; 53333; 53334; 53335; 53336; 53337; 53338; 53977; 53983; 53984; 53985; 53986; 53987 |] } |> Some
       | 452 -> { GroupData.id= 452; name= "Crokite"; categoryId= 25; published= true; typeIds= [| 1225; 17432; 17433; 26851; 28391; 28392; 28393; 28624; 46677; 46693 |] } |> Some
       | 549 -> { GroupData.id= 549; name= "Fighter Drone"; categoryId= 18; published= false; typeIds= [|  |] } |> Some
       | 646 -> { GroupData.id= 646; name= "Drone Tracking Modules"; categoryId= 7; published= true; typeIds= [| 23533; 24438; 31942; 32935; 32937; 32939; 32941; 33826; 41031; 41032 |] } |> Some

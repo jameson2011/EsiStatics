@@ -32,4 +32,5 @@ module internal DogmaEffects47=
       | 6934 -> { DogmaEffectData.id= 6934; name= "shipMaxLockedTargetsBonusAddPassive"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7031 -> { DogmaEffectData.id= 7031; name= "shipBonusHeavyMissileKineticDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 726 -> { DogmaEffectData.id= 726; name= "shipBonusCargo2GI"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8098 -> { DogmaEffectData.id= 8098; name= "shipBonusArmorHPAD2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

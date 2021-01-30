@@ -31,4 +31,5 @@ module internal DogmaEffects52=
       | 6939 -> { DogmaEffectData.id= 6939; name= "subsystemBonusAmarrDefensive2HardenerHeat"; description= "Automatically generated effect"; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7036 -> { DogmaEffectData.id= 7036; name= "shipBonusHeavyAssaultMissileEMDamageCBC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 7230 -> { DogmaEffectData.id= 7230; name= "shipBonusDroneTrackingGC2"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 8103 -> { DogmaEffectData.id= 8103; name= "setBonusRapture"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | _ -> None

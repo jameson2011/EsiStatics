@@ -16,7 +16,7 @@ module internal MarketGroups9=
       | 2240 -> { MarketGroupData.id= 2240; name= "25000mm Armor Plate"; parentMarketGroupId= Some(133); typeIds= [| 41456; 41457; 41458; 40348; 40349; 40350; 40351 |]; description= "25000mm Armor Plate" } |> Some
       | 2337 -> { MarketGroupData.id= 2337; name= "Industrial Command Ships"; parentMarketGroupId= Some(2006); typeIds= [|  |]; description= "" } |> Some
       | 2434 -> { MarketGroupData.id= 2434; name= "Medium"; parentMarketGroupId= Some(2432); typeIds= [| 47273; 47916; 47917; 52238; 47919; 47918 |]; description= "Medium Entropic Disintegrators" } |> Some
-      | 2531 -> { MarketGroupData.id= 2531; name= "Booster Slot 14"; parentMarketGroupId= Some(977); typeIds= [| 55040; 55041; 55042; 55043; 55044; 55045; 55046; 55038; 55039 |]; description= "" } |> Some
+      | 2531 -> { MarketGroupData.id= 2531; name= "Booster Slot 14"; parentMarketGroupId= Some(977); typeIds= [|  |]; description= "" } |> Some
       | 300 -> { MarketGroupData.id= 300; name= "Hybrid Charges"; parentMarketGroupId= Some(211); typeIds= [|  |]; description= "Hybrid charge blueprints." } |> Some
       | 494 -> { MarketGroupData.id= 494; name= "Mining Barges"; parentMarketGroupId= Some(1384); typeIds= [| 17480; 17476; 17478 |]; description= "Lumbering, voracious hulks, expressly created for ore accumulation." } |> Some
       | 591 -> { MarketGroupData.id= 591; name= "Gallente"; parentMarketGroupId= Some(588); typeIds= [| 4309; 16230; 24701 |]; description= "Blueprints of Gallente battlecruiser designs." } |> Some

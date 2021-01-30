@@ -14,7 +14,7 @@ module internal Groups95=
       | 1938 -> { GroupData.id= 1938; name= "Structure Biochemical Reactor Rig M - ME"; categoryId= 66; published= true; typeIds= [| 46494; 46495 |] } |> Some
       | 289 -> { GroupData.id= 289; name= "Projected ECCM"; categoryId= 7; published= true; typeIds= [| 1959; 1960; 7217; 7218; 7219; 7220 |] } |> Some
       | 386 -> { GroupData.id= 386; name= "Cruise Missile"; categoryId= 8; published= true; typeIds= [| 202; 203; 204; 205; 2165; 17908; 27373; 27377; 27389; 27391; 27395; 27399; 27409; 27423; 27425; 27427; 27429; 27431; 27893; 27894; 30426 |] } |> Some
-      | 4072 -> { GroupData.id= 4072; name= "Expired Jump Filaments"; categoryId= 17; published= true; typeIds= [| 53330; 53331; 53332; 53333; 53334; 53335; 53336; 53337; 53338; 54802; 54803 |] } |> Some
+      | 4072 -> { GroupData.id= 4072; name= "Expired Jump Filaments"; categoryId= 17; published= true; typeIds= [| 54802; 54803 |] } |> Some
       | 483 -> { GroupData.id= 483; name= "Frequency Mining Laser"; categoryId= 7; published= true; typeIds= [| 17912; 18068; 24305 |] } |> Some
       | 580 -> { GroupData.id= 580; name= "Asteroid Guristas BattleCruiser"; categoryId= 11; published= false; typeIds= [| 23321; 23322; 23323; 23324; 23325; 23326 |] } |> Some
       | 677 -> { GroupData.id= 677; name= "Mission Gallente Federation Frigate"; categoryId= 11; published= false; typeIds= [| 11666; 13112; 14353; 14361; 14481; 15345; 15580; 15988; 15989; 15990; 15991; 21840; 22706; 25103; 25105; 25106; 25107; 25110; 25112; 25116; 25117; 25118; 25120; 25124; 25137; 25138; 25139; 25140; 25141; 25142; 25143; 25144; 25145; 25146; 29831; 29859; 29863; 29864; 29865; 29866; 29867; 29868; 29869; 29870; 29871; 29872; 29873; 29874; 29875; 45464 |] } |> Some

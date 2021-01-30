@@ -6,7 +6,7 @@ module internal DogmaEffects13=
       match id with 
       | 1080 -> { DogmaEffectData.id= 1080; name= "eliteBonusHeavyGunshipHybridFallOff1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 110 -> { DogmaEffectData.id= 110; name= "characterBlueprintResearchTimeBonus"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
-      | 13 -> { DogmaEffectData.id= 13; name= "medPower"; description= "Requires a medium power slot."; displayName= "Medium power"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
+      | 13 -> { DogmaEffectData.id= 13; name= "medPower"; description= "Requires a medium power slot"; displayName= "Medium power"; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 304 -> { DogmaEffectData.id= 304; name= "instantRecallMemoryBonusModAddMemoryLocationChar"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 3311 -> { DogmaEffectData.id= 3311; name= "oreCapitalShipSkillMultiplier3"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some
       | 3408 -> { DogmaEffectData.id= 3408; name= "violatorsSkillMultiplier1"; description= ""; displayName= ""; effectCategory= 0; preExpression= 0; postExpression= 0 } |> Some

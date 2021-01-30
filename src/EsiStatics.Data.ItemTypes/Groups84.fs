@@ -6,7 +6,7 @@ module internal Groups84=
       match id with 
       | 1054 -> { GroupData.id= 1054; name= "Incursion Sansha's Nation Cruiser"; categoryId= 11; published= false; typeIds= [| 2191; 2207; 2208; 2209; 2859; 2931; 2936; 2950; 3511; 3527 |] } |> Some
       | 1151 -> { GroupData.id= 1151; name= "Armor Resistance Shift Hardener Blueprint"; categoryId= 9; published= true; typeIds= [| 4404; 41657; 41658; 41659; 41660 |] } |> Some
-      | 1248 -> { GroupData.id= 1248; name= "Empire Bounty Reimbursement Tags"; categoryId= 17; published= true; typeIds= [| 33482; 33483; 33484; 33485; 33597; 33598; 33599; 33600; 33601; 33602; 33603; 33604; 33605; 33606; 33607; 33612 |] } |> Some
+      | 1248 -> { GroupData.id= 1248; name= "Bounty Encrypted Bonds"; categoryId= 17; published= true; typeIds= [| 33482; 33483; 33484; 33485; 33597; 33598; 33599; 33600; 33601; 33602; 33603; 33604; 33605; 33606; 33607; 33612; 55930; 55931; 55932; 55933 |] } |> Some
       | 1442 -> { GroupData.id= 1442; name= "Structure Warp Scrambler"; categoryId= 66; published= true; typeIds= [| 35949; 47334 |] } |> Some
       | 1830 -> { GroupData.id= 1830; name= "Structure Engineering Rig M - Advanced Small Ship ME"; categoryId= 66; published= true; typeIds= [| 43854; 43855 |] } |> Some
       | 1927 -> { GroupData.id= 1927; name= "Irregular Structure"; categoryId= 11; published= false; typeIds= [|  |] } |> Some
