@@ -7,7 +7,7 @@ open FluentAssertions
 
 module JumpNavigatorTests=
 
-    let distanceFinder = new SolarSystemDistanceFinder(true)
+    let distanceFinder = new SolarSystemDistanceFinder()
     let solarSystemInfoProvider =  { 
         new ISolarSystemInfoProvider with
             member this.GetSolarSystemInfos() = [| |] }
