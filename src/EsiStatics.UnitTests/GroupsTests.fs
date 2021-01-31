@@ -14,3 +14,13 @@ module GroupsTests=
                         |> Array.ofSeq
 
         values.Length.Should().NotBe(0, "")
+
+
+    [<Fact>]
+    let ``Groups address item types``()=        
+        let values = Groups.groups()
+                        |> Seq.collect (fun g -> g.typeIds)
+                        |> Seq.map ItemTypes.getItemType
+                        |> Array.ofSeq
+
+        values.Length.Should().NotBe(0, "")
