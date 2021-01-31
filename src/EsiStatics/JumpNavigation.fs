@@ -184,7 +184,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
     let solarSystemInfos = solarSystemInfoProvider.GetSolarSystemInfos() |> Seq.map (fun i -> (i.solarSystemId, i)) |> Map.ofSeq
 
     let systemStations (system: Data.Entities.SolarSystemData) = system.stationIds |> Array.map (Data.Universe.Stations.getStation >> Option.get)
-    let fuelConsumption = JumpNavigation.fuelConsumption plan.jumpDriveConservation None shipData
+    let fuelConsumption = JumpNavigation.fuelConsumption plan.jumpDriveConservation plan.jumpFreighter shipData
     let validateSystems (systems: SolarSystemData list) = 
         let rec validate (systems: SolarSystemData list) count result= 
             match systems with
@@ -419,12 +419,12 @@ module JumpRouteNavigation =
         let nav = new JumpNavigator(distanceFinder, solarSystemInfoProvider, plan)
         nav.FindRoute()
 
-    let calibration (level) (plan: JumpPlan)=
+    let calibration (level: int) (plan: JumpPlan)=
         { plan with jumpDriveCalibration = level }
-    let conservation (level) (plan: JumpPlan)=
+    let conservation (level: int) (plan: JumpPlan)=
         { plan with jumpDriveConservation = level }
-    let jumpFreighter (level) (plan: JumpPlan)=
-        { plan with jumpFreighter = level }
+    let jumpFreighter (level: int) (plan: JumpPlan)=
+        { plan with jumpFreighter = Some level }
     let ship (ship: ItemType) (plan: JumpPlan)=
         { plan with ship = Some ship }
     let route (route: SolarSystem[]) (plan: JumpPlan)=
