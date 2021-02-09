@@ -27,6 +27,8 @@ module KnownSystems =
     let deepari = 30013489
     [<Literal>]
     let heild = 30002390
+    [<Literal>]
+    let hevrice = 30005320
 
     let knownSystem = EsiStatics.SolarSystems.byId >> Option.get
 

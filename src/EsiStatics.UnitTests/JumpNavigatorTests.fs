@@ -34,6 +34,8 @@ module JumpNavigatorTests=
     [<InlineData(KnownSystems.adirain, KnownSystems.amamake, KnownItemTypes.thanatos, 5, 5, 0., 0., 3)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.heild, KnownItemTypes.thanatos, 5, 5, 0., 1., 4)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.heild, KnownItemTypes.thanatos, 5, 5, 0., 0., 4)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.hevrice, KnownItemTypes.rhea, 5, 5, 1., 1., 2)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.hevrice, KnownItemTypes.sin, 5, 5, 1., 1., 2)>]
     let findRoute(start, finish, ship, callibration: int, conservation: int, dockingStationsWeight: float, emptyStationsWeight: float, expectedJumps: int) =
         let route = [| start; finish |] |> Array.map knownSystem
         let ship = knownItemType ship
@@ -41,11 +43,13 @@ module JumpNavigatorTests=
         let plan = JumpPlan.empty 
                     |> JumpRouteNavigation.calibration callibration
                     |> JumpRouteNavigation.conservation conservation
+                    |> JumpRouteNavigation.jumpFreighter 5
                     |> JumpRouteNavigation.route route
                     |> JumpRouteNavigation.ship ship
                     |> JumpRouteNavigation.stationDockingWeight dockingStationsWeight
                     |> JumpRouteNavigation.emptyStationsWeight emptyStationsWeight
-                
+                    |> JumpRouteNavigation.distanceWeight 1.0
+                    |> JumpRouteNavigation.jumpsWeight 1.0
         
         let r = JumpRouteNavigation.findRoute distanceFinder solarSystemInfoProvider plan
 
