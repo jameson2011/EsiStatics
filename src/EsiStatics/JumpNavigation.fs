@@ -175,8 +175,8 @@ module internal JumpNavigation =
 
 type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSystemInfoProvider: ISolarSystemInfoProvider, plan: JumpPlan)=  
     let ship = plan.ship |> Option.get
-    let shipData = EsiStatics.Data.ItemTypes.ItemTypes.getItemType ship.Id |> Option.get
-    let shipRange = ship.Id |> Data.ItemTypes.ItemTypes.getItemType |> Option.get |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
+    let shipData = ship.Id |> EsiStatics.Data.ItemTypes.ItemTypes.getItemType |> Option.get
+    let shipRange = shipData |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
            
     let systemNeighbours system = distanceFinder.FindData system shipRange 
                                     |> Array.filter (fst >> JumpNavigation.jumpableSystem)
@@ -264,7 +264,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                             jumpsScale = if maxJumps <> 0. then minJumps / maxJumps else 0.
                             }
 
-    let scoreJumpState (stats: JumpStageDataStats)(plan: JumpPlan) (destination: SolarSystemData) (stage: JumpStageData)  = 
+    let scoreJumpState (stats: JumpStageDataStats) (plan: JumpPlan) (destination: SolarSystemData) (stage: JumpStageData)  = 
                 
         if stage.system = destination then
             System.Double.MinValue     
@@ -329,7 +329,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
             | Some (score, current)  ->
                             if closed.Contains(current.system.id) |> not then
                                 closed.Add current.system.id |> ignore
-                                                                
+                                
                                 let neighbours = current.neighbours
                                                     |> Seq.filter (fun (s,_) -> s.id |> closed.Contains |> not)
                                                     |> Seq.map (fst >> jumpStage >> (relativeValues totalDistanceToDestination))
@@ -431,6 +431,8 @@ module JumpRouteNavigation =
         { plan with route = route }
     let distanceWeight (value) (plan: JumpPlan)=
         { plan with distanceWeight = value }
+    let jumpsWeight (value) (plan: JumpPlan)=
+        { plan with jumpsWeight = value }
     let stationDockingWeight (value) (plan: JumpPlan)=
         { plan with stationDockingWeight = value }
     let emptyStationsWeight (value) (plan: JumpPlan)=
