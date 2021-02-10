@@ -44,7 +44,6 @@ type internal JumpStageData =
         distanceToDestination:          float<LY>
         isotopesToDestination:          float
         stations:                       StationData []
-        neighbours:                     (SolarSystemData * float<LY>) []
         nearestHighsecSystem:           SolarSystemData option
         jumps:                          int option
         shipKills:                      int option
@@ -213,7 +212,6 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                                         distanceToDestination =     distanceToDestination;
                                         isotopesToDestination =     isotopesToDestination;
                                         stations =                  systemStations system;
-                                        neighbours =                systemNeighbours system;
                                         nearestHighsecSystem =      None; 
                                         jumps =                     None;
                                         shipKills =                 None; 
@@ -318,7 +316,8 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                             if closed.Contains(current.system.id) |> not then
                                 closed.Add current.system.id |> ignore
                                 
-                                let neighbours = current.neighbours
+                                let neighbours = current.system
+                                                    |> systemNeighbours
                                                     |> Seq.filter (fun (s,_) -> s.id |> closed.Contains |> not)
                                                     |> Seq.map (fst >> jumpStage)
                                                     |> Array.ofSeq
