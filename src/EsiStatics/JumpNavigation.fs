@@ -175,7 +175,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
     let shipData = ship.Id |> EsiStatics.Data.ItemTypes.ItemTypes.getItemType |> Option.get
     let shipRange = shipData |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
            
-    let systemNeighbours system = distanceFinder.FindData system shipRange 
+    let systemNeighbours system = distanceFinder.FindData shipRange system  
                                     |> Array.filter (fst >> JumpNavigation.jumpableSystem)
 
     let solarSystemInfos = solarSystemInfoProvider.GetSolarSystemInfos() |> Seq.map (fun i -> (i.solarSystemId, i)) |> Map.ofSeq
