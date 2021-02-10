@@ -33,7 +33,7 @@ type SolarSystemDistanceFinder() =
     let findNeighbours (systemId) = 
         systemId 
             |> EsiStatics.Data.Universe.SolarSystemJumps.getSolarSystemJumps
-            |> Option.map (fun j -> j.jumps |> Array.filter (fun j -> j.distance <= neighbourMaxDistance) )
+            |> Option.map (fun j -> j.jumps)
             |> Option.defaultValue [||]
 
     member this.Find(system: SolarSystem) (distance: float<LY>)= 

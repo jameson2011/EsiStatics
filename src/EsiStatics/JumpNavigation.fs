@@ -260,7 +260,6 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
         else                        
             let pochvenAvoidScore = if JumpNavigation.isPochven stage.system then 1. else 0.
             
-            //let distanceScore = (stage.relativeDistanceScore - stats.distanceOffset) * stats.distanceScale
             let distanceScore = (stage.distanceToDestination |> float) / stats.maxDistance
                                     
             let emptyStationScores = if stage.stations.Length = 0 then 1. else 0.
@@ -297,7 +296,6 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
         
     let findRouteDijkstra (start: SolarSystemData) (destination: SolarSystemData) =
         let jumpStage = jumpStageData destination
-        let totalDistanceToDestination = Geometry.euclideanData start.position destination.position |> metresToLY;
         let closed = new HashSet<int>()
         let cameFrom = new Dictionary<int, int>()
         let scores = new Dictionary<int, float>()
