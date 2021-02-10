@@ -57,8 +57,48 @@ module JumpNavigatorTests=
         r.Head.stages.Length.Should().Be(expectedJumps, "") |> ignore
 
     [<Theory>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, KnownItemTypes.thanatos)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, KnownItemTypes.sin)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, KnownItemTypes.thanatos)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.avenod, KnownItemTypes.sin)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.amamake, KnownItemTypes.thanatos)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.amamake, KnownItemTypes.sin)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.heild, KnownItemTypes.thanatos)>]
+    [<InlineData(KnownSystems.adirain, KnownSystems.heild, KnownItemTypes.sin)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.hevrice, KnownItemTypes.thanatos)>]
+    [<InlineData(KnownSystems.jita, KnownSystems.hevrice, KnownItemTypes.sin)>]
+    let ``findRoute all scale to jump freighters``(start, finish, ship) =
+        let route = [| start; finish |] |> Array.map knownSystem
+        let ship = knownItemType ship
+        let jf = knownItemType KnownItemTypes.rhea
+
+        let plan = JumpPlan.empty 
+                    |> JumpRouteNavigation.calibration 5
+                    |> JumpRouteNavigation.conservation 5
+                    |> JumpRouteNavigation.jumpFreighter 5
+                    |> JumpRouteNavigation.route route
+                    |> JumpRouteNavigation.stationDockingWeight 1.
+                    |> JumpRouteNavigation.emptyStationsWeight 1.
+                    |> JumpRouteNavigation.distanceWeight 1.0
+                    |> JumpRouteNavigation.jumpsWeight 1.0
+
+        let shipPlan = plan |> JumpRouteNavigation.ship ship
+        let jfPlan = plan |> JumpRouteNavigation.ship jf
+        
+        let route = JumpRouteNavigation.findRoute distanceFinder solarSystemInfoProvider
+        
+        let shipRoute = route shipPlan |> Seq.head
+        let jfRoute = route jfPlan |> Seq.head
+
+        let shipRouteLen = shipRoute.stages.Length
+        let jfRouteLen = jfRoute.stages.Length
+
+        shipRouteLen.Should().BeGreaterOrEqualTo(jfRouteLen, "") |> ignore
+        
+
+    [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, KnownItemTypes.sin, KnownSystems.schoorasana, 2)>]
-    let findRouteWithSolarSystemInfo(start, finish, ship, expectedMid, expectedJumps: int) =
+    let ``findRoute with SolarSystemInfo``(start, finish, ship, expectedMid, expectedJumps: int) =
         let route = [| start; finish |] |> Array.map knownSystem
         
         let solarSystemInfoProviderMock =  { 
@@ -88,7 +128,7 @@ module JumpNavigatorTests=
     [<InlineData(KnownSystems.adirain, KnownSystems.schoorasana, KnownSystems.avenod, KnownItemTypes.sin, 5, 5, 0., 2)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, KnownSystems.heild, KnownItemTypes.sin, 5, 5, 1., 4)>]
     [<InlineData(KnownSystems.adirain, KnownSystems.avenod, KnownSystems.heild, KnownItemTypes.sin, 5, 5, 0., 4)>]
-    let findMidpointRoute(start, mid, finish, ship, callibration: int, conservation: int, emptyStationsWeight: float, expectedJumps: int) =
+    let ``findRoute with Midpoint``(start, mid, finish, ship, callibration: int, conservation: int, emptyStationsWeight: float, expectedJumps: int) =
         let route = [| start; mid; finish |] |> Array.map knownSystem
         let ship = knownItemType ship
 

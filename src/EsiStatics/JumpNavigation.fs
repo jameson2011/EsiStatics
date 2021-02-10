@@ -41,7 +41,6 @@ type internal JumpStageData =
     {
         system:                         SolarSystemData
         score:                          float
-        relativeDistanceScore:          float
         distanceToDestination:          float<LY>
         isotopesToDestination:          float
         stations:                       StationData []
@@ -59,9 +58,7 @@ type internal JumpStageDataStats =
     {
         maxDistance:    float
         minDistance:    float
-        distanceOffset: float
-        distanceScale:  float
-
+                
         maxJumps:       float
         minJumps:       float
         jumpsScale:     float
@@ -213,7 +210,6 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
 
         let result =    { JumpStageData.system =                    system;
                                         score =                     0.;
-                                        relativeDistanceScore =     0.;
                                         distanceToDestination =     distanceToDestination;
                                         isotopesToDestination =     isotopesToDestination;
                                         stations =                  systemStations system;
@@ -237,28 +233,21 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                                         edencom = si.edencom;
                         }
     
-    let relativeValues (totalDistanceToDestination: float<LY>) (stage: JumpStageData) =                     
-        let distance =  if stage.distanceToDestination > totalDistanceToDestination then System.Double.MaxValue
-                        else -(totalDistanceToDestination - stage.distanceToDestination |> float)
-                
-        { stage with relativeDistanceScore = distance }
 
-    let jumpStageStats (stages: seq<JumpStageData>)=        
-        let distances = stages |> Seq.map (fun s -> s.relativeDistanceScore ) |> Seq.cache
-        let maxDistance = distances |> Seq.max
-        let minDistance = distances |> Seq.min
-                        
-        let diffDistance = maxDistance - minDistance |> Math.abs
-        let distanceFactor = if diffDistance = 0. then 1. else 1. / diffDistance 
-        
-        let jumps = stages |> Seq.map (fun s -> s.jumps) |> Seq.reduceOptions |> Seq.cache
+    let jumpStageStats (stages: seq<JumpStageData>)=                
+        let distances = stages |> Seq.map (fun s -> s.distanceToDestination |> float) |> Array.ofSeq
+                
+        let maxDistance = distances |> Seq.maxSafe 0.
+        let minDistance = distances |> Seq.minSafe 0.
+                
+        let jumps = stages |> Seq.map (fun s -> s.jumps) |> Seq.reduceOptions |> Array.ofSeq
+
         let maxJumps = jumps |> Seq.maxSafe 0 |> float
         let minJumps = jumps |> Seq.minSafe 0 |> float
 
         { JumpStageDataStats.minDistance = minDistance; 
                             maxDistance = maxDistance;
-                            distanceOffset = minDistance;
-                            distanceScale = distanceFactor;
+                            
                             maxJumps = maxJumps; 
                             minJumps = minJumps;
                             jumpsScale = if maxJumps <> 0. then minJumps / maxJumps else 0.
@@ -271,7 +260,8 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
         else                        
             let pochvenAvoidScore = if JumpNavigation.isPochven stage.system then 1. else 0.
             
-            let distanceScore = (stage.relativeDistanceScore - stats.distanceOffset) * stats.distanceScale
+            //let distanceScore = (stage.relativeDistanceScore - stats.distanceOffset) * stats.distanceScale
+            let distanceScore = (stage.distanceToDestination |> float) / stats.maxDistance
                                     
             let emptyStationScores = if stage.stations.Length = 0 then 1. else 0.
                                             
@@ -332,7 +322,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                                 
                                 let neighbours = current.neighbours
                                                     |> Seq.filter (fun (s,_) -> s.id |> closed.Contains |> not)
-                                                    |> Seq.map (fst >> jumpStage >> (relativeValues totalDistanceToDestination))
+                                                    |> Seq.map (fst >> jumpStage)
                                                     |> Array.ofSeq
                                 
                                 let jumpStageStats = jumpStageStats neighbours
