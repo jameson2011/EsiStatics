@@ -27,9 +27,7 @@ type SolarSystemFinder(eagerIndex) =
             |> Seq.map (EsiStatics.SolarSystems.knownSystem)
         
 type SolarSystemDistanceFinder() =
-
-    let neighbourMaxDistance = 10.1 // LY
-        
+    
     let findNeighbours (systemId) = 
         systemId 
             |> EsiStatics.Data.Universe.SolarSystemJumps.getSolarSystemJumps
