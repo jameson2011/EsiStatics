@@ -48,8 +48,7 @@ module JumpNavigatorTests=
                     |> JumpRouteNavigation.ship ship
                     |> JumpRouteNavigation.stationDockingWeight dockingStationsWeight
                     |> JumpRouteNavigation.emptyStationsWeight emptyStationsWeight
-                    |> JumpRouteNavigation.distanceWeight 1.0
-                    |> JumpRouteNavigation.jumpsWeight 1.0
+                    |> JumpRouteNavigation.distanceWeight 1.0                    
         
         let r = JumpRouteNavigation.findRoute distanceFinder solarSystemInfoProvider plan
 
@@ -80,7 +79,6 @@ module JumpNavigatorTests=
                     |> JumpRouteNavigation.stationDockingWeight 1.
                     |> JumpRouteNavigation.emptyStationsWeight 1.
                     |> JumpRouteNavigation.distanceWeight 1.0
-                    |> JumpRouteNavigation.jumpsWeight 1.0
 
         let shipPlan = plan |> JumpRouteNavigation.ship ship
         let jfPlan = plan |> JumpRouteNavigation.ship jf
