@@ -71,7 +71,7 @@ type JumpPlanResult =
         isotopes:   float
     }
 
-type SolarSystemInfo = 
+type SolarSystemStats = 
     {
         solarSystemId:      int
 
@@ -86,8 +86,8 @@ type SolarSystemInfo =
         edencom:            bool option
     }
 
-type ISolarSystemInfoProvider =
-    abstract member GetSolarSystemInfos : unit -> SolarSystemInfo []
+type ISolarSystemStatsProvider =
+    abstract member GetSolarSystemStats : unit -> SolarSystemStats []
 
 module internal JumpNavigation =
 
@@ -169,7 +169,7 @@ module internal JumpNavigation =
         | _ -> 0.
        
 
-type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSystemInfoProvider: ISolarSystemInfoProvider, plan: JumpPlan)=  
+type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSystemInfoProvider: ISolarSystemStatsProvider, plan: JumpPlan)=  
     let ship = plan.ship |> Option.get
     let shipData = ship.Id |> EsiStatics.Data.ItemTypes.ItemTypes.getItemType |> Option.get
     let shipRange = shipData |> JumpNavigation.jumpRange plan.jumpDriveCalibration 
@@ -177,7 +177,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
     let systemNeighbours system = distanceFinder.FindData shipRange system  
                                     |> Array.filter (fst >> JumpNavigation.jumpableSystem)
 
-    let solarSystemInfos = solarSystemInfoProvider.GetSolarSystemInfos() |> Seq.map (fun i -> (i.solarSystemId, i)) |> Map.ofSeq
+    let solarSystemInfos = solarSystemInfoProvider.GetSolarSystemStats() |> Seq.map (fun i -> (i.solarSystemId, i)) |> Map.ofSeq
 
     let systemStations (system: Data.Entities.SolarSystemData) = system.stationIds |> Array.map (Data.Universe.Stations.getStation >> Option.get)
     let fuelConsumption = JumpNavigation.fuelConsumption plan.jumpDriveConservation plan.jumpFreighter shipData
@@ -190,7 +190,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                                 else                JumpNavigation.jumpableSystem
                         let r = match v s with
                                 | true -> None
-                                | _ -> Some "The system must be jumpable."
+                                | _ -> s.name |> sprintf "%s must be a jumpable." |> Some 
                         validate remaining (count + 1) (r :: result)
         validate systems 0 [] |> Seq.reduceOptions
     

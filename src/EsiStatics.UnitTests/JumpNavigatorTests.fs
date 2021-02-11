@@ -9,8 +9,8 @@ module JumpNavigatorTests=
 
     let internal distanceFinder = new SolarSystemDistanceFinder()
     let internal solarSystemInfoProvider =  { 
-        new ISolarSystemInfoProvider with
-            member this.GetSolarSystemInfos() = [| |] }
+        new ISolarSystemStatsProvider with
+            member this.GetSolarSystemStats() = [| |] }
 
     [<Theory>]
     [<InlineData(KnownSystems.adirain, KnownSystems.raeghoscon, KnownItemTypes.sin, 5, 5, 0., 1., 1)>]
@@ -100,8 +100,8 @@ module JumpNavigatorTests=
         let route = [| start; finish |] |> Array.map knownSystem
         
         let solarSystemInfoProviderMock =  { 
-            new ISolarSystemInfoProvider with
-                member this.GetSolarSystemInfos() = [|  { SolarSystemInfo.solarSystemId = expectedMid; 
+            new ISolarSystemStatsProvider with
+                member this.GetSolarSystemStats() = [|  { SolarSystemStats.solarSystemId = expectedMid; 
                                                                             jumps = Some 10; shipKills = None; podKills = None; npcKills = None;
                                                                             incursion = Some false; triglavian = Some false; edencom = Some false } |] 
             }
