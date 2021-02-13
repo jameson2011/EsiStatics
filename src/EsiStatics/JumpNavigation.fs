@@ -3,6 +3,7 @@
 open System.Collections.Generic
 open EsiStatics.Data.Entities;
 open EsiStatics.Data.ItemTypes;
+open EsiStatics.Math;
 
 type systemScore = (SolarSystem -> float)
 type stationScore = (Station -> float)
@@ -20,13 +21,14 @@ type JumpPlan =
         distanceWeight:         float
         stationDockingWeight:   float
         emptyStationsWeight:    float
+        shipKillsWeight:        float
         jumpsWeight:            float
     } with
     [<CompiledName("Empty")>]
     static member empty = 
         { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; 
                     distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1.;
-                    jumpsWeight = 0.}
+                    shipKillsWeight = 0.; jumpsWeight = 0.}
     
 
 type JumpStage = 
@@ -60,7 +62,11 @@ type internal JumpStageDataStats =
                 
         maxJumps:       float
         minJumps:       float
-        jumpsScale:     float
+        
+        minKills:       int
+        maxKills:       int
+
+
     }
 
 type JumpPlanResult =
@@ -167,7 +173,49 @@ module internal JumpNavigation =
         | Some dr, _ -> 0.5
         | _, Some r -> 0.5
         | _ -> 0.
-       
+    
+    let scoreJumpState (stats: JumpStageDataStats) (plan: JumpPlan) (destination: SolarSystemData) (stage: JumpStageData)  = 
+        
+        if stage.system = destination then
+            System.Double.MinValue     
+        else                        
+            let pochvenAvoidScore = if isPochven stage.system then 1. else 0.
+                
+            let distanceScore = (stage.distanceToDestination |> float) /~ stats.maxDistance
+                            
+            let emptyStationScores = if stage.stations.Length = 0 then 1. else 0.
+                                    
+            let stationDockingRangeScores = 
+                stage.stations
+                |> Seq.map (fun s -> EsiStatics.Stations.byId s.id |> Option.get)
+                |> Seq.map dockableStationScore
+                |> List.ofSeq
+
+            let stationDockingScore = 
+                match stationDockingRangeScores with
+                | [] -> 1.
+                | xs -> xs |> Seq.map (fun x -> 1. - x) |> Seq.max
+                                
+            let jumpsScore =  stage.jumps 
+                                |> Option.map (fun j -> j |> float |> (/~) stats.maxJumps)
+                                |> Option.defaultValue 0.
+
+            // TODO: future scores:
+            // midpoints - distance to highsec            
+            // incursion / trig / edencom
+            // ganks / gatecamps
+            
+            let shipKillsScore = ((stage.shipKills |> Option.defaultValue 0) + (stage.podKills |> Option.defaultValue 0) |> float)
+                                    /~ (float stats.maxKills)
+
+            let result =    (distanceScore  * plan.distanceWeight) + 
+                            (pochvenAvoidScore * plan.avoidPochvenWeight) + 
+                            (stationDockingScore * plan.stationDockingWeight) + 
+                            (emptyStationScores * plan.emptyStationsWeight) + 
+                            (jumpsScore * plan.jumpsWeight) + 
+                            (shipKillsScore * plan.shipKillsWeight)
+
+            result
 
 type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSystemInfoProvider: ISolarSystemStatsProvider, plan: JumpPlan)=  
     let ship = plan.ship |> Option.get
@@ -243,53 +291,21 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
         let maxJumps = jumps |> Seq.maxSafe 0 |> float
         let minJumps = jumps |> Seq.minSafe 0 |> float
 
+        let kills = stages  |> Seq.map (fun s ->    (s.shipKills |> Option.defaultValue 0) + 
+                                                    (s.podKills |> Option.defaultValue 0) )
+                            |> Array.ofSeq
+
         { JumpStageDataStats.minDistance = minDistance; 
                             maxDistance = maxDistance;
                             
                             maxJumps = maxJumps; 
                             minJumps = minJumps;
-                            jumpsScale = if maxJumps <> 0. then minJumps / maxJumps else 0.
-                            }
+                            
+                            minKills = kills |> Seq.minSafe 0;
+                            maxKills = kills |> Seq.maxSafe 0;
+                        }
 
-    let scoreJumpState (stats: JumpStageDataStats) (plan: JumpPlan) (destination: SolarSystemData) (stage: JumpStageData)  = 
-                
-        if stage.system = destination then
-            System.Double.MinValue     
-        else                        
-            let pochvenAvoidScore = if JumpNavigation.isPochven stage.system then 1. else 0.
-            
-            let distanceScore = (stage.distanceToDestination |> float) / stats.maxDistance
-                                    
-            let emptyStationScores = if stage.stations.Length = 0 then 1. else 0.
-                                            
-            let stationDockingRangeScores = 
-                stage.stations
-                |> Seq.map (fun s -> EsiStatics.Stations.byId s.id |> Option.get)
-                |> Seq.map JumpNavigation.dockableStationScore
-                |> List.ofSeq
-            let stationDockingScore = 
-                match stationDockingRangeScores with
-                | [] -> 1.
-                | xs -> xs |> Seq.map (fun x -> 1. - x) |> Seq.max
-
-            
-            let jumpsScore =  stage.jumps 
-                                |> Option.map (float >> (*) stats.jumpsScale)
-                                |> Option.defaultValue 0.
-                                
-            // TODO: future scores:
-            // total kills per system            
-            // midpoints - distance to highsec            
-            // incursion / trig / edencom
-            // ganks / gatecamps
-                        
-            let result =    (distanceScore  * plan.distanceWeight) + 
-                            (pochvenAvoidScore * plan.avoidPochvenWeight) + 
-                            (stationDockingScore * plan.stationDockingWeight) + 
-                            (emptyStationScores * plan.emptyStationsWeight) + 
-                            (jumpsScore * plan.jumpsWeight)
-
-            result
+    
 
         
     let findRouteDijkstra (start: SolarSystemData) (destination: SolarSystemData) =
@@ -325,7 +341,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                                 let jumpStageStats = jumpStageStats neighbours
                                 
                                 let neighbours = neighbours
-                                                    |> Array.map (fun stage ->  let stageScore = score + (scoreJumpState jumpStageStats plan destination stage)
+                                                    |> Array.map (fun stage ->  let stageScore = score + (JumpNavigation.scoreJumpState jumpStageStats plan destination stage)
                                                                                 { stage with score = stageScore } )
                                                     
                                 neighbours 
@@ -424,3 +440,7 @@ module JumpRouteNavigation =
         { plan with emptyStationsWeight = value }
     let avoidPochvenWeight (value) (plan: JumpPlan)=
         { plan with avoidPochvenWeight = value }
+    let jumpsWeight (value) (plan: JumpPlan)=
+        { plan with jumpsWeight = value }
+    let killsWeight (value) (plan: JumpPlan)=
+        { plan with shipKillsWeight = value }

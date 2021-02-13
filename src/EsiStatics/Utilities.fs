@@ -45,4 +45,4 @@ module internal Seq=
 module internal Math=
     let sq (x: float) = x * x
     let abs (x: float) = Math.Abs(x)
-
+    let inline (/~) (x: float) (y: float)  = if y = 0. then 0. else x / y
