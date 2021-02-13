@@ -104,6 +104,8 @@ module internal JumpNavigation =
     [<Literal>]
     let jumpDriveConsumptionAmountAttributeId = 868
 
+    let intOptionFloat = Option.map float >> Option.defaultValue 0.
+
     let dogmaAttribute = DogmaAttributes.getDogmaAttribute >> Option.get
     let systemData = EsiStatics.Data.Universe.SolarSystems.getSolarSystem >> Option.get
     let station id = id |> EsiStatics.Stations.byId |> Option.get
@@ -196,16 +198,9 @@ module internal JumpNavigation =
                 | [] -> 1.
                 | xs -> xs |> Seq.map (fun x -> 1. - x) |> Seq.max
                                 
-            let jumpsScore =  stage.jumps 
-                                |> Option.map (fun j -> j |> float |> (/~) stats.maxJumps)
-                                |> Option.defaultValue 0.
-
-            // TODO: future scores:
-            // midpoints - distance to highsec            
-            // incursion / trig / edencom
-            // ganks / gatecamps
-            
-            let shipKillsScore = ((stage.shipKills |> Option.defaultValue 0) + (stage.podKills |> Option.defaultValue 0) |> float)
+            let jumpsScore =  (stage.jumps |> intOptionFloat) /~ stats.maxJumps
+                        
+            let shipKillsScore = ((intOptionFloat stage.shipKills) + (intOptionFloat stage.podKills))
                                     /~ (float stats.maxKills)
 
             let result =    (distanceScore  * plan.distanceWeight) + 

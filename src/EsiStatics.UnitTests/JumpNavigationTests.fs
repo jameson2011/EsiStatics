@@ -75,3 +75,28 @@ module JumpNavigation=
         let score =  stage |> JumpNavigation.scoreJumpState stats plan system
 
         score.Should().Be(expectedScore, "")
+
+    [<Theory>]
+    [<InlineData(0, 0, 0., 0.)>]    
+    [<InlineData(1, 2, 0., 0.)>]
+    [<InlineData(0, 0, 1., 0.)>]
+    [<InlineData(0, 1, 1., 0.)>]
+    [<InlineData(1, 1, 1., 1.)>]
+    [<InlineData(1, 2, 1., 0.5)>]    
+    [<InlineData(2, 2, 1., 1.)>]    
+    let ``scoreJumpState jumps ``(jumps, maxJumps, weight, expectedScore: float)=
+        let plan = JumpPlan.empty 
+                        |> JumpRouteNavigation.emptyStationsWeight 0.
+                        |> JumpRouteNavigation.stationDockingWeight 0.
+                        |> JumpRouteNavigation.distanceWeight 0.
+                        |> JumpRouteNavigation.avoidPochvenWeight 0.
+                        |> JumpRouteNavigation.killsWeight 0.
+                        |> JumpRouteNavigation.jumpsWeight weight
+
+        let system = { defaultSystem with id = 1 }
+        let stats = { defaultStats with maxJumps = maxJumps }
+        let stage = { defaultStage with jumps = Some jumps} 
+
+        let score =  stage |> JumpNavigation.scoreJumpState stats plan system
+
+        score.Should().Be(expectedScore, "")
