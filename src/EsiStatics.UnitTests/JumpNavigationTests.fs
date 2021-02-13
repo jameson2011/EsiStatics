@@ -9,18 +9,14 @@ open FluentAssertions
 module JumpNavigation=
     
     let internal defaultSystem =
-        { SolarSystemData.id = 0; 
-            name = ""; 
-            constellationId = 0; 
-            position = { PositionData.x = 0.; y = 0.; z = 0.; };
-            secRating = SystemSecurity.Lowsec;
-            secClass = "";
-            secStatus = 0.1;
-            stargateIds = [||];
-            stationIds = [||];
-            starIds = [||];
-            planets = [||];
-        }
+        KnownSystems.amamake
+            |> Data.Universe.SolarSystems.getSolarSystem
+            |> Option.get
+
+    let internal defaultStation = 
+        defaultSystem.stationIds
+            |> Seq.map (Data.Universe.Stations.getStation >> Option.get)
+            |> Seq.head
 
     let internal defaultStage = 
         { JumpStageData.distanceToDestination = (Units.toLY 0.);
@@ -121,6 +117,30 @@ module JumpNavigation=
         let system = { defaultSystem with id = 1 }
         let stats = { defaultStats with maxDistance = maxDistance }
         let stage = { defaultStage with distanceToDestination = distance} 
+
+        let score =  stage |> JumpNavigation.scoreJumpState stats plan system
+
+        score.Should().Be(expectedScore, "")
+
+    [<Theory>]
+    [<InlineData(0, 0., 0.)>]    
+    [<InlineData(1, 0., 0.)>]
+    [<InlineData(0, 1., 1.)>]
+    [<InlineData(1, 1., 0.)>]
+    [<InlineData(2, 1., 0.)>]    
+    [<InlineData(3, 1., 0.)>]    
+    let ``scoreJumpState emptyStations``(stations, weight, expectedScore: float)=
+        let plan = JumpPlan.empty 
+                        |> JumpRouteNavigation.emptyStationsWeight weight
+                        |> JumpRouteNavigation.stationDockingWeight 0.
+                        |> JumpRouteNavigation.distanceWeight 0.
+                        |> JumpRouteNavigation.avoidPochvenWeight 0.
+                        |> JumpRouteNavigation.killsWeight 0.
+                        |> JumpRouteNavigation.jumpsWeight 0.
+
+        let system = { defaultSystem with id = 1; stationIds = [| 0 .. (stations-1) |] }
+        let stats = defaultStats 
+        let stage = { defaultStage with stations = [| 0 .. (stations-1) |] |> Array.map (fun _ -> defaultStation) }
 
         let score =  stage |> JumpNavigation.scoreJumpState stats plan system
 
