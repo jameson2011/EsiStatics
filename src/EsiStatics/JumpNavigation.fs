@@ -176,7 +176,7 @@ module internal JumpNavigation =
         | _, Some r -> 0.5
         | _ -> 0.
     
-    let scoreJumpState (stats: JumpStageDataStats) (plan: JumpPlan) (destination: SolarSystemData) (stage: JumpStageData)  = 
+    let scoreJumpStage (stats: JumpStageDataStats) (plan: JumpPlan) (destination: SolarSystemData) (stage: JumpStageData)  = 
         
         if stage.system = destination then
             System.Double.MinValue     
@@ -336,7 +336,7 @@ type internal JumpNavigator(distanceFinder: SolarSystemDistanceFinder, solarSyst
                                 let jumpStageStats = jumpStageStats neighbours
                                 
                                 let neighbours = neighbours
-                                                    |> Array.map (fun stage ->  let stageScore = score + (JumpNavigation.scoreJumpState jumpStageStats plan destination stage)
+                                                    |> Array.map (fun stage ->  let stageScore = score + (JumpNavigation.scoreJumpStage jumpStageStats plan destination stage)
                                                                                 { stage with score = stageScore } )
                                                     
                                 neighbours 

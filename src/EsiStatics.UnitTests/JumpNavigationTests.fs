@@ -55,7 +55,7 @@ module JumpNavigation=
     [<InlineData(1, 0, 1, 1., 1.)>]
     [<InlineData(1, 0, 2, 1., 0.5)>]    
     [<InlineData(1, 1, 2, 1., 1.)>]    
-    let ``scoreJumpState kills ``(shipKills, podKills, maxKills, weight, expectedScore: float)=
+    let ``scoreJumpStage kills ``(shipKills, podKills, maxKills, weight, expectedScore: float)=
         let plan = JumpPlan.empty 
                         |> JumpRouteNavigation.emptyStationsWeight 0.
                         |> JumpRouteNavigation.stationDockingWeight 0.
@@ -68,7 +68,7 @@ module JumpNavigation=
         let stats = { defaultStats with maxKills = maxKills }
         let stage = { defaultStage with podKills = Some podKills; shipKills = Some shipKills} 
 
-        let score =  stage |> JumpNavigation.scoreJumpState stats plan system
+        let score =  stage |> JumpNavigation.scoreJumpStage stats plan system
 
         score.Should().Be(expectedScore, "")
 
@@ -80,7 +80,7 @@ module JumpNavigation=
     [<InlineData(1, 1, 1., 1.)>]
     [<InlineData(1, 2, 1., 0.5)>]    
     [<InlineData(2, 2, 1., 1.)>]    
-    let ``scoreJumpState jumps``(jumps, maxJumps, weight, expectedScore: float)=
+    let ``scoreJumpStage jumps``(jumps, maxJumps, weight, expectedScore: float)=
         let plan = JumpPlan.empty 
                         |> JumpRouteNavigation.emptyStationsWeight 0.
                         |> JumpRouteNavigation.stationDockingWeight 0.
@@ -93,7 +93,7 @@ module JumpNavigation=
         let stats = { defaultStats with maxJumps = maxJumps }
         let stage = { defaultStage with jumps = Some jumps} 
 
-        let score =  stage |> JumpNavigation.scoreJumpState stats plan system
+        let score =  stage |> JumpNavigation.scoreJumpStage stats plan system
 
         score.Should().Be(expectedScore, "")
 
@@ -105,7 +105,7 @@ module JumpNavigation=
     [<InlineData(1000, 1000, 1., 1.)>]
     [<InlineData(1000, 2000, 1., 0.5)>]    
     [<InlineData(2000, 2000, 1., 1.)>]    
-    let ``scoreJumpState distances``(distance, maxDistance, weight, expectedScore: float)=
+    let ``scoreJumpStage distances``(distance, maxDistance, weight, expectedScore: float)=
         let plan = JumpPlan.empty 
                         |> JumpRouteNavigation.emptyStationsWeight 0.
                         |> JumpRouteNavigation.stationDockingWeight 0.
@@ -118,7 +118,7 @@ module JumpNavigation=
         let stats = { defaultStats with maxDistance = maxDistance }
         let stage = { defaultStage with distanceToDestination = distance} 
 
-        let score =  stage |> JumpNavigation.scoreJumpState stats plan system
+        let score =  stage |> JumpNavigation.scoreJumpStage stats plan system
 
         score.Should().Be(expectedScore, "")
 
@@ -129,7 +129,7 @@ module JumpNavigation=
     [<InlineData(1, 1., 0.)>]
     [<InlineData(2, 1., 0.)>]    
     [<InlineData(3, 1., 0.)>]    
-    let ``scoreJumpState emptyStations``(stations, weight, expectedScore: float)=
+    let ``scoreJumpStage emptyStations``(stations, weight, expectedScore: float)=
         let plan = JumpPlan.empty 
                         |> JumpRouteNavigation.emptyStationsWeight weight
                         |> JumpRouteNavigation.stationDockingWeight 0.
@@ -142,6 +142,6 @@ module JumpNavigation=
         let stats = defaultStats 
         let stage = { defaultStage with stations = [| 0 .. (stations-1) |] |> Array.map (fun _ -> defaultStation) }
 
-        let score =  stage |> JumpNavigation.scoreJumpState stats plan system
+        let score =  stage |> JumpNavigation.scoreJumpStage stats plan system
 
         score.Should().Be(expectedScore, "")
