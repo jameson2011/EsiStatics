@@ -40,7 +40,7 @@ module JumpNavigatorTests=
         let route = [| start; finish |] |> Array.map knownSystem
         let ship = knownItemType ship
 
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan
                     |> JumpRouteNavigation.calibration callibration
                     |> JumpRouteNavigation.conservation conservation
                     |> JumpRouteNavigation.jumpFreighter 5
@@ -71,7 +71,7 @@ module JumpNavigatorTests=
         let ship = knownItemType ship
         let jf = knownItemType KnownItemTypes.rhea
 
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan
                     |> JumpRouteNavigation.calibration 5
                     |> JumpRouteNavigation.conservation 5
                     |> JumpRouteNavigation.jumpFreighter 5
@@ -106,7 +106,7 @@ module JumpNavigatorTests=
                                                                             incursion = Some false; triglavian = Some false; edencom = Some false } |] 
             }
 
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan
                     |> JumpRouteNavigation.calibration 5
                     |> JumpRouteNavigation.conservation 5
                     |> JumpRouteNavigation.route route
@@ -130,7 +130,7 @@ module JumpNavigatorTests=
         let route = [| start; mid; finish |] |> Array.map knownSystem
         let ship = knownItemType ship
 
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan
                     |> JumpRouteNavigation.calibration callibration
                     |> JumpRouteNavigation.conservation conservation
                     |> JumpRouteNavigation.route route

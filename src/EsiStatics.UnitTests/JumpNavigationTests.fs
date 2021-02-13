@@ -56,7 +56,7 @@ module JumpNavigation=
     [<InlineData(1, 0, 2, 1., 0.5)>]    
     [<InlineData(1, 1, 2, 1., 1.)>]    
     let ``scoreJumpStage kills ``(shipKills, podKills, maxKills, weight, expectedScore: float)=
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan 
                         |> JumpRouteNavigation.emptyStationsWeight 0.
                         |> JumpRouteNavigation.stationDockingWeight 0.
                         |> JumpRouteNavigation.distanceWeight 0.
@@ -81,7 +81,7 @@ module JumpNavigation=
     [<InlineData(1, 2, 1., 0.5)>]    
     [<InlineData(2, 2, 1., 1.)>]    
     let ``scoreJumpStage jumps``(jumps, maxJumps, weight, expectedScore: float)=
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan 
                         |> JumpRouteNavigation.emptyStationsWeight 0.
                         |> JumpRouteNavigation.stationDockingWeight 0.
                         |> JumpRouteNavigation.distanceWeight 0.
@@ -106,7 +106,7 @@ module JumpNavigation=
     [<InlineData(1000, 2000, 1., 0.5)>]    
     [<InlineData(2000, 2000, 1., 1.)>]    
     let ``scoreJumpStage distances``(distance, maxDistance, weight, expectedScore: float)=
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan 
                         |> JumpRouteNavigation.emptyStationsWeight 0.
                         |> JumpRouteNavigation.stationDockingWeight 0.
                         |> JumpRouteNavigation.distanceWeight weight
@@ -130,7 +130,7 @@ module JumpNavigation=
     [<InlineData(2, 1., 0.)>]    
     [<InlineData(3, 1., 0.)>]    
     let ``scoreJumpStage emptyStations``(stations, weight, expectedScore: float)=
-        let plan = JumpPlan.empty 
+        let plan = JumpRouteNavigation.defaultPlan 
                         |> JumpRouteNavigation.emptyStationsWeight weight
                         |> JumpRouteNavigation.stationDockingWeight 0.
                         |> JumpRouteNavigation.distanceWeight 0.

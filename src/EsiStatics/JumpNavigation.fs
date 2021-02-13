@@ -5,11 +5,6 @@ open EsiStatics.Data.Entities;
 open EsiStatics.Data.ItemTypes;
 open EsiStatics.Math;
 
-type systemScore = (SolarSystem -> float)
-type stationScore = (Station -> float)
-type systemPicker = (SolarSystem -> (float * SolarSystem) [] )
-type internal stationPicker = (Station -> (float * Station) [] )
-
 type JumpPlan =
     {
         ship:                   ItemType option
@@ -23,13 +18,7 @@ type JumpPlan =
         emptyStationsWeight:    float
         shipKillsWeight:        float
         jumpsWeight:            float
-    } with
-    [<CompiledName("Empty")>]
-    static member empty = 
-        { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; 
-                    distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1.;
-                    shipKillsWeight = 0.; jumpsWeight = 0.}
-    
+    }
 
 type JumpStage = 
     {
@@ -65,8 +54,6 @@ type internal JumpStageDataStats =
         
         minKills:       int
         maxKills:       int
-
-
     }
 
 type JumpPlanResult =
@@ -416,6 +403,11 @@ module JumpRouteNavigation =
     let findRoute distanceFinder solarSystemInfoProvider plan = 
         let nav = new JumpNavigator(distanceFinder, solarSystemInfoProvider, plan)
         nav.FindRoute()
+
+    let defaultPlan = 
+        { JumpPlan.ship = None; jumpDriveCalibration = 1; jumpDriveConservation = 5; jumpFreighter = None; route = [||]; 
+                    distanceWeight = 1.; stationDockingWeight = 0.; avoidPochvenWeight = 1.; emptyStationsWeight = 1.;
+                    shipKillsWeight = 0.; jumpsWeight = 0.}
 
     let calibration (level: int) (plan: JumpPlan)=
         { plan with jumpDriveCalibration = level }
